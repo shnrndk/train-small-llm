@@ -5,11 +5,16 @@ import re
 import evaluate
 from openai import OpenAI
 import pandas as pd
+from dotenv import load_dotenv
 
 # --- Configuration ---
-UTSA_API_KEY = "gpustack_50e00c9281422bc5_0c0696dfcb1696d7635e58a2e56d6282"
-UTSA_BASE_URL = "http://10.246.100.230/v1"
-JUDGE_MODEL = "llama-3.3-70b-instruct-awq" 
+# Load environment variables from a .env file
+load_dotenv()
+
+# Initialize the client using the key from the environment
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+JUDGE_MODEL = "gpt-5-mini" 
 
 RESULTS_DIR = "eval_results"
 JUDGE_OUT_DIR = "judge_results"
@@ -61,7 +66,12 @@ def calculate_json_metrics(parsed_pred, parsed_ref):
 def query_judge(client, prompt_text, resp_a, resp_b, id_a, id_b, prompt_id):
     system_prompt = """You are an impartial expert evaluator of large language models. You will be given a user prompt and two responses (A and B).
     
-Proper response should be concise,short, accurate, and directly address the user's prompt without unnecessary fluff. You will evaluate both responses on the following criteria:
+Proper response should be concise, short, accurate, and directly address the user's prompt without unnecessary fluff. 
+
+CRITICAL PENALTIES: Severely penalize a response (score 1 for conciseness and instruction_following) if it exhibits:
+- Self-Prompting: Leaking template tags like `### Instruction:` or continuing to generate fake inputs.
+- Degenerate Loops: Repeating the same phrases or list structures endlessly.
+- Ignoring Context: Failing to use the specific data provided in the prompt.
 
 Evaluate both responses on a scale of 1-5 for: 
 - instruction_following: How well does it follow the core directive?
@@ -92,8 +102,9 @@ You MUST output strictly in this JSON format:
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_message}
             ],
-            max_tokens=2048,
-            temperature=0.1
+            response_format={ "type": "json_object" } # This ensures OpenAI returns perfect JSON
+            # max_tokens=2048,
+            # temperature=0.1
         )
         return clean_and_parse_json(response.choices[0].message.content)
     except Exception as e:
@@ -111,8 +122,8 @@ def run_automatic_metrics(task_name, checkpoints):
         with open(file_path, "r") as f:
             data = json.load(f)
             
-        preds = [d["generated_response"] for d in data]
-        refs = [d["reference"] for d in data]
+        preds = [str(d["generated_response"]) for d in data]
+        refs = [str(d["reference"]) for d in data]
         
         # 1. ROUGE & BERTScore
         rouge_res = rouge.compute(predictions=preds, references=refs)
@@ -211,23 +222,28 @@ def run_judge_eval(client, file_1, file_2, name_1, name_2, output_filename):
     print(f"{name_1} Wins: {win_1}")
     print(f"{name_2} Wins: {win_2}")
     print(f"Ties: {ties}")
-    print(f"Win Rate for {name_2} over {name_1}: {(win_2 / (win_1 + win_2 + ties)):.1%}")
+    
+    # Prevent divide by zero if something fails
+    total_matches = win_1 + win_2 + ties
+    if total_matches > 0:
+        print(f"Win Rate for {name_2} over {name_1}: {(win_2 / total_matches):.1%}")
+    else:
+        print("No successful evaluations to calculate win rate.")
     
     with open(os.path.join(JUDGE_OUT_DIR, output_filename), "w") as f:
         json.dump(results, f, indent=4)
 
 # --- Main ---
 def main():
-    client = OpenAI(api_key=UTSA_API_KEY, base_url=UTSA_BASE_URL)
     checkpoints = ["ckpt0_base", "ckpt1_stage1", "ckpt2_stage2"]
     
-    # 1. Automatic Metrics (Now includes Schema Compliance, Field F1, R1/R2)
+    # 1. Automatic Metrics
     run_automatic_metrics("alpaca", checkpoints)
     run_automatic_metrics("json", checkpoints)
     
     # 2. Pairwise Judge Evaluation 
     
-    # EXPERIMENT 4.1: Base vs Stage 1 (Did Alpaca tuning work?)
+    # EXPERIMENT 4.1: Base vs Stage 1
     run_judge_eval(
         client, 
         f"{RESULTS_DIR}/ckpt0_base_alpaca_responses.json", 
@@ -236,7 +252,7 @@ def main():
         "judge_alpaca_0_vs_1.json"
     )
     
-    # EXPERIMENT 4.4: Stage 1 vs Stage 2 (Forgetting Analysis)
+    # EXPERIMENT 4.4: Stage 1 vs Stage 2 
     run_judge_eval(
         client, 
         f"{RESULTS_DIR}/ckpt1_stage1_alpaca_responses.json", 
@@ -245,8 +261,7 @@ def main():
         "judge_alpaca_1_vs_2.json"
     )
     
-    # EXPERIMENT 4.3: JSON Improvement (Base vs Stage 1 vs Stage 2)
-    # Testing Stage 1 vs Stage 2 for JSON structured output
+    # EXPERIMENT 4.3: Stage 1 vs Stage 2 (JSON specific)
     run_judge_eval(
         client, 
         f"{RESULTS_DIR}/ckpt1_stage1_json_responses.json", 
