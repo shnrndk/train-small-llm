@@ -1,0 +1,12 @@
+torch
+transformers
+trl
+peft
+accelerate
+bitsandbytes>=0.46.1
+datasets
+python-dotenv
+wandb
+numpy
+rouge-score
+bert-score

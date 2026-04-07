@@ -1,0 +1,378 @@
+[
+  {
+    "id": "flat_015",
+    "task_type": "json_extraction",
+    "schema_category": "flat_object",
+    "split": "eval",
+    "domain": "insurance / policy summary",
+    "instruction": "Extract the insurance policy details into a JSON object with keys: \"policy_number\", \"holder_name\", \"policy_type\", \"coverage_amount_usd\", \"premium_monthly_usd\", \"start_date\", \"expiry_date\".",
+    "input": "Policy #POL-2024-88741 is a homeowners insurance plan held by Thomas Brennan. The policy covers up to $450,000 in damages with a monthly premium of $182. Coverage runs from January 1, 2024 to December 31, 2024.",
+    "output": "",
+    "expected_keys": [
+      "policy_number",
+      "holder_name",
+      "policy_type",
+      "coverage_amount_usd",
+      "premium_monthly_usd",
+      "start_date",
+      "expiry_date"
+    ]
+  },
+  {
+    "id": "flat_016",
+    "task_type": "json_extraction",
+    "schema_category": "flat_object",
+    "split": "eval",
+    "domain": "astronomy / exoplanet discovery",
+    "instruction": "Extract the exoplanet discovery data into a JSON object with keys: \"planet_name\", \"host_star\", \"discovery_year\", \"distance_light_years\", \"orbital_period_days\", \"mass_earth_units\", \"potentially_habitable\".",
+    "input": "Kepler-452c was discovered in 2024, orbiting the star Kepler-452 approximately 1,400 light-years from Earth. The planet has a mass of 3.8 Earth masses and completes one orbit every 385 days. Scientists have flagged it as potentially habitable.",
+    "output": "",
+    "expected_keys": [
+      "planet_name",
+      "host_star",
+      "discovery_year",
+      "distance_light_years",
+      "orbital_period_days",
+      "mass_earth_units",
+      "potentially_habitable"
+    ]
+  },
+  {
+    "id": "flat_017",
+    "task_type": "json_extraction",
+    "schema_category": "flat_object",
+    "split": "eval",
+    "domain": "fashion / clothing item",
+    "instruction": "Extract clothing product details into a JSON object with keys: \"item_name\", \"brand\", \"category\", \"size_range\", \"fabric\", \"price_usd\", \"sustainable_certified\".",
+    "input": "The Terra Linen Blazer by EcoThread is a women's outerwear piece made from 100% organic linen. It is available in sizes XS to XL, priced at $215, and holds the GOTS sustainability certification.",
+    "output": "",
+    "expected_keys": [
+      "item_name",
+      "brand",
+      "category",
+      "size_range",
+      "fabric",
+      "price_usd",
+      "sustainable_certified"
+    ]
+  },
+  {
+    "id": "flat_018",
+    "task_type": "json_extraction",
+    "schema_category": "flat_object",
+    "split": "eval",
+    "domain": "energy / power plant record",
+    "instruction": "Extract the power plant data into a JSON object with keys: \"plant_name\", \"operator\", \"country\", \"energy_source\", \"capacity_mw\", \"commissioned_year\", \"operational\".",
+    "input": "The Solara Sunrise facility, operated by GreenGrid Energy in Morocco, is a utility-scale solar power plant with a generation capacity of 580 MW. It was commissioned in 2022 and remains fully operational.",
+    "output": "",
+    "expected_keys": [
+      "plant_name",
+      "operator",
+      "country",
+      "energy_source",
+      "capacity_mw",
+      "commissioned_year",
+      "operational"
+    ]
+  },
+  {
+    "id": "nested_015",
+    "task_type": "json_extraction",
+    "schema_category": "nested_object",
+    "split": "eval",
+    "domain": "logistics / warehouse facility",
+    "instruction": "Extract warehouse details into a JSON object with keys \"facility\" (sub-keys: \"facility_id\", \"name\", \"area_sqft\", \"type\") and \"location\" (sub-keys: \"city\", \"country\", \"coordinates\").",
+    "input": "Facility WH-EU-044, named NordHub Central, is a 280,000 sq ft cold-storage warehouse located in Hamburg, Germany, at coordinates 53.5753\u00b0 N, 10.0153\u00b0 E.",
+    "output": "",
+    "expected_keys": [
+      "facility.facility_id",
+      "facility.name",
+      "facility.area_sqft",
+      "facility.type",
+      "location.city",
+      "location.country",
+      "location.coordinates"
+    ]
+  },
+  {
+    "id": "nested_016",
+    "task_type": "json_extraction",
+    "schema_category": "nested_object",
+    "split": "eval",
+    "domain": "public health / vaccination campaign",
+    "instruction": "Extract campaign details into a JSON object with keys \"campaign\" (sub-keys: \"campaign_id\", \"disease\", \"target_population\", \"launch_date\") and \"agency\" (sub-keys: \"name\", \"country\", \"funding_source\").",
+    "input": "Campaign VX-2024-PH09 targets polio prevention among children under 5 years in rural districts, launched on February 10, 2025. It is run by the National Health Authority of Nigeria, funded through WHO and UNICEF grants.",
+    "output": "",
+    "expected_keys": [
+      "campaign.campaign_id",
+      "campaign.disease",
+      "campaign.target_population",
+      "campaign.launch_date",
+      "agency.name",
+      "agency.country",
+      "agency.funding_source"
+    ]
+  },
+  {
+    "id": "nested_017",
+    "task_type": "json_extraction",
+    "schema_category": "nested_object",
+    "split": "eval",
+    "domain": "fintech / crypto transaction",
+    "instruction": "Extract the blockchain transaction details into a JSON object with keys \"transaction\" (sub-keys: \"tx_hash\", \"block_number\", \"timestamp\", \"fee_usd\") and \"transfer\" (sub-keys: \"from_address\", \"to_address\", \"amount\", \"currency\").",
+    "input": "Transaction 0xabc123def456 was confirmed in block 19,204,311 at 14:32:07 UTC on October 18, 2024, with a network fee of $2.84. It transferred 1.25 ETH from address 0xSender001 to 0xReceiver002.",
+    "output": "",
+    "expected_keys": [
+      "transaction.tx_hash",
+      "transaction.block_number",
+      "transaction.timestamp",
+      "transaction.fee_usd",
+      "transfer.from_address",
+      "transfer.to_address",
+      "transfer.amount",
+      "transfer.currency"
+    ]
+  },
+  {
+    "id": "nested_018",
+    "task_type": "json_extraction",
+    "schema_category": "nested_object",
+    "split": "eval",
+    "domain": "education / student enrollment",
+    "instruction": "Extract enrollment details into a JSON object with keys \"student\" (sub-keys: \"student_id\", \"name\", \"gpa\") and \"enrollment\" (sub-keys: \"program\", \"university\", \"start_semester\", \"expected_graduation\").",
+    "input": "Student ID STU-20240883, Aisha Ndiaye, maintains a GPA of 3.81 and is enrolled in the Master of Data Science program at the University of Edinburgh, beginning Fall 2024 with expected graduation in Spring 2026.",
+    "output": "",
+    "expected_keys": [
+      "student.student_id",
+      "student.name",
+      "student.gpa",
+      "enrollment.program",
+      "enrollment.university",
+      "enrollment.start_semester",
+      "enrollment.expected_graduation"
+    ]
+  },
+  {
+    "id": "array_015",
+    "task_type": "json_extraction",
+    "schema_category": "array_of_objects",
+    "split": "eval",
+    "domain": "logistics / delivery stops",
+    "instruction": "Extract each delivery stop from the route manifest into a JSON array. Each element should have keys: \"stop_number\", \"address\", \"recipient\", \"package_id\", \"delivery_window\", \"signature_required\".",
+    "input": "Stop 1: 22 Oak Avenue, Mr. Howard \u2014 PKG-0041, 9am\u201311am, no signature. Stop 2: 145 Pine Rd, Dr. Cho \u2014 PKG-0042, 10am\u201312pm, signature required. Stop 3: 88 Cedar Blvd, Ms. Reyes \u2014 PKG-0043, 1pm\u20133pm, no signature.",
+    "output": "",
+    "expected_keys": [
+      "[].stop_number",
+      "[].address",
+      "[].recipient",
+      "[].package_id",
+      "[].delivery_window",
+      "[].signature_required"
+    ]
+  },
+  {
+    "id": "array_016",
+    "task_type": "json_extraction",
+    "schema_category": "array_of_objects",
+    "split": "eval",
+    "domain": "finance / portfolio holdings",
+    "instruction": "Extract each holding from the investment portfolio summary into a JSON array. Each element should have keys: \"ticker\", \"company_name\", \"shares\", \"purchase_price_usd\", \"current_price_usd\", \"asset_class\".",
+    "input": "AAPL \u2014 Apple Inc., 50 shares, purchased at $178.00, current price $195.40, Equity. MSFT \u2014 Microsoft Corp., 30 shares, purchased at $310.00, current price $387.00, Equity. BND \u2014 Vanguard Bond ETF, 100 shares, purchased at $72.50, current price $74.80, Fixed Income.",
+    "output": "",
+    "expected_keys": [
+      "[].ticker",
+      "[].company_name",
+      "[].shares",
+      "[].purchase_price_usd",
+      "[].current_price_usd",
+      "[].asset_class"
+    ]
+  },
+  {
+    "id": "array_017",
+    "task_type": "json_extraction",
+    "schema_category": "array_of_objects",
+    "split": "eval",
+    "domain": "manufacturing / quality control",
+    "instruction": "Extract each defect entry from the quality control log into a JSON array. Each element should have keys: \"batch_id\", \"defect_type\", \"units_affected\", \"severity\", \"detected_by\".",
+    "input": "Batch B-2024-441: Surface scratch defect, 12 units affected, Minor severity, detected by Inspector Huang. Batch B-2024-442: Dimensional non-conformance, 3 units affected, Critical severity, detected by automated sensor. Batch B-2024-443: Colour mismatch, 28 units affected, Minor severity, detected by Inspector Patel.",
+    "output": "",
+    "expected_keys": [
+      "[].batch_id",
+      "[].defect_type",
+      "[].units_affected",
+      "[].severity",
+      "[].detected_by"
+    ]
+  },
+  {
+    "id": "array_018",
+    "task_type": "json_extraction",
+    "schema_category": "array_of_objects",
+    "split": "eval",
+    "domain": "astronomy / observation log",
+    "instruction": "Extract each celestial observation from the log into a JSON array. Each element should have keys: \"observation_id\", \"object_name\", \"object_type\", \"date\", \"telescope\", \"magnitude\".",
+    "input": "OBS-001: NGC 4889 (Galaxy), Oct 12 2024, Hubble Space Telescope, magnitude 11.2. OBS-002: Betelgeuse (Star), Oct 13 2024, VLT Chile, magnitude 0.42. OBS-003: Comet C/2023 A3 (Comet), Oct 14 2024, Subaru Telescope, magnitude 4.9.",
+    "output": "",
+    "expected_keys": [
+      "[].observation_id",
+      "[].object_name",
+      "[].object_type",
+      "[].date",
+      "[].telescope",
+      "[].magnitude"
+    ]
+  },
+  {
+    "id": "mixed_015",
+    "task_type": "json_extraction",
+    "schema_category": "mixed_flat_and_array",
+    "split": "eval",
+    "domain": "finance / earnings report",
+    "instruction": "Extract the earnings report summary into a JSON object with flat keys \"company\", \"fiscal_quarter\", \"reported_date\", \"total_revenue_usd_billions\" and an array key \"segments\" where each element has \"segment_name\", \"revenue_usd_billions\", \"yoy_growth_percent\".",
+    "input": "Apex Technologies Q3 2024 Earnings Report, released November 1, 2024. Total revenue: $38.4B. Segment breakdown: Cloud Services \u2014 $18.2B, +22% YoY; Hardware \u2014 $11.5B, +4% YoY; Software Licensing \u2014 $8.7B, +11% YoY.",
+    "output": "",
+    "expected_keys": [
+      "company",
+      "fiscal_quarter",
+      "reported_date",
+      "total_revenue_usd_billions",
+      "segments[].segment_name",
+      "segments[].revenue_usd_billions",
+      "segments[].yoy_growth_percent"
+    ]
+  },
+  {
+    "id": "mixed_016",
+    "task_type": "json_extraction",
+    "schema_category": "mixed_flat_and_array",
+    "split": "eval",
+    "domain": "hr / performance review",
+    "instruction": "Extract the performance review details into a JSON object with flat keys \"employee_name\", \"review_period\", \"reviewer\", \"overall_rating\" and an array key \"competencies\" where each element has \"name\", \"score\", \"comment\".",
+    "input": "Performance review for Nina Schulz, covering Q3 2024, conducted by her manager Oliver Brown. Overall rating: 4.2/5. Competencies: Technical Skills \u2014 4.5, consistently delivers high-quality code; Communication \u2014 3.8, improving but needs clearer written updates; Leadership \u2014 4.3, proactively mentors junior teammates.",
+    "output": "",
+    "expected_keys": [
+      "employee_name",
+      "review_period",
+      "reviewer",
+      "overall_rating",
+      "competencies[].name",
+      "competencies[].score",
+      "competencies[].comment"
+    ]
+  },
+  {
+    "id": "mixed_017",
+    "task_type": "json_extraction",
+    "schema_category": "mixed_flat_and_array",
+    "split": "eval",
+    "domain": "music / concert setlist",
+    "instruction": "Extract the concert details into a JSON object with flat keys \"artist\", \"venue\", \"city\", \"date\" and an array key \"setlist\" where each element has \"position\", \"song_title\", \"album\".",
+    "input": "Artist: The Lunar Tides. Venue: Hammersmith Apollo, London. Date: October 5, 2024. Setlist: 1 \u2014 'Orbit' from Gravity; 2 \u2014 'Fallen Star' from Eclipse; 3 \u2014 'Neon Tide' from Gravity; 4 \u2014 'Afterglow' from Meridian; 5 \u2014 'Last Transmission' from Eclipse.",
+    "output": "",
+    "expected_keys": [
+      "artist",
+      "venue",
+      "city",
+      "date",
+      "setlist[].position",
+      "setlist[].song_title",
+      "setlist[].album"
+    ]
+  },
+  {
+    "id": "mixed_018",
+    "task_type": "json_extraction",
+    "schema_category": "mixed_flat_and_array",
+    "split": "eval",
+    "domain": "healthcare / discharge summary",
+    "instruction": "Extract the hospital discharge summary into a JSON object with flat keys \"patient_name\", \"admission_date\", \"discharge_date\", \"discharge_diagnosis\" and an array key \"procedures\" where each element has \"procedure_name\", \"date_performed\", \"performing_surgeon\".",
+    "input": "Patient: Eduardo Reyes. Admitted: November 3, 2024. Discharged: November 7, 2024. Discharge diagnosis: Acute appendicitis. Procedures performed: Laparoscopic Appendectomy on November 3 by Dr. Karen Loh; Abdominal Ultrasound on November 4 by Dr. James Teo.",
+    "output": "",
+    "expected_keys": [
+      "patient_name",
+      "admission_date",
+      "discharge_date",
+      "discharge_diagnosis",
+      "procedures[].procedure_name",
+      "procedures[].date_performed",
+      "procedures[].performing_surgeon"
+    ]
+  },
+  {
+    "id": "nullable_015",
+    "task_type": "json_extraction",
+    "schema_category": "nullable_fields",
+    "split": "eval",
+    "domain": "gaming / player account",
+    "instruction": "Extract gaming account details into a JSON object with keys: \"username\", \"platform\", \"level\", \"rank\", \"hours_played\", \"premium_member\", \"linked_twitch\". Use null for fields not available.",
+    "input": "Username: ShadowBolt_99, playing on PC. Account level: 87. Total hours played: 1,240. This player has a premium membership active. Current rank is not shown on public profile. No linked Twitch account was found.",
+    "output": "",
+    "expected_keys": [
+      "username",
+      "platform",
+      "level",
+      "rank",
+      "hours_played",
+      "premium_member",
+      "linked_twitch"
+    ]
+  },
+  {
+    "id": "nullable_016",
+    "task_type": "json_extraction",
+    "schema_category": "nullable_fields",
+    "split": "eval",
+    "domain": "hr / contractor agreement",
+    "instruction": "Extract contractor agreement details into a JSON object with keys: \"contractor_name\", \"client_company\", \"start_date\", \"end_date\", \"hourly_rate_usd\", \"scope_of_work\", \"non_compete_clause\". Use null for undisclosed fields.",
+    "input": "Contractor: Isabel Ferreira. Client: Apex Digital Ltd. Contract starts January 6, 2025 with an hourly rate of $95. Scope: UX design and prototyping for the mobile app rebrand. Contract end date and non-compete clause details were not included in the summary.",
+    "output": "",
+    "expected_keys": [
+      "contractor_name",
+      "client_company",
+      "start_date",
+      "end_date",
+      "hourly_rate_usd",
+      "scope_of_work",
+      "non_compete_clause"
+    ]
+  },
+  {
+    "id": "nullable_017",
+    "task_type": "json_extraction",
+    "schema_category": "nullable_fields",
+    "split": "eval",
+    "domain": "travel / visa application",
+    "instruction": "Extract visa application details into a JSON object with keys: \"applicant_name\", \"passport_number\", \"nationality\", \"destination_country\", \"visa_type\", \"application_date\", \"decision\". Use null for fields not available.",
+    "input": "Applicant: Kwame Asante. Passport: GH-4421992. Nationality: Ghanaian. Applied for a tourist visa to Canada on October 10, 2024. A decision has not yet been issued.",
+    "output": "",
+    "expected_keys": [
+      "applicant_name",
+      "passport_number",
+      "nationality",
+      "destination_country",
+      "visa_type",
+      "application_date",
+      "decision"
+    ]
+  },
+  {
+    "id": "nullable_018",
+    "task_type": "json_extraction",
+    "schema_category": "nullable_fields",
+    "split": "eval",
+    "domain": "retail / store event",
+    "instruction": "Extract the store event details into a JSON object with keys: \"event_name\", \"store_name\", \"location\", \"date\", \"time\", \"registration_required\", \"ticket_price_usd\". Use null for fields not mentioned.",
+    "input": "Grand Opening Sale at StyleHub, located at Westfield Mall, Sydney. Date: December 7, 2024. No registration required to attend. The event time and any ticket pricing were not mentioned in the announcement.",
+    "output": "",
+    "expected_keys": [
+      "event_name",
+      "store_name",
+      "location",
+      "date",
+      "time",
+      "registration_required",
+      "ticket_price_usd"
+    ]
+  }
+]

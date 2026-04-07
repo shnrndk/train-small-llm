@@ -1,0 +1,702 @@
+[
+  {
+    "id": "tool_find_flight_001",
+    "task_type": "tool_call_generation",
+    "schema_category": "find_flights",
+    "domain": "travel search",
+    "instruction": "Parse the user's flight search request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"STRING (3-letter code)\", \"destination\": \"STRING (3-letter code)\", \"date\": \"YYYY-MM-DD\"}}",
+    "input": "Hey, can you look up flights from JFK to London Heathrow for next Friday, say October 23rd, 2026?",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"JFK\", \"destination\": \"LHR\", \"date\": \"2026-10-23\"}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_find_flight_002",
+    "task_type": "tool_call_generation",
+    "schema_category": "find_flights",
+    "domain": "travel search",
+    "instruction": "Parse the user's flight search request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"STRING (3-letter code)\", \"destination\": \"STRING (3-letter code)\", \"date\": \"YYYY-MM-DD\"}}",
+    "input": "Just browsing right now, what are the options from Seattle (SEA) to Tokyo (HND) leaving on 2026-12-01?",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"SEA\", \"destination\": \"HND\", \"date\": \"2026-12-01\"}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_find_flight_003",
+    "task_type": "tool_call_generation",
+    "schema_category": "find_flights",
+    "domain": "travel search",
+    "instruction": "Parse the user's flight search request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"STRING (3-letter code)\", \"destination\": \"STRING (3-letter code)\", \"date\": \"YYYY-MM-DD\"}}",
+    "input": "I need to check if there's anything flying out of LAX and landing in Chicago ORD on November 5th, 2026.",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"LAX\", \"destination\": \"ORD\", \"date\": \"2026-11-05\"}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_find_flight_004",
+    "task_type": "tool_call_generation",
+    "schema_category": "find_flights",
+    "domain": "travel search",
+    "instruction": "Parse the user's flight search request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"STRING (3-letter code)\", \"destination\": \"STRING (3-letter code)\", \"date\": \"YYYY-MM-DD\"}}",
+    "input": "Show me the flight schedule for Miami (MIA) to Charles de Gaulle (CDG) on the 15th of August, 2026.",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"MIA\", \"destination\": \"CDG\", \"date\": \"2026-08-15\"}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_find_flight_005",
+    "task_type": "tool_call_generation",
+    "schema_category": "find_flights",
+    "domain": "travel search",
+    "instruction": "Parse the user's flight search request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"STRING (3-letter code)\", \"destination\": \"STRING (3-letter code)\", \"date\": \"YYYY-MM-DD\"}}",
+    "input": "Can you find me a flight leaving SFO and going to Austin (AUS) on 2026-09-10?",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"SFO\", \"destination\": \"AUS\", \"date\": \"2026-09-10\"}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_find_flight_006",
+    "task_type": "tool_call_generation",
+    "schema_category": "find_flights",
+    "domain": "travel search",
+    "instruction": "Parse the user's flight search request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"STRING (3-letter code)\", \"destination\": \"STRING (3-letter code)\", \"date\": \"YYYY-MM-DD\"}}",
+    "input": "Search for departures from Boston Logan (BOS) to Dallas (DFW) on 2026-07-04.",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"BOS\", \"destination\": \"DFW\", \"date\": \"2026-07-04\"}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_find_flight_007",
+    "task_type": "tool_call_generation",
+    "schema_category": "find_flights",
+    "domain": "travel search",
+    "instruction": "Parse the user's flight search request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"STRING (3-letter code)\", \"destination\": \"STRING (3-letter code)\", \"date\": \"YYYY-MM-DD\"}}",
+    "input": "I'm looking for a quick hop from Atlanta (ATL) to Orlando (MCO) on 2026-05-22. What's available?",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"ATL\", \"destination\": \"MCO\", \"date\": \"2026-05-22\"}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_find_flight_008",
+    "task_type": "tool_call_generation",
+    "schema_category": "find_flights",
+    "domain": "travel search",
+    "instruction": "Parse the user's flight search request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"STRING (3-letter code)\", \"destination\": \"STRING (3-letter code)\", \"date\": \"YYYY-MM-DD\"}}",
+    "input": "Are there any nonstop flights from Denver (DEN) to Houston (IAH) on October 2nd, 2026?",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"DEN\", \"destination\": \"IAH\", \"date\": \"2026-10-02\"}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_find_flight_009",
+    "task_type": "tool_call_generation",
+    "schema_category": "find_flights",
+    "domain": "travel search",
+    "instruction": "Parse the user's flight search request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"STRING (3-letter code)\", \"destination\": \"STRING (3-letter code)\", \"date\": \"YYYY-MM-DD\"}}",
+    "input": "Find the cheapest route from San Antonio (SAT) to New York (JFK) for 2026-11-18.",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"SAT\", \"destination\": \"JFK\", \"date\": \"2026-11-18\"}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_find_flight_010",
+    "task_type": "tool_call_generation",
+    "schema_category": "find_flights",
+    "domain": "travel search",
+    "instruction": "Parse the user's flight search request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"STRING (3-letter code)\", \"destination\": \"STRING (3-letter code)\", \"date\": \"YYYY-MM-DD\"}}",
+    "input": "I want to see the flight board for London Gatwick (LGW) to Rome (FCO) on 2026-06-30.",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"LGW\", \"destination\": \"FCO\", \"date\": \"2026-06-30\"}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_find_flight_011",
+    "task_type": "tool_call_generation",
+    "schema_category": "find_flights",
+    "domain": "travel search",
+    "instruction": "Parse the user's flight search request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"STRING (3-letter code)\", \"destination\": \"STRING (3-letter code)\", \"date\": \"YYYY-MM-DD\"}}",
+    "input": "Please pull up all flights leaving Sydney (SYD) and arriving in Auckland (AKL) on 2027-01-10.",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"SYD\", \"destination\": \"AKL\", \"date\": \"2027-01-10\"}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_find_flight_012",
+    "task_type": "tool_call_generation",
+    "schema_category": "find_flights",
+    "domain": "travel search",
+    "instruction": "Parse the user's flight search request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"STRING (3-letter code)\", \"destination\": \"STRING (3-letter code)\", \"date\": \"YYYY-MM-DD\"}}",
+    "input": "What time do flights leave from Toronto (YYZ) to Vancouver (YVR) on 2026-09-05?",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"YYZ\", \"destination\": \"YVR\", \"date\": \"2026-09-05\"}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_find_flight_013",
+    "task_type": "tool_call_generation",
+    "schema_category": "find_flights",
+    "domain": "travel search",
+    "instruction": "Parse the user's flight search request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"STRING (3-letter code)\", \"destination\": \"STRING (3-letter code)\", \"date\": \"YYYY-MM-DD\"}}",
+    "input": "Check the availability from Frankfurt (FRA) to Dubai (DXB) on the 20th of December, 2026.",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"FRA\", \"destination\": \"DXB\", \"date\": \"2026-12-20\"}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_find_flight_014",
+    "task_type": "tool_call_generation",
+    "schema_category": "find_flights",
+    "domain": "travel search",
+    "instruction": "Parse the user's flight search request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"STRING (3-letter code)\", \"destination\": \"STRING (3-letter code)\", \"date\": \"YYYY-MM-DD\"}}",
+    "input": "Any red-eyes from Las Vegas (LAS) to Philadelphia (PHL) scheduled for 2026-08-11?",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"find_flights\", \"parameters\": {\"origin\": \"LAS\", \"destination\": \"PHL\", \"date\": \"2026-08-11\"}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_book_flight_001",
+    "task_type": "tool_call_generation",
+    "schema_category": "book_flights",
+    "domain": "travel booking",
+    "instruction": "Parse the user's flight booking request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"STRING\", \"destination\": \"STRING\", \"date\": \"YYYY-MM-DD\", \"time\": \"STRING\", \"PeopleCount\": INTEGER}}",
+    "input": "Lock it in: two of us flying from LAX to SFO on Nov 26, 2026, catching the 6:30 PM flight.",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"LAX\", \"destination\": \"SFO\", \"date\": \"2026-11-26\", \"time\": \"6:30 PM\", \"PeopleCount\": 2}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_book_flight_002",
+    "task_type": "tool_call_generation",
+    "schema_category": "book_flights",
+    "domain": "travel booking",
+    "instruction": "Parse the user's flight booking request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"STRING\", \"destination\": \"STRING\", \"date\": \"YYYY-MM-DD\", \"time\": \"STRING\", \"PeopleCount\": INTEGER}}",
+    "input": "Go ahead and book that trip for me and my wife (so 2 people). We need to leave JFK for Miami (MIA) at 8:00 AM on 2026-12-12.",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"JFK\", \"destination\": \"MIA\", \"date\": \"2026-12-12\", \"time\": \"8:00 AM\", \"PeopleCount\": 2}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_book_flight_003",
+    "task_type": "tool_call_generation",
+    "schema_category": "book_flights",
+    "domain": "travel booking",
+    "instruction": "Parse the user's flight booking request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"STRING\", \"destination\": \"STRING\", \"date\": \"YYYY-MM-DD\", \"time\": \"STRING\", \"PeopleCount\": INTEGER}}",
+    "input": "I'm ready to buy the tickets. Grab the 2:15 PM flight out of ORD heading to Denver (DEN) on 2026-10-31 for 4 people.",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"ORD\", \"destination\": \"DEN\", \"date\": \"2026-10-31\", \"time\": \"2:15 PM\", \"PeopleCount\": 4}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_book_flight_004",
+    "task_type": "tool_call_generation",
+    "schema_category": "book_flights",
+    "domain": "travel booking",
+    "instruction": "Parse the user's flight booking request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"STRING\", \"destination\": \"STRING\", \"date\": \"YYYY-MM-DD\", \"time\": \"STRING\", \"PeopleCount\": INTEGER}}",
+    "input": "Let's finalize this. Three passengers, taking the 7:45 AM from Atlanta (ATL) to Las Vegas (LAS) on 2027-01-15.",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"ATL\", \"destination\": \"LAS\", \"date\": \"2027-01-15\", \"time\": \"7:45 AM\", \"PeopleCount\": 3}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_book_flight_005",
+    "task_type": "tool_call_generation",
+    "schema_category": "book_flights",
+    "domain": "travel booking",
+    "instruction": "Parse the user's flight booking request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"STRING\", \"destination\": \"STRING\", \"date\": \"YYYY-MM-DD\", \"time\": \"STRING\", \"PeopleCount\": INTEGER}}",
+    "input": "Purchase 1 ticket for the 10:30 PM red-eye from SEA to EWR on 2026-09-20.",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"SEA\", \"destination\": \"EWR\", \"date\": \"2026-09-20\", \"time\": \"10:30 PM\", \"PeopleCount\": 1}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_book_flight_006",
+    "task_type": "tool_call_generation",
+    "schema_category": "book_flights",
+    "domain": "travel booking",
+    "instruction": "Parse the user's flight booking request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"STRING\", \"destination\": \"STRING\", \"date\": \"YYYY-MM-DD\", \"time\": \"STRING\", \"PeopleCount\": INTEGER}}",
+    "input": "Book it! We've got 5 people going from Dallas (DFW) to Cancun (CUN) on 2027-03-14, on the 9:00 AM flight.",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"DFW\", \"destination\": \"CUN\", \"date\": \"2027-03-14\", \"time\": \"9:00 AM\", \"PeopleCount\": 5}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_book_flight_007",
+    "task_type": "tool_call_generation",
+    "schema_category": "book_flights",
+    "domain": "travel booking",
+    "instruction": "Parse the user's flight booking request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"STRING\", \"destination\": \"STRING\", \"date\": \"YYYY-MM-DD\", \"time\": \"STRING\", \"PeopleCount\": INTEGER}}",
+    "input": "I need to secure 2 seats on the 11:15 AM departure from Phoenix (PHX) to Seattle (SEA) on 2026-08-08.",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"PHX\", \"destination\": \"SEA\", \"date\": \"2026-08-08\", \"time\": \"11:15 AM\", \"PeopleCount\": 2}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_book_flight_008",
+    "task_type": "tool_call_generation",
+    "schema_category": "book_flights",
+    "domain": "travel booking",
+    "instruction": "Parse the user's flight booking request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"STRING\", \"destination\": \"STRING\", \"date\": \"YYYY-MM-DD\", \"time\": \"STRING\", \"PeopleCount\": INTEGER}}",
+    "input": "Confirm the reservation. Just 1 passenger flying from Boston (BOS) to Chicago (ORD) at 5:00 PM on 2026-10-10.",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"BOS\", \"destination\": \"ORD\", \"date\": \"2026-10-10\", \"time\": \"5:00 PM\", \"PeopleCount\": 1}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_book_flight_009",
+    "task_type": "tool_call_generation",
+    "schema_category": "book_flights",
+    "domain": "travel booking",
+    "instruction": "Parse the user's flight booking request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"STRING\", \"destination\": \"STRING\", \"date\": \"YYYY-MM-DD\", \"time\": \"STRING\", \"PeopleCount\": INTEGER}}",
+    "input": "Go ahead and charge the card for 6 people taking the 1:30 PM flight from Orlando (MCO) to Newark (EWR) on 2026-07-25.",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"MCO\", \"destination\": \"EWR\", \"date\": \"2026-07-25\", \"time\": \"1:30 PM\", \"PeopleCount\": 6}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_book_flight_010",
+    "task_type": "tool_call_generation",
+    "schema_category": "book_flights",
+    "domain": "travel booking",
+    "instruction": "Parse the user's flight booking request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"STRING\", \"destination\": \"STRING\", \"date\": \"YYYY-MM-DD\", \"time\": \"STRING\", \"PeopleCount\": INTEGER}}",
+    "input": "Get me a single ticket on the 6:00 AM early flight from Detroit (DTW) to Atlanta (ATL) on 2026-11-02.",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"DTW\", \"destination\": \"ATL\", \"date\": \"2026-11-02\", \"time\": \"6:00 AM\", \"PeopleCount\": 1}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_book_flight_011",
+    "task_type": "tool_call_generation",
+    "schema_category": "book_flights",
+    "domain": "travel booking",
+    "instruction": "Parse the user's flight booking request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"STRING\", \"destination\": \"STRING\", \"date\": \"YYYY-MM-DD\", \"time\": \"STRING\", \"PeopleCount\": INTEGER}}",
+    "input": "We need 4 tickets booked ASAP for the San Diego (SAN) to San Jose (SJC) trip at 3:45 PM on 2026-06-18.",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"SAN\", \"destination\": \"SJC\", \"date\": \"2026-06-18\", \"time\": \"3:45 PM\", \"PeopleCount\": 4}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_book_flight_012",
+    "task_type": "tool_call_generation",
+    "schema_category": "book_flights",
+    "domain": "travel booking",
+    "instruction": "Parse the user's flight booking request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"STRING\", \"destination\": \"STRING\", \"date\": \"YYYY-MM-DD\", \"time\": \"STRING\", \"PeopleCount\": INTEGER}}",
+    "input": "Please confirm the flight for 2 passengers from Charlotte (CLT) to London (LHR) on 2026-12-23 at 8:15 PM.",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"CLT\", \"destination\": \"LHR\", \"date\": \"2026-12-23\", \"time\": \"8:15 PM\", \"PeopleCount\": 2}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_book_flight_013",
+    "task_type": "tool_call_generation",
+    "schema_category": "book_flights",
+    "domain": "travel booking",
+    "instruction": "Parse the user's flight booking request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"STRING\", \"destination\": \"STRING\", \"date\": \"YYYY-MM-DD\", \"time\": \"STRING\", \"PeopleCount\": INTEGER}}",
+    "input": "Make the booking for me. 1 person, flying out of Austin (AUS) to Houston (IAH) at 12:00 PM on 2026-05-30.",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"AUS\", \"destination\": \"IAH\", \"date\": \"2026-05-30\", \"time\": \"12:00 PM\", \"PeopleCount\": 1}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_book_flight_014",
+    "task_type": "tool_call_generation",
+    "schema_category": "book_flights",
+    "domain": "travel booking",
+    "instruction": "Parse the user's flight booking request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"STRING\", \"destination\": \"STRING\", \"date\": \"YYYY-MM-DD\", \"time\": \"STRING\", \"PeopleCount\": INTEGER}}",
+    "input": "Process the payment for 3 seats on the 4:20 PM flight from Honolulu (HNL) to Los Angeles (LAX) on 2027-02-14.",
+    "output": "{\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"HNL\", \"destination\": \"LAX\", \"date\": \"2027-02-14\", \"time\": \"4:20 PM\", \"PeopleCount\": 3}}",
+    "expected_tool": "flight_booking_service"
+  },
+  {
+    "id": "tool_weather_001",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_weather",
+    "domain": "weather API",
+    "instruction": "Parse the user's weather request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"STRING\", \"unit\": \"STRING (fahrenheit or celsius)\"}}",
+    "input": "What's the weather looking like in San Antonio today? Tell me in Fahrenheit.",
+    "output": "{\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"San Antonio\", \"unit\": \"fahrenheit\"}}",
+    "expected_tool": "get_weather"
+  },
+  {
+    "id": "tool_weather_002",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_weather",
+    "domain": "weather API",
+    "instruction": "Parse the user's weather request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"STRING\", \"unit\": \"STRING (fahrenheit or celsius)\"}}",
+    "input": "Do I need a jacket in London right now? Give me the temp in Celsius.",
+    "output": "{\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"London\", \"unit\": \"celsius\"}}",
+    "expected_tool": "get_weather"
+  },
+  {
+    "id": "tool_weather_003",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_weather",
+    "domain": "weather API",
+    "instruction": "Parse the user's weather request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"STRING\", \"unit\": \"STRING (fahrenheit or celsius)\"}}",
+    "input": "Is it freezing in Chicago? Hit me with the temperature in Fahrenheit.",
+    "output": "{\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"Chicago\", \"unit\": \"fahrenheit\"}}",
+    "expected_tool": "get_weather"
+  },
+  {
+    "id": "tool_weather_004",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_weather",
+    "domain": "weather API",
+    "instruction": "Parse the user's weather request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"STRING\", \"unit\": \"STRING (fahrenheit or celsius)\"}}",
+    "input": "Check the forecast for Tokyo and give me the numbers in celsius.",
+    "output": "{\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"Tokyo\", \"unit\": \"celsius\"}}",
+    "expected_tool": "get_weather"
+  },
+  {
+    "id": "tool_weather_005",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_weather",
+    "domain": "weather API",
+    "instruction": "Parse the user's weather request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"STRING\", \"unit\": \"STRING (fahrenheit or celsius)\"}}",
+    "input": "What is the current temp in Sydney, Australia? Celsius please.",
+    "output": "{\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"Sydney\", \"unit\": \"celsius\"}}",
+    "expected_tool": "get_weather"
+  },
+  {
+    "id": "tool_weather_006",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_weather",
+    "domain": "weather API",
+    "instruction": "Parse the user's weather request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"STRING\", \"unit\": \"STRING (fahrenheit or celsius)\"}}",
+    "input": "Is it going to rain in New York City? Tell me the temp in Fahrenheit.",
+    "output": "{\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"New York City\", \"unit\": \"fahrenheit\"}}",
+    "expected_tool": "get_weather"
+  },
+  {
+    "id": "tool_weather_007",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_weather",
+    "domain": "weather API",
+    "instruction": "Parse the user's weather request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"STRING\", \"unit\": \"STRING (fahrenheit or celsius)\"}}",
+    "input": "How hot is it in Phoenix right now? Fahrenheit is fine.",
+    "output": "{\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"Phoenix\", \"unit\": \"fahrenheit\"}}",
+    "expected_tool": "get_weather"
+  },
+  {
+    "id": "tool_weather_008",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_weather",
+    "domain": "weather API",
+    "instruction": "Parse the user's weather request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"STRING\", \"unit\": \"STRING (fahrenheit or celsius)\"}}",
+    "input": "Find out if it's snowing in Toronto and display the temperature in Celsius.",
+    "output": "{\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"Toronto\", \"unit\": \"celsius\"}}",
+    "expected_tool": "get_weather"
+  },
+  {
+    "id": "tool_weather_009",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_weather",
+    "domain": "weather API",
+    "instruction": "Parse the user's weather request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"STRING\", \"unit\": \"STRING (fahrenheit or celsius)\"}}",
+    "input": "I need the current weather conditions for Paris, using Celsius.",
+    "output": "{\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"Paris\", \"unit\": \"celsius\"}}",
+    "expected_tool": "get_weather"
+  },
+  {
+    "id": "tool_weather_010",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_weather",
+    "domain": "weather API",
+    "instruction": "Parse the user's weather request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"STRING\", \"unit\": \"STRING (fahrenheit or celsius)\"}}",
+    "input": "Can you check the humidity and temperature for Miami? Fahrenheit please.",
+    "output": "{\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"Miami\", \"unit\": \"fahrenheit\"}}",
+    "expected_tool": "get_weather"
+  },
+  {
+    "id": "tool_weather_011",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_weather",
+    "domain": "weather API",
+    "instruction": "Parse the user's weather request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"STRING\", \"unit\": \"STRING (fahrenheit or celsius)\"}}",
+    "input": "What are the skies like in Berlin? Send the temp in Celsius.",
+    "output": "{\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"Berlin\", \"unit\": \"celsius\"}}",
+    "expected_tool": "get_weather"
+  },
+  {
+    "id": "tool_weather_012",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_weather",
+    "domain": "weather API",
+    "instruction": "Parse the user's weather request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"STRING\", \"unit\": \"STRING (fahrenheit or celsius)\"}}",
+    "input": "Is it a good beach day in Honolulu? Show me degrees Fahrenheit.",
+    "output": "{\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"Honolulu\", \"unit\": \"fahrenheit\"}}",
+    "expected_tool": "get_weather"
+  },
+  {
+    "id": "tool_weather_013",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_weather",
+    "domain": "weather API",
+    "instruction": "Parse the user's weather request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"STRING\", \"unit\": \"STRING (fahrenheit or celsius)\"}}",
+    "input": "Get the local weather for Seoul, South Korea in Celsius.",
+    "output": "{\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"Seoul\", \"unit\": \"celsius\"}}",
+    "expected_tool": "get_weather"
+  },
+  {
+    "id": "tool_weather_014",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_weather",
+    "domain": "weather API",
+    "instruction": "Parse the user's weather request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"STRING\", \"unit\": \"STRING (fahrenheit or celsius)\"}}",
+    "input": "I'm packing for Denver. Tell me the current temp in Fahrenheit.",
+    "output": "{\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"Denver\", \"unit\": \"fahrenheit\"}}",
+    "expected_tool": "get_weather"
+  },
+  {
+    "id": "tool_product_001",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_product",
+    "domain": "e-commerce",
+    "instruction": "Parse the user's e-commerce request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"productId\": \"STRING\", \"quantity\": INTEGER, \"price\": FLOAT}",
+    "input": "Add two of those SKU12345 wireless mice to my cart, they are listed at 49.99 right?",
+    "output": "{\"productId\": \"SKU12345\", \"quantity\": 2, \"price\": 49.99}",
+    "expected_tool": "get_product"
+  },
+  {
+    "id": "tool_product_002",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_product",
+    "domain": "e-commerce",
+    "instruction": "Parse the user's e-commerce request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"productId\": \"STRING\", \"quantity\": INTEGER, \"price\": FLOAT}",
+    "input": "I'll take 5 of the standing desks, product ID: DESK-990. Lock them in at 299.50 each.",
+    "output": "{\"productId\": \"DESK-990\", \"quantity\": 5, \"price\": 299.50}",
+    "expected_tool": "get_product"
+  },
+  {
+    "id": "tool_product_003",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_product",
+    "domain": "e-commerce",
+    "instruction": "Parse the user's e-commerce request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"productId\": \"STRING\", \"quantity\": INTEGER, \"price\": FLOAT}",
+    "input": "Throw one XBOX-CTRL-01 into the basket. The price is 59.99.",
+    "output": "{\"productId\": \"XBOX-CTRL-01\", \"quantity\": 1, \"price\": 59.99}",
+    "expected_tool": "get_product"
+  },
+  {
+    "id": "tool_product_004",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_product",
+    "domain": "e-commerce",
+    "instruction": "Parse the user's e-commerce request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"productId\": \"STRING\", \"quantity\": INTEGER, \"price\": FLOAT}",
+    "input": "Let's buy 10 units of SKU-88721, the mechanical keyboards. The agreed price is 85.00.",
+    "output": "{\"productId\": \"SKU-88721\", \"quantity\": 10, \"price\": 85.00}",
+    "expected_tool": "get_product"
+  },
+  {
+    "id": "tool_product_005",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_product",
+    "domain": "e-commerce",
+    "instruction": "Parse the user's e-commerce request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"productId\": \"STRING\", \"quantity\": INTEGER, \"price\": FLOAT}",
+    "input": "I need 3 of the noise-cancelling headphones, SKU-NC500, at 199.99 a pop.",
+    "output": "{\"productId\": \"SKU-NC500\", \"quantity\": 3, \"price\": 199.99}",
+    "expected_tool": "get_product"
+  },
+  {
+    "id": "tool_product_006",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_product",
+    "domain": "e-commerce",
+    "instruction": "Parse the user's e-commerce request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"productId\": \"STRING\", \"quantity\": INTEGER, \"price\": FLOAT}",
+    "input": "Purchase 50 of those USB-C cables, ID: CBL-USBC-1M, for 9.99 each.",
+    "output": "{\"productId\": \"CBL-USBC-1M\", \"quantity\": 50, \"price\": 9.99}",
+    "expected_tool": "get_product"
+  },
+  {
+    "id": "tool_product_007",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_product",
+    "domain": "e-commerce",
+    "instruction": "Parse the user's e-commerce request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"productId\": \"STRING\", \"quantity\": INTEGER, \"price\": FLOAT}",
+    "input": "Order 4 of the smart LED bulbs, item ID BULB-LED-45. They are 14.50 right now.",
+    "output": "{\"productId\": \"BULB-LED-45\", \"quantity\": 4, \"price\": 14.50}",
+    "expected_tool": "get_product"
+  },
+  {
+    "id": "tool_product_008",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_product",
+    "domain": "e-commerce",
+    "instruction": "Parse the user's e-commerce request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"productId\": \"STRING\", \"quantity\": INTEGER, \"price\": FLOAT}",
+    "input": "I'll take 1 of the PRO-MONITOR-32. Grab it at the current price of 349.00.",
+    "output": "{\"productId\": \"PRO-MONITOR-32\", \"quantity\": 1, \"price\": 349.00}",
+    "expected_tool": "get_product"
+  },
+  {
+    "id": "tool_product_009",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_product",
+    "domain": "e-commerce",
+    "instruction": "Parse the user's e-commerce request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"productId\": \"STRING\", \"quantity\": INTEGER, \"price\": FLOAT}",
+    "input": "We need to restock 100 packs of PRINTER-PAPER-A4. The negotiated rate is 5.25.",
+    "output": "{\"productId\": \"PRINTER-PAPER-A4\", \"quantity\": 100, \"price\": 5.25}",
+    "expected_tool": "get_product"
+  },
+  {
+    "id": "tool_product_010",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_product",
+    "domain": "e-commerce",
+    "instruction": "Parse the user's e-commerce request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"productId\": \"STRING\", \"quantity\": INTEGER, \"price\": FLOAT}",
+    "input": "Put 2 of the VR-HEADSET-PRO in the cart. They are running for 499.99 each.",
+    "output": "{\"productId\": \"VR-HEADSET-PRO\", \"quantity\": 2, \"price\": 499.99}",
+    "expected_tool": "get_product"
+  },
+  {
+    "id": "tool_product_011",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_product",
+    "domain": "e-commerce",
+    "instruction": "Parse the user's e-commerce request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"productId\": \"STRING\", \"quantity\": INTEGER, \"price\": FLOAT}",
+    "input": "Add 6 bottles of the cleaning spray, SKU-CLEAN-01. The cost is 3.50 per bottle.",
+    "output": "{\"productId\": \"SKU-CLEAN-01\", \"quantity\": 6, \"price\": 3.50}",
+    "expected_tool": "get_product"
+  },
+  {
+    "id": "tool_product_012",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_product",
+    "domain": "e-commerce",
+    "instruction": "Parse the user's e-commerce request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"productId\": \"STRING\", \"quantity\": INTEGER, \"price\": FLOAT}",
+    "input": "I am buying 1 ergonomic office chair, ID: ERGO-CHAIR-X, for 150.00.",
+    "output": "{\"productId\": \"ERGO-CHAIR-X\", \"quantity\": 1, \"price\": 150.00}",
+    "expected_tool": "get_product"
+  },
+  {
+    "id": "tool_product_013",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_product",
+    "domain": "e-commerce",
+    "instruction": "Parse the user's e-commerce request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"productId\": \"STRING\", \"quantity\": INTEGER, \"price\": FLOAT}",
+    "input": "Can you order 20 units of the wireless chargers (W-CHARGER-15W)? They are 19.99 today.",
+    "output": "{\"productId\": \"W-CHARGER-15W\", \"quantity\": 20, \"price\": 19.99}",
+    "expected_tool": "get_product"
+  },
+  {
+    "id": "tool_product_014",
+    "task_type": "tool_call_generation",
+    "schema_category": "get_product",
+    "domain": "e-commerce",
+    "instruction": "Parse the user's e-commerce request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"productId\": \"STRING\", \"quantity\": INTEGER, \"price\": FLOAT}",
+    "input": "Let's get 5 cases of the energy drinks, ID: DRINK-NRG-24, listed at 35.00 a case.",
+    "output": "{\"productId\": \"DRINK-NRG-24\", \"quantity\": 5, \"price\": 35.00}",
+    "expected_tool": "get_product"
+  },
+  {
+    "id": "tool_meeting_001",
+    "task_type": "tool_call_generation",
+    "schema_category": "schedule_meeting",
+    "domain": "calendar management",
+    "instruction": "Parse the user's meeting request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"YYYY-MM-DD\", \"time\": \"HH:MM\", \"participants\": [\"email1\", \"email2\"]}}",
+    "input": "Grab Sarah and Mike for a quick sync. Put it on the calendar for 2026-04-06 at 10:00. Their emails are sarah@example.com and mike.jones@example.com.",
+    "output": "{\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"2026-04-06\", \"time\": \"10:00\", \"participants\": [\"sarah@example.com\", \"mike.jones@example.com\"]}}",
+    "expected_tool": "calendar_service"
+  },
+  {
+    "id": "tool_meeting_002",
+    "task_type": "tool_call_generation",
+    "schema_category": "schedule_meeting",
+    "domain": "calendar management",
+    "instruction": "Parse the user's meeting request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"YYYY-MM-DD\", \"time\": \"HH:MM\", \"participants\": [\"email1\", \"email2\"]}}",
+    "input": "Schedule a roadmap review with the leads. I need dev@company.com and design@company.com booked for 14:30 on 2026-05-12.",
+    "output": "{\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"2026-05-12\", \"time\": \"14:30\", \"participants\": [\"dev@company.com\", \"design@company.com\"]}}",
+    "expected_tool": "calendar_service"
+  },
+  {
+    "id": "tool_meeting_003",
+    "task_type": "tool_call_generation",
+    "schema_category": "schedule_meeting",
+    "domain": "calendar management",
+    "instruction": "Parse the user's meeting request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"YYYY-MM-DD\", \"time\": \"HH:MM\", \"participants\": [\"email1\", \"email2\"]}}",
+    "input": "Can you set up a meeting with client@external.com and boss@mycorp.com? Let's do 09:15 on 2026-11-20.",
+    "output": "{\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"2026-11-20\", \"time\": \"09:15\", \"participants\": [\"client@external.com\", \"boss@mycorp.com\"]}}",
+    "expected_tool": "calendar_service"
+  },
+  {
+    "id": "tool_meeting_004",
+    "task_type": "tool_call_generation",
+    "schema_category": "schedule_meeting",
+    "domain": "calendar management",
+    "instruction": "Parse the user's meeting request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"YYYY-MM-DD\", \"time\": \"HH:MM\", \"participants\": [\"email1\", \"email2\"]}}",
+    "input": "Let's do a 1-on-1 with j.doe@startup.io at 16:00 on 2026-08-01. Don't forget to invite hr@startup.io as well.",
+    "output": "{\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"2026-08-01\", \"time\": \"16:00\", \"participants\": [\"j.doe@startup.io\", \"hr@startup.io\"]}}",
+    "expected_tool": "calendar_service"
+  },
+  {
+    "id": "tool_meeting_005",
+    "task_type": "tool_call_generation",
+    "schema_category": "schedule_meeting",
+    "domain": "calendar management",
+    "instruction": "Parse the user's meeting request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"YYYY-MM-DD\", \"time\": \"HH:MM\", \"participants\": [\"email1\", \"email2\"]}}",
+    "input": "Book the quarterly review on 2026-07-15 at 11:00. Invite finance@corp.net and legal@corp.net.",
+    "output": "{\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"2026-07-15\", \"time\": \"11:00\", \"participants\": [\"finance@corp.net\", \"legal@corp.net\"]}}",
+    "expected_tool": "calendar_service"
+  },
+  {
+    "id": "tool_meeting_006",
+    "task_type": "tool_call_generation",
+    "schema_category": "schedule_meeting",
+    "domain": "calendar management",
+    "instruction": "Parse the user's meeting request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"YYYY-MM-DD\", \"time\": \"HH:MM\", \"participants\": [\"email1\", \"email2\"]}}",
+    "input": "I need to talk to bob@gmail.com and alice@gmail.com. Put a meeting on the books for 13:00 on 2026-12-05.",
+    "output": "{\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"2026-12-05\", \"time\": \"13:00\", \"participants\": [\"bob@gmail.com\", \"alice@gmail.com\"]}}",
+    "expected_tool": "calendar_service"
+  },
+  {
+    "id": "tool_meeting_007",
+    "task_type": "tool_call_generation",
+    "schema_category": "schedule_meeting",
+    "domain": "calendar management",
+    "instruction": "Parse the user's meeting request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"YYYY-MM-DD\", \"time\": \"HH:MM\", \"participants\": [\"email1\", \"email2\"]}}",
+    "input": "Schedule a technical interview with candidate@yahoo.com and interviewer@tech.co for 08:30 on 2026-09-14.",
+    "output": "{\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"2026-09-14\", \"time\": \"08:30\", \"participants\": [\"candidate@yahoo.com\", \"interviewer@tech.co\"]}}",
+    "expected_tool": "calendar_service"
+  },
+  {
+    "id": "tool_meeting_008",
+    "task_type": "tool_call_generation",
+    "schema_category": "schedule_meeting",
+    "domain": "calendar management",
+    "instruction": "Parse the user's meeting request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"YYYY-MM-DD\", \"time\": \"HH:MM\", \"participants\": [\"email1\", \"email2\"]}}",
+    "input": "Let's do a sprint planning session. Block out 15:00 on 2026-10-02 for pm@agile.net and lead@agile.net.",
+    "output": "{\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"2026-10-02\", \"time\": \"15:00\", \"participants\": [\"pm@agile.net\", \"lead@agile.net\"]}}",
+    "expected_tool": "calendar_service"
+  },
+  {
+    "id": "tool_meeting_009",
+    "task_type": "tool_call_generation",
+    "schema_category": "schedule_meeting",
+    "domain": "calendar management",
+    "instruction": "Parse the user's meeting request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"YYYY-MM-DD\", \"time\": \"HH:MM\", \"participants\": [\"email1\", \"email2\"]}}",
+    "input": "Can we get marketing@store.com and sales@store.com in a room together? Book it for 2026-08-25 at 11:45.",
+    "output": "{\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"2026-08-25\", \"time\": \"11:45\", \"participants\": [\"marketing@store.com\", \"sales@store.com\"]}}",
+    "expected_tool": "calendar_service"
+  },
+  {
+    "id": "tool_meeting_010",
+    "task_type": "tool_call_generation",
+    "schema_category": "schedule_meeting",
+    "domain": "calendar management",
+    "instruction": "Parse the user's meeting request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"YYYY-MM-DD\", \"time\": \"HH:MM\", \"participants\": [\"email1\", \"email2\"]}}",
+    "input": "Create a calendar event for the merger discussion. Date is 2027-01-08, time is 17:00, invitees are ceo@company_a.com and ceo@company_b.com.",
+    "output": "{\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"2027-01-08\", \"time\": \"17:00\", \"participants\": [\"ceo@company_a.com\", \"ceo@company_b.com\"]}}",
+    "expected_tool": "calendar_service"
+  },
+  {
+    "id": "tool_meeting_011",
+    "task_type": "tool_call_generation",
+    "schema_category": "schedule_meeting",
+    "domain": "calendar management",
+    "instruction": "Parse the user's meeting request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"YYYY-MM-DD\", \"time\": \"HH:MM\", \"participants\": [\"email1\", \"email2\"]}}",
+    "input": "I need a post-mortem meeting scheduled for 2026-06-05 at 09:00. Make sure ops@system.com and devops@system.com are invited.",
+    "output": "{\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"2026-06-05\", \"time\": \"09:00\", \"participants\": [\"ops@system.com\", \"devops@system.com\"]}}",
+    "expected_tool": "calendar_service"
+  },
+  {
+    "id": "tool_meeting_012",
+    "task_type": "tool_call_generation",
+    "schema_category": "schedule_meeting",
+    "domain": "calendar management",
+    "instruction": "Parse the user's meeting request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"YYYY-MM-DD\", \"time\": \"HH:MM\", \"participants\": [\"email1\", \"email2\"]}}",
+    "input": "Set up a demo with the vendor. Use 2026-11-11 at 13:30, and invite rep@vendor.com and buyer@ourcorp.com.",
+    "output": "{\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"2026-11-11\", \"time\": \"13:30\", \"participants\": [\"rep@vendor.com\", \"buyer@ourcorp.com\"]}}",
+    "expected_tool": "calendar_service"
+  },
+  {
+    "id": "tool_meeting_013",
+    "task_type": "tool_call_generation",
+    "schema_category": "schedule_meeting",
+    "domain": "calendar management",
+    "instruction": "Parse the user's meeting request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"YYYY-MM-DD\", \"time\": \"HH:MM\", \"participants\": [\"email1\", \"email2\"]}}",
+    "input": "Let's review the PhD dissertation draft. Book an hour at 10:15 on 2026-05-20 with advisor@university.edu and student@university.edu.",
+    "output": "{\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"2026-05-20\", \"time\": \"10:15\", \"participants\": [\"advisor@university.edu\", \"student@university.edu\"]}}",
+    "expected_tool": "calendar_service"
+  },
+  {
+    "id": "tool_meeting_014",
+    "task_type": "tool_call_generation",
+    "schema_category": "schedule_meeting",
+    "domain": "calendar management",
+    "instruction": "Parse the user's meeting request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"YYYY-MM-DD\", \"time\": \"HH:MM\", \"participants\": [\"email1\", \"email2\"]}}",
+    "input": "Please schedule an HR check-in on 2026-12-18 at 14:00. The participants will be john.smith@company.com and hr.rep@company.com.",
+    "output": "{\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"2026-12-18\", \"time\": \"14:00\", \"participants\": [\"john.smith@company.com\", \"hr.rep@company.com\"]}}",
+    "expected_tool": "calendar_service"
+  }
+]

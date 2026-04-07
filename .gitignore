@@ -1,0 +1,5 @@
+/sft-lora-Phi-3.5-mini-instruct-alpaca-r32-a64-d0.05-lr1.0e-04-wd0.01/
+/sft-lora-stage2-json-r32-lr1.0e-04/
+/_pycache__/
+/wandb/
+.env

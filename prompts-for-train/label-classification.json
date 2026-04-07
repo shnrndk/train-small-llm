@@ -1,0 +1,702 @@
+[
+  {
+    "id": "class_pol_001",
+    "task_type": "exact_label_classification",
+    "schema_category": "political_stance",
+    "domain": "social media / politics",
+    "instruction": "Analyze the ideological stance of the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'LIBERAL', 'CONSERVATIVE', or 'CENTRIST'.",
+    "input": "We need massive federal investments in green energy and a wealth tax to ensure billionaires pay their fair share to fund universal healthcare.",
+    "output": "{\"label\": \"LIBERAL\"}",
+    "expected_label": "LIBERAL"
+  },
+  {
+    "id": "class_pol_002",
+    "task_type": "exact_label_classification",
+    "schema_category": "political_stance",
+    "domain": "social media / politics",
+    "instruction": "Analyze the ideological stance of the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'LIBERAL', 'CONSERVATIVE', or 'CENTRIST'.",
+    "input": "Slashing corporate regulations and lowering taxes across the board is the only proven way to stimulate job growth and protect free markets.",
+    "output": "{\"label\": \"CONSERVATIVE\"}",
+    "expected_label": "CONSERVATIVE"
+  },
+  {
+    "id": "class_pol_003",
+    "task_type": "exact_label_classification",
+    "schema_category": "political_stance",
+    "domain": "social media / politics",
+    "instruction": "Analyze the ideological stance of the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'LIBERAL', 'CONSERVATIVE', or 'CENTRIST'.",
+    "input": "While we must address climate change, we also need to balance our energy transition with economic stability and realistic budget constraints.",
+    "output": "{\"label\": \"CENTRIST\"}",
+    "expected_label": "CENTRIST"
+  },
+  {
+    "id": "class_pol_004",
+    "task_type": "exact_label_classification",
+    "schema_category": "political_stance",
+    "domain": "social media / politics",
+    "instruction": "Analyze the ideological stance of the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'LIBERAL', 'CONSERVATIVE', or 'CENTRIST'.",
+    "input": "Systemic inequalities in our justice system require immediate reform, and we must drastically redirect funding toward community-based social programs.",
+    "output": "{\"label\": \"LIBERAL\"}",
+    "expected_label": "LIBERAL"
+  },
+  {
+    "id": "class_pol_005",
+    "task_type": "exact_label_classification",
+    "schema_category": "political_stance",
+    "domain": "social media / politics",
+    "instruction": "Analyze the ideological stance of the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'LIBERAL', 'CONSERVATIVE', or 'CENTRIST'.",
+    "input": "A strong nation requires secure borders, strict enforcement of the rule of law, and a steadfast defense of our Second Amendment rights.",
+    "output": "{\"label\": \"CONSERVATIVE\"}",
+    "expected_label": "CONSERVATIVE"
+  },
+  {
+    "id": "class_pol_006",
+    "task_type": "exact_label_classification",
+    "schema_category": "political_stance",
+    "domain": "social media / politics",
+    "instruction": "Analyze the ideological stance of the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'LIBERAL', 'CONSERVATIVE', or 'CENTRIST'.",
+    "input": "Compromise is essential; we need common-sense border security coupled with a practical, bipartisan path to legal status for those already here.",
+    "output": "{\"label\": \"CENTRIST\"}",
+    "expected_label": "CENTRIST"
+  },
+  {
+    "id": "class_pol_007",
+    "task_type": "exact_label_classification",
+    "schema_category": "political_stance",
+    "domain": "social media / politics",
+    "instruction": "Analyze the ideological stance of the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'LIBERAL', 'CONSERVATIVE', or 'CENTRIST'.",
+    "input": "Universal basic income and student debt forgiveness are essential policies to create a fair and equitable economy for all.",
+    "output": "{\"label\": \"LIBERAL\"}",
+    "expected_label": "LIBERAL"
+  },
+  {
+    "id": "class_pol_008",
+    "task_type": "exact_label_classification",
+    "schema_category": "political_stance",
+    "domain": "social media / politics",
+    "instruction": "Analyze the ideological stance of the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'LIBERAL', 'CONSERVATIVE', or 'CENTRIST'.",
+    "input": "Deregulating the tech industry and lowering capital gains taxes will spur innovation and keep us competitive globally.",
+    "output": "{\"label\": \"CONSERVATIVE\"}",
+    "expected_label": "CONSERVATIVE"
+  },
+  {
+    "id": "class_pol_009",
+    "task_type": "exact_label_classification",
+    "schema_category": "political_stance",
+    "domain": "social media / politics",
+    "instruction": "Analyze the ideological stance of the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'LIBERAL', 'CONSERVATIVE', or 'CENTRIST'.",
+    "input": "We should support free trade agreements while ensuring targeted protections are in place for displaced domestic workers.",
+    "output": "{\"label\": \"CENTRIST\"}",
+    "expected_label": "CENTRIST"
+  },
+  {
+    "id": "class_pol_010",
+    "task_type": "exact_label_classification",
+    "schema_category": "political_stance",
+    "domain": "social media / politics",
+    "instruction": "Analyze the ideological stance of the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'LIBERAL', 'CONSERVATIVE', or 'CENTRIST'.",
+    "input": "Healthcare is a fundamental human right and should be provided entirely free at the point of service by the federal government.",
+    "output": "{\"label\": \"LIBERAL\"}",
+    "expected_label": "LIBERAL"
+  },
+  {
+    "id": "class_pol_011",
+    "task_type": "exact_label_classification",
+    "schema_category": "political_stance",
+    "domain": "social media / politics",
+    "instruction": "Analyze the ideological stance of the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'LIBERAL', 'CONSERVATIVE', or 'CENTRIST'.",
+    "input": "The government has no business mandating what kinds of vehicles we are allowed to buy; let the free market dictate consumer choices.",
+    "output": "{\"label\": \"CONSERVATIVE\"}",
+    "expected_label": "CONSERVATIVE"
+  },
+  {
+    "id": "class_pol_012",
+    "task_type": "exact_label_classification",
+    "schema_category": "political_stance",
+    "domain": "social media / politics",
+    "instruction": "Analyze the ideological stance of the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'LIBERAL', 'CONSERVATIVE', or 'CENTRIST'.",
+    "input": "Improving our national infrastructure is a bipartisan issue that requires sensible spending from both sides of the aisle.",
+    "output": "{\"label\": \"CENTRIST\"}",
+    "expected_label": "CENTRIST"
+  },
+  {
+    "id": "class_pol_013",
+    "task_type": "exact_label_classification",
+    "schema_category": "political_stance",
+    "domain": "social media / politics",
+    "instruction": "Analyze the ideological stance of the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'LIBERAL', 'CONSERVATIVE', or 'CENTRIST'.",
+    "input": "Overreaching environmental regulations are actively destroying jobs in the energy sector and need to be rolled back immediately.",
+    "output": "{\"label\": \"CONSERVATIVE\"}",
+    "expected_label": "CONSERVATIVE"
+  },
+  {
+    "id": "class_pol_014",
+    "task_type": "exact_label_classification",
+    "schema_category": "political_stance",
+    "domain": "social media / politics",
+    "instruction": "Analyze the ideological stance of the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'LIBERAL', 'CONSERVATIVE', or 'CENTRIST'.",
+    "input": "Rent control and mandatory affordable housing quotas are the only ethical ways to fix the systemic housing crisis in our cities.",
+    "output": "{\"label\": \"LIBERAL\"}",
+    "expected_label": "LIBERAL"
+  },
+  {
+    "id": "class_claim_001",
+    "task_type": "exact_label_classification",
+    "schema_category": "claim_type",
+    "domain": "general statements",
+    "instruction": "Classify the type of statement provided in the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'FACTUAL_CLAIM', 'SUBJECTIVE_OPINION', or 'SPECULATION'.",
+    "input": "The boiling point of water at standard atmospheric pressure is 100 degrees Celsius.",
+    "output": "{\"label\": \"FACTUAL_CLAIM\"}",
+    "expected_label": "FACTUAL_CLAIM"
+  },
+  {
+    "id": "class_claim_002",
+    "task_type": "exact_label_classification",
+    "schema_category": "claim_type",
+    "domain": "general statements",
+    "instruction": "Classify the type of statement provided in the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'FACTUAL_CLAIM', 'SUBJECTIVE_OPINION', or 'SPECULATION'.",
+    "input": "The original Star Wars trilogy is vastly superior to any of the modern prequels or sequels.",
+    "output": "{\"label\": \"SUBJECTIVE_OPINION\"}",
+    "expected_label": "SUBJECTIVE_OPINION"
+  },
+  {
+    "id": "class_claim_003",
+    "task_type": "exact_label_classification",
+    "schema_category": "claim_type",
+    "domain": "general statements",
+    "instruction": "Classify the type of statement provided in the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'FACTUAL_CLAIM', 'SUBJECTIVE_OPINION', or 'SPECULATION'.",
+    "input": "By the year 2045, human consciousness will likely be fully uploadable to cloud-based neural networks.",
+    "output": "{\"label\": \"SPECULATION\"}",
+    "expected_label": "SPECULATION"
+  },
+  {
+    "id": "class_claim_004",
+    "task_type": "exact_label_classification",
+    "schema_category": "claim_type",
+    "domain": "general statements",
+    "instruction": "Classify the type of statement provided in the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'FACTUAL_CLAIM', 'SUBJECTIVE_OPINION', or 'SPECULATION'.",
+    "input": "During the 2020 fiscal year, the company reported a net revenue increase of 14.5% compared to the previous year.",
+    "output": "{\"label\": \"FACTUAL_CLAIM\"}",
+    "expected_label": "FACTUAL_CLAIM"
+  },
+  {
+    "id": "class_claim_005",
+    "task_type": "exact_label_classification",
+    "schema_category": "claim_type",
+    "domain": "general statements",
+    "instruction": "Classify the type of statement provided in the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'FACTUAL_CLAIM', 'SUBJECTIVE_OPINION', or 'SPECULATION'.",
+    "input": "Working from home is just fundamentally better and more relaxing than commuting to an office every day.",
+    "output": "{\"label\": \"SUBJECTIVE_OPINION\"}",
+    "expected_label": "SUBJECTIVE_OPINION"
+  },
+  {
+    "id": "class_claim_006",
+    "task_type": "exact_label_classification",
+    "schema_category": "claim_type",
+    "domain": "general statements",
+    "instruction": "Classify the type of statement provided in the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'FACTUAL_CLAIM', 'SUBJECTIVE_OPINION', or 'SPECULATION'.",
+    "input": "If the current inflation trends continue, the housing market will almost certainly crash before the end of the next quarter.",
+    "output": "{\"label\": \"SPECULATION\"}",
+    "expected_label": "SPECULATION"
+  },
+  {
+    "id": "class_claim_007",
+    "task_type": "exact_label_classification",
+    "schema_category": "claim_type",
+    "domain": "computer vision theory",
+    "instruction": "Classify the type of statement provided in the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'FACTUAL_CLAIM', 'SUBJECTIVE_OPINION', or 'SPECULATION'.",
+    "input": "Epipolar geometry defines the fundamental geometric relationship between two 3D camera views of the exact same scene.",
+    "output": "{\"label\": \"FACTUAL_CLAIM\"}",
+    "expected_label": "FACTUAL_CLAIM"
+  },
+  {
+    "id": "class_claim_008",
+    "task_type": "exact_label_classification",
+    "schema_category": "claim_type",
+    "domain": "hardware review",
+    "instruction": "Classify the type of statement provided in the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'FACTUAL_CLAIM', 'SUBJECTIVE_OPINION', or 'SPECULATION'.",
+    "input": "The MacBook Pro equipped with the M4 Pro chip is the absolute best machine for running local LLM inference right now.",
+    "output": "{\"label\": \"SUBJECTIVE_OPINION\"}",
+    "expected_label": "SUBJECTIVE_OPINION"
+  },
+  {
+    "id": "class_claim_009",
+    "task_type": "exact_label_classification",
+    "schema_category": "claim_type",
+    "domain": "cryptocurrency prediction",
+    "instruction": "Classify the type of statement provided in the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'FACTUAL_CLAIM', 'SUBJECTIVE_OPINION', or 'SPECULATION'.",
+    "input": "Bitcoin will likely hit $150,000 by the end of next year if current institutional adoption and ETF inflows continue.",
+    "output": "{\"label\": \"SPECULATION\"}",
+    "expected_label": "SPECULATION"
+  },
+  {
+    "id": "class_claim_010",
+    "task_type": "exact_label_classification",
+    "schema_category": "claim_type",
+    "domain": "machine learning architectures",
+    "instruction": "Classify the type of statement provided in the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'FACTUAL_CLAIM', 'SUBJECTIVE_OPINION', or 'SPECULATION'.",
+    "input": "Large Language Models utilize self-attention mechanisms to weigh the importance of different tokens in an input sequence.",
+    "output": "{\"label\": \"FACTUAL_CLAIM\"}",
+    "expected_label": "FACTUAL_CLAIM"
+  },
+  {
+    "id": "class_claim_011",
+    "task_type": "exact_label_classification",
+    "schema_category": "claim_type",
+    "domain": "food critique",
+    "instruction": "Classify the type of statement provided in the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'FACTUAL_CLAIM', 'SUBJECTIVE_OPINION', or 'SPECULATION'.",
+    "input": "Whataburger's Patty Melt is way more flavorful than anything you can possibly get at In-N-Out or McDonald's.",
+    "output": "{\"label\": \"SUBJECTIVE_OPINION\"}",
+    "expected_label": "SUBJECTIVE_OPINION"
+  },
+  {
+    "id": "class_claim_012",
+    "task_type": "exact_label_classification",
+    "schema_category": "claim_type",
+    "domain": "technology forecasting",
+    "instruction": "Classify the type of statement provided in the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'FACTUAL_CLAIM', 'SUBJECTIVE_OPINION', or 'SPECULATION'.",
+    "input": "Fully automated test generation for AR applications will likely replace all manual QA processes within the next five years.",
+    "output": "{\"label\": \"SPECULATION\"}",
+    "expected_label": "SPECULATION"
+  },
+  {
+    "id": "class_claim_013",
+    "task_type": "exact_label_classification",
+    "schema_category": "claim_type",
+    "domain": "software documentation",
+    "instruction": "Classify the type of statement provided in the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'FACTUAL_CLAIM', 'SUBJECTIVE_OPINION', or 'SPECULATION'.",
+    "input": "WSO2 Micro Integrator is an open-source integration framework designed to connect APIs, cloud services, and data stores.",
+    "output": "{\"label\": \"FACTUAL_CLAIM\"}",
+    "expected_label": "FACTUAL_CLAIM"
+  },
+  {
+    "id": "class_claim_014",
+    "task_type": "exact_label_classification",
+    "schema_category": "claim_type",
+    "domain": "game development",
+    "instruction": "Classify the type of statement provided in the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'FACTUAL_CLAIM', 'SUBJECTIVE_OPINION', or 'SPECULATION'.",
+    "input": "Developing games in the Godot engine is a much more enjoyable and intuitive experience than wrestling with Unity's interface.",
+    "output": "{\"label\": \"SUBJECTIVE_OPINION\"}",
+    "expected_label": "SUBJECTIVE_OPINION"
+  },
+  {
+    "id": "class_support_001",
+    "task_type": "exact_label_classification",
+    "schema_category": "support_routing",
+    "domain": "customer service",
+    "instruction": "Determine the primary intent of the customer's message. Return ONLY a JSON object with the key 'label' and a value of exactly 'BILLING', 'TECHNICAL_SUPPORT', 'SALES', or 'CANCELLATION'.",
+    "input": "Why was my credit card charged $49.99 yesterday? I thought I was still on the 30-day free trial!",
+    "output": "{\"label\": \"BILLING\"}",
+    "expected_label": "BILLING"
+  },
+  {
+    "id": "class_support_002",
+    "task_type": "exact_label_classification",
+    "schema_category": "support_routing",
+    "domain": "customer service",
+    "instruction": "Determine the primary intent of the customer's message. Return ONLY a JSON object with the key 'label' and a value of exactly 'BILLING', 'TECHNICAL_SUPPORT', 'SALES', or 'CANCELLATION'.",
+    "input": "Every time I try to export the report to PDF, the app freezes and I have to force quit. I'm using Windows 11.",
+    "output": "{\"label\": \"TECHNICAL_SUPPORT\"}",
+    "expected_label": "TECHNICAL_SUPPORT"
+  },
+  {
+    "id": "class_support_003",
+    "task_type": "exact_label_classification",
+    "schema_category": "support_routing",
+    "domain": "customer service",
+    "instruction": "Determine the primary intent of the customer's message. Return ONLY a JSON object with the key 'label' and a value of exactly 'BILLING', 'TECHNICAL_SUPPORT', 'SALES', or 'CANCELLATION'.",
+    "input": "Do you guys offer bulk discounts if I purchase 50 enterprise licenses for my team?",
+    "output": "{\"label\": \"SALES\"}",
+    "expected_label": "SALES"
+  },
+  {
+    "id": "class_support_004",
+    "task_type": "exact_label_classification",
+    "schema_category": "support_routing",
+    "domain": "customer service",
+    "instruction": "Determine the primary intent of the customer's message. Return ONLY a JSON object with the key 'label' and a value of exactly 'BILLING', 'TECHNICAL_SUPPORT', 'SALES', or 'CANCELLATION'.",
+    "input": "I'm not using the service enough to justify the cost anymore, please close my account and stop renewing my subscription.",
+    "output": "{\"label\": \"CANCELLATION\"}",
+    "expected_label": "CANCELLATION"
+  },
+  {
+    "id": "class_support_005",
+    "task_type": "exact_label_classification",
+    "schema_category": "support_routing",
+    "domain": "customer service",
+    "instruction": "Determine the primary intent of the customer's message. Return ONLY a JSON object with the key 'label' and a value of exactly 'BILLING', 'TECHNICAL_SUPPORT', 'SALES', or 'CANCELLATION'.",
+    "input": "My router keeps dropping the 5GHz connection but the 2.4GHz one works fine. I've already tried rebooting it twice.",
+    "output": "{\"label\": \"TECHNICAL_SUPPORT\"}",
+    "expected_label": "TECHNICAL_SUPPORT"
+  },
+  {
+    "id": "class_support_006",
+    "task_type": "exact_label_classification",
+    "schema_category": "support_routing",
+    "domain": "customer service",
+    "instruction": "Determine the primary intent of the customer's message. Return ONLY a JSON object with the key 'label' and a value of exactly 'BILLING', 'TECHNICAL_SUPPORT', 'SALES', or 'CANCELLATION'.",
+    "input": "I need to update the payment method on file because my old Visa expired last month. Where do I go to do that?",
+    "output": "{\"label\": \"BILLING\"}",
+    "expected_label": "BILLING"
+  },
+  {
+    "id": "class_support_007",
+    "task_type": "exact_label_classification",
+    "schema_category": "support_routing",
+    "domain": "hardware support",
+    "instruction": "Determine the primary intent of the customer's message. Return ONLY a JSON object with the key 'label' and a value of exactly 'BILLING', 'TECHNICAL_SUPPORT', 'SALES', or 'CANCELLATION'.",
+    "input": "My MSI monitor keeps flickering intermittently when I connect it to my MacBook via HDMI. How do I start the RMA process?",
+    "output": "{\"label\": \"TECHNICAL_SUPPORT\"}",
+    "expected_label": "TECHNICAL_SUPPORT"
+  },
+  {
+    "id": "class_support_008",
+    "task_type": "exact_label_classification",
+    "schema_category": "support_routing",
+    "domain": "e-commerce support",
+    "instruction": "Determine the primary intent of the customer's message. Return ONLY a JSON object with the key 'label' and a value of exactly 'BILLING', 'TECHNICAL_SUPPORT', 'SALES', or 'CANCELLATION'.",
+    "input": "I used Klarna to pay for my Best Buy order, but the installment amount charged to my bank this month is incorrect.",
+    "output": "{\"label\": \"BILLING\"}",
+    "expected_label": "BILLING"
+  },
+  {
+    "id": "class_support_009",
+    "task_type": "exact_label_classification",
+    "schema_category": "support_routing",
+    "domain": "property management",
+    "instruction": "Determine the primary intent of the customer's message. Return ONLY a JSON object with the key 'label' and a value of exactly 'BILLING', 'TECHNICAL_SUPPORT', 'SALES', or 'CANCELLATION'.",
+    "input": "I want to end my lease at Rio Springs Apartments early since I am relocating. What is the process to terminate the contract?",
+    "output": "{\"label\": \"CANCELLATION\"}",
+    "expected_label": "CANCELLATION"
+  },
+  {
+    "id": "class_support_010",
+    "task_type": "exact_label_classification",
+    "schema_category": "support_routing",
+    "domain": "mobile carrier",
+    "instruction": "Determine the primary intent of the customer's message. Return ONLY a JSON object with the key 'label' and a value of exactly 'BILLING', 'TECHNICAL_SUPPORT', 'SALES', or 'CANCELLATION'.",
+    "input": "Does the new Samsung Galaxy S25 Ultra come with any bundle deals if I trade in my older Pixel phone today?",
+    "output": "{\"label\": \"SALES\"}",
+    "expected_label": "SALES"
+  },
+  {
+    "id": "class_support_011",
+    "task_type": "exact_label_classification",
+    "schema_category": "support_routing",
+    "domain": "enterprise software",
+    "instruction": "Determine the primary intent of the customer's message. Return ONLY a JSON object with the key 'label' and a value of exactly 'BILLING', 'TECHNICAL_SUPPORT', 'SALES', or 'CANCELLATION'.",
+    "input": "The WSO2 API Manager keeps throwing a 502 Bad Gateway error whenever I try to publish my new REST API to the gateway.",
+    "output": "{\"label\": \"TECHNICAL_SUPPORT\"}",
+    "expected_label": "TECHNICAL_SUPPORT"
+  },
+  {
+    "id": "class_support_012",
+    "task_type": "exact_label_classification",
+    "schema_category": "support_routing",
+    "domain": "streaming service",
+    "instruction": "Determine the primary intent of the customer's message. Return ONLY a JSON object with the key 'label' and a value of exactly 'BILLING', 'TECHNICAL_SUPPORT', 'SALES', or 'CANCELLATION'.",
+    "input": "Please stop renewing my Hulu subscription immediately. I barely have time to watch anything on there anymore.",
+    "output": "{\"label\": \"CANCELLATION\"}",
+    "expected_label": "CANCELLATION"
+  },
+  {
+    "id": "class_support_013",
+    "task_type": "exact_label_classification",
+    "schema_category": "support_routing",
+    "domain": "cloud infrastructure",
+    "instruction": "Determine the primary intent of the customer's message. Return ONLY a JSON object with the key 'label' and a value of exactly 'BILLING', 'TECHNICAL_SUPPORT', 'SALES', or 'CANCELLATION'.",
+    "input": "How much would it cost to upgrade my current HPC storage allocation from the standard tier to the 5TB enterprise tier?",
+    "output": "{\"label\": \"SALES\"}",
+    "expected_label": "SALES"
+  },
+  {
+    "id": "class_support_014",
+    "task_type": "exact_label_classification",
+    "schema_category": "support_routing",
+    "domain": "financial services",
+    "instruction": "Determine the primary intent of the customer's message. Return ONLY a JSON object with the key 'label' and a value of exactly 'BILLING', 'TECHNICAL_SUPPORT', 'SALES', or 'CANCELLATION'.",
+    "input": "My Robinhood account shows a margin call fee deduction, but I only traded cash-secured ETFs like QQQM.",
+    "output": "{\"label\": \"BILLING\"}",
+    "expected_label": "BILLING"
+  },
+  {
+    "id": "class_triage_001",
+    "task_type": "exact_label_classification",
+    "schema_category": "urgency_triage",
+    "domain": "IT / operations",
+    "instruction": "Assess the severity of the reported issue. Return ONLY a JSON object with the key 'label' and a value of exactly 'LOW', 'MEDIUM', 'HIGH', or 'CRITICAL'.",
+    "input": "URGENT: The main production database just went offline and all customers are getting 500 errors. We are losing thousands of dollars a minute!",
+    "output": "{\"label\": \"CRITICAL\"}",
+    "expected_label": "CRITICAL"
+  },
+  {
+    "id": "class_triage_002",
+    "task_type": "exact_label_classification",
+    "schema_category": "urgency_triage",
+    "domain": "IT / operations",
+    "instruction": "Assess the severity of the reported issue. Return ONLY a JSON object with the key 'label' and a value of exactly 'LOW', 'MEDIUM', 'HIGH', or 'CRITICAL'.",
+    "input": "The payment gateway is intermittently failing for about 20% of users checking out. Needs investigation ASAP before peak hours.",
+    "output": "{\"label\": \"HIGH\"}",
+    "expected_label": "HIGH"
+  },
+  {
+    "id": "class_triage_003",
+    "task_type": "exact_label_classification",
+    "schema_category": "urgency_triage",
+    "domain": "IT / operations",
+    "instruction": "Assess the severity of the reported issue. Return ONLY a JSON object with the key 'label' and a value of exactly 'LOW', 'MEDIUM', 'HIGH', or 'CRITICAL'.",
+    "input": "One of the images on the 'About Us' page is loading really slowly and dragging down the Lighthouse score. Let's optimize it this sprint.",
+    "output": "{\"label\": \"MEDIUM\"}",
+    "expected_label": "MEDIUM"
+  },
+  {
+    "id": "class_triage_004",
+    "task_type": "exact_label_classification",
+    "schema_category": "urgency_triage",
+    "domain": "IT / operations",
+    "instruction": "Assess the severity of the reported issue. Return ONLY a JSON object with the key 'label' and a value of exactly 'LOW', 'MEDIUM', 'HIGH', or 'CRITICAL'.",
+    "input": "Hey, I noticed a tiny typo in the footer of the blog. It says 'Copyrigth' instead of 'Copyright'. No rush, just a heads up.",
+    "output": "{\"label\": \"LOW\"}",
+    "expected_label": "LOW"
+  },
+  {
+    "id": "class_triage_005",
+    "task_type": "exact_label_classification",
+    "schema_category": "urgency_triage",
+    "domain": "IT / operations",
+    "instruction": "Assess the severity of the reported issue. Return ONLY a JSON object with the key 'label' and a value of exactly 'LOW', 'MEDIUM', 'HIGH', or 'CRITICAL'.",
+    "input": "The primary load balancer is completely unresponsive. All traffic to the European servers is currently blackholing.",
+    "output": "{\"label\": \"CRITICAL\"}",
+    "expected_label": "CRITICAL"
+  },
+  {
+    "id": "class_triage_006",
+    "task_type": "exact_label_classification",
+    "schema_category": "urgency_triage",
+    "domain": "IT / operations",
+    "instruction": "Assess the severity of the reported issue. Return ONLY a JSON object with the key 'label' and a value of exactly 'LOW', 'MEDIUM', 'HIGH', or 'CRITICAL'.",
+    "input": "The office printer on the 3rd floor is out of magenta toner again. Can someone from IT restock it when they have a moment?",
+    "output": "{\"label\": \"LOW\"}",
+    "expected_label": "LOW"
+  },
+  {
+    "id": "class_triage_007",
+    "task_type": "exact_label_classification",
+    "schema_category": "urgency_triage",
+    "domain": "CI/CD pipelines",
+    "instruction": "Assess the severity of the reported issue. Return ONLY a JSON object with the key 'label' and a value of exactly 'LOW', 'MEDIUM', 'HIGH', or 'CRITICAL'.",
+    "input": "The Jenkins build pipeline for carbon-apimgt has been failing for the last hour, blocking all developers from merging their pull requests.",
+    "output": "{\"label\": \"HIGH\"}",
+    "expected_label": "HIGH"
+  },
+  {
+    "id": "class_triage_008",
+    "task_type": "exact_label_classification",
+    "schema_category": "urgency_triage",
+    "domain": "university website",
+    "instruction": "Assess the severity of the reported issue. Return ONLY a JSON object with the key 'label' and a value of exactly 'LOW', 'MEDIUM', 'HIGH', or 'CRITICAL'.",
+    "input": "There's a slight misalignment in the CSS padding on the UTSA Computer Science department's faculty directory page.",
+    "output": "{\"label\": \"LOW\"}",
+    "expected_label": "LOW"
+  },
+  {
+    "id": "class_triage_009",
+    "task_type": "exact_label_classification",
+    "schema_category": "urgency_triage",
+    "domain": "algorithmic trading",
+    "instruction": "Assess the severity of the reported issue. Return ONLY a JSON object with the key 'label' and a value of exactly 'LOW', 'MEDIUM', 'HIGH', or 'CRITICAL'.",
+    "input": "The production trading bot just erroneously executed 500 rapid limit orders for PEPE coin, rapidly draining our API account balance!",
+    "output": "{\"label\": \"CRITICAL\"}",
+    "expected_label": "CRITICAL"
+  },
+  {
+    "id": "class_triage_010",
+    "task_type": "exact_label_classification",
+    "schema_category": "urgency_triage",
+    "domain": "hpc job monitoring",
+    "instruction": "Assess the severity of the reported issue. Return ONLY a JSON object with the key 'label' and a value of exactly 'LOW', 'MEDIUM', 'HIGH', or 'CRITICAL'.",
+    "input": "Our Alpaca QLoRA fine-tuning script on the HPC is running about 20% slower than expected. Let's profile the GPU utilization later today.",
+    "output": "{\"label\": \"MEDIUM\"}",
+    "expected_label": "MEDIUM"
+  },
+  {
+    "id": "class_triage_011",
+    "task_type": "exact_label_classification",
+    "schema_category": "urgency_triage",
+    "domain": "IAM services",
+    "instruction": "Assess the severity of the reported issue. Return ONLY a JSON object with the key 'label' and a value of exactly 'LOW', 'MEDIUM', 'HIGH', or 'CRITICAL'.",
+    "input": "Authentication via SSO is currently failing for all admin users trying to access the WSO2 management console.",
+    "output": "{\"label\": \"HIGH\"}",
+    "expected_label": "HIGH"
+  },
+  {
+    "id": "class_triage_012",
+    "task_type": "exact_label_classification",
+    "schema_category": "urgency_triage",
+    "domain": "repo documentation",
+    "instruction": "Assess the severity of the reported issue. Return ONLY a JSON object with the key 'label' and a value of exactly 'LOW', 'MEDIUM', 'HIGH', or 'CRITICAL'.",
+    "input": "We should probably update the README.md in our Godot VR test project repository to include the new dependency setup instructions.",
+    "output": "{\"label\": \"LOW\"}",
+    "expected_label": "LOW"
+  },
+  {
+    "id": "class_triage_013",
+    "task_type": "exact_label_classification",
+    "schema_category": "urgency_triage",
+    "domain": "data center power",
+    "instruction": "Assess the severity of the reported issue. Return ONLY a JSON object with the key 'label' and a value of exactly 'LOW', 'MEDIUM', 'HIGH', or 'CRITICAL'.",
+    "input": "All primary database clusters in the San Antonio data center just lost power, and the failover instances are completely unresponsive.",
+    "output": "{\"label\": \"CRITICAL\"}",
+    "expected_label": "CRITICAL"
+  },
+  {
+    "id": "class_triage_014",
+    "task_type": "exact_label_classification",
+    "schema_category": "urgency_triage",
+    "domain": "unit testing",
+    "instruction": "Assess the severity of the reported issue. Return ONLY a JSON object with the key 'label' and a value of exactly 'LOW', 'MEDIUM', 'HIGH', or 'CRITICAL'.",
+    "input": "The automated unit tests for the LLM evaluation module are intermittently failing due to API timeouts from the inference server.",
+    "output": "{\"label\": \"MEDIUM\"}",
+    "expected_label": "MEDIUM"
+  },
+  {
+    "id": "class_safety_001",
+    "task_type": "exact_label_classification",
+    "schema_category": "content_moderation",
+    "domain": "community / email",
+    "instruction": "Classify the safety risk of the provided text. Return ONLY a JSON object with the key 'label' and a value of exactly 'SAFE', 'SPAM', 'TOXIC', or 'PHISHING'.",
+    "input": "SECURITY ALERT: Your account has been temporarily locked due to suspicious activity. Click here [link] within 24 hours to verify your credentials.",
+    "output": "{\"label\": \"PHISHING\"}",
+    "expected_label": "PHISHING"
+  },
+  {
+    "id": "class_safety_002",
+    "task_type": "exact_label_classification",
+    "schema_category": "content_moderation",
+    "domain": "community / email",
+    "instruction": "Classify the safety risk of the provided text. Return ONLY a JSON object with the key 'label' and a value of exactly 'SAFE', 'SPAM', 'TOXIC', or 'PHISHING'.",
+    "input": "You are an absolute moron and everyone in this thread knows it. Go jump off a bridge, you pathetic loser.",
+    "output": "{\"label\": \"TOXIC\"}",
+    "expected_label": "TOXIC"
+  },
+  {
+    "id": "class_safety_003",
+    "task_type": "exact_label_classification",
+    "schema_category": "content_moderation",
+    "domain": "community / email",
+    "instruction": "Classify the safety risk of the provided text. Return ONLY a JSON object with the key 'label' and a value of exactly 'SAFE', 'SPAM', 'TOXIC', or 'PHISHING'.",
+    "input": "Make $5000 a week working from home!!! 🤑🤑 No experience needed! Just DM me 'READY' and buy my crypto course today! 🚀🚀",
+    "output": "{\"label\": \"SPAM\"}",
+    "expected_label": "SPAM"
+  },
+  {
+    "id": "class_safety_004",
+    "task_type": "exact_label_classification",
+    "schema_category": "content_moderation",
+    "domain": "community / email",
+    "instruction": "Classify the safety risk of the provided text. Return ONLY a JSON object with the key 'label' and a value of exactly 'SAFE', 'SPAM', 'TOXIC', or 'PHISHING'.",
+    "input": "I totally agree with your points about the new movie. The cinematography was beautiful, though the pacing felt a bit slow in the second act.",
+    "output": "{\"label\": \"SAFE\"}",
+    "expected_label": "SAFE"
+  },
+  {
+    "id": "class_safety_005",
+    "task_type": "exact_label_classification",
+    "schema_category": "content_moderation",
+    "domain": "community / email",
+    "instruction": "Classify the safety risk of the provided text. Return ONLY a JSON object with the key 'label' and a value of exactly 'SAFE', 'SPAM', 'TOXIC', or 'PHISHING'.",
+    "input": "Hello, this is HR. Please review the attached 'Updated_Salary_Guidelines_2024.exe' document and log in with your company email to acknowledge receipt.",
+    "output": "{\"label\": \"PHISHING\"}",
+    "expected_label": "PHISHING"
+  },
+  {
+    "id": "class_safety_006",
+    "task_type": "exact_label_classification",
+    "schema_category": "content_moderation",
+    "domain": "community / email",
+    "instruction": "Classify the safety risk of the provided text. Return ONLY a JSON object with the key 'label' and a value of exactly 'SAFE', 'SPAM', 'TOXIC', or 'PHISHING'.",
+    "input": "People from your country are basically subhuman trash and shouldn't be allowed to speak on the internet. Get out of here.",
+    "output": "{\"label\": \"TOXIC\"}",
+    "expected_label": "TOXIC"
+  },
+  {
+    "id": "class_safety_007",
+    "task_type": "exact_label_classification",
+    "schema_category": "content_moderation",
+    "domain": "e-commerce email",
+    "instruction": "Classify the safety risk of the provided text. Return ONLY a JSON object with the key 'label' and a value of exactly 'SAFE', 'SPAM', 'TOXIC', or 'PHISHING'.",
+    "input": "Verify your Amazon account immediately by downloading the attached invoice.zip file or your recent order will be permanently cancelled.",
+    "output": "{\"label\": \"PHISHING\"}",
+    "expected_label": "PHISHING"
+  },
+  {
+    "id": "class_safety_008",
+    "task_type": "exact_label_classification",
+    "schema_category": "content_moderation",
+    "domain": "developer forums",
+    "instruction": "Classify the safety risk of the provided text. Return ONLY a JSON object with the key 'label' and a value of exactly 'SAFE', 'SPAM', 'TOXIC', or 'PHISHING'.",
+    "input": "Anyone who uses Python for backend development is a complete idiot and should quit coding forever.",
+    "output": "{\"label\": \"TOXIC\"}",
+    "expected_label": "TOXIC"
+  },
+  {
+    "id": "class_safety_009",
+    "task_type": "exact_label_classification",
+    "schema_category": "content_moderation",
+    "domain": "crypto telegram",
+    "instruction": "Classify the safety risk of the provided text. Return ONLY a JSON object with the key 'label' and a value of exactly 'SAFE', 'SPAM', 'TOXIC', or 'PHISHING'.",
+    "input": "🔥 GUARANTEED 1000x RETURNS! Buy $BONK and $SHIB right now before the massive airdrop!! Join the VIP group! 🔥",
+    "output": "{\"label\": \"SPAM\"}",
+    "expected_label": "SPAM"
+  },
+  {
+    "id": "class_safety_010",
+    "task_type": "exact_label_classification",
+    "schema_category": "content_moderation",
+    "domain": "academic collaboration",
+    "instruction": "Classify the safety risk of the provided text. Return ONLY a JSON object with the key 'label' and a value of exactly 'SAFE', 'SPAM', 'TOXIC', or 'PHISHING'.",
+    "input": "The ASE conference deadline is coming up in March, so let's make sure the paper draft is fully reviewed by Friday.",
+    "output": "{\"label\": \"SAFE\"}",
+    "expected_label": "SAFE"
+  },
+  {
+    "id": "class_safety_011",
+    "task_type": "exact_label_classification",
+    "schema_category": "content_moderation",
+    "domain": "university phishing",
+    "instruction": "Classify the safety risk of the provided text. Return ONLY a JSON object with the key 'label' and a value of exactly 'SAFE', 'SPAM', 'TOXIC', or 'PHISHING'.",
+    "input": "Important message from UTSA IT: Your webmail quota is exceeded. Click the link below and enter your credentials to upgrade your storage.",
+    "output": "{\"label\": \"PHISHING\"}",
+    "expected_label": "PHISHING"
+  },
+  {
+    "id": "class_safety_012",
+    "task_type": "exact_label_classification",
+    "schema_category": "content_moderation",
+    "domain": "academic forum toxicity",
+    "instruction": "Classify the safety risk of the provided text. Return ONLY a JSON object with the key 'label' and a value of exactly 'SAFE', 'SPAM', 'TOXIC', or 'PHISHING'.",
+    "input": "I hope your entire lab gets shut down. Your research methodology is garbage and you are an absolute fraud.",
+    "output": "{\"label\": \"TOXIC\"}",
+    "expected_label": "TOXIC"
+  },
+  {
+    "id": "class_safety_013",
+    "task_type": "exact_label_classification",
+    "schema_category": "content_moderation",
+    "domain": "student forums",
+    "instruction": "Classify the safety risk of the provided text. Return ONLY a JSON object with the key 'label' and a value of exactly 'SAFE', 'SPAM', 'TOXIC', or 'PHISHING'.",
+    "input": "Need cheap textbooks for your PhD? Get 90% off all Engineering books at this totally legit unregulated proxy site! Click here!",
+    "output": "{\"label\": \"SPAM\"}",
+    "expected_label": "SPAM"
+  },
+  {
+    "id": "class_safety_014",
+    "task_type": "exact_label_classification",
+    "schema_category": "content_moderation",
+    "domain": "personal messaging",
+    "instruction": "Classify the safety risk of the provided text. Return ONLY a JSON object with the key 'label' and a value of exactly 'SAFE', 'SPAM', 'TOXIC', or 'PHISHING'.",
+    "input": "Hey, I just booked our tickets to visit The Alamo in San Antonio for next Saturday. Should be a fun trip!",
+    "output": "{\"label\": \"SAFE\"}",
+    "expected_label": "SAFE"
+  }
+]

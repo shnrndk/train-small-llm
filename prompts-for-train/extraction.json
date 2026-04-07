@@ -1,0 +1,1285 @@
+[
+  {
+    "id": "flat_001",
+    "task_type": "json_extraction",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "e-commerce / product",
+    "instruction": "Extract the product details from the text below into a JSON object with exactly these keys: \"product_name\", \"brand\", \"price_usd\", \"color\", \"material\", \"weight_kg\". Use the exact key names provided.",
+    "input": "Introducing the CloudStep Runner by NovaSport \u2014 a premium athletic shoe crafted from recycled mesh fabric. Available in Midnight Blue, it weighs just 0.34 kg and is priced at $129.99.",
+    "output": "",
+    "expected_keys": [
+      "product_name",
+      "brand",
+      "price_usd",
+      "color",
+      "material",
+      "weight_kg"
+    ]
+  },
+  {
+    "id": "flat_002",
+    "task_type": "json_extraction",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "news / person profile",
+    "instruction": "Extract the biographical details of the person mentioned in the text into a JSON object with keys: \"full_name\", \"age\", \"nationality\", \"occupation\", \"organization\".",
+    "input": "Dr. Amara Osei, a 41-year-old Ghanaian epidemiologist currently serving as the Director of Infectious Disease Research at the African Health Institute, presented her findings at the Geneva summit on Monday.",
+    "output": "",
+    "expected_keys": [
+      "full_name",
+      "age",
+      "nationality",
+      "occupation",
+      "organization"
+    ]
+  },
+  {
+    "id": "flat_003",
+    "task_type": "json_extraction",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "real estate",
+    "instruction": "Extract the property listing details from the description into a JSON object with keys: \"address\", \"price_usd\", \"bedrooms\", \"bathrooms\", \"area_sqft\", \"property_type\", \"year_built\".",
+    "input": "For sale: a charming 3-bedroom, 2-bathroom single-family home at 482 Elmwood Drive, Portland, OR. Built in 1998, this 1,740 sq ft property is listed at $465,000.",
+    "output": "",
+    "expected_keys": [
+      "address",
+      "price_usd",
+      "bedrooms",
+      "bathrooms",
+      "area_sqft",
+      "property_type",
+      "year_built"
+    ]
+  },
+  {
+    "id": "flat_004",
+    "task_type": "json_extraction",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "aviation / travel",
+    "instruction": "Extract the flight information from the text into a JSON object with keys: \"flight_number\", \"airline\", \"origin\", \"destination\", \"departure_time\", \"arrival_time\", \"status\".",
+    "input": "Flight AA2047 operated by American Airlines departs from Dallas/Fort Worth International at 08:15 and is scheduled to arrive at John F. Kennedy International at 13:42. The flight is currently listed as on time.",
+    "output": "",
+    "expected_keys": [
+      "flight_number",
+      "airline",
+      "origin",
+      "destination",
+      "departure_time",
+      "arrival_time",
+      "status"
+    ]
+  },
+  {
+    "id": "flat_005",
+    "task_type": "json_extraction",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "HR / job posting",
+    "instruction": "Extract the job posting details from the text into a JSON object with keys: \"job_title\", \"company\", \"location\", \"employment_type\", \"salary_range\", \"required_experience_years\", \"remote_eligible\".",
+    "input": "Meridian Analytics is hiring a Senior Data Engineer based in Austin, TX. This is a full-time role with a salary range of $130,000\u2013$155,000 per year. Candidates must have at least 5 years of relevant experience. Hybrid remote work is available.",
+    "output": "",
+    "expected_keys": [
+      "job_title",
+      "company",
+      "location",
+      "employment_type",
+      "salary_range",
+      "required_experience_years",
+      "remote_eligible"
+    ]
+  },
+  {
+    "id": "flat_006",
+    "task_type": "json_extraction",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "academic / research paper",
+    "instruction": "Extract the metadata of the research paper described in the text into a JSON object with keys: \"title\", \"lead_author\", \"year\", \"journal\", \"doi\", \"field\".",
+    "input": "A 2023 study titled 'Transformer Efficiency in Low-Resource Settings' was published in the Journal of Machine Learning Research by lead author Priya Subramaniam. The paper can be found under DOI 10.5555/jmlr.2023.0047 and falls within the field of natural language processing.",
+    "output": "",
+    "expected_keys": [
+      "title",
+      "lead_author",
+      "year",
+      "journal",
+      "doi",
+      "field"
+    ]
+  },
+  {
+    "id": "nested_001",
+    "task_type": "json_extraction",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "HR / employee record",
+    "instruction": "Extract the employee details from the text into a JSON object. The top-level keys should be \"employee\" (with sub-keys: \"name\", \"age\", \"email\") and \"role\" (with sub-keys: \"title\", \"department\", \"start_date\").",
+    "input": "Marcus Webb, 34, joined the company on February 1st, 2021 as a Senior Product Manager in the Digital Transformation department. His work email is m.webb@company.com.",
+    "output": "",
+    "expected_keys": [
+      "employee.name",
+      "employee.age",
+      "employee.email",
+      "role.title",
+      "role.department",
+      "role.start_date"
+    ]
+  },
+  {
+    "id": "nested_002",
+    "task_type": "json_extraction",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "logistics / shipment",
+    "instruction": "Extract shipment details into a JSON object with top-level keys \"shipment\" (sub-keys: \"tracking_number\", \"carrier\", \"status\") and \"route\" (sub-keys: \"origin_city\", \"destination_city\", \"estimated_delivery\").",
+    "input": "Your package with tracking number 1Z999AA10123456784 is being shipped via UPS and is currently in transit. It departed from Seattle, WA and is expected to arrive in Miami, FL by November 18th.",
+    "output": "",
+    "expected_keys": [
+      "shipment.tracking_number",
+      "shipment.carrier",
+      "shipment.status",
+      "route.origin_city",
+      "route.destination_city",
+      "route.estimated_delivery"
+    ]
+  },
+  {
+    "id": "nested_003",
+    "task_type": "json_extraction",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "healthcare / patient intake",
+    "instruction": "Extract patient information into a JSON object with keys \"patient\" (sub-keys: \"name\", \"dob\", \"gender\") and \"contact\" (sub-keys: \"phone\", \"emergency_contact_name\", \"emergency_contact_relation\").",
+    "input": "Patient name: Julia Fernandez. Date of birth: July 14, 1987. Gender: Female. Primary phone: 512-334-9021. Emergency contact: Carlos Fernandez, listed as spouse.",
+    "output": "",
+    "expected_keys": [
+      "patient.name",
+      "patient.dob",
+      "patient.gender",
+      "contact.phone",
+      "contact.emergency_contact_name",
+      "contact.emergency_contact_relation"
+    ]
+  },
+  {
+    "id": "nested_004",
+    "task_type": "json_extraction",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "finance / company profile",
+    "instruction": "Extract the company information into a nested JSON object with keys \"company\" (sub-keys: \"name\", \"industry\", \"founded_year\") and \"headquarters\" (sub-keys: \"city\", \"country\", \"postal_code\").",
+    "input": "Helios Energy Solutions, founded in 2011 and operating in the renewable energy sector, maintains its headquarters at its offices in Utrecht, Netherlands, with postal code 3512 AB.",
+    "output": "",
+    "expected_keys": [
+      "company.name",
+      "company.industry",
+      "company.founded_year",
+      "headquarters.city",
+      "headquarters.country",
+      "headquarters.postal_code"
+    ]
+  },
+  {
+    "id": "nested_005",
+    "task_type": "json_extraction",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "legal / court case",
+    "instruction": "Extract the legal case details into a JSON object with keys \"case\" (sub-keys: \"case_number\", \"filing_date\", \"case_type\") and \"parties\" (sub-keys: \"plaintiff\", \"defendant\", \"presiding_judge\").",
+    "input": "Case No. 2024-CV-00341, filed on March 7, 2024, is a civil breach-of-contract dispute. The plaintiff is Redwood Capital LLC and the defendant is Orion Construction Group. The case is assigned to Judge Patricia Holt.",
+    "output": "",
+    "expected_keys": [
+      "case.case_number",
+      "case.filing_date",
+      "case.case_type",
+      "parties.plaintiff",
+      "parties.defendant",
+      "parties.presiding_judge"
+    ]
+  },
+  {
+    "id": "nested_006",
+    "task_type": "json_extraction",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "education / course catalog",
+    "instruction": "Extract course information into a JSON object with top-level keys \"course\" (sub-keys: \"title\", \"course_code\", \"credits\") and \"instructor\" (sub-keys: \"name\", \"email\", \"office_hours\").",
+    "input": "CS 4710: Introduction to Reinforcement Learning (3 credits) is taught by Prof. Lena Hartmann (l.hartmann@university.edu). Office hours are held on Tuesdays from 2:00\u20134:00 PM.",
+    "output": "",
+    "expected_keys": [
+      "course.title",
+      "course.course_code",
+      "course.credits",
+      "instructor.name",
+      "instructor.email",
+      "instructor.office_hours"
+    ]
+  },
+  {
+    "id": "array_001",
+    "task_type": "json_extraction",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "finance / transactions",
+    "instruction": "Extract all transactions mentioned in the bank statement below into a JSON array. Each element should have keys: \"date\", \"description\", \"amount_usd\", \"type\" (either \"credit\" or \"debit\").",
+    "input": "Oct 3 \u2014 Purchase at Whole Foods Market: $67.42 (debit). Oct 5 \u2014 Payroll deposit from Axiom Corp: $3,200.00 (credit). Oct 7 \u2014 Netflix subscription charge: $15.49 (debit). Oct 9 \u2014 Refund from Amazon: $34.00 (credit).",
+    "output": "",
+    "expected_keys": [
+      "[].date",
+      "[].description",
+      "[].amount_usd",
+      "[].type"
+    ]
+  },
+  {
+    "id": "array_002",
+    "task_type": "json_extraction",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "HR / resume",
+    "instruction": "Extract the work experience entries from the resume excerpt into a JSON array. Each element should have keys: \"company\", \"title\", \"start_year\", \"end_year\" (use \"present\" if ongoing), \"location\".",
+    "input": "From 2018 to 2021, worked as a Software Engineer at Dropbox in San Francisco. Joined Stripe as a Senior Engineer in 2021, still currently employed there in New York. Previously interned at IBM in Austin from 2017 to 2018.",
+    "output": "",
+    "expected_keys": [
+      "[].company",
+      "[].title",
+      "[].start_year",
+      "[].end_year",
+      "[].location"
+    ]
+  },
+  {
+    "id": "array_003",
+    "task_type": "json_extraction",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "healthcare / medication list",
+    "instruction": "Extract each medication mentioned in the clinical note into a JSON array. Each element should have keys: \"medication_name\", \"dosage\", \"frequency\", \"route\".",
+    "input": "The patient is currently prescribed Metformin 500mg taken twice daily by mouth, Lisinopril 10mg once daily orally, and Atorvastatin 20mg once daily taken by mouth at bedtime.",
+    "output": "",
+    "expected_keys": [
+      "[].medication_name",
+      "[].dosage",
+      "[].frequency",
+      "[].route"
+    ]
+  },
+  {
+    "id": "array_004",
+    "task_type": "json_extraction",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "news / event timeline",
+    "instruction": "Extract all dated events from the news excerpt into a JSON array, ordered as they appear. Each element should have keys: \"date\", \"event\", \"location\".",
+    "input": "On January 12th, a ceasefire agreement was signed in Geneva between the two factions. By January 19th, international peacekeepers had arrived in Kinshasa to oversee the transition. A formal peace summit convened in Brussels on February 3rd.",
+    "output": "",
+    "expected_keys": [
+      "[].date",
+      "[].event",
+      "[].location"
+    ]
+  },
+  {
+    "id": "array_005",
+    "task_type": "json_extraction",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "sports / match statistics",
+    "instruction": "Extract each player's performance stats from the match report into a JSON array. Each element should have keys: \"player_name\", \"team\", \"goals\", \"assists\", \"minutes_played\".",
+    "input": "In yesterday's match, Ronaldo (Real Madrid) scored 2 goals with 1 assist and played all 90 minutes. Mbappe (PSG) netted 1 goal and 2 assists in 85 minutes. De Bruyne (Man City) had no goals but recorded 3 assists in 90 minutes.",
+    "output": "",
+    "expected_keys": [
+      "[].player_name",
+      "[].team",
+      "[].goals",
+      "[].assists",
+      "[].minutes_played"
+    ]
+  },
+  {
+    "id": "array_006",
+    "task_type": "json_extraction",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "supply chain / inventory",
+    "instruction": "Extract each product mentioned in the warehouse inventory report into a JSON array. Each element should have keys: \"sku\", \"product_name\", \"quantity\", \"unit_price_usd\", \"warehouse_location\".",
+    "input": "SKU-1042: Wireless Keyboard (x150 units, $29.99 each) stored in Aisle 3B. SKU-2201: USB-C Hub (x75 units, $49.99 each) in Aisle 1A. SKU-3309: 27-inch Monitor (x40 units, $249.00 each) in Aisle 5C.",
+    "output": "",
+    "expected_keys": [
+      "[].sku",
+      "[].product_name",
+      "[].quantity",
+      "[].unit_price_usd",
+      "[].warehouse_location"
+    ]
+  },
+  {
+    "id": "mixed_001",
+    "task_type": "json_extraction",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "finance / invoice",
+    "instruction": "Extract the invoice details into a JSON object with flat keys \"invoice_number\", \"vendor\", \"issue_date\", \"total_usd\", and an array key \"line_items\" where each element has \"description\", \"quantity\", \"unit_price_usd\".",
+    "input": "Invoice #INV-2024-0892 from TechSupply Co., issued on September 10, 2024. Items: 4x Mechanical Keyboard at $89.00 each; 2x HDMI Cable at $14.50 each; 1x Webcam at $79.99. Total: $466.99.",
+    "output": "",
+    "expected_keys": [
+      "invoice_number",
+      "vendor",
+      "issue_date",
+      "total_usd",
+      "line_items[].description",
+      "line_items[].quantity",
+      "line_items[].unit_price_usd"
+    ]
+  },
+  {
+    "id": "mixed_002",
+    "task_type": "json_extraction",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "event management",
+    "instruction": "Extract event details into a JSON object with flat keys \"event_name\", \"date\", \"venue\", \"city\" and an array key \"speakers\" where each element has \"name\", \"topic\".",
+    "input": "The 2024 Future of AI Summit takes place on November 5th at the Moscone Center in San Francisco. Keynote speakers include Dr. Fei-Fei Li presenting on Embodied Intelligence, Sam Altman on AGI Safety, and Yoshua Bengio discussing AI Governance.",
+    "output": "",
+    "expected_keys": [
+      "event_name",
+      "date",
+      "venue",
+      "city",
+      "speakers[].name",
+      "speakers[].topic"
+    ]
+  },
+  {
+    "id": "mixed_003",
+    "task_type": "json_extraction",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "education / syllabus",
+    "instruction": "Extract the course overview into a JSON object with flat keys \"course_title\", \"semester\", \"instructor\", \"credit_hours\" and an array key \"weekly_topics\" where each element has \"week\" and \"topic\".",
+    "input": "Advanced Database Systems (4 credit hours) \u2014 Spring 2025, taught by Prof. Nadia Torres. Week 1: Relational Algebra Review. Week 2: Query Optimization. Week 3: Indexing Strategies. Week 4: Distributed Databases.",
+    "output": "",
+    "expected_keys": [
+      "course_title",
+      "semester",
+      "instructor",
+      "credit_hours",
+      "weekly_topics[].week",
+      "weekly_topics[].topic"
+    ]
+  },
+  {
+    "id": "mixed_004",
+    "task_type": "json_extraction",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "food & beverage / restaurant menu",
+    "instruction": "Extract the restaurant profile into a JSON object with flat keys \"restaurant_name\", \"cuisine\", \"city\", \"average_rating\" and an array key \"menu_items\" where each element has \"item_name\", \"price_usd\", \"category\".",
+    "input": "Sakura Garden, a Japanese restaurant in Seattle with an average rating of 4.7, offers: Salmon Sashimi ($18.00, appetizer), Beef Ramen ($16.50, main), Matcha Ice Cream ($7.00, dessert), and Edamame ($5.50, appetizer).",
+    "output": "",
+    "expected_keys": [
+      "restaurant_name",
+      "cuisine",
+      "city",
+      "average_rating",
+      "menu_items[].item_name",
+      "menu_items[].price_usd",
+      "menu_items[].category"
+    ]
+  },
+  {
+    "id": "mixed_005",
+    "task_type": "json_extraction",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "journalism / press release",
+    "instruction": "Extract the press release details into a JSON object with flat keys \"company\", \"release_date\", \"headline\" and an array key \"key_quotes\" where each element has \"speaker\", \"title\", \"quote_summary\".",
+    "input": "NovaMed Pharmaceuticals \u2014 Press Release, July 22, 2024. Headline: NovaMed Receives FDA Approval for CardioShield. CEO Daniel Park stated the drug represents a breakthrough for heart failure patients. Chief Medical Officer Dr. Ruth Okafor emphasized the rigorous clinical trial process. Lead Researcher Dr. Ian Cho highlighted the drug's safety profile.",
+    "output": "",
+    "expected_keys": [
+      "company",
+      "release_date",
+      "headline",
+      "key_quotes[].speaker",
+      "key_quotes[].title",
+      "key_quotes[].quote_summary"
+    ]
+  },
+  {
+    "id": "mixed_006",
+    "task_type": "json_extraction",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "travel / itinerary",
+    "instruction": "Extract the travel itinerary into a JSON object with flat keys \"traveler_name\", \"trip_destination\", \"trip_duration_days\", \"total_budget_usd\" and an array key \"daily_activities\" where each element has \"day\", \"activity\", \"estimated_cost_usd\".",
+    "input": "Elena Vasquez's 4-day Tokyo trip with a total budget of $2,000. Day 1: Visit Senso-ji Temple, estimated $10. Day 2: TeamLab Planets, estimated $35. Day 3: Day trip to Nikko, estimated $80. Day 4: Shibuya and Harajuku shopping, estimated $150.",
+    "output": "",
+    "expected_keys": [
+      "traveler_name",
+      "trip_destination",
+      "trip_duration_days",
+      "total_budget_usd",
+      "daily_activities[].day",
+      "daily_activities[].activity",
+      "daily_activities[].estimated_cost_usd"
+    ]
+  },
+  {
+    "id": "nullable_001",
+    "task_type": "json_extraction",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "healthcare / clinical note",
+    "instruction": "Extract the patient information from the clinical note into a JSON object with keys: \"patient_name\", \"age\", \"diagnosis\", \"allergies\", \"attending_physician\", \"next_appointment\". Use null for any field not mentioned in the note.",
+    "input": "Patient: Samuel Owusu. Presenting with Type 2 Diabetes and early-stage hypertension. No known drug allergies on record. Attending physician: Dr. Miriam Sato. Age and follow-up appointment not documented in this note.",
+    "output": "",
+    "expected_keys": [
+      "patient_name",
+      "age",
+      "diagnosis",
+      "allergies",
+      "attending_physician",
+      "next_appointment"
+    ]
+  },
+  {
+    "id": "nullable_002",
+    "task_type": "json_extraction",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "job application",
+    "instruction": "Extract applicant profile details into a JSON object with keys: \"full_name\", \"email\", \"phone\", \"linkedin_url\", \"years_of_experience\", \"highest_degree\", \"github_url\". Use null for any field not mentioned.",
+    "input": "Applicant: Tariq Hassan. Email: tariq.h@email.com. He holds a Bachelor's degree in Computer Science and brings 6 years of industry experience. No phone number or LinkedIn profile was provided. GitHub was not mentioned.",
+    "output": "",
+    "expected_keys": [
+      "full_name",
+      "email",
+      "phone",
+      "linkedin_url",
+      "years_of_experience",
+      "highest_degree",
+      "github_url"
+    ]
+  },
+  {
+    "id": "nullable_003",
+    "task_type": "json_extraction",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "e-commerce / product spec",
+    "instruction": "Extract product specifications into a JSON object with keys: \"product_name\", \"brand\", \"model_number\", \"battery_life_hours\", \"weight_grams\", \"warranty_years\", \"waterproof_rating\". Use null for unspecified fields.",
+    "input": "The SoundWave Pro earbuds by Audivex deliver up to 28 hours of battery life and weigh 54 grams. The product comes with a 2-year manufacturer warranty. Model number and waterproof rating were not listed on the packaging.",
+    "output": "",
+    "expected_keys": [
+      "product_name",
+      "brand",
+      "model_number",
+      "battery_life_hours",
+      "weight_grams",
+      "warranty_years",
+      "waterproof_rating"
+    ]
+  },
+  {
+    "id": "nullable_004",
+    "task_type": "json_extraction",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "biography / public figure",
+    "instruction": "Extract biographical details into a JSON object with keys: \"full_name\", \"birth_date\", \"birth_city\", \"nationality\", \"known_for\", \"spouse\", \"death_date\". Use null for any field not mentioned in the text.",
+    "input": "Kenji Watanabe is a Japanese architect widely recognized for his sustainable urban housing projects. He was born in Osaka but his exact birth date is not publicly available. He has not disclosed personal details about a spouse.",
+    "output": "",
+    "expected_keys": [
+      "full_name",
+      "birth_date",
+      "birth_city",
+      "nationality",
+      "known_for",
+      "spouse",
+      "death_date"
+    ]
+  },
+  {
+    "id": "nullable_005",
+    "task_type": "json_extraction",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "legal / case record",
+    "instruction": "Extract the legal case details into a JSON object with keys: \"case_id\", \"plaintiff\", \"defendant\", \"filing_date\", \"verdict\", \"sentence\", \"appeal_filed\". Use null for fields not present in the summary.",
+    "input": "Case ID: 2023-CR-00782. The state of Texas (plaintiff) vs. Derek Morales (defendant). Filed on August 14, 2023. As of this report, no verdict has been reached. Appeal status and sentencing information are not yet applicable.",
+    "output": "",
+    "expected_keys": [
+      "case_id",
+      "plaintiff",
+      "defendant",
+      "filing_date",
+      "verdict",
+      "sentence",
+      "appeal_filed"
+    ]
+  },
+  {
+    "id": "nullable_006",
+    "task_type": "json_extraction",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "real estate / property listing",
+    "instruction": "Extract property details into a JSON object with keys: \"address\", \"listing_price_usd\", \"bedrooms\", \"bathrooms\", \"garage\", \"hoa_fee_monthly_usd\", \"basement\". Use null for any field not mentioned.",
+    "input": "Listed at $389,500 \u2014 4 bedrooms, 2.5 bathrooms at 77 Maple Ridge Lane, Columbus, OH. Attached 2-car garage included. No mention of an HOA or basement in the listing description.",
+    "output": "",
+    "expected_keys": [
+      "address",
+      "listing_price_usd",
+      "bedrooms",
+      "bathrooms",
+      "garage",
+      "hoa_fee_monthly_usd",
+      "basement"
+    ]
+  },
+  {
+    "id": "flat_007",
+    "task_type": "json_extraction",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "banking / loan summary",
+    "instruction": "Extract the loan details from the text into a JSON object with keys: \"loan_id\", \"borrower_name\", \"loan_type\", \"principal_usd\", \"interest_rate_percent\", \"term_months\", \"status\".",
+    "input": "Loan #LN-2024-00421 was issued to Rachel Kim for a personal loan of $18,500 at an annual interest rate of 7.5% over 36 months. The loan is currently active and in good standing.",
+    "output": "",
+    "expected_keys": [
+      "loan_id",
+      "borrower_name",
+      "loan_type",
+      "principal_usd",
+      "interest_rate_percent",
+      "term_months",
+      "status"
+    ]
+  },
+  {
+    "id": "flat_008",
+    "task_type": "json_extraction",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "entertainment / podcast episode",
+    "instruction": "Extract podcast episode metadata from the text into a JSON object with keys: \"podcast_name\", \"episode_number\", \"episode_title\", \"host\", \"guest\", \"duration_minutes\", \"release_date\".",
+    "input": "Episode 214 of 'The Deep Dive' podcast, titled 'The Future of Quantum Computing', was released on October 3, 2024. Host Jordan Mercer interviewed Dr. Sophie Lang. The episode runs for 58 minutes.",
+    "output": "",
+    "expected_keys": [
+      "podcast_name",
+      "episode_number",
+      "episode_title",
+      "host",
+      "guest",
+      "duration_minutes",
+      "release_date"
+    ]
+  },
+  {
+    "id": "flat_009",
+    "task_type": "json_extraction",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "government / public tender",
+    "instruction": "Extract the tender details into a JSON object with keys: \"tender_id\", \"issuing_agency\", \"title\", \"deadline\", \"estimated_value_usd\", \"category\", \"open_to_foreign_bidders\".",
+    "input": "Tender REF-GOV-2024-1138, issued by the Department of Infrastructure, seeks contractors for the Northern Bridge Rehabilitation Project. Bids are due by December 1, 2024. The estimated contract value is $4.2 million. This is a civil engineering tender open to international bidders.",
+    "output": "",
+    "expected_keys": [
+      "tender_id",
+      "issuing_agency",
+      "title",
+      "deadline",
+      "estimated_value_usd",
+      "category",
+      "open_to_foreign_bidders"
+    ]
+  },
+  {
+    "id": "flat_010",
+    "task_type": "json_extraction",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "sports / athlete profile",
+    "instruction": "Extract athlete profile details into a JSON object with keys: \"full_name\", \"sport\", \"nationality\", \"age\", \"team\", \"position\", \"career_earnings_usd\".",
+    "input": "Brazilian midfielder Lucas Carvalho, age 27, currently plays for FC Stuttgart in Germany. He has accumulated approximately $14.3 million in career earnings across his professional clubs.",
+    "output": "",
+    "expected_keys": [
+      "full_name",
+      "sport",
+      "nationality",
+      "age",
+      "team",
+      "position",
+      "career_earnings_usd"
+    ]
+  },
+  {
+    "id": "flat_011",
+    "task_type": "json_extraction",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "environment / pollution report",
+    "instruction": "Extract environmental monitoring data into a JSON object with keys: \"station_id\", \"location\", \"date\", \"pm25_ugm3\", \"co2_ppm\", \"aqi\", \"alert_level\".",
+    "input": "Station ENV-049, located in downtown Mexico City, recorded the following readings on November 8, 2024: PM2.5 at 67.4 \u00b5g/m\u00b3, CO2 at 418 ppm, and an AQI of 152. The alert level has been classified as Unhealthy.",
+    "output": "",
+    "expected_keys": [
+      "station_id",
+      "location",
+      "date",
+      "pm25_ugm3",
+      "co2_ppm",
+      "aqi",
+      "alert_level"
+    ]
+  },
+  {
+    "id": "flat_012",
+    "task_type": "json_extraction",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "cybersecurity / vulnerability report",
+    "instruction": "Extract the CVE report details into a JSON object with keys: \"cve_id\", \"affected_product\", \"vendor\", \"severity\", \"cvss_score\", \"published_date\", \"patch_available\".",
+    "input": "CVE-2024-31882 affects Apache HTTP Server versions prior to 2.4.62, published by the Apache Software Foundation. The vulnerability has a CVSS score of 9.1 and is rated Critical. It was disclosed on September 17, 2024. A patch is available in the latest release.",
+    "output": "",
+    "expected_keys": [
+      "cve_id",
+      "affected_product",
+      "vendor",
+      "severity",
+      "cvss_score",
+      "published_date",
+      "patch_available"
+    ]
+  },
+  {
+    "id": "flat_013",
+    "task_type": "json_extraction",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "pharmaceutical / drug approval",
+    "instruction": "Extract FDA drug approval details into a JSON object with keys: \"brand_name\", \"generic_name\", \"manufacturer\", \"approval_date\", \"indication\", \"drug_class\", \"prescription_required\".",
+    "input": "Lumavax (generic name: lumacitinib), manufactured by Vertex Biosciences, received FDA approval on August 5, 2024 for the treatment of moderate-to-severe psoriasis. It belongs to the JAK inhibitor drug class and requires a prescription.",
+    "output": "",
+    "expected_keys": [
+      "brand_name",
+      "generic_name",
+      "manufacturer",
+      "approval_date",
+      "indication",
+      "drug_class",
+      "prescription_required"
+    ]
+  },
+  {
+    "id": "flat_014",
+    "task_type": "json_extraction",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "gaming / video game release",
+    "instruction": "Extract video game release metadata into a JSON object with keys: \"title\", \"developer\", \"publisher\", \"genre\", \"platform\", \"release_date\", \"metacritic_score\".",
+    "input": "Ironveil Chronicles, developed by NightOwl Studios and published by Nexus Interactive, launched on November 15, 2024 for PlayStation 5 and PC. The RPG received a Metacritic score of 88.",
+    "output": "",
+    "expected_keys": [
+      "title",
+      "developer",
+      "publisher",
+      "genre",
+      "platform",
+      "release_date",
+      "metacritic_score"
+    ]
+  },
+  {
+    "id": "nested_007",
+    "task_type": "json_extraction",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "retail / store branch",
+    "instruction": "Extract the store information into a JSON object with top-level keys \"store\" (sub-keys: \"store_id\", \"brand\", \"type\") and \"location\" (sub-keys: \"address\", \"city\", \"country\", \"opening_hours\").",
+    "input": "Branch ID: STR-0042, a flagship outlet of LuxHome Interiors, categorized as a premium retail store. Located at 18 Regent Street, London, United Kingdom. Open Monday to Saturday from 9am to 8pm.",
+    "output": "",
+    "expected_keys": [
+      "store.store_id",
+      "store.brand",
+      "store.type",
+      "location.address",
+      "location.city",
+      "location.country",
+      "location.opening_hours"
+    ]
+  },
+  {
+    "id": "nested_008",
+    "task_type": "json_extraction",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "aviation / aircraft record",
+    "instruction": "Extract aircraft details into a nested JSON object with keys \"aircraft\" (sub-keys: \"registration\", \"model\", \"manufacturer\") and \"operator\" (sub-keys: \"airline\", \"base_airport\", \"fleet_size\").",
+    "input": "Aircraft registration N447UA is a Boeing 787-9 Dreamliner manufactured by Boeing. It is operated by United Airlines, based at Chicago O'Hare International Airport. United currently operates a fleet of 312 aircraft.",
+    "output": "",
+    "expected_keys": [
+      "aircraft.registration",
+      "aircraft.model",
+      "aircraft.manufacturer",
+      "operator.airline",
+      "operator.base_airport",
+      "operator.fleet_size"
+    ]
+  },
+  {
+    "id": "nested_009",
+    "task_type": "json_extraction",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "media / tv series",
+    "instruction": "Extract TV series information into a JSON object with top-level keys \"series\" (sub-keys: \"title\", \"genre\", \"seasons\") and \"production\" (sub-keys: \"network\", \"country\", \"premiere_year\", \"status\").",
+    "input": "Fractured Skies is a sci-fi drama that has aired for 4 seasons. The show premiered in 2020 on HBO in the United States and is currently in production for a fifth season.",
+    "output": "",
+    "expected_keys": [
+      "series.title",
+      "series.genre",
+      "series.seasons",
+      "production.network",
+      "production.country",
+      "production.premiere_year",
+      "production.status"
+    ]
+  },
+  {
+    "id": "nested_010",
+    "task_type": "json_extraction",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "agriculture / farm record",
+    "instruction": "Extract farm details into a JSON object with keys \"farm\" (sub-keys: \"name\", \"type\", \"area_hectares\") and \"owner\" (sub-keys: \"name\", \"contact_email\", \"cooperative_member\").",
+    "input": "Greenfield Organics is a 340-hectare certified organic crop farm. It is owned by Patricia Mwangi, reachable at p.mwangi@greenfield.co.ke. Patricia is a registered member of the East Africa Farmers Cooperative.",
+    "output": "",
+    "expected_keys": [
+      "farm.name",
+      "farm.type",
+      "farm.area_hectares",
+      "owner.name",
+      "owner.contact_email",
+      "owner.cooperative_member"
+    ]
+  },
+  {
+    "id": "nested_011",
+    "task_type": "json_extraction",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "cybersecurity / incident report",
+    "instruction": "Extract security incident details into a JSON object with keys \"incident\" (sub-keys: \"incident_id\", \"type\", \"severity\", \"detected_at\") and \"affected_system\" (sub-keys: \"system_name\", \"ip_address\", \"owner_department\").",
+    "input": "Incident INC-2024-4410 was detected on October 22, 2024 at 03:14 UTC. It is classified as a ransomware attack with critical severity. The affected system is the Payroll Processing Server at IP 10.0.4.82, owned by the Finance Department.",
+    "output": "",
+    "expected_keys": [
+      "incident.incident_id",
+      "incident.type",
+      "incident.severity",
+      "incident.detected_at",
+      "affected_system.system_name",
+      "affected_system.ip_address",
+      "affected_system.owner_department"
+    ]
+  },
+  {
+    "id": "nested_012",
+    "task_type": "json_extraction",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "nonprofit / grant record",
+    "instruction": "Extract grant information into a nested JSON object with keys \"grant\" (sub-keys: \"grant_id\", \"title\", \"amount_usd\", \"start_date\") and \"recipient\" (sub-keys: \"organization\", \"country\", \"contact_name\").",
+    "input": "Grant GR-2024-0091, titled 'Clean Water Access Initiative', awards $750,000 starting March 1, 2025. The recipient is the Blue Earth Foundation, a nonprofit based in Kenya, with contact person Dr. Otieno Achieng.",
+    "output": "",
+    "expected_keys": [
+      "grant.grant_id",
+      "grant.title",
+      "grant.amount_usd",
+      "grant.start_date",
+      "recipient.organization",
+      "recipient.country",
+      "recipient.contact_name"
+    ]
+  },
+  {
+    "id": "nested_013",
+    "task_type": "json_extraction",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "construction / project site",
+    "instruction": "Extract construction project details into a JSON object with keys \"project\" (sub-keys: \"project_id\", \"name\", \"type\", \"budget_usd\") and \"site\" (sub-keys: \"address\", \"city\", \"site_manager\").",
+    "input": "Project PRJ-2024-7712 is a mixed-use residential tower named Skyline Vista with a total budget of $62 million. The construction site is located at 901 Harbor Boulevard, Miami. The site is managed by David Okonkwo.",
+    "output": "",
+    "expected_keys": [
+      "project.project_id",
+      "project.name",
+      "project.type",
+      "project.budget_usd",
+      "site.address",
+      "site.city",
+      "site.site_manager"
+    ]
+  },
+  {
+    "id": "nested_014",
+    "task_type": "json_extraction",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "telecommunications / subscriber account",
+    "instruction": "Extract subscriber details into a JSON object with keys \"account\" (sub-keys: \"account_id\", \"plan\", \"monthly_fee_usd\", \"active\") and \"subscriber\" (sub-keys: \"name\", \"phone_number\", \"country\").",
+    "input": "Account ACC-9982341 belongs to Yuki Tanaka, holding a Premium Unlimited plan billed at $89/month. Yuki's number is +81-90-3344-5566 and the account is registered in Japan. The account is currently active.",
+    "output": "",
+    "expected_keys": [
+      "account.account_id",
+      "account.plan",
+      "account.monthly_fee_usd",
+      "account.active",
+      "subscriber.name",
+      "subscriber.phone_number",
+      "subscriber.country"
+    ]
+  },
+  {
+    "id": "array_007",
+    "task_type": "json_extraction",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "legal / contract clauses",
+    "instruction": "Extract each clause mentioned in the contract summary into a JSON array. Each element should have keys: \"clause_number\", \"title\", \"description\", \"binding\".",
+    "input": "Clause 1 \u2014 Confidentiality: Both parties agree not to disclose proprietary information to third parties. Binding. Clause 2 \u2014 Payment Terms: Invoices must be settled within 30 days of receipt. Binding. Clause 3 \u2014 Best Efforts: The vendor will endeavor to meet all delivery timelines. Non-binding.",
+    "output": "",
+    "expected_keys": [
+      "[].clause_number",
+      "[].title",
+      "[].description",
+      "[].binding"
+    ]
+  },
+  {
+    "id": "array_008",
+    "task_type": "json_extraction",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "real estate / open house schedule",
+    "instruction": "Extract each open house event from the schedule into a JSON array. Each element should have keys: \"property_address\", \"date\", \"start_time\", \"end_time\", \"agent_name\".",
+    "input": "Saturday Nov 9: 14 Birch Lane \u2014 10:00am to 12:00pm with Agent Lisa Park. Sunday Nov 10: 88 Sunset Ave \u2014 1:00pm to 3:00pm with Agent Marco Diaz. Saturday Nov 9: 305 Elm Court \u2014 2:00pm to 4:00pm with Agent Lisa Park.",
+    "output": "",
+    "expected_keys": [
+      "[].property_address",
+      "[].date",
+      "[].start_time",
+      "[].end_time",
+      "[].agent_name"
+    ]
+  },
+  {
+    "id": "array_009",
+    "task_type": "json_extraction",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "education / exam scores",
+    "instruction": "Extract each student's exam result from the score sheet into a JSON array. Each element should have keys: \"student_name\", \"student_id\", \"subject\", \"score\", \"grade\".",
+    "input": "Student Ana Costa (ID: 10041) scored 91 in Mathematics \u2014 Grade A. Student James Obi (ID: 10042) scored 74 in Mathematics \u2014 Grade C. Student Mei Lin (ID: 10043) scored 83 in Mathematics \u2014 Grade B.",
+    "output": "",
+    "expected_keys": [
+      "[].student_name",
+      "[].student_id",
+      "[].subject",
+      "[].score",
+      "[].grade"
+    ]
+  },
+  {
+    "id": "array_010",
+    "task_type": "json_extraction",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "ecommerce / order history",
+    "instruction": "Extract each order from the purchase history into a JSON array. Each element should have keys: \"order_id\", \"date\", \"product_name\", \"quantity\", \"total_usd\", \"status\".",
+    "input": "Order #ORD-5512 on Jan 4: 2x Desk Lamp, $47.98, Delivered. Order #ORD-5788 on Jan 19: 1x Laptop Stand, $34.99, Shipped. Order #ORD-6001 on Feb 2: 3x Notebook Pack, $22.50, Processing.",
+    "output": "",
+    "expected_keys": [
+      "[].order_id",
+      "[].date",
+      "[].product_name",
+      "[].quantity",
+      "[].total_usd",
+      "[].status"
+    ]
+  },
+  {
+    "id": "array_011",
+    "task_type": "json_extraction",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "science / chemical compounds",
+    "instruction": "Extract each chemical compound mentioned in the lab report into a JSON array. Each element should have keys: \"compound_name\", \"formula\", \"molecular_weight_gmol\", \"state_at_room_temp\", \"hazardous\".",
+    "input": "Sodium chloride (NaCl), molecular weight 58.44 g/mol, is a solid at room temperature and is non-hazardous. Acetone (C3H6O), molecular weight 58.08 g/mol, is a liquid and is classified as hazardous. Ammonia (NH3), molecular weight 17.03 g/mol, is a gas and is highly hazardous.",
+    "output": "",
+    "expected_keys": [
+      "[].compound_name",
+      "[].formula",
+      "[].molecular_weight_gmol",
+      "[].state_at_room_temp",
+      "[].hazardous"
+    ]
+  },
+  {
+    "id": "array_012",
+    "task_type": "json_extraction",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "public policy / legislation history",
+    "instruction": "Extract each piece of legislation from the policy brief into a JSON array. Each element should have keys: \"bill_name\", \"introduced_date\", \"sponsor\", \"status\", \"topic\".",
+    "input": "The Clean Air Restoration Act was introduced on March 12, 2023 by Sen. Julia Rhodes, currently in committee. The Digital Privacy Reform Bill, introduced July 5, 2023 by Rep. Mark Singh, passed into law. The Infrastructure Renewal Act was introduced on January 8, 2024 by Sen. Lisa Okonkwo and is awaiting vote.",
+    "output": "",
+    "expected_keys": [
+      "[].bill_name",
+      "[].introduced_date",
+      "[].sponsor",
+      "[].status",
+      "[].topic"
+    ]
+  },
+  {
+    "id": "array_013",
+    "task_type": "json_extraction",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "hospitality / hotel amenities",
+    "instruction": "Extract each amenity listed for the hotel into a JSON array. Each element should have keys: \"amenity_name\", \"location\", \"available_24h\", \"extra_charge\".",
+    "input": "Rooftop Pool \u2014 located on Floor 22, available 24 hours, no extra charge. Spa & Wellness Center \u2014 Basement Level 1, open 6am\u201310pm, extra charge applies. Business Center \u2014 Floor 3, available 24 hours, no extra charge. Fine Dining Restaurant \u2014 Floor 1, open 7am\u201311pm, extra charge applies.",
+    "output": "",
+    "expected_keys": [
+      "[].amenity_name",
+      "[].location",
+      "[].available_24h",
+      "[].extra_charge"
+    ]
+  },
+  {
+    "id": "array_014",
+    "task_type": "json_extraction",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "conference / session schedule",
+    "instruction": "Extract each conference session from the schedule into a JSON array. Each element should have keys: \"session_id\", \"title\", \"speaker\", \"start_time\", \"room\", \"track\".",
+    "input": "Session S-01: 'LLMs in Production' by Dr. Chen Wei at 9:00am in Hall A, AI Track. Session S-02: 'Kubernetes at Scale' by Ravi Menon at 9:00am in Room 204, DevOps Track. Session S-03: 'Privacy-Preserving ML' by Dr. Sara Blom at 10:30am in Hall A, AI Track.",
+    "output": "",
+    "expected_keys": [
+      "[].session_id",
+      "[].title",
+      "[].speaker",
+      "[].start_time",
+      "[].room",
+      "[].track"
+    ]
+  },
+  {
+    "id": "mixed_007",
+    "task_type": "json_extraction",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "healthcare / clinical trial",
+    "instruction": "Extract the clinical trial summary into a JSON object with flat keys \"trial_id\", \"title\", \"sponsor\", \"phase\", \"start_date\" and an array key \"sites\" where each element has \"hospital\", \"city\", \"country\".",
+    "input": "Trial NCT-2024-00814, titled 'CardioGuard Phase III Efficacy Study', is sponsored by NovaMed Pharma and is currently in Phase III, beginning January 15, 2025. Study sites include St. Mary's Hospital in London, UK; Charit\u00e9 Hospital in Berlin, Germany; and Mayo Clinic in Rochester, USA.",
+    "output": "",
+    "expected_keys": [
+      "trial_id",
+      "title",
+      "sponsor",
+      "phase",
+      "start_date",
+      "sites[].hospital",
+      "sites[].city",
+      "sites[].country"
+    ]
+  },
+  {
+    "id": "mixed_008",
+    "task_type": "json_extraction",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "software / release notes",
+    "instruction": "Extract the software release details into a JSON object with flat keys \"version\", \"product\", \"release_date\", \"release_type\" and an array key \"changes\" where each element has \"type\", \"description\".",
+    "input": "Product: DataPipeline Pro, Version 3.4.1, released October 28, 2024 as a patch release. Changes include: bugfix \u2014 resolved null pointer exception in batch processor; bugfix \u2014 fixed CSV export encoding issue; improvement \u2014 reduced memory usage in stream mode by 18%.",
+    "output": "",
+    "expected_keys": [
+      "version",
+      "product",
+      "release_date",
+      "release_type",
+      "changes[].type",
+      "changes[].description"
+    ]
+  },
+  {
+    "id": "mixed_009",
+    "task_type": "json_extraction",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "sports / tournament bracket",
+    "instruction": "Extract the tournament details into a JSON object with flat keys \"tournament_name\", \"sport\", \"location\", \"start_date\" and an array key \"matches\" where each element has \"match_id\", \"team_a\", \"team_b\", \"scheduled_time\".",
+    "input": "The 2024 Global Esports Championship in League of Legends takes place in Seoul, South Korea, starting November 2, 2024. Match M-01: Team Liquid vs Cloud9 at 10:00am. Match M-02: T1 vs G2 Esports at 1:00pm. Match M-03: Fnatic vs 100 Thieves at 4:00pm.",
+    "output": "",
+    "expected_keys": [
+      "tournament_name",
+      "sport",
+      "location",
+      "start_date",
+      "matches[].match_id",
+      "matches[].team_a",
+      "matches[].team_b",
+      "matches[].scheduled_time"
+    ]
+  },
+  {
+    "id": "mixed_010",
+    "task_type": "json_extraction",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "government / budget proposal",
+    "instruction": "Extract the budget proposal into a JSON object with flat keys \"fiscal_year\", \"country\", \"total_budget_usd_billions\", \"submitted_by\" and an array key \"allocations\" where each element has \"department\", \"amount_usd_billions\", \"percent_of_total\".",
+    "input": "The 2025 Federal Budget Proposal for Canada, submitted by Finance Minister Elena Dubois, totals CAD $480 billion. Key allocations: Healthcare \u2014 $145B (30.2%), Defence \u2014 $48B (10%), Education \u2014 $72B (15%), Infrastructure \u2014 $60B (12.5%).",
+    "output": "",
+    "expected_keys": [
+      "fiscal_year",
+      "country",
+      "total_budget_usd_billions",
+      "submitted_by",
+      "allocations[].department",
+      "allocations[].amount_usd_billions",
+      "allocations[].percent_of_total"
+    ]
+  },
+  {
+    "id": "mixed_011",
+    "task_type": "json_extraction",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "real estate / building directory",
+    "instruction": "Extract the building details into a JSON object with flat keys \"building_name\", \"address\", \"total_floors\", \"owner\" and an array key \"tenants\" where each element has \"company\", \"floor\", \"lease_expiry\".",
+    "input": "Meridian Tower at 550 Fifth Avenue, New York, is a 42-floor commercial building owned by Atlas Real Estate Group. Current tenants: FinCorp Holdings on Floor 12, lease expiring Dec 2025; BlueSky Media on Floors 20\u201321, lease expiring June 2027; TechNova Inc. on Floor 38, lease expiring March 2026.",
+    "output": "",
+    "expected_keys": [
+      "building_name",
+      "address",
+      "total_floors",
+      "owner",
+      "tenants[].company",
+      "tenants[].floor",
+      "tenants[].lease_expiry"
+    ]
+  },
+  {
+    "id": "mixed_012",
+    "task_type": "json_extraction",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "publishing / book series",
+    "instruction": "Extract the book series details into a JSON object with flat keys \"series_name\", \"author\", \"genre\", \"publisher\" and an array key \"books\" where each element has \"book_number\", \"title\", \"publish_year\", \"pages\".",
+    "input": "The Stormbound Chronicles by author Kira Oduya, published by Ember Press under the fantasy genre. Book 1: The First Seal (2019, 412 pages). Book 2: Shattered Throne (2021, 488 pages). Book 3: Ashes of the Veil (2023, 524 pages).",
+    "output": "",
+    "expected_keys": [
+      "series_name",
+      "author",
+      "genre",
+      "publisher",
+      "books[].book_number",
+      "books[].title",
+      "books[].publish_year",
+      "books[].pages"
+    ]
+  },
+  {
+    "id": "mixed_013",
+    "task_type": "json_extraction",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "environment / conservation area",
+    "instruction": "Extract the nature reserve details into a JSON object with flat keys \"reserve_name\", \"country\", \"area_km2\", \"established_year\" and an array key \"protected_species\" where each element has \"species_name\", \"class\", \"conservation_status\".",
+    "input": "The Tambopata National Reserve in Peru, covering 274,690 km\u00b2, was established in 2000. Protected species include the Giant Otter (Mammal, Endangered), the Harpy Eagle (Bird, Vulnerable), and the Black Caiman (Reptile, Least Concern).",
+    "output": "",
+    "expected_keys": [
+      "reserve_name",
+      "country",
+      "area_km2",
+      "established_year",
+      "protected_species[].species_name",
+      "protected_species[].class",
+      "protected_species[].conservation_status"
+    ]
+  },
+  {
+    "id": "mixed_014",
+    "task_type": "json_extraction",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "technology / product launch",
+    "instruction": "Extract the product launch details into a JSON object with flat keys \"product_name\", \"company\", \"launch_date\", \"starting_price_usd\" and an array key \"features\" where each element has \"feature_name\", \"description\".",
+    "input": "NovaTech unveiled the HorizonPad X on October 14, 2024, starting at $699. Key features: ProVision Display \u2014 a 12.9-inch mini-LED panel with 2000 nit brightness; NovaBrain M3 Chip \u2014 40% faster than its predecessor; 5G Connectivity \u2014 supports mmWave and sub-6 GHz; All-Day Battery \u2014 rated at 18 hours of mixed use.",
+    "output": "",
+    "expected_keys": [
+      "product_name",
+      "company",
+      "launch_date",
+      "starting_price_usd",
+      "features[].feature_name",
+      "features[].description"
+    ]
+  },
+  {
+    "id": "nullable_007",
+    "task_type": "json_extraction",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "startup / funding round",
+    "instruction": "Extract funding round details into a JSON object with keys: \"startup_name\", \"round_type\", \"amount_raised_usd\", \"lead_investor\", \"valuation_usd\", \"co_investors\", \"announced_date\". Use null for any field not mentioned.",
+    "input": "QuantumLeap AI announced a Series B round raising $40 million, led by Horizon Ventures, announced on September 30, 2024. The post-money valuation was not disclosed. No co-investors were named in the press release.",
+    "output": "",
+    "expected_keys": [
+      "startup_name",
+      "round_type",
+      "amount_raised_usd",
+      "lead_investor",
+      "valuation_usd",
+      "co_investors",
+      "announced_date"
+    ]
+  },
+  {
+    "id": "nullable_008",
+    "task_type": "json_extraction",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "transport / vehicle incident",
+    "instruction": "Extract the incident report details into a JSON object with keys: \"incident_id\", \"date\", \"vehicle_plate\", \"driver_name\", \"location\", \"injuries_reported\", \"police_report_number\". Use null for missing fields.",
+    "input": "Incident IR-2024-8821 occurred on November 2, 2024 involving vehicle plate TX-4421-K driven by Omar Saleh at the intersection of Highway 35 and Oak Creek Road. No injuries were reported. A police report was filed under reference RPT-449210.",
+    "output": "",
+    "expected_keys": [
+      "incident_id",
+      "date",
+      "vehicle_plate",
+      "driver_name",
+      "location",
+      "injuries_reported",
+      "police_report_number"
+    ]
+  },
+  {
+    "id": "nullable_009",
+    "task_type": "json_extraction",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "science / research grant",
+    "instruction": "Extract research grant details into a JSON object with keys: \"grant_title\", \"principal_investigator\", \"institution\", \"funding_agency\", \"amount_usd\", \"duration_years\", \"co_investigator\". Use null for any absent field.",
+    "input": "The grant 'Deep Learning for Seismic Analysis' is led by Principal Investigator Dr. Fatima Al-Hassan at King Abdullah University of Science and Technology. It is funded by the National Science Foundation for $620,000 over 3 years. No co-investigator is listed.",
+    "output": "",
+    "expected_keys": [
+      "grant_title",
+      "principal_investigator",
+      "institution",
+      "funding_agency",
+      "amount_usd",
+      "duration_years",
+      "co_investigator"
+    ]
+  },
+  {
+    "id": "nullable_010",
+    "task_type": "json_extraction",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "media / newspaper article",
+    "instruction": "Extract article metadata into a JSON object with keys: \"headline\", \"author\", \"publication\", \"published_date\", \"section\", \"word_count\", \"subscription_required\". Use null for any field not mentioned.",
+    "input": "The article 'Rising Seas and Shrinking Cities' was published by The Global Tribune on October 22, 2024 in the Environment section. The author was not credited in the published version. Word count and paywall details are not available in the preview.",
+    "output": "",
+    "expected_keys": [
+      "headline",
+      "author",
+      "publication",
+      "published_date",
+      "section",
+      "word_count",
+      "subscription_required"
+    ]
+  },
+  {
+    "id": "nullable_011",
+    "task_type": "json_extraction",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "ecommerce / seller profile",
+    "instruction": "Extract the marketplace seller profile into a JSON object with keys: \"seller_id\", \"store_name\", \"country\", \"rating\", \"total_reviews\", \"verified_seller\", \"return_policy_days\". Use null for any field not available.",
+    "input": "Seller ID: SLR-00482. Store: TechParts Express, based in South Korea. Seller rating: 4.8 out of 5 based on 3,210 reviews. The seller is verified. Return policy information was not listed on the profile.",
+    "output": "",
+    "expected_keys": [
+      "seller_id",
+      "store_name",
+      "country",
+      "rating",
+      "total_reviews",
+      "verified_seller",
+      "return_policy_days"
+    ]
+  },
+  {
+    "id": "nullable_012",
+    "task_type": "json_extraction",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "sports / transfer record",
+    "instruction": "Extract the player transfer record into a JSON object with keys: \"player_name\", \"from_club\", \"to_club\", \"transfer_fee_usd\", \"contract_years\", \"announced_date\", \"agent_name\". Use null for fields not disclosed.",
+    "input": "Striker Diego Romero has officially moved from Atletico Veracruz to FC Dynamo on a 3-year contract, announced August 22, 2024. The transfer fee was not disclosed by either club. The name of the player's agent was not mentioned.",
+    "output": "",
+    "expected_keys": [
+      "player_name",
+      "from_club",
+      "to_club",
+      "transfer_fee_usd",
+      "contract_years",
+      "announced_date",
+      "agent_name"
+    ]
+  },
+  {
+    "id": "nullable_013",
+    "task_type": "json_extraction",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "academia / conference paper",
+    "instruction": "Extract conference paper submission details into a JSON object with keys: \"paper_title\", \"submitting_author\", \"institution\", \"conference\", \"submission_date\", \"review_status\", \"camera_ready_deadline\". Use null for fields not mentioned.",
+    "input": "Paper 'Efficient Attention Mechanisms for Edge Devices' submitted by Dr. Yuki Ishida of Osaka University to ICLR 2025. Submission date: October 1, 2024. The review decision is still pending. Camera-ready deadline has not been announced.",
+    "output": "",
+    "expected_keys": [
+      "paper_title",
+      "submitting_author",
+      "institution",
+      "conference",
+      "submission_date",
+      "review_status",
+      "camera_ready_deadline"
+    ]
+  },
+  {
+    "id": "nullable_014",
+    "task_type": "json_extraction",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "government / census record",
+    "instruction": "Extract household details from the census form into a JSON object with keys: \"household_id\", \"head_of_household\", \"number_of_residents\", \"address\", \"annual_income_usd\", \"home_ownership\", \"internet_access\". Use null for any field left blank.",
+    "input": "Household ID: HH-2024-00441. Head of household: Maria Santos. 4 residents at 33 Acacia Street, Quezon City. Annual household income not provided. Home ownership: renter. Internet access was not indicated on the form.",
+    "output": "",
+    "expected_keys": [
+      "household_id",
+      "head_of_household",
+      "number_of_residents",
+      "address",
+      "annual_income_usd",
+      "home_ownership",
+      "internet_access"
+    ]
+  }
+]

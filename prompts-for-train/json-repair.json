@@ -1,0 +1,632 @@
+[
+  {
+    "id": "repair_unquoted_001",
+    "task_type": "json_repair",
+    "schema_category": "unquoted_keys_and_values",
+    "domain": "user profile",
+    "instruction": "The following text contains malformed JSON with unquoted keys and/or values. Repair the syntax errors and output strictly valid JSON.",
+    "input": "{username: admin, role: superuser, active: true}",
+    "output": "{\"username\": \"admin\", \"role\": \"superuser\", \"active\": true}"
+  },
+  {
+    "id": "repair_unquoted_002",
+    "task_type": "json_repair",
+    "schema_category": "unquoted_keys_and_values",
+    "domain": "server config",
+    "instruction": "The following text contains malformed JSON with unquoted keys and/or values. Repair the syntax errors and output strictly valid JSON.",
+    "input": "{host: localhost, port: 8080, protocol: http}",
+    "output": "{\"host\": \"localhost\", \"port\": 8080, \"protocol\": \"http\"}"
+  },
+  {
+    "id": "repair_unquoted_003",
+    "task_type": "json_repair",
+    "schema_category": "unquoted_keys_and_values",
+    "domain": "product details",
+    "instruction": "The following text contains malformed JSON with unquoted keys and/or values. Repair the syntax errors and output strictly valid JSON.",
+    "input": "{sku: XZ-100, price: 49.99, category: Electronics}",
+    "output": "{\"sku\": \"XZ-100\", \"price\": 49.99, \"category\": \"Electronics\"}"
+  },
+  {
+    "id": "repair_unquoted_004",
+    "task_type": "json_repair",
+    "schema_category": "unquoted_keys_and_values",
+    "domain": "coordinates",
+    "instruction": "The following text contains malformed JSON with unquoted keys and/or values. Repair the syntax errors and output strictly valid JSON.",
+    "input": "{lat: 34.0522, lng: -118.2437, city: Los Angeles}",
+    "output": "{\"lat\": 34.0522, \"lng\": -118.2437, \"city\": \"Los Angeles\"}"
+  },
+  {
+    "id": "repair_unquoted_005",
+    "task_type": "json_repair",
+    "schema_category": "unquoted_keys_and_values",
+    "domain": "book metadata",
+    "instruction": "The following text contains malformed JSON with unquoted keys and/or values. Repair the syntax errors and output strictly valid JSON.",
+    "input": "{title: 1984, author: George Orwell, year: 1949}",
+    "output": "{\"title\": \"1984\", \"author\": \"George Orwell\", \"year\": 1949}"
+  },
+  {
+    "id": "repair_unquoted_006",
+    "task_type": "json_repair",
+    "schema_category": "unquoted_keys_and_values",
+    "domain": "color palette",
+    "instruction": "The following text contains malformed JSON with unquoted keys and/or values. Repair the syntax errors and output strictly valid JSON.",
+    "input": "{primary: blue, secondary: green, opacity: 0.8}",
+    "output": "{\"primary\": \"blue\", \"secondary\": \"green\", \"opacity\": 0.8}"
+  },
+  {
+    "id": "repair_unquoted_007",
+    "task_type": "json_repair",
+    "schema_category": "unquoted_keys_and_values",
+    "domain": "trading bot config",
+    "instruction": "The following text contains malformed JSON with unquoted keys and/or values. Repair the syntax errors and output strictly valid JSON.",
+    "input": "{symbol: BTC, strategy: momentum, active: true}",
+    "output": "{\"symbol\": \"BTC\", \"strategy\": \"momentum\", \"active\": true}"
+  },
+  {
+    "id": "repair_unquoted_008",
+    "task_type": "json_repair",
+    "schema_category": "unquoted_keys_and_values",
+    "domain": "unit test results",
+    "instruction": "The following text contains malformed JSON with unquoted keys and/or values. Repair the syntax errors and output strictly valid JSON.",
+    "input": "{testName: testAuthentication, status: passed, retries: 0}",
+    "output": "{\"testName\": \"testAuthentication\", \"status\": \"passed\", \"retries\": 0}"
+  },
+  {
+    "id": "repair_unquoted_009",
+    "task_type": "json_repair",
+    "schema_category": "unquoted_keys_and_values",
+    "domain": "godot node properties",
+    "instruction": "The following text contains malformed JSON with unquoted keys and/or values. Repair the syntax errors and output strictly valid JSON.",
+    "input": "{nodeType: RigidBody3D, visible: true, mass: 2.5}",
+    "output": "{\"nodeType\": \"RigidBody3D\", \"visible\": true, \"mass\": 2.5}"
+  },
+  {
+    "id": "repair_unquoted_010",
+    "task_type": "json_repair",
+    "schema_category": "unquoted_keys_and_values",
+    "domain": "api gateway routing",
+    "instruction": "The following text contains malformed JSON with unquoted keys and/or values. Repair the syntax errors and output strictly valid JSON.",
+    "input": "{endpoint: /api/v1/users, rateLimit: 100}",
+    "output": "{\"endpoint\": \"/api/v1/users\", \"rateLimit\": 100}"
+  },
+  {
+    "id": "repair_unquoted_011",
+    "task_type": "json_repair",
+    "schema_category": "unquoted_keys_and_values",
+    "domain": "crypto order execution",
+    "instruction": "The following text contains malformed JSON with unquoted keys and/or values. Repair the syntax errors and output strictly valid JSON.",
+    "input": "{coin: PEPE, amount: 1000000, type: limit}",
+    "output": "{\"coin\": \"PEPE\", \"amount\": 1000000, \"type\": \"limit\"}"
+  },
+  {
+    "id": "repair_unquoted_012",
+    "task_type": "json_repair",
+    "schema_category": "unquoted_keys_and_values",
+    "domain": "pizza delivery order",
+    "instruction": "The following text contains malformed JSON with unquoted keys and/or values. Repair the syntax errors and output strictly valid JSON.",
+    "input": "{store: Dominos, item: pepperoni, size: large}",
+    "output": "{\"store\": \"Dominos\", \"item\": \"pepperoni\", \"size\": \"large\"}"
+  },
+  {
+    "id": "repair_unquoted_013",
+    "task_type": "json_repair",
+    "schema_category": "unquoted_keys_and_values",
+    "domain": "hardware rma status",
+    "instruction": "The following text contains malformed JSON with unquoted keys and/or values. Repair the syntax errors and output strictly valid JSON.",
+    "input": "{brand: MSI, status: pending, rmaNumber: 12345}",
+    "output": "{\"brand\": \"MSI\", \"status\": \"pending\", \"rmaNumber\": 12345}"
+  },
+  {
+    "id": "repair_unquoted_014",
+    "task_type": "json_repair",
+    "schema_category": "unquoted_keys_and_values",
+    "domain": "hpc job allocation",
+    "instruction": "The following text contains malformed JSON with unquoted keys and/or values. Repair the syntax errors and output strictly valid JSON.",
+    "input": "{cluster: UTSA-HPC, gpus: 4, jobName: qlora_stage2}",
+    "output": "{\"cluster\": \"UTSA-HPC\", \"gpus\": 4, \"jobName\": \"qlora_stage2\"}"
+  },
+  {
+    "id": "repair_trailing_001",
+    "task_type": "json_repair",
+    "schema_category": "trailing_commas",
+    "domain": "array of strings",
+    "instruction": "The following JSON contains trailing commas, which are invalid in strict JSON. Repair the syntax and output strictly valid JSON.",
+    "input": "[\"apple\", \"banana\", \"cherry\",]",
+    "output": "[\"apple\", \"banana\", \"cherry\"]"
+  },
+  {
+    "id": "repair_trailing_002",
+    "task_type": "json_repair",
+    "schema_category": "trailing_commas",
+    "domain": "settings object",
+    "instruction": "The following JSON contains trailing commas, which are invalid in strict JSON. Repair the syntax and output strictly valid JSON.",
+    "input": "{\"theme\": \"dark\", \"language\": \"en\", \"notifications\": true,}",
+    "output": "{\"theme\": \"dark\", \"language\": \"en\", \"notifications\": true}"
+  },
+  {
+    "id": "repair_trailing_003",
+    "task_type": "json_repair",
+    "schema_category": "trailing_commas",
+    "domain": "nested objects",
+    "instruction": "The following JSON contains trailing commas, which are invalid in strict JSON. Repair the syntax and output strictly valid JSON.",
+    "input": "{\"user\": {\"id\": 1, \"name\": \"Bob\",}, \"status\": \"active\",}",
+    "output": "{\"user\": {\"id\": 1, \"name\": \"Bob\"}, \"status\": \"active\"}"
+  },
+  {
+    "id": "repair_trailing_004",
+    "task_type": "json_repair",
+    "schema_category": "trailing_commas",
+    "domain": "array of objects",
+    "instruction": "The following JSON contains trailing commas, which are invalid in strict JSON. Repair the syntax and output strictly valid JSON.",
+    "input": "[{\"x\": 10, \"y\": 20}, {\"x\": 15, \"y\": 25},]",
+    "output": "[{\"x\": 10, \"y\": 20}, {\"x\": 15, \"y\": 25}]"
+  },
+  {
+    "id": "repair_trailing_005",
+    "task_type": "json_repair",
+    "schema_category": "trailing_commas",
+    "domain": "database config",
+    "instruction": "The following JSON contains trailing commas, which are invalid in strict JSON. Repair the syntax and output strictly valid JSON.",
+    "input": "{\"db\": \"postgres\", \"max_connections\": 100, \"timeout\": 5000,}",
+    "output": "{\"db\": \"postgres\", \"max_connections\": 100, \"timeout\": 5000}"
+  },
+  {
+    "id": "repair_trailing_006",
+    "task_type": "json_repair",
+    "schema_category": "trailing_commas",
+    "domain": "mixed trailing",
+    "instruction": "The following JSON contains trailing commas, which are invalid in strict JSON. Repair the syntax and output strictly valid JSON.",
+    "input": "{\"tags\": [\"urgent\", \"review\",], \"assignee\": \"John\",}",
+    "output": "{\"tags\": [\"urgent\", \"review\"], \"assignee\": \"John\"}"
+  },
+  {
+    "id": "repair_trailing_007",
+    "task_type": "json_repair",
+    "schema_category": "trailing_commas",
+    "domain": "etf watchlist",
+    "instruction": "The following JSON contains trailing commas, which are invalid in strict JSON. Repair the syntax and output strictly valid JSON.",
+    "input": "[\"QQQM\", \"AAPL\", \"MSFT\",]",
+    "output": "[\"QQQM\", \"AAPL\", \"MSFT\"]"
+  },
+  {
+    "id": "repair_trailing_008",
+    "task_type": "json_repair",
+    "schema_category": "trailing_commas",
+    "domain": "test framework config",
+    "instruction": "The following JSON contains trailing commas, which are invalid in strict JSON. Repair the syntax and output strictly valid JSON.",
+    "input": "{\"testing\": [\"JUnit\", \"Mockito\",], \"language\": \"Java\"}",
+    "output": "{\"testing\": [\"JUnit\", \"Mockito\"], \"language\": \"Java\"}"
+  },
+  {
+    "id": "repair_trailing_009",
+    "task_type": "json_repair",
+    "schema_category": "trailing_commas",
+    "domain": "used car features",
+    "instruction": "The following JSON contains trailing commas, which are invalid in strict JSON. Repair the syntax and output strictly valid JSON.",
+    "input": "{\"make\": \"Toyota\", \"mileage\": 65000, \"features\": [\"Bluetooth\", \"Backup Camera\",],}",
+    "output": "{\"make\": \"Toyota\", \"mileage\": 65000, \"features\": [\"Bluetooth\", \"Backup Camera\"]}"
+  },
+  {
+    "id": "repair_trailing_010",
+    "task_type": "json_repair",
+    "schema_category": "trailing_commas",
+    "domain": "phd research topics",
+    "instruction": "The following JSON contains trailing commas, which are invalid in strict JSON. Repair the syntax and output strictly valid JSON.",
+    "input": "[\"LLMs\", \"Augmented Reality\", \"Unit Testing\",]",
+    "output": "[\"LLMs\", \"Augmented Reality\", \"Unit Testing\"]"
+  },
+  {
+    "id": "repair_trailing_011",
+    "task_type": "json_repair",
+    "schema_category": "trailing_commas",
+    "domain": "api usage limits",
+    "instruction": "The following JSON contains trailing commas, which are invalid in strict JSON. Repair the syntax and output strictly valid JSON.",
+    "input": "{\"tier\": \"free\", \"requests\": 1000,}",
+    "output": "{\"tier\": \"free\", \"requests\": 1000}"
+  },
+  {
+    "id": "repair_trailing_012",
+    "task_type": "json_repair",
+    "schema_category": "trailing_commas",
+    "domain": "local travel itinerary",
+    "instruction": "The following JSON contains trailing commas, which are invalid in strict JSON. Repair the syntax and output strictly valid JSON.",
+    "input": "{\"city\": \"San Antonio\", \"destinations\": [\"The Alamo\", \"Riverwalk\",],}",
+    "output": "{\"city\": \"San Antonio\", \"destinations\": [\"The Alamo\", \"Riverwalk\"]}"
+  },
+  {
+    "id": "repair_trailing_013",
+    "task_type": "json_repair",
+    "schema_category": "trailing_commas",
+    "domain": "cluster addresses",
+    "instruction": "The following JSON contains trailing commas, which are invalid in strict JSON. Repair the syntax and output strictly valid JSON.",
+    "input": "[\"192.168.1.10\", \"10.0.0.5\",]",
+    "output": "[\"192.168.1.10\", \"10.0.0.5\"]"
+  },
+  {
+    "id": "repair_trailing_014",
+    "task_type": "json_repair",
+    "schema_category": "trailing_commas",
+    "domain": "fast food order",
+    "instruction": "The following JSON contains trailing commas, which are invalid in strict JSON. Repair the syntax and output strictly valid JSON.",
+    "input": "{\"restaurant\": \"Whataburger\", \"items\": [\"Patty Melt\", \"Fries\",],}",
+    "output": "{\"restaurant\": \"Whataburger\", \"items\": [\"Patty Melt\", \"Fries\"]}"
+  },
+  {
+    "id": "repair_truncated_001",
+    "task_type": "json_repair",
+    "schema_category": "truncated_structure",
+    "domain": "nested object",
+    "instruction": "The following JSON payload was truncated and is missing closing brackets or braces. Repair the structure and output strictly valid JSON.",
+    "input": "{\"response\": {\"status\": 200, \"data\": {\"user_id\": 101, \"username\": \"alice\"",
+    "output": "{\"response\": {\"status\": 200, \"data\": {\"user_id\": 101, \"username\": \"alice\"}}}"
+  },
+  {
+    "id": "repair_truncated_002",
+    "task_type": "json_repair",
+    "schema_category": "truncated_structure",
+    "domain": "array closure",
+    "instruction": "The following JSON payload was truncated and is missing closing brackets or braces. Repair the structure and output strictly valid JSON.",
+    "input": "{\"items\": [{\"id\": 1, \"name\": \"item A\"}, {\"id\": 2, \"name\": \"item B\"",
+    "output": "{\"items\": [{\"id\": 1, \"name\": \"item A\"}, {\"id\": 2, \"name\": \"item B\"}]}"
+  },
+  {
+    "id": "repair_truncated_003",
+    "task_type": "json_repair",
+    "schema_category": "truncated_structure",
+    "domain": "missing opening brace",
+    "instruction": "The following JSON payload is missing opening brackets or braces. Repair the structure and output strictly valid JSON.",
+    "input": "\"timestamp\": \"2024-11-20T10:00:00Z\", \"event\": \"login_success\"}",
+    "output": "{\"timestamp\": \"2024-11-20T10:00:00Z\", \"event\": \"login_success\"}"
+  },
+  {
+    "id": "repair_truncated_004",
+    "task_type": "json_repair",
+    "schema_category": "truncated_structure",
+    "domain": "deeply nested",
+    "instruction": "The following JSON payload was truncated and is missing closing brackets or braces. Repair the structure and output strictly valid JSON.",
+    "input": "{\"payload\": {\"metadata\": {\"version\": \"1.0\", \"author\": \"system\"",
+    "output": "{\"payload\": {\"metadata\": {\"version\": \"1.0\", \"author\": \"system\"}}}"
+  },
+  {
+    "id": "repair_truncated_005",
+    "task_type": "json_repair",
+    "schema_category": "truncated_structure",
+    "domain": "cut off string",
+    "instruction": "The following JSON payload was truncated mid-string. Close the string and repair the structure to output strictly valid JSON.",
+    "input": "{\"error_code\": 500, \"error_message\": \"Internal Server Err",
+    "output": "{\"error_code\": 500, \"error_message\": \"Internal Server Err\"}"
+  },
+  {
+    "id": "repair_truncated_006",
+    "task_type": "json_repair",
+    "schema_category": "truncated_structure",
+    "domain": "missing multiple closures",
+    "instruction": "The following JSON payload was truncated and is missing closing brackets or braces. Repair the structure and output strictly valid JSON.",
+    "input": "[{\"category\": \"news\", \"articles\": [{\"id\": 12}, {\"id\": 13",
+    "output": "[{\"category\": \"news\", \"articles\": [{\"id\": 12}, {\"id\": 13}]}]"
+  },
+  {
+    "id": "repair_truncated_007",
+    "task_type": "json_repair",
+    "schema_category": "truncated_structure",
+    "domain": "algorithmic trade log",
+    "instruction": "The following JSON payload was truncated and is missing closing brackets or braces. Repair the structure and output strictly valid JSON.",
+    "input": "{\"trade_id\": \"9876\", \"details\": {\"pair\": \"DOGE/USD\", \"action\": \"buy\"",
+    "output": "{\"trade_id\": \"9876\", \"details\": {\"pair\": \"DOGE/USD\", \"action\": \"buy\"}}"
+  },
+  {
+    "id": "repair_truncated_008",
+    "task_type": "json_repair",
+    "schema_category": "truncated_structure",
+    "domain": "apartment amenities listing",
+    "instruction": "The following JSON payload was truncated and is missing closing brackets or braces. Repair the structure and output strictly valid JSON.",
+    "input": "{\"complex\": \"Rio Springs\", \"rent\": 1200, \"amenities\": [\"pool\", \"gym\"",
+    "output": "{\"complex\": \"Rio Springs\", \"rent\": 1200, \"amenities\": [\"pool\", \"gym\"]}"
+  },
+  {
+    "id": "repair_truncated_009",
+    "task_type": "json_repair",
+    "schema_category": "truncated_structure",
+    "domain": "qlora model config",
+    "instruction": "The following JSON payload was truncated and is missing closing brackets or braces. Repair the structure and output strictly valid JSON.",
+    "input": "{\"model\": \"Phi-3.5-mini\", \"lora\": {\"r\": 16, \"alpha\": 32",
+    "output": "{\"model\": \"Phi-3.5-mini\", \"lora\": {\"r\": 16, \"alpha\": 32}}"
+  },
+  {
+    "id": "repair_truncated_010",
+    "task_type": "json_repair",
+    "schema_category": "truncated_structure",
+    "domain": "user ui preferences",
+    "instruction": "The following JSON payload was truncated mid-string or mid-boolean. Close the value and repair the structure to output strictly valid JSON.",
+    "input": "{\"id\": 44, \"preferences\": {\"theme\": \"dark\", \"notifications\": tr",
+    "output": "{\"id\": 44, \"preferences\": {\"theme\": \"dark\", \"notifications\": true}}"
+  },
+  {
+    "id": "repair_truncated_011",
+    "task_type": "json_repair",
+    "schema_category": "truncated_structure",
+    "domain": "hotel reservation",
+    "instruction": "The following JSON payload was truncated and is missing closing brackets or braces. Repair the structure and output strictly valid JSON.",
+    "input": "{\"hotel\": \"Granbell Colombo\", \"dates\": {\"checkin\": \"2025-07-07\"",
+    "output": "{\"hotel\": \"Granbell Colombo\", \"dates\": {\"checkin\": \"2025-07-07\"}}"
+  },
+  {
+    "id": "repair_truncated_012",
+    "task_type": "json_repair",
+    "schema_category": "truncated_structure",
+    "domain": "vr scene composition",
+    "instruction": "The following JSON payload was truncated and is missing closing brackets or braces. Repair the structure and output strictly valid JSON.",
+    "input": "{\"scene\": \"main_menu\", \"objects\": [{\"id\": 1, \"type\": \"camera\"}, {\"id\": 2",
+    "output": "{\"scene\": \"main_menu\", \"objects\": [{\"id\": 1, \"type\": \"camera\"}, {\"id\": 2}]}"
+  },
+  {
+    "id": "repair_truncated_013",
+    "task_type": "json_repair",
+    "schema_category": "truncated_structure",
+    "domain": "computer vision parameters",
+    "instruction": "The following JSON payload was truncated and is missing closing brackets or braces. Repair the structure and output strictly valid JSON.",
+    "input": "{\"algorithm\": \"epipolar_geometry\", \"params\": {\"focal_length\": 50.0, \"distortion\": [",
+    "output": "{\"algorithm\": \"epipolar_geometry\", \"params\": {\"focal_length\": 50.0, \"distortion\": []}}"
+  },
+  {
+    "id": "repair_truncated_014",
+    "task_type": "json_repair",
+    "schema_category": "truncated_structure",
+    "domain": "flight ticket status",
+    "instruction": "The following JSON payload is missing opening brackets or braces. Repair the structure and output strictly valid JSON.",
+    "input": "\"airline\": \"Delta\", \"flight\": \"DL123\", \"status\": \"on_time\"}",
+    "output": "{\"airline\": \"Delta\", \"flight\": \"DL123\", \"status\": \"on_time\"}"
+  },
+  {
+    "id": "repair_delimiters_001",
+    "task_type": "json_repair",
+    "schema_category": "incorrect_delimiters",
+    "domain": "single quotes",
+    "instruction": "The following text uses invalid delimiters (like single quotes or incorrect punctuation). Convert it to strictly valid JSON format.",
+    "input": "{'name': 'Charlie', 'age': 28, 'is_active': True}",
+    "output": "{\"name\": \"Charlie\", \"age\": 28, \"is_active\": true}"
+  },
+  {
+    "id": "repair_delimiters_002",
+    "task_type": "json_repair",
+    "schema_category": "incorrect_delimiters",
+    "domain": "equals signs",
+    "instruction": "The following text uses invalid delimiters (like equals signs instead of colons). Convert it to strictly valid JSON format.",
+    "input": "{\"status\" = \"success\", \"code\" = 200}",
+    "output": "{\"status\": \"success\", \"code\": 200}"
+  },
+  {
+    "id": "repair_delimiters_003",
+    "task_type": "json_repair",
+    "schema_category": "incorrect_delimiters",
+    "domain": "semicolons",
+    "instruction": "The following text uses invalid delimiters (like semicolons instead of commas). Convert it to strictly valid JSON format.",
+    "input": "{\"department\": \"Engineering\"; \"manager\": \"Sarah\"; \"budget\": 50000}",
+    "output": "{\"department\": \"Engineering\", \"manager\": \"Sarah\", \"budget\": 50000}"
+  },
+  {
+    "id": "repair_delimiters_004",
+    "task_type": "json_repair",
+    "schema_category": "incorrect_delimiters",
+    "domain": "missing commas entirely",
+    "instruction": "The following text is missing required comma delimiters between key-value pairs. Convert it to strictly valid JSON format.",
+    "input": "{\"id\": 10 \"name\": \"Test Item\" \"verified\": false}",
+    "output": "{\"id\": 10, \"name\": \"Test Item\", \"verified\": false}"
+  },
+  {
+    "id": "repair_delimiters_005",
+    "task_type": "json_repair",
+    "schema_category": "incorrect_delimiters",
+    "domain": "mixed garbage delimiters",
+    "instruction": "The following text uses completely invalid delimiters (like pipes and equals signs). Convert it to strictly valid JSON format.",
+    "input": "{\"host\" = \"127.0.0.1\" | \"port\" = 3306 | \"user\" = 'root'}",
+    "output": "{\"host\": \"127.0.0.1\", \"port\": 3306, \"user\": \"root\"}"
+  },
+  {
+    "id": "repair_delimiters_006",
+    "task_type": "json_repair",
+    "schema_category": "incorrect_delimiters",
+    "domain": "python dictionary syntax",
+    "instruction": "The following text is formatted like a Python dictionary (single quotes, Capitalized booleans). Convert it to strictly valid JSON format.",
+    "input": "{'results': ['apple', 'banana'], 'success': False, 'count': 2}",
+    "output": "{\"results\": [\"apple\", \"banana\"], \"success\": false, \"count\": 2}"
+  },
+  {
+    "id": "repair_delimiters_007",
+    "task_type": "json_repair",
+    "schema_category": "incorrect_delimiters",
+    "domain": "python trading script params",
+    "instruction": "The following text uses invalid delimiters (like single quotes or incorrect punctuation). Convert it to strictly valid JSON format.",
+    "input": "{'script': 'backtest.py', 'epochs': 50, 'use_gpu': True}",
+    "output": "{\"script\": \"backtest.py\", \"epochs\": 50, \"use_gpu\": true}"
+  },
+  {
+    "id": "repair_delimiters_008",
+    "task_type": "json_repair",
+    "schema_category": "incorrect_delimiters",
+    "domain": "environment variables",
+    "instruction": "The following text uses invalid delimiters (like equals signs instead of colons). Convert it to strictly valid JSON format.",
+    "input": "{\"DB_HOST\" = \"localhost\", \"DB_PORT\" = 5432}",
+    "output": "{\"DB_HOST\": \"localhost\", \"DB_PORT\": 5432}"
+  },
+  {
+    "id": "repair_delimiters_009",
+    "task_type": "json_repair",
+    "schema_category": "incorrect_delimiters",
+    "domain": "dissertation metadata",
+    "instruction": "The following text uses invalid delimiters (like semicolons instead of commas). Convert it to strictly valid JSON format.",
+    "input": "{\"title\": \"AR App Testing\"; \"author\": \"Sahan\"; \"year\": 2026}",
+    "output": "{\"title\": \"AR App Testing\", \"author\": \"Sahan\", \"year\": 2026}"
+  },
+  {
+    "id": "repair_delimiters_010",
+    "task_type": "json_repair",
+    "schema_category": "incorrect_delimiters",
+    "domain": "wso2 product config",
+    "instruction": "The following text is missing required comma delimiters between key-value pairs. Convert it to strictly valid JSON format.",
+    "input": "{\"product\": \"micro-integrator\" \"version\": \"4.2.0\" \"clustering\": false}",
+    "output": "{\"product\": \"micro-integrator\", \"version\": \"4.2.0\", \"clustering\": false}"
+  },
+  {
+    "id": "repair_delimiters_011",
+    "task_type": "json_repair",
+    "schema_category": "incorrect_delimiters",
+    "domain": "laptop hardware specs",
+    "instruction": "The following text uses completely invalid delimiters (like pipes and equals signs). Convert it to strictly valid JSON format.",
+    "input": "{\"laptop\": \"MacBook Pro\" | \"chip\": \"M4 Pro\" | \"ram\": \"32GB\"}",
+    "output": "{\"laptop\": \"MacBook Pro\", \"chip\": \"M4 Pro\", \"ram\": \"32GB\"}"
+  },
+  {
+    "id": "repair_delimiters_012",
+    "task_type": "json_repair",
+    "schema_category": "incorrect_delimiters",
+    "domain": "maven dependencies",
+    "instruction": "The following text uses invalid delimiters (like single quotes or incorrect punctuation). Convert it to strictly valid JSON format.",
+    "input": "{'groupId': 'org.junit.jupiter', 'artifactId': 'junit-jupiter-api'}",
+    "output": "{\"groupId\": \"org.junit.jupiter\", \"artifactId\": \"junit-jupiter-api\"}"
+  },
+  {
+    "id": "repair_delimiters_013",
+    "task_type": "json_repair",
+    "schema_category": "incorrect_delimiters",
+    "domain": "smartwatch vitals",
+    "instruction": "The following text uses invalid delimiters (like equals signs instead of colons). Convert it to strictly valid JSON format.",
+    "input": "{\"device\" = \"Galaxy Watch\", \"heart_rate\" = 72}",
+    "output": "{\"device\": \"Galaxy Watch\", \"heart_rate\": 72}"
+  },
+  {
+    "id": "repair_delimiters_014",
+    "task_type": "json_repair",
+    "schema_category": "incorrect_delimiters",
+    "domain": "online shopping cart",
+    "instruction": "The following text uses invalid delimiters (like semicolons instead of commas). Convert it to strictly valid JSON format.",
+    "input": "{\"store\": \"Amazon\"; \"total\": 145.99; \"payment\": \"Klarna\"}",
+    "output": "{\"store\": \"Amazon\", \"total\": 145.99, \"payment\": \"Klarna\"}"
+  },
+  {
+    "id": "repair_escaping_001",
+    "task_type": "json_repair",
+    "schema_category": "escaping_and_quote_errors",
+    "domain": "unescaped internal quotes",
+    "instruction": "The following JSON contains unescaped internal quotes inside a string value, breaking the parser. Escape the quotes and output strictly valid JSON.",
+    "input": "{\"bio\": \"He is known as \"The Boss\" around the office.\"}",
+    "output": "{\"bio\": \"He is known as \\\"The Boss\\\" around the office.\"}"
+  },
+  {
+    "id": "repair_escaping_002",
+    "task_type": "json_repair",
+    "schema_category": "escaping_and_quote_errors",
+    "domain": "unescaped paths",
+    "instruction": "The following JSON contains unescaped backslashes in a file path. Escape the backslashes and output strictly valid JSON.",
+    "input": "{\"directory\": \"C:\\Windows\\System32\\Drivers\"}",
+    "output": "{\"directory\": \"C:\\\\Windows\\\\System32\\\\Drivers\"}"
+  },
+  {
+    "id": "repair_escaping_003",
+    "task_type": "json_repair",
+    "schema_category": "escaping_and_quote_errors",
+    "domain": "html attributes",
+    "instruction": "The following JSON contains unescaped quotes inside an HTML string. Escape the quotes and output strictly valid JSON.",
+    "input": "{\"html_blob\": \"<a href=\"https://example.com\">Click Here</a>\"}",
+    "output": "{\"html_blob\": \"<a href=\\\"https://example.com\\\">Click Here</a>\"}"
+  },
+  {
+    "id": "repair_escaping_004",
+    "task_type": "json_repair",
+    "schema_category": "escaping_and_quote_errors",
+    "domain": "unescaped regex",
+    "instruction": "The following JSON contains an unescaped regular expression string. Escape the backslashes and output strictly valid JSON.",
+    "input": "{\"pattern\": \"^\\d{4}-\\d{2}-\\d{2}$\"}",
+    "output": "{\"pattern\": \"^\\\\d{4}-\\\\d{2}-\\\\d{2}$\"}"
+  },
+  {
+    "id": "repair_escaping_005",
+    "task_type": "json_repair",
+    "schema_category": "escaping_and_quote_errors",
+    "domain": "apostrophe string collision",
+    "instruction": "The following JSON attempts to use single quotes to wrap a string that contains an apostrophe. Repair to use double quotes and output strictly valid JSON.",
+    "input": "{\"restaurant\": 'O'Connor's Pub'}",
+    "output": "{\"restaurant\": \"O'Connor's Pub\"}"
+  },
+  {
+    "id": "repair_escaping_006",
+    "task_type": "json_repair",
+    "schema_category": "escaping_and_quote_errors",
+    "domain": "literal line break",
+    "instruction": "The following JSON contains a literal line break inside a string value. Replace it with the proper newline escape character and output strictly valid JSON.",
+    "input": "{\"message\": \"This is line one.\nThis is line two.\"}",
+    "output": "{\"message\": \"This is line one.\\nThis is line two.\"}"
+  },
+  {
+    "id": "repair_escaping_007",
+    "task_type": "json_repair",
+    "schema_category": "escaping_and_quote_errors",
+    "domain": "api json payload",
+    "instruction": "The following JSON contains unescaped internal quotes inside a string value, breaking the parser. Escape the quotes and output strictly valid JSON.",
+    "input": "{\"message\": \"The server responded with \"500 Internal Error\" during the request.\"}",
+    "output": "{\"message\": \"The server responded with \\\"500 Internal Error\\\" during the request.\"}"
+  },
+  {
+    "id": "repair_escaping_008",
+    "task_type": "json_repair",
+    "schema_category": "escaping_and_quote_errors",
+    "domain": "windows file path",
+    "instruction": "The following JSON contains unescaped backslashes in a file path. Escape the backslashes and output strictly valid JSON.",
+    "input": "{\"log_dir\": \"C:\\Users\\admin\\appdata\\local\"}",
+    "output": "{\"log_dir\": \"C:\\\\Users\\\\admin\\\\appdata\\\\local\"}"
+  },
+  {
+    "id": "repair_escaping_009",
+    "task_type": "json_repair",
+    "schema_category": "escaping_and_quote_errors",
+    "domain": "bash command string",
+    "instruction": "The following JSON contains unescaped internal quotes inside a string value, breaking the parser. Escape the quotes and output strictly valid JSON.",
+    "input": "{\"cmd\": \"awk '{print $1}' access.log\"}",
+    "output": "{\"cmd\": \"awk '{print $1}' access.log\"}"
+  },
+  {
+    "id": "repair_escaping_010",
+    "task_type": "json_repair",
+    "schema_category": "escaping_and_quote_errors",
+    "domain": "regex string",
+    "instruction": "The following JSON contains an unescaped regular expression string. Escape the backslashes and output strictly valid JSON.",
+    "input": "{\"ip_regex\": \"^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$\"}",
+    "output": "{\"ip_regex\": \"^(?:[0-9]{1,3}\\\\.){3}[0-9]{1,3}$\"}"
+  },
+  {
+    "id": "repair_escaping_011",
+    "task_type": "json_repair",
+    "schema_category": "escaping_and_quote_errors",
+    "domain": "markdown text snippet",
+    "instruction": "The following JSON contains a literal line break inside a string value. Replace it with the proper newline escape character and output strictly valid JSON.",
+    "input": "{\"content\": \"Here is some code: \n```python\nprint('hello')\n```\"}",
+    "output": "{\"content\": \"Here is some code: \\n```python\\nprint('hello')\\n```\"}"
+  },
+  {
+    "id": "repair_escaping_012",
+    "task_type": "json_repair",
+    "schema_category": "escaping_and_quote_errors",
+    "domain": "html injection",
+    "instruction": "The following JSON contains unescaped internal quotes inside a string value, breaking the parser. Escape the quotes and output strictly valid JSON.",
+    "input": "{\"div_element\": \"<div class=\"container\">Content</div>\"}",
+    "output": "{\"div_element\": \"<div class=\\\"container\\\">Content</div>\"}"
+  },
+  {
+    "id": "repair_escaping_013",
+    "task_type": "json_repair",
+    "schema_category": "escaping_and_quote_errors",
+    "domain": "informal review text",
+    "instruction": "The following JSON attempts to use single quotes to wrap a string that contains an apostrophe. Repair to use double quotes and output strictly valid JSON.",
+    "input": "{\"review\": 'The Alamo's audio tour was quite informative.'}",
+    "output": "{\"review\": \"The Alamo's audio tour was quite informative.\"}"
+  },
+  {
+    "id": "repair_escaping_014",
+    "task_type": "json_repair",
+    "schema_category": "escaping_and_quote_errors",
+    "domain": "multi-line biography",
+    "instruction": "The following JSON contains a literal line break inside a string value. Replace it with the proper newline escape character and output strictly valid JSON.",
+    "input": "{\"bio\": \"Software developer.\nCurrently studying engineering.\"}",
+    "output": "{\"bio\": \"Software developer.\\nCurrently studying engineering.\"}"
+  }
+]

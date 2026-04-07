@@ -1,0 +1,1793 @@
+[
+  {
+    "id": "schema_flat_001",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "social media / user profile",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. All required fields must be present with the correct data types.\n\nSchema:\n{\n  \"username\": \"string\",\n  \"display_name\": \"string\",\n  \"bio\": \"string (max 160 characters)\",\n  \"followers_count\": \"integer\",\n  \"following_count\": \"integer\",\n  \"verified\": \"boolean\",\n  \"account_created_year\": \"integer\"\n}",
+    "input": "Generate a realistic user profile for a travel photographer from New Zealand who has been on the platform since 2019 and has a large following.",
+    "output": "",
+    "required_keys": [
+      "username",
+      "display_name",
+      "bio",
+      "followers_count",
+      "following_count",
+      "verified",
+      "account_created_year"
+    ],
+    "type_constraints": {
+      "followers_count": "integer",
+      "following_count": "integer",
+      "verified": "boolean",
+      "account_created_year": "integer"
+    }
+  },
+  {
+    "id": "schema_flat_002",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "meteorology / weather report",
+    "instruction": "Schema weather",
+    "input": "Generate a weather report for a cold and rainy autumn day in Tokyo, Japan.",
+    "output": "",
+    "required_keys": [
+      "city",
+      "country_code",
+      "date",
+      "temperature_celsius",
+      "humidity_percent",
+      "wind_speed_kmh",
+      "condition",
+      "uv_index"
+    ],
+    "type_constraints": {
+      "temperature_celsius": "float",
+      "humidity_percent": "integer",
+      "wind_speed_kmh": "float",
+      "uv_index": "integer"
+    }
+  },
+  {
+    "id": "schema_flat_003",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "e-commerce / product review",
+    "instruction": "Schema review",
+    "input": "Generate a positive review for a mechanical keyboard.",
+    "output": "",
+    "required_keys": [
+      "review_id",
+      "product_name",
+      "reviewer_name",
+      "rating",
+      "title",
+      "body",
+      "verified_purchase",
+      "helpful_votes",
+      "review_date"
+    ],
+    "type_constraints": {
+      "rating": "integer",
+      "verified_purchase": "boolean",
+      "helpful_votes": "integer"
+    }
+  },
+  {
+    "id": "schema_flat_004",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "transportation / vehicle registration",
+    "instruction": "Schema vehicle",
+    "input": "Generate a registration record for a personal electric SUV.",
+    "output": "",
+    "required_keys": [
+      "registration_number",
+      "make",
+      "model",
+      "year",
+      "color",
+      "fuel_type",
+      "owner_name",
+      "state",
+      "expiry_date",
+      "is_commercial"
+    ],
+    "type_constraints": {
+      "year": "integer",
+      "is_commercial": "boolean"
+    }
+  },
+  {
+    "id": "schema_flat_005",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "library / book catalog",
+    "instruction": "Schema book",
+    "input": "Generate a catalog entry for a quantum computing book.",
+    "output": "",
+    "required_keys": [
+      "isbn",
+      "title",
+      "author",
+      "publisher",
+      "publish_year",
+      "genre",
+      "pages",
+      "language",
+      "available"
+    ],
+    "type_constraints": {
+      "publish_year": "integer",
+      "pages": "integer",
+      "available": "boolean"
+    }
+  },
+  {
+    "id": "schema_flat_006",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "geopolitics / country statistics",
+    "instruction": "Schema country",
+    "input": "Generate statistics for a mid-sized European country.",
+    "output": "",
+    "required_keys": [
+      "country_name",
+      "iso_code",
+      "capital",
+      "population",
+      "area_km2",
+      "gdp_usd_billions",
+      "official_language",
+      "currency",
+      "un_member"
+    ],
+    "type_constraints": {
+      "population": "integer",
+      "area_km2": "float",
+      "gdp_usd_billions": "float",
+      "un_member": "boolean"
+    }
+  },
+  {
+    "id": "schema_nested_001",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "e-commerce / order record",
+    "instruction": "Schema order",
+    "input": "Generate an order record for a customer in Chicago.",
+    "output": "",
+    "required_keys": [
+      "order_id",
+      "placed_at",
+      "status",
+      "customer.id",
+      "customer.name",
+      "customer.email",
+      "shipping_address.street",
+      "shipping_address.city",
+      "shipping_address.state",
+      "shipping_address.zip",
+      "shipping_address.country"
+    ]
+  },
+  {
+    "id": "schema_nested_002",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "academia / research paper metadata",
+    "instruction": "Schema paper",
+    "input": "Generate metadata for a federated learning paper.",
+    "output": "",
+    "required_keys": [
+      "paper_id",
+      "title",
+      "abstract",
+      "author.name",
+      "author.affiliation",
+      "author.email",
+      "venue.name",
+      "venue.type",
+      "venue.year",
+      "venue.location"
+    ]
+  },
+  {
+    "id": "schema_nested_003",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "healthcare / clinical encounter",
+    "instruction": "Schema encounter",
+    "input": "Generate a clinical encounter for a respiratory infection patient.",
+    "output": "",
+    "required_keys": [
+      "encounter_id",
+      "encounter_date",
+      "encounter_type",
+      "patient.patient_id",
+      "patient.name",
+      "patient.age",
+      "patient.gender",
+      "diagnosis.icd_code",
+      "diagnosis.description",
+      "diagnosis.severity"
+    ]
+  },
+  {
+    "id": "schema_nested_004",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "software engineering / repository metadata",
+    "instruction": "Schema repo",
+    "input": "Generate a repository record for a Python data visualization library.",
+    "output": "",
+    "required_keys": [
+      "repo_id",
+      "name",
+      "description",
+      "is_public",
+      "metadata.language",
+      "metadata.license",
+      "metadata.stars",
+      "metadata.forks",
+      "metadata.created_at",
+      "owner.username",
+      "owner.type"
+    ]
+  },
+  {
+    "id": "schema_nested_005",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "real estate / property and agent",
+    "instruction": "Schema listing",
+    "input": "Generate a listing for a 3-bedroom condo in Miami.",
+    "output": "",
+    "required_keys": [
+      "listing_id",
+      "list_date",
+      "property.address",
+      "property.type",
+      "property.price_usd",
+      "property.bedrooms",
+      "property.bathrooms",
+      "agent.name",
+      "agent.license_number",
+      "agent.agency",
+      "agent.phone"
+    ]
+  },
+  {
+    "id": "schema_nested_006",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "fintech / loan application",
+    "instruction": "Schema loan",
+    "input": "Generate a loan application for a self-employed individual.",
+    "output": "",
+    "required_keys": [
+      "application_id",
+      "submitted_at",
+      "loan.amount_usd",
+      "loan.purpose",
+      "loan.term_months",
+      "loan.interest_rate_percent",
+      "applicant.name",
+      "applicant.annual_income_usd",
+      "applicant.credit_score",
+      "applicant.employment_status"
+    ]
+  },
+  {
+    "id": "schema_array_001",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "e-commerce / shopping cart",
+    "instruction": "Schema cart",
+    "input": "Generate a shopping cart for home office supplies.",
+    "output": "",
+    "required_keys": [
+      "[].item_id",
+      "[].product_name",
+      "[].category",
+      "[].quantity",
+      "[].unit_price_usd",
+      "[].in_stock"
+    ],
+    "array_length": 4
+  },
+  {
+    "id": "schema_array_002",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "sports / team roster",
+    "instruction": "Schema roster",
+    "input": "Generate roster entries for 5 European football players.",
+    "output": "",
+    "required_keys": [
+      "[].player_id",
+      "[].name",
+      "[].jersey_number",
+      "[].position",
+      "[].nationality",
+      "[].age",
+      "[].is_captain"
+    ],
+    "array_length": 5
+  },
+  {
+    "id": "schema_array_003",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "project management / task list",
+    "instruction": "Schema tasks",
+    "input": "Generate sprint tasks for user authentication.",
+    "output": "",
+    "required_keys": [
+      "[].task_id",
+      "[].title",
+      "[].assigned_to",
+      "[].priority",
+      "[].status",
+      "[].due_date",
+      "[].story_points"
+    ],
+    "array_length": 5
+  },
+  {
+    "id": "schema_array_004",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "entertainment / film cast",
+    "instruction": "Schema cast",
+    "input": "Generate cast for a sci-fi blockbuster.",
+    "output": "",
+    "required_keys": [
+      "[].actor_name",
+      "[].character_name",
+      "[].role_type",
+      "[].screen_time_minutes",
+      "[].award_nominated"
+    ],
+    "array_length": 5
+  },
+  {
+    "id": "schema_array_005",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "API design / endpoint catalog",
+    "instruction": "Schema endpoints",
+    "input": "Generate API endpoints for user management.",
+    "output": "",
+    "required_keys": [
+      "[].endpoint_id",
+      "[].path",
+      "[].method",
+      "[].description",
+      "[].requires_auth",
+      "[].rate_limit_per_minute"
+    ],
+    "array_length": 4
+  },
+  {
+    "id": "schema_array_006",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "nutrition / meal ingredients",
+    "instruction": "Schema ingredients",
+    "input": "Generate ingredient list for pasta carbonara.",
+    "output": "",
+    "required_keys": [
+      "[].ingredient_name",
+      "[].amount",
+      "[].unit",
+      "[].calories_per_unit",
+      "[].allergen"
+    ],
+    "array_length": 6
+  },
+  {
+    "id": "schema_mixed_001",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "music / album record",
+    "instruction": "Schema album",
+    "input": "Generate an indie rock debut album with 5 tracks.",
+    "output": "",
+    "required_keys": [
+      "album_id",
+      "title",
+      "artist",
+      "genre",
+      "release_year",
+      "total_duration_seconds",
+      "tracks[].track_number",
+      "tracks[].title",
+      "tracks[].duration_seconds",
+      "tracks[].explicit"
+    ],
+    "array_field": "tracks",
+    "array_length": 5
+  },
+  {
+    "id": "schema_mixed_002",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "HR / job posting",
+    "instruction": "Schema job",
+    "input": "Generate a job posting for Senior ML Engineer.",
+    "output": "",
+    "required_keys": [
+      "job_id",
+      "title",
+      "company",
+      "location",
+      "salary_range",
+      "posted_date",
+      "requirements[].type",
+      "requirements[].description",
+      "requirements[].required"
+    ],
+    "array_field": "requirements",
+    "array_length": 5
+  },
+  {
+    "id": "schema_mixed_003",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "software / project manifest",
+    "instruction": "Schema manifest",
+    "input": "Generate a project manifest for cloud migration.",
+    "output": "",
+    "required_keys": [
+      "project_id",
+      "name",
+      "description",
+      "owner",
+      "status",
+      "budget_usd",
+      "milestones[].milestone_id",
+      "milestones[].title",
+      "milestones[].due_date",
+      "milestones[].completed"
+    ],
+    "array_field": "milestones",
+    "array_length": 4
+  },
+  {
+    "id": "schema_mixed_004",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "education / online course",
+    "instruction": "Schema course",
+    "input": "Generate a Docker course with 5 modules.",
+    "output": "",
+    "required_keys": [
+      "course_id",
+      "title",
+      "platform",
+      "instructor",
+      "level",
+      "price_usd",
+      "modules[].module_number",
+      "modules[].title",
+      "modules[].duration_minutes",
+      "modules[].has_quiz"
+    ],
+    "array_field": "modules",
+    "array_length": 5
+  },
+  {
+    "id": "schema_mixed_005",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "healthcare / vaccination record",
+    "instruction": "Schema vaccination",
+    "input": "Generate a vaccination record for 3 COVID doses.",
+    "output": "",
+    "required_keys": [
+      "record_id",
+      "patient_name",
+      "date_of_birth",
+      "issuing_clinic",
+      "doses[].vaccine_name",
+      "doses[].dose_number",
+      "doses[].date_administered",
+      "doses[].administered_by",
+      "doses[].lot_number"
+    ],
+    "array_field": "doses",
+    "array_length": 3
+  },
+  {
+    "id": "schema_mixed_006",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "journalism / news article",
+    "instruction": "Schema article",
+    "input": "Generate an article about AI regulation with 4 sources.",
+    "output": "",
+    "required_keys": [
+      "article_id",
+      "headline",
+      "author",
+      "published_at",
+      "category",
+      "word_count",
+      "sources[].source_name",
+      "sources[].source_type",
+      "sources[].url"
+    ],
+    "array_field": "sources",
+    "array_length": 4
+  },
+  {
+    "id": "schema_nullable_001",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "social media / creator profile",
+    "instruction": "Schema creator",
+    "input": "Generate a tech YouTube creator profile.",
+    "output": "",
+    "required_keys": [
+      "user_id",
+      "username",
+      "display_name",
+      "website_url",
+      "location",
+      "youtube_channel",
+      "instagram_handle",
+      "total_subscribers",
+      "monetized"
+    ],
+    "nullable_fields": [
+      "website_url",
+      "location",
+      "instagram_handle"
+    ]
+  },
+  {
+    "id": "schema_nullable_002",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "HR / employee directory",
+    "instruction": "Schema employee",
+    "input": "Generate a remote junior analyst directory entry.",
+    "output": "",
+    "required_keys": [
+      "employee_id",
+      "full_name",
+      "department",
+      "title",
+      "work_phone",
+      "office_location",
+      "manager_name",
+      "linkedin_url",
+      "is_active"
+    ],
+    "nullable_fields": [
+      "office_location",
+      "manager_name",
+      "linkedin_url"
+    ]
+  },
+  {
+    "id": "schema_nullable_003",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "software / dependency manifest",
+    "instruction": "Schema package",
+    "input": "Generate a Python utility package manifest.",
+    "output": "",
+    "required_keys": [
+      "package_name",
+      "version",
+      "language",
+      "license",
+      "homepage_url",
+      "repository_url",
+      "deprecated",
+      "replacement_package",
+      "last_updated"
+    ],
+    "nullable_fields": [
+      "homepage_url",
+      "replacement_package"
+    ]
+  },
+  {
+    "id": "schema_nullable_004",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "e-commerce / return request",
+    "instruction": "Schema return",
+    "input": "Generate a pending return request.",
+    "output": "",
+    "required_keys": [
+      "return_id",
+      "order_id",
+      "customer_name",
+      "reason",
+      "requested_at",
+      "approved_at",
+      "refund_amount_usd",
+      "refund_method",
+      "resolved"
+    ],
+    "nullable_fields": [
+      "approved_at",
+      "refund_amount_usd",
+      "refund_method"
+    ]
+  },
+  {
+    "id": "schema_nullable_005",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "startup / company profile",
+    "instruction": "Schema startup",
+    "input": "Generate a bootstrapped health tech startup profile.",
+    "output": "",
+    "required_keys": [
+      "company_id",
+      "name",
+      "industry",
+      "founded_year",
+      "hq_city",
+      "funding_stage",
+      "total_funding_usd",
+      "ipo_date",
+      "acquired_by",
+      "is_active"
+    ],
+    "nullable_fields": [
+      "funding_stage",
+      "total_funding_usd",
+      "ipo_date",
+      "acquired_by"
+    ]
+  },
+  {
+    "id": "schema_nullable_006",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "legal / contract record",
+    "instruction": "Schema contract",
+    "input": "Generate a SaaS contract signed by only one party.",
+    "output": "",
+    "required_keys": [
+      "contract_id",
+      "title",
+      "party_a",
+      "party_b",
+      "effective_date",
+      "expiry_date",
+      "contract_value_usd",
+      "signed_by_a",
+      "signed_by_b",
+      "termination_reason"
+    ],
+    "nullable_fields": [
+      "expiry_date",
+      "termination_reason"
+    ]
+  },
+  {
+    "id": "schema_flat_007",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "banking / credit card statement",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. All required fields must be present with the correct data types.\n\nSchema:\n{\n  \"statement_id\": \"string\",\n  \"account_holder\": \"string\",\n  \"card_last_four\": \"string (exactly 4 digits)\",\n  \"billing_period_start\": \"string (YYYY-MM-DD)\",\n  \"billing_period_end\": \"string (YYYY-MM-DD)\",\n  \"total_charges_usd\": \"float\",\n  \"minimum_payment_usd\": \"float\",\n  \"due_date\": \"string (YYYY-MM-DD)\",\n  \"rewards_points_earned\": \"integer\"\n}",
+    "input": "Generate a monthly credit card statement for a frequent traveler who spent heavily on airlines and hotels this billing cycle.",
+    "output": "",
+    "required_keys": [
+      "statement_id",
+      "account_holder",
+      "card_last_four",
+      "billing_period_start",
+      "billing_period_end",
+      "total_charges_usd",
+      "minimum_payment_usd",
+      "due_date",
+      "rewards_points_earned"
+    ],
+    "type_constraints": {
+      "total_charges_usd": "float",
+      "minimum_payment_usd": "float",
+      "rewards_points_earned": "integer"
+    }
+  },
+  {
+    "id": "schema_flat_008",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "fitness / workout session log",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. All required fields must be present with the correct data types.\n\nSchema:\n{\n  \"session_id\": \"string\",\n  \"athlete_name\": \"string\",\n  \"date\": \"string (YYYY-MM-DD)\",\n  \"workout_type\": \"string (one of: strength, cardio, hiit, yoga, mobility, mixed)\",\n  \"duration_minutes\": \"integer\",\n  \"calories_burned\": \"integer\",\n  \"avg_heart_rate_bpm\": \"integer\",\n  \"completed\": \"boolean\",\n  \"coach_notes\": \"string\"\n}",
+    "input": "Generate a workout session log for a competitive runner completing a high-intensity interval training session.",
+    "output": "",
+    "required_keys": [
+      "session_id",
+      "athlete_name",
+      "date",
+      "workout_type",
+      "duration_minutes",
+      "calories_burned",
+      "avg_heart_rate_bpm",
+      "completed",
+      "coach_notes"
+    ],
+    "type_constraints": {
+      "duration_minutes": "integer",
+      "calories_burned": "integer",
+      "avg_heart_rate_bpm": "integer",
+      "completed": "boolean"
+    }
+  },
+  {
+    "id": "schema_flat_009",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "government / passport record",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. All required fields must be present with the correct data types.\n\nSchema:\n{\n  \"passport_number\": \"string\",\n  \"surname\": \"string\",\n  \"given_names\": \"string\",\n  \"nationality\": \"string\",\n  \"date_of_birth\": \"string (YYYY-MM-DD)\",\n  \"gender\": \"string (one of: M, F, X)\",\n  \"issue_date\": \"string (YYYY-MM-DD)\",\n  \"expiry_date\": \"string (YYYY-MM-DD)\",\n  \"issuing_country_code\": \"string (ISO 3166-1 alpha-3)\"\n}",
+    "input": "Generate a passport record for a Canadian citizen issued in 2021 with standard 10-year validity.",
+    "output": "",
+    "required_keys": [
+      "passport_number",
+      "surname",
+      "given_names",
+      "nationality",
+      "date_of_birth",
+      "gender",
+      "issue_date",
+      "expiry_date",
+      "issuing_country_code"
+    ],
+    "type_constraints": {}
+  },
+  {
+    "id": "schema_flat_010",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "entertainment / streaming subscription",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. All required fields must be present with the correct data types.\n\nSchema:\n{\n  \"subscription_id\": \"string\",\n  \"platform\": \"string\",\n  \"subscriber_name\": \"string\",\n  \"plan_tier\": \"string (one of: basic, standard, premium, family)\",\n  \"monthly_price_usd\": \"float\",\n  \"billing_cycle\": \"string (one of: monthly, annual)\",\n  \"start_date\": \"string (YYYY-MM-DD)\",\n  \"auto_renew\": \"boolean\",\n  \"max_screens\": \"integer\"\n}",
+    "input": "Generate a subscription record for a family plan on a major streaming service billed annually.",
+    "output": "",
+    "required_keys": [
+      "subscription_id",
+      "platform",
+      "subscriber_name",
+      "plan_tier",
+      "monthly_price_usd",
+      "billing_cycle",
+      "start_date",
+      "auto_renew",
+      "max_screens"
+    ],
+    "type_constraints": {
+      "monthly_price_usd": "float",
+      "auto_renew": "boolean",
+      "max_screens": "integer"
+    }
+  },
+  {
+    "id": "schema_flat_011",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "HR / payroll record",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. All required fields must be present with the correct data types.\n\nSchema:\n{\n  \"payroll_id\": \"string\",\n  \"employee_id\": \"string\",\n  \"employee_name\": \"string\",\n  \"pay_period\": \"string (e.g., 2024-10)\",\n  \"gross_pay_usd\": \"float\",\n  \"tax_withheld_usd\": \"float\",\n  \"net_pay_usd\": \"float\",\n  \"payment_method\": \"string (one of: direct_deposit, check, wire)\",\n  \"processed\": \"boolean\"\n}",
+    "input": "Generate a payroll record for a senior software engineer processed via direct deposit for October 2024.",
+    "output": "",
+    "required_keys": [
+      "payroll_id",
+      "employee_id",
+      "employee_name",
+      "pay_period",
+      "gross_pay_usd",
+      "tax_withheld_usd",
+      "net_pay_usd",
+      "payment_method",
+      "processed"
+    ],
+    "type_constraints": {
+      "gross_pay_usd": "float",
+      "tax_withheld_usd": "float",
+      "net_pay_usd": "float",
+      "processed": "boolean"
+    }
+  },
+  {
+    "id": "schema_flat_012",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "science / satellite telemetry",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. All required fields must be present with the correct data types.\n\nSchema:\n{\n  \"satellite_id\": \"string\",\n  \"satellite_name\": \"string\",\n  \"timestamp\": \"string (ISO 8601 datetime)\",\n  \"altitude_km\": \"float\",\n  \"latitude\": \"float (-90 to 90)\",\n  \"longitude\": \"float (-180 to 180)\",\n  \"orbital_speed_kmh\": \"float\",\n  \"battery_level_percent\": \"integer\",\n  \"signal_strength_dbm\": \"integer\",\n  \"operational\": \"boolean\"\n}",
+    "input": "Generate a telemetry snapshot for a low Earth orbit observation satellite passing over the Pacific Ocean.",
+    "output": "",
+    "required_keys": [
+      "satellite_id",
+      "satellite_name",
+      "timestamp",
+      "altitude_km",
+      "latitude",
+      "longitude",
+      "orbital_speed_kmh",
+      "battery_level_percent",
+      "signal_strength_dbm",
+      "operational"
+    ],
+    "type_constraints": {
+      "altitude_km": "float",
+      "latitude": "float",
+      "longitude": "float",
+      "orbital_speed_kmh": "float",
+      "battery_level_percent": "integer",
+      "signal_strength_dbm": "integer",
+      "operational": "boolean"
+    }
+  },
+  {
+    "id": "schema_flat_013",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "hospitality / hotel booking",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. All required fields must be present with the correct data types.\n\nSchema:\n{\n  \"booking_id\": \"string\",\n  \"guest_name\": \"string\",\n  \"hotel_name\": \"string\",\n  \"room_type\": \"string (one of: standard, deluxe, suite, penthouse)\",\n  \"check_in_date\": \"string (YYYY-MM-DD)\",\n  \"check_out_date\": \"string (YYYY-MM-DD)\",\n  \"nights\": \"integer\",\n  \"rate_per_night_usd\": \"float\",\n  \"breakfast_included\": \"boolean\",\n  \"confirmation_sent\": \"boolean\"\n}",
+    "input": "Generate a hotel booking record for a business traveler staying in a deluxe room in Singapore for 4 nights.",
+    "output": "",
+    "required_keys": [
+      "booking_id",
+      "guest_name",
+      "hotel_name",
+      "room_type",
+      "check_in_date",
+      "check_out_date",
+      "nights",
+      "rate_per_night_usd",
+      "breakfast_included",
+      "confirmation_sent"
+    ],
+    "type_constraints": {
+      "nights": "integer",
+      "rate_per_night_usd": "float",
+      "breakfast_included": "boolean",
+      "confirmation_sent": "boolean"
+    }
+  },
+  {
+    "id": "schema_flat_014",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "flat_object",
+    "split": "train",
+    "domain": "legal / trademark filing",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. All required fields must be present with the correct data types.\n\nSchema:\n{\n  \"application_number\": \"string\",\n  \"trademark_name\": \"string\",\n  \"applicant\": \"string\",\n  \"filing_date\": \"string (YYYY-MM-DD)\",\n  \"nice_class\": \"integer (1-45)\",\n  \"goods_services_description\": \"string\",\n  \"status\": \"string (one of: pending, approved, rejected, abandoned)\",\n  \"registered\": \"boolean\"\n}",
+    "input": "Generate a trademark filing record for a software company registering a brand name for cloud computing services.",
+    "output": "",
+    "required_keys": [
+      "application_number",
+      "trademark_name",
+      "applicant",
+      "filing_date",
+      "nice_class",
+      "goods_services_description",
+      "status",
+      "registered"
+    ],
+    "type_constraints": {
+      "nice_class": "integer",
+      "registered": "boolean"
+    }
+  },
+  {
+    "id": "schema_nested_007",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "finance / investment account",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. All nested fields must be fully populated.\n\nSchema:\n{\n  \"account_id\": \"string\",\n  \"account_type\": \"string (one of: brokerage, IRA, Roth_IRA, 401k)\",\n  \"opened_date\": \"string (YYYY-MM-DD)\",\n  \"owner\": {\n    \"name\": \"string\",\n    \"ssn_last_four\": \"string (4 digits)\",\n    \"risk_profile\": \"string (one of: conservative, moderate, aggressive)\"\n  },\n  \"balance\": {\n    \"total_value_usd\": \"float\",\n    \"cash_usd\": \"float\",\n    \"invested_usd\": \"float\"\n  }\n}",
+    "input": "Generate an investment account record for an aggressive-profile investor with a Roth IRA opened in 2018 with significant holdings.",
+    "output": "",
+    "required_keys": [
+      "account_id",
+      "account_type",
+      "opened_date",
+      "owner.name",
+      "owner.ssn_last_four",
+      "owner.risk_profile",
+      "balance.total_value_usd",
+      "balance.cash_usd",
+      "balance.invested_usd"
+    ],
+    "type_constraints": {
+      "balance.total_value_usd": "float",
+      "balance.cash_usd": "float",
+      "balance.invested_usd": "float"
+    }
+  },
+  {
+    "id": "schema_nested_008",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "healthcare / prescription record",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. All nested objects must be fully populated.\n\nSchema:\n{\n  \"prescription_id\": \"string\",\n  \"issued_date\": \"string (YYYY-MM-DD)\",\n  \"medication\": {\n    \"name\": \"string\",\n    \"dosage_mg\": \"float\",\n    \"form\": \"string (one of: tablet, capsule, liquid, injection, patch)\",\n    \"refills_allowed\": \"integer\"\n  },\n  \"prescriber\": {\n    \"name\": \"string\",\n    \"license_number\": \"string\",\n    \"specialty\": \"string\"\n  }\n}",
+    "input": "Generate a prescription record issued by a cardiologist for a blood pressure medication with 3 refills allowed.",
+    "output": "",
+    "required_keys": [
+      "prescription_id",
+      "issued_date",
+      "medication.name",
+      "medication.dosage_mg",
+      "medication.form",
+      "medication.refills_allowed",
+      "prescriber.name",
+      "prescriber.license_number",
+      "prescriber.specialty"
+    ],
+    "type_constraints": {
+      "medication.dosage_mg": "float",
+      "medication.refills_allowed": "integer"
+    }
+  },
+  {
+    "id": "schema_nested_009",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "software / CI-CD pipeline config",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. Nested fields are all required.\n\nSchema:\n{\n  \"pipeline_id\": \"string\",\n  \"pipeline_name\": \"string\",\n  \"enabled\": \"boolean\",\n  \"repository\": {\n    \"url\": \"string\",\n    \"branch\": \"string\",\n    \"provider\": \"string (one of: github, gitlab, bitbucket)\"\n  },\n  \"trigger\": {\n    \"event\": \"string (one of: push, pull_request, schedule, manual)\",\n    \"cron_expression\": \"string or null\",\n    \"notify_on_failure\": \"boolean\"\n  }\n}",
+    "input": "Generate a CI/CD pipeline configuration for a Python microservice that triggers on every push to the main branch with failure notifications enabled.",
+    "output": "",
+    "required_keys": [
+      "pipeline_id",
+      "pipeline_name",
+      "enabled",
+      "repository.url",
+      "repository.branch",
+      "repository.provider",
+      "trigger.event",
+      "trigger.cron_expression",
+      "trigger.notify_on_failure"
+    ],
+    "type_constraints": {
+      "enabled": "boolean",
+      "trigger.notify_on_failure": "boolean"
+    }
+  },
+  {
+    "id": "schema_nested_010",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "sports / athlete contract",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. All nested sub-fields are required.\n\nSchema:\n{\n  \"contract_id\": \"string\",\n  \"signed_date\": \"string (YYYY-MM-DD)\",\n  \"athlete\": {\n    \"name\": \"string\",\n    \"sport\": \"string\",\n    \"position\": \"string\",\n    \"nationality\": \"string\"\n  },\n  \"terms\": {\n    \"duration_years\": \"integer\",\n    \"annual_salary_usd\": \"integer\",\n    \"signing_bonus_usd\": \"integer\",\n    \"includes_no_trade_clause\": \"boolean\"\n  }\n}",
+    "input": "Generate an athlete contract for a star NBA point guard signing a max contract extension with their current team.",
+    "output": "",
+    "required_keys": [
+      "contract_id",
+      "signed_date",
+      "athlete.name",
+      "athlete.sport",
+      "athlete.position",
+      "athlete.nationality",
+      "terms.duration_years",
+      "terms.annual_salary_usd",
+      "terms.signing_bonus_usd",
+      "terms.includes_no_trade_clause"
+    ],
+    "type_constraints": {
+      "terms.duration_years": "integer",
+      "terms.annual_salary_usd": "integer",
+      "terms.signing_bonus_usd": "integer",
+      "terms.includes_no_trade_clause": "boolean"
+    }
+  },
+  {
+    "id": "schema_nested_011",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "government / election candidate",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. All nested fields must be present with valid types.\n\nSchema:\n{\n  \"candidate_id\": \"string\",\n  \"election_year\": \"integer\",\n  \"personal\": {\n    \"full_name\": \"string\",\n    \"age\": \"integer\",\n    \"party\": \"string\",\n    \"state\": \"string\"\n  },\n  \"campaign\": {\n    \"office_sought\": \"string\",\n    \"slogan\": \"string\",\n    \"total_raised_usd\": \"integer\",\n    \"incumbent\": \"boolean\"\n  }\n}",
+    "input": "Generate a candidate profile for a non-incumbent Democratic senator running in a 2024 US Senate race in a swing state.",
+    "output": "",
+    "required_keys": [
+      "candidate_id",
+      "election_year",
+      "personal.full_name",
+      "personal.age",
+      "personal.party",
+      "personal.state",
+      "campaign.office_sought",
+      "campaign.slogan",
+      "campaign.total_raised_usd",
+      "campaign.incumbent"
+    ],
+    "type_constraints": {
+      "election_year": "integer",
+      "personal.age": "integer",
+      "campaign.total_raised_usd": "integer",
+      "campaign.incumbent": "boolean"
+    }
+  },
+  {
+    "id": "schema_nested_012",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "nonprofit / volunteer record",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. All nested objects must be fully populated.\n\nSchema:\n{\n  \"record_id\": \"string\",\n  \"organization\": \"string\",\n  \"volunteer\": {\n    \"name\": \"string\",\n    \"email\": \"string\",\n    \"age_group\": \"string (one of: under_18, 18_25, 26_40, 41_60, over_60)\"\n  },\n  \"engagement\": {\n    \"role\": \"string\",\n    \"start_date\": \"string (YYYY-MM-DD)\",\n    \"total_hours\": \"integer\",\n    \"background_check_passed\": \"boolean\"\n  }\n}",
+    "input": "Generate a volunteer record for an adult in the 26\u201340 age group serving as a youth mentor at a literacy nonprofit.",
+    "output": "",
+    "required_keys": [
+      "record_id",
+      "organization",
+      "volunteer.name",
+      "volunteer.email",
+      "volunteer.age_group",
+      "engagement.role",
+      "engagement.start_date",
+      "engagement.total_hours",
+      "engagement.background_check_passed"
+    ],
+    "type_constraints": {
+      "engagement.total_hours": "integer",
+      "engagement.background_check_passed": "boolean"
+    }
+  },
+  {
+    "id": "schema_nested_013",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "cybersecurity / firewall rule",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. All nested fields are required.\n\nSchema:\n{\n  \"rule_id\": \"string\",\n  \"created_at\": \"string (ISO 8601 datetime)\",\n  \"enabled\": \"boolean\",\n  \"match\": {\n    \"protocol\": \"string (one of: TCP, UDP, ICMP, ANY)\",\n    \"source_ip\": \"string\",\n    \"destination_ip\": \"string\",\n    \"port\": \"integer or null\"\n  },\n  \"action\": {\n    \"type\": \"string (one of: allow, deny, log, redirect)\",\n    \"log_event\": \"boolean\",\n    \"priority\": \"integer (1-100)\"\n  }\n}",
+    "input": "Generate a firewall rule that blocks all inbound TCP traffic from an external subnet to an internal database server port 5432.",
+    "output": "",
+    "required_keys": [
+      "rule_id",
+      "created_at",
+      "enabled",
+      "match.protocol",
+      "match.source_ip",
+      "match.destination_ip",
+      "match.port",
+      "action.type",
+      "action.log_event",
+      "action.priority"
+    ],
+    "type_constraints": {
+      "enabled": "boolean",
+      "match.port": "integer",
+      "action.log_event": "boolean",
+      "action.priority": "integer"
+    }
+  },
+  {
+    "id": "schema_nested_014",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nested_object",
+    "split": "train",
+    "domain": "retail / loyalty program member",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. All nested fields must be present.\n\nSchema:\n{\n  \"member_id\": \"string\",\n  \"enrolled_date\": \"string (YYYY-MM-DD)\",\n  \"tier\": \"string (one of: bronze, silver, gold, platinum)\",\n  \"profile\": {\n    \"name\": \"string\",\n    \"email\": \"string\",\n    \"preferred_store\": \"string\"\n  },\n  \"points\": {\n    \"current_balance\": \"integer\",\n    \"lifetime_earned\": \"integer\",\n    \"expiry_date\": \"string (YYYY-MM-DD)\"\n  }\n}",
+    "input": "Generate a loyalty program member record for a platinum-tier customer who shops frequently at a high-end grocery chain.",
+    "output": "",
+    "required_keys": [
+      "member_id",
+      "enrolled_date",
+      "tier",
+      "profile.name",
+      "profile.email",
+      "profile.preferred_store",
+      "points.current_balance",
+      "points.lifetime_earned",
+      "points.expiry_date"
+    ],
+    "type_constraints": {
+      "points.current_balance": "integer",
+      "points.lifetime_earned": "integer"
+    }
+  },
+  {
+    "id": "schema_array_007",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "HR / interview scorecard",
+    "instruction": "Given the schema below, generate a valid JSON array containing exactly 5 objects, each strictly conforming to the evaluation schema.\n\nEvaluation Schema:\n{\n  \"interviewer_name\": \"string\",\n  \"round\": \"string (one of: screening, technical, behavioral, case_study, final)\",\n  \"score\": \"integer (1-10)\",\n  \"recommendation\": \"string (one of: strong_hire, hire, no_hire, strong_no_hire)\",\n  \"completed\": \"boolean\"\n}",
+    "input": "Generate 5 interview evaluation entries for a senior data scientist candidate who has progressed through multiple rounds with mostly positive feedback.",
+    "output": "",
+    "required_keys": [
+      "[].interviewer_name",
+      "[].round",
+      "[].score",
+      "[].recommendation",
+      "[].completed"
+    ],
+    "array_length": 5,
+    "type_constraints": {
+      "score": "integer",
+      "completed": "boolean"
+    }
+  },
+  {
+    "id": "schema_array_008",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "e-commerce / product wishlist",
+    "instruction": "Given the schema below, generate a valid JSON array containing exactly 4 objects, each strictly conforming to the wishlist item schema.\n\nWishlist Item Schema:\n{\n  \"wishlist_item_id\": \"string\",\n  \"product_name\": \"string\",\n  \"brand\": \"string\",\n  \"desired_price_usd\": \"float\",\n  \"current_price_usd\": \"float\",\n  \"in_stock\": \"boolean\",\n  \"added_date\": \"string (YYYY-MM-DD)\"\n}",
+    "input": "Generate 4 wishlist items for a tech enthusiast saving up for smart home and audio equipment.",
+    "output": "",
+    "required_keys": [
+      "[].wishlist_item_id",
+      "[].product_name",
+      "[].brand",
+      "[].desired_price_usd",
+      "[].current_price_usd",
+      "[].in_stock",
+      "[].added_date"
+    ],
+    "array_length": 4,
+    "type_constraints": {
+      "desired_price_usd": "float",
+      "current_price_usd": "float",
+      "in_stock": "boolean"
+    }
+  },
+  {
+    "id": "schema_array_009",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "science / experiment observations",
+    "instruction": "Given the schema below, generate a valid JSON array containing exactly 5 objects, each strictly conforming to the observation schema.\n\nObservation Schema:\n{\n  \"observation_id\": \"string\",\n  \"trial_number\": \"integer\",\n  \"timestamp\": \"string (ISO 8601 datetime)\",\n  \"measured_value\": \"float\",\n  \"unit\": \"string\",\n  \"within_expected_range\": \"boolean\",\n  \"notes\": \"string\"\n}",
+    "input": "Generate 5 experimental observations for a chemistry titration experiment where most but not all trials fall within the expected range.",
+    "output": "",
+    "required_keys": [
+      "[].observation_id",
+      "[].trial_number",
+      "[].timestamp",
+      "[].measured_value",
+      "[].unit",
+      "[].within_expected_range",
+      "[].notes"
+    ],
+    "array_length": 5,
+    "type_constraints": {
+      "trial_number": "integer",
+      "measured_value": "float",
+      "within_expected_range": "boolean"
+    }
+  },
+  {
+    "id": "schema_array_010",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "IT / server inventory",
+    "instruction": "Given the schema below, generate a valid JSON array containing exactly 4 objects, each strictly conforming to the server schema.\n\nServer Schema:\n{\n  \"server_id\": \"string\",\n  \"hostname\": \"string\",\n  \"ip_address\": \"string\",\n  \"os\": \"string\",\n  \"cpu_cores\": \"integer\",\n  \"ram_gb\": \"integer\",\n  \"storage_tb\": \"float\",\n  \"is_virtual\": \"boolean\",\n  \"status\": \"string (one of: active, standby, decommissioned, maintenance)\"\n}",
+    "input": "Generate an IT inventory of 4 production servers in a data center, including a mix of physical and virtual machines.",
+    "output": "",
+    "required_keys": [
+      "[].server_id",
+      "[].hostname",
+      "[].ip_address",
+      "[].os",
+      "[].cpu_cores",
+      "[].ram_gb",
+      "[].storage_tb",
+      "[].is_virtual",
+      "[].status"
+    ],
+    "array_length": 4,
+    "type_constraints": {
+      "cpu_cores": "integer",
+      "ram_gb": "integer",
+      "storage_tb": "float",
+      "is_virtual": "boolean"
+    }
+  },
+  {
+    "id": "schema_array_011",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "travel / visa requirements",
+    "instruction": "Given the schema below, generate a valid JSON array containing exactly 5 objects, each strictly conforming to the requirement schema.\n\nRequirement Schema:\n{\n  \"requirement_id\": \"string\",\n  \"category\": \"string (one of: document, financial, biometric, health, other)\",\n  \"description\": \"string\",\n  \"mandatory\": \"boolean\",\n  \"processing_days\": \"integer\"\n}",
+    "input": "Generate a visa requirements list for a long-stay work visa application covering all major requirement categories.",
+    "output": "",
+    "required_keys": [
+      "[].requirement_id",
+      "[].category",
+      "[].description",
+      "[].mandatory",
+      "[].processing_days"
+    ],
+    "array_length": 5,
+    "type_constraints": {
+      "mandatory": "boolean",
+      "processing_days": "integer"
+    }
+  },
+  {
+    "id": "schema_array_012",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "government / cabinet members",
+    "instruction": "Given the schema below, generate a valid JSON array containing exactly 6 objects, each strictly conforming to the cabinet member schema.\n\nCabinet Member Schema:\n{\n  \"member_id\": \"string\",\n  \"full_name\": \"string\",\n  \"portfolio\": \"string\",\n  \"party\": \"string\",\n  \"appointed_date\": \"string (YYYY-MM-DD)\",\n  \"is_deputy_pm\": \"boolean\"\n}",
+    "input": "Generate a fictional cabinet roster for 6 ministers of a parliamentary government, with one designated as Deputy Prime Minister.",
+    "output": "",
+    "required_keys": [
+      "[].member_id",
+      "[].full_name",
+      "[].portfolio",
+      "[].party",
+      "[].appointed_date",
+      "[].is_deputy_pm"
+    ],
+    "array_length": 6,
+    "type_constraints": {
+      "is_deputy_pm": "boolean"
+    }
+  },
+  {
+    "id": "schema_array_013",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "event / ticket tiers",
+    "instruction": "Given the schema below, generate a valid JSON array containing exactly 4 objects, each strictly conforming to the ticket tier schema.\n\nTicket Tier Schema:\n{\n  \"tier_id\": \"string\",\n  \"tier_name\": \"string\",\n  \"price_usd\": \"float\",\n  \"capacity\": \"integer\",\n  \"sold_out\": \"boolean\",\n  \"includes_backstage\": \"boolean\",\n  \"description\": \"string\"\n}",
+    "input": "Generate 4 ticket tiers for a major music festival with options ranging from general admission to VIP packages.",
+    "output": "",
+    "required_keys": [
+      "[].tier_id",
+      "[].tier_name",
+      "[].price_usd",
+      "[].capacity",
+      "[].sold_out",
+      "[].includes_backstage",
+      "[].description"
+    ],
+    "array_length": 4,
+    "type_constraints": {
+      "price_usd": "float",
+      "capacity": "integer",
+      "sold_out": "boolean",
+      "includes_backstage": "boolean"
+    }
+  },
+  {
+    "id": "schema_array_014",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "array_of_objects",
+    "split": "train",
+    "domain": "legal / case evidence list",
+    "instruction": "Given the schema below, generate a valid JSON array containing exactly 5 objects, each strictly conforming to the evidence schema.\n\nEvidence Schema:\n{\n  \"evidence_id\": \"string\",\n  \"type\": \"string (one of: document, photograph, video, witness_statement, physical)\",\n  \"description\": \"string\",\n  \"collected_date\": \"string (YYYY-MM-DD)\",\n  \"admissible\": \"boolean\",\n  \"chain_of_custody_intact\": \"boolean\"\n}",
+    "input": "Generate an evidence log for a fictional civil fraud trial with 5 pieces of evidence of mixed admissibility.",
+    "output": "",
+    "required_keys": [
+      "[].evidence_id",
+      "[].type",
+      "[].description",
+      "[].collected_date",
+      "[].admissible",
+      "[].chain_of_custody_intact"
+    ],
+    "array_length": 5,
+    "type_constraints": {
+      "admissible": "boolean",
+      "chain_of_custody_intact": "boolean"
+    }
+  },
+  {
+    "id": "schema_mixed_007",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "software / API documentation page",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. Both the flat fields and the parameters array are required.\n\nSchema:\n{\n  \"endpoint_name\": \"string\",\n  \"base_url\": \"string\",\n  \"http_method\": \"string (one of: GET, POST, PUT, DELETE, PATCH)\",\n  \"auth_required\": \"boolean\",\n  \"version\": \"string\",\n  \"parameters\": [\n    {\n      \"name\": \"string\",\n      \"type\": \"string (one of: string, integer, boolean, array, object)\",\n      \"required\": \"boolean\",\n      \"description\": \"string\"\n    }\n  ]\n}",
+    "input": "Generate API documentation for a POST endpoint that creates a new user, with 5 parameters mixing required and optional fields.",
+    "output": "",
+    "required_keys": [
+      "endpoint_name",
+      "base_url",
+      "http_method",
+      "auth_required",
+      "version",
+      "parameters[].name",
+      "parameters[].type",
+      "parameters[].required",
+      "parameters[].description"
+    ],
+    "array_field": "parameters",
+    "array_length": 5,
+    "type_constraints": {
+      "auth_required": "boolean",
+      "parameters[].required": "boolean"
+    }
+  },
+  {
+    "id": "schema_mixed_008",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "science / research dataset",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. All flat fields and the variables array must be present.\n\nSchema:\n{\n  \"dataset_id\": \"string\",\n  \"title\": \"string\",\n  \"collection_date\": \"string (YYYY-MM-DD)\",\n  \"sample_size\": \"integer\",\n  \"publicly_available\": \"boolean\",\n  \"variables\": [\n    {\n      \"variable_name\": \"string\",\n      \"data_type\": \"string (one of: numeric, categorical, boolean, text, datetime)\",\n      \"description\": \"string\",\n      \"has_missing_values\": \"boolean\"\n    }\n  ]\n}",
+    "input": "Generate a dataset metadata record for a public health survey on sleep habits with 5 measured variables.",
+    "output": "",
+    "required_keys": [
+      "dataset_id",
+      "title",
+      "collection_date",
+      "sample_size",
+      "publicly_available",
+      "variables[].variable_name",
+      "variables[].data_type",
+      "variables[].description",
+      "variables[].has_missing_values"
+    ],
+    "array_field": "variables",
+    "array_length": 5,
+    "type_constraints": {
+      "sample_size": "integer",
+      "publicly_available": "boolean",
+      "variables[].has_missing_values": "boolean"
+    }
+  },
+  {
+    "id": "schema_mixed_009",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "finance / audit report",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. Flat fields and the recommendations array are both required.\n\nSchema:\n{\n  \"report_id\": \"string\",\n  \"company\": \"string\",\n  \"audit_period\": \"string\",\n  \"lead_auditor\": \"string\",\n  \"opinion\": \"string (one of: unqualified, qualified, adverse, disclaimer)\",\n  \"recommendations\": [\n    {\n      \"rec_id\": \"string\",\n      \"area\": \"string\",\n      \"priority\": \"string (one of: low, medium, high)\",\n      \"description\": \"string\",\n      \"management_agreed\": \"boolean\"\n    }\n  ]\n}",
+    "input": "Generate an audit report for a qualified opinion on a mid-sized retail company for fiscal year 2023 with 4 recommendations.",
+    "output": "",
+    "required_keys": [
+      "report_id",
+      "company",
+      "audit_period",
+      "lead_auditor",
+      "opinion",
+      "recommendations[].rec_id",
+      "recommendations[].area",
+      "recommendations[].priority",
+      "recommendations[].description",
+      "recommendations[].management_agreed"
+    ],
+    "array_field": "recommendations",
+    "array_length": 4,
+    "type_constraints": {
+      "recommendations[].management_agreed": "boolean"
+    }
+  },
+  {
+    "id": "schema_mixed_010",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "sports / season statistics report",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. The flat metadata and top_performers array are both required.\n\nSchema:\n{\n  \"report_id\": \"string\",\n  \"league\": \"string\",\n  \"season\": \"string\",\n  \"total_games_played\": \"integer\",\n  \"top_performers\": [\n    {\n      \"player_name\": \"string\",\n      \"team\": \"string\",\n      \"stat_category\": \"string\",\n      \"value\": \"float\",\n      \"rank\": \"integer\"\n    }\n  ]\n}",
+    "input": "Generate a season statistics report for the NBA 2023\u201324 season highlighting the top 5 performers across different statistical categories.",
+    "output": "",
+    "required_keys": [
+      "report_id",
+      "league",
+      "season",
+      "total_games_played",
+      "top_performers[].player_name",
+      "top_performers[].team",
+      "top_performers[].stat_category",
+      "top_performers[].value",
+      "top_performers[].rank"
+    ],
+    "array_field": "top_performers",
+    "array_length": 5,
+    "type_constraints": {
+      "total_games_played": "integer",
+      "top_performers[].value": "float",
+      "top_performers[].rank": "integer"
+    }
+  },
+  {
+    "id": "schema_mixed_011",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "government / infrastructure project",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. All flat fields and the contractors array must be fully populated.\n\nSchema:\n{\n  \"project_id\": \"string\",\n  \"project_name\": \"string\",\n  \"country\": \"string\",\n  \"total_budget_usd_millions\": \"float\",\n  \"expected_completion\": \"string (YYYY-MM-DD)\",\n  \"contractors\": [\n    {\n      \"contractor_name\": \"string\",\n      \"role\": \"string (one of: prime, sub, consultant)\",\n      \"contract_value_usd_millions\": \"float\",\n      \"country_of_origin\": \"string\"\n    }\n  ]\n}",
+    "input": "Generate an infrastructure project record for a national highway expansion in Indonesia with 4 contractors including international subcontractors.",
+    "output": "",
+    "required_keys": [
+      "project_id",
+      "project_name",
+      "country",
+      "total_budget_usd_millions",
+      "expected_completion",
+      "contractors[].contractor_name",
+      "contractors[].role",
+      "contractors[].contract_value_usd_millions",
+      "contractors[].country_of_origin"
+    ],
+    "array_field": "contractors",
+    "array_length": 4,
+    "type_constraints": {
+      "total_budget_usd_millions": "float",
+      "contractors[].contract_value_usd_millions": "float"
+    }
+  },
+  {
+    "id": "schema_mixed_012",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "HR / training program",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. All flat fields and the sessions array are required.\n\nSchema:\n{\n  \"program_id\": \"string\",\n  \"program_name\": \"string\",\n  \"department\": \"string\",\n  \"mandatory\": \"boolean\",\n  \"total_duration_hours\": \"float\",\n  \"sessions\": [\n    {\n      \"session_number\": \"integer\",\n      \"topic\": \"string\",\n      \"facilitator\": \"string\",\n      \"duration_hours\": \"float\",\n      \"online\": \"boolean\"\n    }\n  ]\n}",
+    "input": "Generate a mandatory onboarding training program for the Engineering department with 5 sessions mixing online and in-person formats.",
+    "output": "",
+    "required_keys": [
+      "program_id",
+      "program_name",
+      "department",
+      "mandatory",
+      "total_duration_hours",
+      "sessions[].session_number",
+      "sessions[].topic",
+      "sessions[].facilitator",
+      "sessions[].duration_hours",
+      "sessions[].online"
+    ],
+    "array_field": "sessions",
+    "array_length": 5,
+    "type_constraints": {
+      "mandatory": "boolean",
+      "total_duration_hours": "float",
+      "sessions[].session_number": "integer",
+      "sessions[].duration_hours": "float",
+      "sessions[].online": "boolean"
+    }
+  },
+  {
+    "id": "schema_mixed_013",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "media / documentary film",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. Flat fields and the chapter_list array are both required.\n\nSchema:\n{\n  \"film_id\": \"string\",\n  \"title\": \"string\",\n  \"director\": \"string\",\n  \"release_year\": \"integer\",\n  \"total_runtime_minutes\": \"integer\",\n  \"language\": \"string\",\n  \"chapters\": [\n    {\n      \"chapter_number\": \"integer\",\n      \"title\": \"string\",\n      \"duration_minutes\": \"integer\",\n      \"contains_archival_footage\": \"boolean\"\n    }\n  ]\n}",
+    "input": "Generate a documentary film record for a political history film about the Cold War divided into 5 chapters.",
+    "output": "",
+    "required_keys": [
+      "film_id",
+      "title",
+      "director",
+      "release_year",
+      "total_runtime_minutes",
+      "language",
+      "chapters[].chapter_number",
+      "chapters[].title",
+      "chapters[].duration_minutes",
+      "chapters[].contains_archival_footage"
+    ],
+    "array_field": "chapters",
+    "array_length": 5,
+    "type_constraints": {
+      "release_year": "integer",
+      "total_runtime_minutes": "integer",
+      "chapters[].chapter_number": "integer",
+      "chapters[].duration_minutes": "integer",
+      "chapters[].contains_archival_footage": "boolean"
+    }
+  },
+  {
+    "id": "schema_mixed_014",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "mixed_flat_and_array",
+    "split": "train",
+    "domain": "healthcare / clinical treatment protocol",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. All flat and array fields are required.\n\nSchema:\n{\n  \"protocol_id\": \"string\",\n  \"condition\": \"string\",\n  \"guideline_version\": \"string\",\n  \"approved_date\": \"string (YYYY-MM-DD)\",\n  \"evidence_level\": \"string (one of: A, B, C, D)\",\n  \"steps\": [\n    {\n      \"step_number\": \"integer\",\n      \"action\": \"string\",\n      \"responsible_role\": \"string\",\n      \"time_frame\": \"string\",\n      \"mandatory\": \"boolean\"\n    }\n  ]\n}",
+    "input": "Generate a clinical treatment protocol for managing acute hypertensive crisis in an emergency setting with 5 steps.",
+    "output": "",
+    "required_keys": [
+      "protocol_id",
+      "condition",
+      "guideline_version",
+      "approved_date",
+      "evidence_level",
+      "steps[].step_number",
+      "steps[].action",
+      "steps[].responsible_role",
+      "steps[].time_frame",
+      "steps[].mandatory"
+    ],
+    "array_field": "steps",
+    "array_length": 5,
+    "type_constraints": {
+      "steps[].step_number": "integer",
+      "steps[].mandatory": "boolean"
+    }
+  },
+  {
+    "id": "schema_nullable_007",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "travel / hotel reservation",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. Nullable fields should be set to null when not applicable.\n\nSchema:\n{\n  \"reservation_id\": \"string (required)\",\n  \"guest_name\": \"string (required)\",\n  \"hotel\": \"string (required)\",\n  \"check_in\": \"string (required, YYYY-MM-DD)\",\n  \"check_out\": \"string (required, YYYY-MM-DD)\",\n  \"special_requests\": \"string or null\",\n  \"corporate_rate_code\": \"string or null\",\n  \"loyalty_member_id\": \"string or null\",\n  \"pre_paid\": \"boolean (required)\",\n  \"cancellation_deadline\": \"string or null (YYYY-MM-DD)\"\n}",
+    "input": "Generate a hotel reservation for a leisure traveler who is not a loyalty member, has no corporate rate, and made no special requests.",
+    "output": "",
+    "required_keys": [
+      "reservation_id",
+      "guest_name",
+      "hotel",
+      "check_in",
+      "check_out",
+      "special_requests",
+      "corporate_rate_code",
+      "loyalty_member_id",
+      "pre_paid",
+      "cancellation_deadline"
+    ],
+    "nullable_fields": [
+      "special_requests",
+      "corporate_rate_code",
+      "loyalty_member_id"
+    ],
+    "type_constraints": {
+      "pre_paid": "boolean"
+    }
+  },
+  {
+    "id": "schema_nullable_008",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "finance / tax filing record",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. Optional fields must be null when not applicable to the filer.\n\nSchema:\n{\n  \"filing_id\": \"string (required)\",\n  \"taxpayer_name\": \"string (required)\",\n  \"tax_year\": \"integer (required)\",\n  \"filing_status\": \"string (required, one of: single, married_filing_jointly, married_filing_separately, head_of_household)\",\n  \"gross_income_usd\": \"integer (required)\",\n  \"deductions_usd\": \"integer or null\",\n  \"credits_claimed_usd\": \"integer or null\",\n  \"tax_owed_usd\": \"integer (required)\",\n  \"refund_usd\": \"integer or null\",\n  \"filed_electronically\": \"boolean (required)\"\n}",
+    "input": "Generate a tax filing record for a single filer with no credits claimed and a small tax refund for the 2023 tax year.",
+    "output": "",
+    "required_keys": [
+      "filing_id",
+      "taxpayer_name",
+      "tax_year",
+      "filing_status",
+      "gross_income_usd",
+      "deductions_usd",
+      "credits_claimed_usd",
+      "tax_owed_usd",
+      "refund_usd",
+      "filed_electronically"
+    ],
+    "nullable_fields": [
+      "credits_claimed_usd"
+    ],
+    "type_constraints": {
+      "tax_year": "integer",
+      "gross_income_usd": "integer",
+      "deductions_usd": "integer",
+      "tax_owed_usd": "integer",
+      "refund_usd": "integer",
+      "filed_electronically": "boolean"
+    }
+  },
+  {
+    "id": "schema_nullable_009",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "entertainment / award nomination",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. Nullable fields should be null when the information is not yet available or not applicable.\n\nSchema:\n{\n  \"nomination_id\": \"string (required)\",\n  \"award_ceremony\": \"string (required)\",\n  \"year\": \"integer (required)\",\n  \"category\": \"string (required)\",\n  \"nominee_name\": \"string (required)\",\n  \"work_title\": \"string (required)\",\n  \"won\": \"boolean (required)\",\n  \"acceptance_speech_url\": \"string or null\",\n  \"co_nominees\": \"string or null\",\n  \"presented_by\": \"string or null\"\n}",
+    "input": "Generate a nomination record for an actor nominated for Best Supporting Actor at a major film awards ceremony who did not win.",
+    "output": "",
+    "required_keys": [
+      "nomination_id",
+      "award_ceremony",
+      "year",
+      "category",
+      "nominee_name",
+      "work_title",
+      "won",
+      "acceptance_speech_url",
+      "co_nominees",
+      "presented_by"
+    ],
+    "nullable_fields": [
+      "acceptance_speech_url",
+      "co_nominees",
+      "presented_by"
+    ],
+    "type_constraints": {
+      "year": "integer",
+      "won": "boolean"
+    }
+  },
+  {
+    "id": "schema_nullable_010",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "science / patent application",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. Nullable fields should be null when the data is unavailable or not yet applicable.\n\nSchema:\n{\n  \"application_number\": \"string (required)\",\n  \"title\": \"string (required)\",\n  \"inventors\": \"string (required)\",\n  \"filing_date\": \"string (required, YYYY-MM-DD)\",\n  \"technology_class\": \"string (required)\",\n  \"status\": \"string (required, one of: filed, published, granted, rejected, abandoned)\",\n  \"grant_date\": \"string or null (YYYY-MM-DD)\",\n  \"expiry_date\": \"string or null (YYYY-MM-DD)\",\n  \"licensee\": \"string or null\",\n  \"abstract_available\": \"boolean (required)\"\n}",
+    "input": "Generate a patent application record for a recently filed semiconductor manufacturing process that has not yet been granted.",
+    "output": "",
+    "required_keys": [
+      "application_number",
+      "title",
+      "inventors",
+      "filing_date",
+      "technology_class",
+      "status",
+      "grant_date",
+      "expiry_date",
+      "licensee",
+      "abstract_available"
+    ],
+    "nullable_fields": [
+      "grant_date",
+      "expiry_date",
+      "licensee"
+    ],
+    "type_constraints": {
+      "abstract_available": "boolean"
+    }
+  },
+  {
+    "id": "schema_nullable_011",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "HR / exit interview",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. Optional fields should be null when the employee declined to provide the information.\n\nSchema:\n{\n  \"interview_id\": \"string (required)\",\n  \"employee_name\": \"string (required)\",\n  \"department\": \"string (required)\",\n  \"last_day\": \"string (required, YYYY-MM-DD)\",\n  \"tenure_years\": \"float (required)\",\n  \"primary_reason_for_leaving\": \"string (required)\",\n  \"destination_employer\": \"string or null\",\n  \"would_recommend_company\": \"boolean or null\",\n  \"rehire_eligible\": \"boolean (required)\",\n  \"nda_signed\": \"boolean (required)\"\n}",
+    "input": "Generate an exit interview record for a mid-level analyst who is leaving for personal reasons and declined to share their next employer or give a recommendation rating.",
+    "output": "",
+    "required_keys": [
+      "interview_id",
+      "employee_name",
+      "department",
+      "last_day",
+      "tenure_years",
+      "primary_reason_for_leaving",
+      "destination_employer",
+      "would_recommend_company",
+      "rehire_eligible",
+      "nda_signed"
+    ],
+    "nullable_fields": [
+      "destination_employer",
+      "would_recommend_company"
+    ],
+    "type_constraints": {
+      "tenure_years": "float",
+      "would_recommend_company": "boolean",
+      "rehire_eligible": "boolean",
+      "nda_signed": "boolean"
+    }
+  },
+  {
+    "id": "schema_nullable_012",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "legal / power of attorney",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. Fields marked nullable should be null when the condition does not apply.\n\nSchema:\n{\n  \"document_id\": \"string (required)\",\n  \"principal_name\": \"string (required)\",\n  \"agent_name\": \"string (required)\",\n  \"scope\": \"string (required, one of: general, limited, durable, springing)\",\n  \"effective_date\": \"string (required, YYYY-MM-DD)\",\n  \"expiry_date\": \"string or null (YYYY-MM-DD)\",\n  \"notarized\": \"boolean (required)\",\n  \"witness_name\": \"string or null\",\n  \"revocation_date\": \"string or null (YYYY-MM-DD)\",\n  \"jurisdiction\": \"string (required)\"\n}",
+    "input": "Generate a durable power of attorney record that has no fixed expiry date, has been notarized, and has not been revoked.",
+    "output": "",
+    "required_keys": [
+      "document_id",
+      "principal_name",
+      "agent_name",
+      "scope",
+      "effective_date",
+      "expiry_date",
+      "notarized",
+      "witness_name",
+      "revocation_date",
+      "jurisdiction"
+    ],
+    "nullable_fields": [
+      "expiry_date",
+      "revocation_date"
+    ],
+    "type_constraints": {
+      "notarized": "boolean"
+    }
+  },
+  {
+    "id": "schema_nullable_013",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "e-commerce / subscription box",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. Optional fields must be null when not applicable to this subscription.\n\nSchema:\n{\n  \"subscription_id\": \"string (required)\",\n  \"subscriber_name\": \"string (required)\",\n  \"box_name\": \"string (required)\",\n  \"frequency\": \"string (required, one of: weekly, bi_weekly, monthly, quarterly)\",\n  \"price_per_cycle_usd\": \"float (required)\",\n  \"active\": \"boolean (required)\",\n  \"discount_code\": \"string or null\",\n  \"gift_recipient_name\": \"string or null\",\n  \"pause_until\": \"string or null (YYYY-MM-DD)\",\n  \"next_shipment_date\": \"string (required, YYYY-MM-DD)\"\n}",
+    "input": "Generate a subscription box record for a customer with an active monthly subscription who is not gifting it and has no active discount or pause.",
+    "output": "",
+    "required_keys": [
+      "subscription_id",
+      "subscriber_name",
+      "box_name",
+      "frequency",
+      "price_per_cycle_usd",
+      "active",
+      "discount_code",
+      "gift_recipient_name",
+      "pause_until",
+      "next_shipment_date"
+    ],
+    "nullable_fields": [
+      "discount_code",
+      "gift_recipient_name",
+      "pause_until"
+    ],
+    "type_constraints": {
+      "price_per_cycle_usd": "float",
+      "active": "boolean"
+    }
+  },
+  {
+    "id": "schema_nullable_014",
+    "task_type": "schema_constrained_generation",
+    "schema_category": "nullable_fields",
+    "split": "train",
+    "domain": "government / building permit",
+    "instruction": "Given the schema below, generate a valid JSON object that strictly conforms to it. Nullable fields should be null when not yet determined or not applicable.\n\nSchema:\n{\n  \"permit_id\": \"string (required)\",\n  \"applicant_name\": \"string (required)\",\n  \"project_type\": \"string (required, one of: new_construction, renovation, demolition, extension)\",\n  \"address\": \"string (required)\",\n  \"submission_date\": \"string (required, YYYY-MM-DD)\",\n  \"approval_date\": \"string or null (YYYY-MM-DD)\",\n  \"estimated_cost_usd\": \"integer or null\",\n  \"approved\": \"boolean (required)\",\n  \"inspector_assigned\": \"string or null\",\n  \"expiry_date\": \"string or null (YYYY-MM-DD)\"\n}",
+    "input": "Generate a building permit record for a renovation project that is still under review and has not yet been approved or assigned an inspector.",
+    "output": "",
+    "required_keys": [
+      "permit_id",
+      "applicant_name",
+      "project_type",
+      "address",
+      "submission_date",
+      "approval_date",
+      "estimated_cost_usd",
+      "approved",
+      "inspector_assigned",
+      "expiry_date"
+    ],
+    "nullable_fields": [
+      "approval_date",
+      "inspector_assigned",
+      "expiry_date"
+    ],
+    "type_constraints": {
+      "estimated_cost_usd": "integer",
+      "approved": "boolean"
+    }
+  }
+]
