@@ -117,15 +117,15 @@ def main():
 
     # 1. Generate the Training Dataset
     process_dataset(
-        input_dir="prompts-for-train", 
-        output_file="final_json_dataset_for_train.json", 
+        input_dir="../../prompts/prompts-for-train", 
+        output_file="../../data/final_json_dataset_for_train.json", 
         client=client
     )
 
     # 2. Generate the Evaluation/Test Dataset
     process_dataset(
-        input_dir="prompts-for-eval", 
-        output_file="final_json_dataset_for_test.json", 
+        input_dir="../../prompts/prompts-for-eval", 
+        output_file="../../data/final_json_dataset_for_test.json", 
         client=client
     )
 

@@ -16,8 +16,8 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 JUDGE_MODEL = "gpt-5-mini" 
 
-RESULTS_DIR = "eval_results"
-JUDGE_OUT_DIR = "judge_results"
+RESULTS_DIR = "../../eval_results"
+JUDGE_OUT_DIR = "../../judge_results"
 os.makedirs(JUDGE_OUT_DIR, exist_ok=True)
 
 # Load Evaluation Metrics
