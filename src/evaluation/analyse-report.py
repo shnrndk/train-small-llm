@@ -1,7 +1,8 @@
 import json
 import os
 
-JUDGE_FILE = "judge_results/judge_alpaca_1_vs_2.json"
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+JUDGE_FILE = os.path.join(BASE_DIR, "judge_results/judge_alpaca_1_vs_2.json")
 
 def calculate_averages():
     with open(JUDGE_FILE, 'r') as f:

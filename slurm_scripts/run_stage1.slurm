@@ -17,4 +17,4 @@ echo "Installing dependencies from requirements.txt..."
 pip install -r requirements.txt -q
 
 # Run the training script using your accelerate config
-accelerate launch --config_file accelerate-config-v2-ds.yaml train-sft.py
+accelerate launch --config_file accelerate-config-v2-ds.yaml src/training/train_stage1_alpaca.py

@@ -7,6 +7,10 @@ from openai import OpenAI
 import pandas as pd
 from dotenv import load_dotenv
 
+import sys
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.append(BASE_DIR)
+
 # --- Configuration ---
 # Load environment variables from a .env file
 load_dotenv()
@@ -16,8 +20,9 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 JUDGE_MODEL = "gpt-4o-mini" 
 
-RESULTS_DIR = "eval_results"
-JUDGE_OUT_DIR = "judge_results"
+RESULTS_DIR = os.path.join(BASE_DIR, "eval_results")
+JUDGE_OUT_DIR = os.path.join(BASE_DIR, "judge_results")
+PROMPT_TEMPLATE_PATH = os.path.join(BASE_DIR, "prompts/judge_prompt_template.txt")
 os.makedirs(JUDGE_OUT_DIR, exist_ok=True)
 
 # Load Evaluation Metrics
@@ -64,34 +69,8 @@ def calculate_json_metrics(parsed_pred, parsed_ref):
 
 # --- Helper: The LLM Judge API Call ---
 def query_judge(client, prompt_text, resp_a, resp_b, id_a, id_b, prompt_id):
-    system_prompt = """You are an impartial expert evaluator of large language models. You will be given a user prompt and two responses (A and B).
-    
-Proper response should be concise, short, accurate, and directly address the user's prompt without unnecessary fluff. 
-
-CRITICAL PENALTIES: Severely penalize a response (score 1 for conciseness and instruction_following) if it exhibits:
-- Self-Prompting: Leaking template tags like `### Instruction:` or continuing to generate fake inputs.
-- Degenerate Loops: Repeating the same phrases or list structures endlessly.
-- Ignoring Context: Failing to use the specific data provided in the prompt.
-
-Evaluate both responses on a scale of 1-5 for: 
-- instruction_following: How well does it follow the core directive?
-- correctness: Is the information factually accurate?
-- clarity: Is the language clear and easy to understand?
-- completeness: Does it answer all parts of the prompt?
-- conciseness: 5 means perfectly concise without missing details; 1 means overly verbose, rambling, or contains irrelevant fluff.
-- structured_output_validity: Rate high if formatting is perfect JSON if requested, otherwise N/A or 5.
-- hallucination_risk: 5 means NO hallucinations, 1 means high hallucination.
-
-You MUST output strictly in this JSON format:
-{
-  "prompt_id": "<prompt_id>",
-  "checkpoint_a": "<checkpoint_a_name>",
-  "checkpoint_b": "<checkpoint_b_name>",
-  "response_a_scores": {"instruction_following": 0, "correctness": 0, "clarity": 0, "completeness": 0, "conciseness": 0, "structured_output_validity": 0, "hallucination_risk": 0},
-  "response_b_scores": {"instruction_following": 0, "correctness": 0, "clarity": 0, "completeness": 0, "conciseness": 0, "structured_output_validity": 0, "hallucination_risk": 0},
-  "winner": "<A, B, or Tie>",
-  "justification": "<Brief reason highlighting why the winner is better, specifically mentioning length/conciseness if applicable>"
-}"""
+    with open(PROMPT_TEMPLATE_PATH, "r") as f:
+        system_prompt = f.read()
 
     user_message = f"Prompt ID: {prompt_id}\n\nUSER PROMPT:\n{prompt_text}\n\n---\nRESPONSE A:\n{resp_a}\n\n---\nRESPONSE B:\n{resp_b}"
 

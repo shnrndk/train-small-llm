@@ -7,15 +7,17 @@ from peft import PeftModel
 import gc
 
 # --- Configuration ---
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+
 BASE_MODEL_NAME = "microsoft/Phi-3.5-mini-instruct"
-STAGE1_ADAPTER = "./sft-lora-Phi-3.5-mini-instruct-alpaca-r32-a64-d0.05-lr1.0e-04-wd0.01/final"
-STAGE2_ADAPTER = "./sft-lora-stage2-json-r32-lr1.0e-04/final"
+STAGE1_ADAPTER = os.path.join(BASE_DIR, "checkpoints/sft-lora-Phi-3.5-mini-instruct-alpaca-r32-a64-d0.05-lr1.0e-04-wd0.01/final")
+STAGE2_ADAPTER = os.path.join(BASE_DIR, "checkpoints/sft-lora-stage2-json-r32-lr1.0e-04/final")
 
 # Paths to your explicitly generated test sets
-ALPACA_EVAL_PATH = "alpaca_eval_set.json" 
-JSON_EVAL_PATH = "final_json_dataset_for_test.json" 
+ALPACA_EVAL_PATH = os.path.join(BASE_DIR, "data/alpaca_eval_set.json")
+JSON_EVAL_PATH = os.path.join(BASE_DIR, "data/final_json_dataset_for_test.json")
 
-OUTPUT_DIR = "eval_results"
+OUTPUT_DIR = os.path.join(BASE_DIR, "eval_results")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # --- Helper: Generate Responses ---

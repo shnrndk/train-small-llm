@@ -18,4 +18,4 @@ pip install -r requirements.txt -q
 
 # Run the Stage 2 training script using your accelerate config
 echo "Starting Stage 3 Generation..."
-accelerate launch --config_file accelerate-config-v2-ds.yaml eval_generate_part1.py
+accelerate launch --config_file accelerate-config-v2-ds.yaml src/evaluation/generate_responses.py

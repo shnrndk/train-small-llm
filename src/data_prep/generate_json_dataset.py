@@ -4,6 +4,8 @@ import os
 from openai import OpenAI
 
 # --- Configuration ---
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+
 UTSA_API_KEY = "gpustack_50e00c9281422bc5_0c0696dfcb1696d7635e58a2e56d6282"
 UTSA_BASE_URL = "http://10.246.100.230/v1"
 TEACHER_MODEL = "llama-3.3-70b-instruct-awq" 
@@ -117,15 +119,15 @@ def main():
 
     # 1. Generate the Training Dataset
     process_dataset(
-        input_dir="prompts-for-train", 
-        output_file="final_json_dataset_for_train.json", 
+        input_dir=os.path.join(BASE_DIR, "prompts/prompts-for-train"), 
+        output_file=os.path.join(BASE_DIR, "data/final_json_dataset_for_train.json"), 
         client=client
     )
 
     # 2. Generate the Evaluation/Test Dataset
     process_dataset(
-        input_dir="prompts-for-eval", 
-        output_file="final_json_dataset_for_test.json", 
+        input_dir=os.path.join(BASE_DIR, "prompts/prompts-for-eval"), 
+        output_file=os.path.join(BASE_DIR, "data/final_json_dataset_for_test.json"), 
         client=client
     )
 

@@ -2,6 +2,10 @@ import os
 import dotenv
 import torch
 
+import sys
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.append(BASE_DIR)
+
 import config 
 from datasets import load_dataset
 
@@ -19,8 +23,8 @@ from transformers import (
 dotenv.load_dotenv()
 
 # The 'final' folder saved at the end of your Stage 1 training
-STAGE1_ADAPTER_PATH = "./sft-lora-Phi-3.5-mini-instruct-alpaca-r32-a64-d0.05-lr1.0e-04-wd0.01/final" 
-JSON_DATASET_PATH = "final_json_dataset_for_train.json"
+STAGE1_ADAPTER_PATH = os.path.join(BASE_DIR, "checkpoints/sft-lora-Phi-3.5-mini-instruct-alpaca-r32-a64-d0.05-lr1.0e-04-wd0.01/final")
+JSON_DATASET_PATH = os.path.join(BASE_DIR, "data/final_json_dataset_for_train.json")
 
 # ---------------------------------------------------------
 #  Training
@@ -57,8 +61,8 @@ def main():
     val_set = dataset["test"]
 
     # Set up Stage 2 output directory
-    output_dir = (
-        f"./sft-lora-stage2-json"
+    output_dir = os.path.join(BASE_DIR, "checkpoints",
+        f"sft-lora-stage2-json"
         f"-r{lora_args.r}"
         f"-lr{train_args.learning_rate:.1e}"
     )

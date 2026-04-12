@@ -18,4 +18,4 @@ pip install -r requirements.txt -q
 
 # Run the Stage 2 training script using your accelerate config
 echo "Starting Stage 2 JSON Fine-Tuning..."
-accelerate launch --config_file accelerate-config-v2-ds.yaml train-stage2-json.py
+accelerate launch --config_file accelerate-config-v2-ds.yaml src/training/train_stage2_json.py

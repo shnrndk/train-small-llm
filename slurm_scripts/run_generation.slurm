@@ -15,4 +15,4 @@ source activate myenv
 pip install -r requirements.txt -q
 
 # Run the generation script
-python generate_json_data.py
+python src/data_prep/generate_json_dataset.py

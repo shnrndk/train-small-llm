@@ -1,8 +1,12 @@
 import os
 import dotenv
 
+import sys
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.append(BASE_DIR)
+
 import config
-import data_utils as du
+import src.utils.data_utils as du
 
 import torch
 from peft import LoraConfig, get_peft_model
@@ -44,8 +48,8 @@ def main():
         seed=data_args.dataset_ops_seed,
     )
 
-    output_dir = (
-        f"./sft-lora-{model_args.model_name_or_path.split('/')[-1]}"
+    output_dir = os.path.join(BASE_DIR, "checkpoints",
+        f"sft-lora-{model_args.model_name_or_path.split('/')[-1]}"
         f"-alpaca"
         f"-r{lora_args.r}"
         f"-a{lora_args.lora_alpha}"
