@@ -1,0 +1,5202 @@
+[
+    {
+        "prompt_id": "alpaca_eval_0",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses provide three creative uses for potatoes with clear and accurate descriptions. They are equally concise and complete, making them equally effective.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_1",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 4,
+            "correctness": 4,
+            "clarity": 4,
+            "completeness": 3,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B provides a more comprehensive summary of the election, including details about voter fraud claims and specific dates, while still being clear. Response A is less complete and lacks some context.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_2",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is more concise than Response A while still providing the same accurate prediction, making it the better choice.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_3",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 4,
+            "correctness": 5,
+            "clarity": 4,
+            "completeness": 4,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is more concise and structured, providing clear instructions and a complete recipe without unnecessary fluff.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_4",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses provide a correct palindrome sentence and are equally concise and clear.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_5",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise and directly addresses the task with a clear list of actions, while Response B includes some unnecessary details that make it slightly less concise.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_6",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses effectively illustrate the relationship between humans and animals using the same metaphor, maintaining clarity and correctness. They are equally concise, with slight variations in wording but no significant difference in quality.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_7",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 4,
+            "correctness": 4,
+            "clarity": 4,
+            "completeness": 4,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 1,
+            "correctness": 3,
+            "clarity": 2,
+            "completeness": 1,
+            "conciseness": 1,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 4
+        },
+        "winner": "A",
+        "justification": "Response A is more concise and avoids unnecessary repetition, while Response B suffers from excessive redundancy and does not effectively address the prompt.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_8",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical and perfectly answer the prompt with clarity and conciseness.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_9",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses effectively address the prompt with clear, accurate, and concise suggestions for reducing air pollution. They are equally valid in terms of content and structure.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_10",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is slightly more concise than Response A, providing the same essential information without the extra detail about getting a car loan, which may not be necessary for everyone.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_11",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 3,
+            "correctness": 3,
+            "clarity": 3,
+            "completeness": 3,
+            "conciseness": 2,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B provides more varied and specific conflict ideas, directly addressing the prompt with clarity and completeness, while Response A is repetitive and less concise.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_12",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise than Response B while providing the same level of detail and clarity.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_13",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 2,
+            "correctness": 3,
+            "clarity": 2,
+            "completeness": 2,
+            "conciseness": 1,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 3
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is more concise and provides a diverse range of healthy meal options without unnecessary repetition, while Response A suffers from excessive repetition and lacks clarity.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_14",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is slightly more concise and avoids redundancy in public service announcements, making it a better choice overall.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_15",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is slightly more concise and varied in its questions, making it a better choice for meaningful interview questions.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_16",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise than Response B while still conveying the same information effectively.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_17",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses correctly identify the misspelt word 'fivve' and are equally concise and clear.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_18",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 3,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is more concise while still providing a complete and accurate list of synonyms, making it slightly better than Response A.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_19",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is more concise while still accurately defining machine learning, making it slightly better in terms of length and conciseness.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_20",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 4,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 4,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses provide alternative titles that are creative and relevant, maintaining conciseness and clarity.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_21",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise and directly addresses the prompt without unnecessary details, while Response B includes extraneous information about explicit authentication, making it less concise.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_22",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical, fully address the prompt, and are equally concise and clear.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_23",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 3,
+            "correctness": 5,
+            "clarity": 4,
+            "completeness": 4,
+            "conciseness": 2,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 3,
+            "correctness": 5,
+            "clarity": 4,
+            "completeness": 4,
+            "conciseness": 1,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more varied in its expression of hope, while Response B suffers from excessive repetition, making it less concise and engaging.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_24",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise, providing the answer directly without additional wording.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_25",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 4,
+            "correctness": 5,
+            "clarity": 4,
+            "completeness": 4,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 4,
+            "correctness": 5,
+            "clarity": 4,
+            "completeness": 4,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is slightly more concise than Response A while still covering all necessary points, making it a better choice overall.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_26",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 1,
+            "correctness": 1,
+            "clarity": 5,
+            "completeness": 1,
+            "conciseness": 1,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 1,
+            "correctness": 1,
+            "clarity": 5,
+            "completeness": 1,
+            "conciseness": 1,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical and fail to provide the requested pronoun, resulting in equal scores.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_27",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise while still effectively conveying the metaphor, whereas Response B adds unnecessary detail that slightly reduces its conciseness.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_28",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses provide a clear and complete list of fantasy novel names, adhering to the prompt without unnecessary fluff. They are equally concise and accurate.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_29",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 4,
+            "correctness": 5,
+            "clarity": 4,
+            "completeness": 4,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise while still delivering a funny anecdote. Response B, although complete and clear, is slightly more verbose.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_30",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses accurately describe the drug development process with similar levels of detail and clarity, making them equally effective.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_31",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise and directly corrects the original sentence without adding unnecessary embellishments, while Response B, although correct, adds extra detail that may not be required.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_32",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise than Response B, providing a clear explanation without unnecessary repetition or additional information.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_33",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is slightly more concise while still providing accurate and clear information. It omits some detail about communication, making it more succinct without losing essential facts.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_34",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses effectively summarize the essay's main points and are equally clear and correct. They are also concise, with only minor differences in wording.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_35",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical and correctly convert the time into seconds, providing a clear and concise answer.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_36",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical and fully meet the prompt requirements with no unnecessary fluff.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_37",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are correct, clear, concise, and complete, providing the same accurate answer.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_38",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 1,
+            "correctness": 1,
+            "clarity": 1,
+            "completeness": 1,
+            "conciseness": 1,
+            "structured_output_validity": 1,
+            "hallucination_risk": 1
+        },
+        "response_b_scores": {
+            "instruction_following": 1,
+            "correctness": 1,
+            "clarity": 1,
+            "completeness": 1,
+            "conciseness": 1,
+            "structured_output_validity": 1,
+            "hallucination_risk": 1
+        },
+        "winner": "Tie",
+        "justification": "Both responses are empty and do not fulfill the prompt requirements, resulting in equal scores.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_39",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses effectively fulfill the prompt with clear and relevant song titles, showing no significant difference in length or conciseness.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_40",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 4,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 4,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is slightly more concise than Response B, providing vivid imagery without unnecessary elaboration, making it a better fit for the prompt.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_41",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise and poetic, effectively using both words in a compact form, while Response B is slightly longer and less succinct.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_42",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 4,
+            "correctness": 3,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 4,
+            "correctness": 3,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are clear, concise, and follow the instruction, but neither provides the correct order of ingredients based on amount needed.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_43",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise, providing a straightforward list without additional details, while Response B includes extra descriptions that make it slightly less concise.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_44",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is more concise while still covering the main functions of the Federal Reserve, making it slightly better in terms of length and conciseness.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_45",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 3,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A provides a complete and clear answer, while Response B is too brief and lacks completeness.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_46",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses effectively follow the instruction, are clear, complete, and correct. They are similar in length and conciseness, making them equally suitable.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_47",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical and correctly formatted, providing the same accurate and concise completion of the prompt.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_48",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 4,
+            "correctness": 4,
+            "clarity": 4,
+            "completeness": 4,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 4,
+            "correctness": 3,
+            "clarity": 4,
+            "completeness": 4,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise and avoids unnecessary repetition, while Response B introduces inaccuracies regarding Python's object-oriented capabilities and is slightly more verbose.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_49",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical and correctly edit the original sentence, making them equally valid.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_50",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical and perfectly fulfill the prompt with concise and accurate descriptions.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_51",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical and correctly edit the sentence for grammar, making them equally effective.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_52",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is more concise while still providing a complete explanation of how autotrophic organisms obtain energy, making it slightly better than Response A.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_53",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 2,
+            "correctness": 5,
+            "clarity": 3,
+            "completeness": 2,
+            "conciseness": 1,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is concise, clear, and follows the prompt effectively, while Response B suffers from excessive repetition and lacks completeness.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_54",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 4,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise and effectively captures the essence of the company's motto in a shorter tagline, making it more suitable for a business card.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_55",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 3,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise by removing the clich\u00e9 'all I need is' while still conveying the essential message.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_56",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 4,
+            "correctness": 4,
+            "clarity": 4,
+            "completeness": 4,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 4,
+            "correctness": 4,
+            "clarity": 4,
+            "completeness": 4,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is slightly more concise and focused on optimizing the delivery process, while still covering essential aspects of the system design.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_57",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise and directly encourages action without unnecessary elaboration, making it more effective as a subject line.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_58",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses accurately convey the same idea as the original sentence in a clear and concise manner.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_59",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise and directly answers the prompt without unnecessary detail, while Response B, although accurate, is overly verbose.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_60",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses correctly identify the present participle 'running' and are equally concise and clear.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_61",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 4,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 1,
+            "correctness": 1,
+            "clarity": 1,
+            "completeness": 1,
+            "conciseness": 1,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A provides a relevant redesign suggestion, while Response B does not respond to the prompt at all.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_62",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses provide comprehensive and clear advice on preparing for job interviews, covering similar points with slight variations. They are equally concise and accurate, making them both effective.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_63",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses provide the same accurate synonyms and are equally concise and clear.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_64",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 2,
+            "correctness": 5,
+            "clarity": 4,
+            "completeness": 4,
+            "conciseness": 1,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is more concise and directly addresses the prompt without unnecessary repetition, while still providing a complete and clear job advertisement.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_65",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 4,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A uses the correct column name 'sale_date' as per the context, while Response B uses 'date_sold', which may not be accurate. Both responses are concise, but A is factually more correct.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_66",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is more concise while still effectively addressing the prompt, making it slightly better in terms of length and clarity.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_67",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise while still effectively personalizing the birthday message for Camila, making it a better choice.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_68",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses provide the same correct and concise answer without any unnecessary information.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_69",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 3,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A provides a complete and clear answer, while Response B is too brief and lacks completeness.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_70",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses accurately summarize the article in three sentences, maintaining clarity and correctness. They are similarly concise, with slight variations in wording but no significant differences in length or content.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_71",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise while effectively summarizing the shopping website's idea, making it slightly better than Response B.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_72",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are equally effective in addressing the prompt, providing clear and accurate explanations without unnecessary verbosity.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_73",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses provide the same accurate information with equal clarity and conciseness.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_74",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses provide accurate and interesting facts about Colombia, are clear and concise, and follow the instruction perfectly. The only difference is the detail about coffee plantations in Response B, which does not affect the overall quality.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_75",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 2,
+            "correctness": 2,
+            "clarity": 2,
+            "completeness": 2,
+            "conciseness": 1,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 3
+        },
+        "response_b_scores": {
+            "instruction_following": 2,
+            "correctness": 2,
+            "clarity": 2,
+            "completeness": 2,
+            "conciseness": 1,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 3
+        },
+        "winner": "Tie",
+        "justification": "Both responses exhibit severe repetition and lack of conciseness, making them equally ineffective. Neither response clearly addresses the prompt without unnecessary verbosity.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_76",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are equally effective in addressing the prompt, providing accurate and clear information without hallucinations. They are similar in length and conciseness.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_77",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses effectively list three advantages and disadvantages of using a GPT model with clear and accurate information. They are similarly concise, making them equally effective.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_78",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is slightly more concise as it omits the comma, making it a bit cleaner while still fulfilling the prompt effectively.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_79",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A provides a more complete overview of facial recognition technologies, including facial expression recognition, which Response B omits. Both responses are concise, but A is slightly more comprehensive.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_80",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses effectively address the prompt with clear and complete proposals. They are concise and accurate, with minor differences in detail regarding incentives, but neither is significantly better than the other.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_81",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical and correctly address the prompt with no errors, making them equally effective.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_82",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise than Response B, listing the movements without additional descriptors, making it clearer and more direct.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_83",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses accurately list three characteristics of an extrovert with clear language and completeness. They are similarly concise, with slight variations in wording but no significant difference in length or clarity.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_84",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is slightly more concise than Response B, making it the better choice while still effectively combining the sentences.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_85",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 3,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A provides more detailed information about the James Webb Space Telescope, enhancing completeness and context, while Response B is overly concise and lacks depth.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_86",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses provide the exact same SQL query, fulfilling the prompt requirements perfectly with no differences in length or content.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_87",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B provides a more complete overview of the South American climate, including the impact of the Andes and weather phenomena like El Ni\u00f1o and La Ni\u00f1a, while still being clear and accurate. Response A is concise but lacks some details present in B.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_88",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 1,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B provides a more complete explanation of the PageRank algorithm, including its function and significance, while still being clear and accurate. Response A is concise but lacks detail.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_89",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise, providing clear suggestions without unnecessary elaboration, while Response B, although accurate, is slightly more verbose.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_90",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise than Response B, providing a complete answer without unnecessary repetition or detail.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_91",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical and perfectly concise, accurately addressing the prompt without unnecessary information.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_92",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical in content and quality, providing the correct conversion concisely and clearly.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_93",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical and perfectly fulfill the prompt with clarity and conciseness.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_94",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 1,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 1
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 1,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 1
+        },
+        "winner": "Tie",
+        "justification": "Both responses provided the same incorrect answer and were equally clear and concise.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_95",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 3,
+            "correctness": 5,
+            "clarity": 4,
+            "completeness": 3,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise and directly presents a clear analogy, while Response B is more verbose and less focused on a specific analogy.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_96",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is more concise while still addressing the prompt effectively. It covers key solutions without excessive detail, making it easier to read.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_97",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is slightly more concise than Response B, providing the same information without the additional detail about improving soil fertility, which makes it more direct.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_98",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses correctly name five cities in France, are clear, concise, and complete, with no hallucinations.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_99",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B provides a more complete description by including the detail about malaria being a major cause of death, while still being clear and concise.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_100",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 4,
+            "correctness": 4,
+            "clarity": 4,
+            "completeness": 4,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 4
+        },
+        "winner": "A",
+        "justification": "Response A is more concise and directly addresses the prompt without unnecessary repetition or excessive detail, while Response B includes a repeated entry and is slightly more verbose.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_101",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise than Response B, making it a better choice while still fully addressing the prompt.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_102",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise and provides a comprehensive list of satisfaction questions without unnecessary repetition, while Response B includes some additional questions that slightly increase verbosity.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_103",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 1,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is correct and concise, while Response B provides an incorrect year.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_104",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is slightly more concise as it does not include unnecessary punctuation at the end, making it a better choice.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_105",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 1,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 0,
+            "hallucination_risk": 1
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 1,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 0,
+            "hallucination_risk": 1
+        },
+        "winner": "Tie",
+        "justification": "Both responses provide the same incorrect zodiac sign and are equally clear and concise. Neither response accurately reflects the zodiac sign based on the provided Sun sign.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_106",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses provide a clear and concise answer to the prompt, but they differ in the cost provided. Since both are valid responses, they tie.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_107",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses provide a unique dish using the ingredients, are clear and correct, and follow the instructions well. They are similar in length and conciseness.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_108",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses effectively describe the importance of blockchain technology, covering key aspects and applications concisely. They are equally clear and complete, with minor differences in phrasing but no significant advantage in length or detail.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_109",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses provide the same correct answer with equal clarity and conciseness.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_110",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses correctly replaced 'great' with 'amazing' and are equally concise and clear.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_111",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 2,
+            "correctness": 2,
+            "clarity": 5,
+            "completeness": 2,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A provides specific websites that directly address best practices for programming with Python, while Response B lists general Python websites that do not specifically focus on best practices.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_112",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 1,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 2,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is more concise and directly adheres to the 25-word limit, while Response A is overly verbose.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_113",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 3,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A provides additional details about the performance differences, making it more complete, while Response B is overly concise and lacks supporting information.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_114",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical in content and quality, providing accurate and clear information concisely.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_115",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 3,
+            "correctness": 5,
+            "clarity": 3,
+            "completeness": 4,
+            "conciseness": 1,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is concise and directly addresses the prompt with a clear and complete plan, while Response B is overly verbose and repetitive, making it less effective.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_116",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses provide two synonyms for 'creative' accurately and concisely, with no unnecessary fluff.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_117",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 1
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 1,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A correctly identifies that the article is based on a research study, while Response B incorrectly claims it is fake news without evidence. Response A is also concise and clear.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_118",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A provides a more detailed and complete description of John, covering various aspects of his character, while Response B is slightly less comprehensive and concise.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_119",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses correctly reference NASA and provide the same information with slight variations in structure, resulting in equal scores.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_120",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses provide the same correct SQL query, are clear, concise, and complete, resulting in a tie.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_121",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical in content, clarity, correctness, and conciseness, providing a complete evaluation of the expression.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_122",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses effectively use the phrase 'start over' in clear, concise sentences that fulfill the prompt requirements.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_123",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 4,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A provides a more interactive flow, engaging the user with questions that guide them through the process, while Response B is more concise but lacks the conversational depth.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_124",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical in content and quality, providing a clear and concise answer without any unnecessary information.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_125",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A provides a complete story with a clear narrative arc and character development, while Response B, although concise, lacks some depth and completeness in the storyline.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_126",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical in content, scoring equally across all metrics.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_127",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses effectively summarize the text within the word limit and maintain clarity and correctness. They are similar in length and conciseness, making them equally effective.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_128",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses correctly implement the JavaScript code to display an alert when the 'Submit' button is pressed, and they are equally concise and clear.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_129",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 4,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is slightly better because it accurately identifies nuclear energy as a clean source and avoids the ambiguity of 'cost-effective' in Response B, which may not be universally true.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_130",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is slightly more concise than Response B, which uses 'would be' instead of 'is,' making it less direct.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_131",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses effectively tell a story about an astronaut's mission to the moon, maintaining clarity and correctness. They are similar in length and conciseness, with minor variations in wording but no significant differences in quality.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_132",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses provide the same accurate information concisely and clearly, with no unnecessary fluff.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_133",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical, providing a correct and concise answer to the prompt.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_134",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 1,
+            "correctness": 1,
+            "clarity": 2,
+            "completeness": 1,
+            "conciseness": 1,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is more varied and coherent, effectively addressing the prompt with a clear rap verse. Response A is repetitive and lacks conciseness.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_135",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is more concise while still effectively comparing the two excerpts, making it slightly better in terms of length and conciseness.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_136",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical and effectively improve the writing style by correcting 'Theirselves' to 'They'. They are equally concise and clear.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_137",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses correctly classify iron as a mineral and are equally concise and clear.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_138",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 4,
+            "correctness": 4,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is slightly better as it provides a complete sentence that clearly states the result, though it is a bit longer than Response A.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_139",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical and perfectly fulfill the prompt requirements, demonstrating clarity, correctness, and conciseness.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_140",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical and perfectly fulfill the prompt with clarity and conciseness.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_141",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical and perfectly fulfill the prompt requirements with no unnecessary content.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_142",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 1,
+            "correctness": 5,
+            "clarity": 3,
+            "completeness": 2,
+            "conciseness": 1,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 4,
+            "correctness": 5,
+            "clarity": 4,
+            "completeness": 3,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is more concise and varied in its expressions of love, while Response A suffers from excessive repetition and lacks clarity.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_143",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is more concise while still accurately listing the adjectives that describe Jane, making it the better choice.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_144",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses effectively describe two strategies for professional development with clear and accurate information. They are similar in length and conciseness, making them equally effective.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_145",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A provides more specific and actionable strategies, making it slightly more effective and concise than Response B.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_146",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is slightly more concise than Response A while still effectively covering all aspects of the prompt. It avoids redundancy and maintains clarity throughout.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_147",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical, providing the correct output concisely and clearly.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_148",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 1,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A correctly identifies the statement as true, while Response B incorrectly states it as false. Response A is accurate and concise.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_149",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise and maintains a consistent format with all words ending in '-y', while Response B introduces a non-standard format with 'Lemon-tastic' and 'Golden-glow'.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_150",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is slightly more concise while still effectively completing the prompt. Response A, while complete, is more verbose.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_151",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 3,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A provides a complete sentence that clearly states the result, while Response B is concise but lacks completeness in context.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_152",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses provide five examples of proper breakfast food accurately and concisely, with no significant differences in length or content.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_153",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 4,
+            "correctness": 3,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 4
+        },
+        "winner": "A",
+        "justification": "Response A is more accurate and concise, listing general categories of celestial objects, while Response B incorrectly includes the Moon, which is not a celestial object within the Milky Way but rather a satellite of Earth.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_154",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses provide valid strategies to reduce poverty in India, are clear and complete, and have similar lengths and conciseness.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_155",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses effectively fulfill the prompt with clear and accurate bios. They are similar in length and conciseness, making them equally effective.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_156",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise while still fully addressing the prompt, whereas Response B adds unnecessary detail that makes it less concise.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_157",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical and correctly delete the incorrect phrase, providing a clear and concise answer.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_158",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical and perfectly fulfill the prompt without any unnecessary content.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_159",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical and perfectly fulfill the task of sorting the items by price in descending order.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_160",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise than Response B, providing a clear list of relevant questions without unnecessary repetition or verbosity.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_161",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B provides a more detailed outline with specific subpoints under each category, enhancing completeness while remaining clear and accurate. Although slightly less concise than A, the added detail justifies its length.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_162",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are correct, clear, concise, and follow the instruction perfectly.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_163",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 3,
+            "correctness": 5,
+            "clarity": 4,
+            "completeness": 3,
+            "conciseness": 1,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is more concise and varied, providing a complete set of jokes without repetition, while Response A suffers from excessive repetition and lacks conciseness.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_164",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": 0,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 4,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 3,
+            "conciseness": 5,
+            "structured_output_validity": 0,
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A provides a clear partitioning into three parts, while Response B does not fully meet the requirement for equal parts, making A the better choice despite being slightly less concise.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_165",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses effectively argue for the statement with clear, accurate points. They are similar in length and conciseness, making them equally strong.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_166",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses effectively discuss the philosophical concept of success, providing clear and accurate definitions. They are similar in length and conciseness, making them equally effective.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_167",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A provides a more comprehensive explanation of political landscapes, covering various influencing factors, while Response B is slightly less complete and concise.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_168",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical and equally fulfill the prompt requirements without any unnecessary fluff.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_169",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise, providing a clear explanation without unnecessary details, while Response B includes extra information that, although accurate, makes it less concise.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_170",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical and perfectly fulfill the prompt with correct grammar and clarity.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_171",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical in content and meet all criteria equally well.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_172",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 1,
+            "correctness": 1,
+            "clarity": 1,
+            "completeness": 1,
+            "conciseness": 1,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 1,
+            "correctness": 1,
+            "clarity": 1,
+            "completeness": 1,
+            "conciseness": 1,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical and fail to meet the five-word requirement, resulting in a tie.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_173",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 4,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 3
+        },
+        "winner": "A",
+        "justification": "Response A is more concise and directly answers the question without additional, potentially inaccurate details about user numbers.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_174",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is more concise while still effectively conveying the growth of the internet, making it slightly better in terms of length and conciseness.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_175",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 3,
+            "correctness": 4,
+            "clarity": 4,
+            "completeness": 3,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is more concise and directly addresses the prompt by providing two clear and distinct uses for sugar, while Response A is more verbose and less focused.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_176",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise, directly answering the prompt without additional details, while Response B, although accurate, includes unnecessary elaboration that makes it less concise.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_177",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise while still providing accurate information, making it a better fit for the prompt's length requirement.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_178",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses provide the same correct answer concisely and clearly, fulfilling the prompt requirements equally.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_179",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B provides a more comprehensive overview of the consequences, including specific new countries formed and the rise of economic powers, making it slightly more complete than Response A.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_180",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical and perfectly fulfill the prompt with correct article usage, clarity, and conciseness.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_181",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses effectively tell a complete story with a beginning, middle, and end, and they are equally clear and correct. They are also concise, though slightly verbose. Therefore, they are tied.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_182",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 4,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 3
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 4,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 3
+        },
+        "winner": "B",
+        "justification": "Response B is slightly more concise while still providing a complete description. It avoids unnecessary details compared to Response A.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_183",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is slightly more concise than Response B, which includes an unnecessary phrase ('go on vacation') that adds length without additional value.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_184",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is more concise while still effectively capturing the essence of the prompt, making it slightly better overall.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_185",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 3,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A provides additional context and explanations for each technology, making it more informative despite being slightly less concise than Response B.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_186",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": 5,
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise and directly serves as a slogan, while Response B is slightly longer and less succinct.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_187",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is slightly more concise and structured in its approach to algorithm design tasks, making it clearer and more direct.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_188",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A provides a more engaging and varied dialogue, while Response B is repetitive and less dynamic, making A the better choice despite being slightly less concise.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_189",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical and correctly translate the sentence into French, making them equally valid.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_190",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B provides a more comprehensive analysis by discussing the complexity of happiness and the role of money in relation to personal fulfillment, making it slightly more complete than Response A.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_191",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is more concise than Response A while still providing the correct answer.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_192",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are identical in content and quality, providing clear and accurate explanations without unnecessary fluff.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "alpaca_eval_193",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is slightly more concise, omitting the testing step which, while useful, is not strictly necessary for the installation process.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_194",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise than Response B while still covering all necessary aspects of culture shock, making it the better choice.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_195",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 4,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is better because it includes terms that are all relevant to the phenomenon of attraction between objects, while Response B includes 'Strong Nuclear Force,' which is not applicable to the general attraction between objects.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_196",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A provides a more complete story with a clear resolution and character development, while Response B is slightly less complete in its narrative arc.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    },
+    {
+        "prompt_id": "alpaca_eval_197",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 4,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "B",
+        "justification": "Response B is slightly more concise while still covering the key points about the importance of a valid will, making it the better choice.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_198",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2_epoch1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 3,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise than Response B while still providing a complete and clear design suggestion for the poster.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "alpaca_eval_199",
+        "checkpoint_a": "ckpt2_stage2_epoch1",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 5,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "response_b_scores": {
+            "instruction_following": 5,
+            "correctness": 5,
+            "clarity": 5,
+            "completeness": 5,
+            "conciseness": 4,
+            "structured_output_validity": "N/A",
+            "hallucination_risk": 5
+        },
+        "winner": "A",
+        "justification": "Response A is more concise than Response B while still providing a complete and accurate explanation of the CBT technique.",
+        "actual_winner": "ckpt2_stage2_epoch1"
+    }
+]
