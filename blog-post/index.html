@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Alignment Tax: Sequential Fine-Tuning and Catastrophic Forgetting</title>
+    <title>Sequential Fine-Tuning and Catastrophic Forgetting in LLMs</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -135,7 +135,7 @@
 <body>
 
     <article>
-        <h1>The Alignment Tax: Sequential Fine-Tuning and Catastrophic Forgetting in LLMs</h1>
+        <h1>Sequential Fine-Tuning and Catastrophic Forgetting in LLMs</h1>
 
         <div class="author-block">
             <p><strong>Author:</strong> Sahan Randika Kalutarage</p>
@@ -153,60 +153,119 @@
 
             <h3>1.1 Model Selection</h3>
             <p><strong>Student Model:</strong> A highly capable but compact open-weight base model
-                (<code>Phi-3.5-mini-instruct</code>) was selected as the student. Smaller parameter models are ideal for
-                post-training experiments as they exhibit more pronounced shifts in behavior during fine-tuning compared
-                to their larger counterparts, making phenomena like catastrophic forgetting easier to measure within
-                academic compute constraints.</p>
-            <p><strong>Teacher Model:</strong> We utilized frontier models to generate synthetic training data. These
-                models possess robust internal representations of complex schema structures, making them ideal teachers
-                for distilling structured reasoning into smaller student architectures.</p>
+                (<code>microsoft/Phi-3.5-mini-instruct</code>) was selected as the student. Smaller parameter models are
+                ideal for post-training experiments as they exhibit more pronounced shifts in behavior during
+                fine-tuning compared to their larger counterparts, making phenomena like catastrophic forgetting easier
+                to measure within academic compute constraints. During training, the base model is dynamically quantized
+                to 4-bit (<code>nf4</code>) precision using <code>bitsandbytes</code> (with double quantization and
+                <code>float16</code> compute type) to drastically reduce VRAM footprints.
+            </p>
+            <p><strong>Teacher Model:</strong> We utilized a frontier-level model
+                (<code>llama-3.3-70b-instruct-awq</code>) deployed locally to generate synthetic training data. These
+                large-scale models possess robust internal representations of complex schema structures, making them
+                ideal teachers for distilling strict reasoning frameworks into smaller student architectures.</p>
 
             <h3>1.2 Data Sourcing and Imitation Learning Pipeline</h3>
             <p>The training corpus was divided into two distinct datasets to support the sequential training stages:</p>
             <ul>
-                <li><strong>Stage 1 (General Alignment):</strong> We utilized the open-source Stanford Alpaca dataset,
-                    which contains 52,000 instruction-following records. It covers a broad taxonomy of tasks and serves
-                    as the academic standard for transforming a base completion model into a conversational assistant.
-                </li>
+                <li><strong>Stage 1 (General Alignment):</strong> We utilized the open-source Stanford Alpaca dataset
+                    (<code>tatsu-lab/alpaca</code>), which contains 52,000 instruction-following records. A 90/10
+                    train-validation split was utilized. It covers a broad taxonomy of tasks and serves as the academic
+                    standard for transforming a base completion model into a conversational assistant.</li>
                 <li><strong>Stage 2 (Structured Output):</strong> To teach the model strict structural compliance, we
-                    constructed a synthetic <em>JSON Instruct</em> dataset. We prompted the teacher model to generate
-                    complex JSON responses covering five specific task types: information extraction, text
-                    summarization, sentiment analysis, entity relationship mapping, and nested categorization. This
-                    imitation learning pipeline allowed us to transfer the structural precision of a frontier model into
-                    our student model.</li>
+                    constructed a synthetic <em>JSON Instruct</em> dataset using an <strong>Imitation Learning
+                        Pipeline</strong>:
+                    <ul>
+                        <li>The teacher model (<code>llama-3.3-70b-instruct-awq</code>) received prompts defining five
+                            unique sub-tasks: extraction, json-repair, label-classification, schema-constrained
+                            generation, and tool-call formatting.</li>
+                        <li><strong>Parametric strictness</strong>: The teacher model was generationally constrained
+                            using an extremely low temperature (<code>0.1</code>) and enforced system prompts mandating
+                            raw string output without markdown blocks.</li>
+                        <li><strong>Automated Validation & Retry</strong>: The generation pipeline programmatically
+                            verified the output syntax. If the teacher hallucinated invalid JSON or injected
+                            conversational fluff, the pipeline initiated up to 3 automated retries per sample to
+                            guarantee a pristine structural dataset of maximum quality for student distillation.</li>
+                    </ul>
+                </li>
             </ul>
 
             <h3>1.3 Training Design, Ablation Setup, and UTSA HPC Setup</h3>
-            <p>Training was executed sequentially using Parameter-Efficient Fine-Tuning (LoRA, r=32, alpha=64, learning
-                rate=1e-4) to ensure stable convergence:</p>
+            <p>Training was executed sequentially leveraging Parameter-Efficient Fine-Tuning (PEFT) to ensure stable
+                convergence without over-saturating the base model weights.</p>
+
+            <p><strong>Hyperparameters (Stages 1 & 2):</strong></p>
             <ul>
-                <li><strong>Checkpoint 0:</strong> The untuned base model.</li>
-                <li><strong>Checkpoint 1:</strong> The model fine-tuned exclusively on the Alpaca dataset (Stage 1).
+                <li><strong>LoRA Configuration</strong>: Rank (<code>r=32</code>), Alpha (<code>64</code>), Dropout
+                    (<code>0.05</code>), Target Modules (<code>all-linear</code>), Task Type (<code>CAUSAL_LM</code>).
                 </li>
-                <li><strong>Checkpoint 2:</strong> Checkpoint 1 fine-tuned exclusively on the JSON Instruct dataset
-                    (Stage 2).</li>
+                <li><strong>Optimization Strategy</strong>: Learning rate of <code>1e-4</code> using a
+                    <code>cosine</code> scheduler with a <code>0.3</code> warmup ratio.
+                </li>
+                <li><strong>Batching & Regularization</strong>: Per-device batch size of <code>4</code> with
+                    <code>8</code> gradient accumulation steps (yielding a larger effective batch size). Max gradient
+                    norm clipped at <code>0.3</code>, weight decay at <code>0.01</code>. Half-precision
+                    (<code>fp16</code>) and <code>gradient_checkpointing</code> were enabled for maximal memory
+                    efficiency on sequences up to <code>1024</code> tokens.
+                </li>
             </ul>
-            <p><strong>Ablation Study Design:</strong> To understand how quickly catastrophic forgetting occurs, we
-                conducted an ablation study during Stage 2. We altered our Slurm batch scripts to pass command-line
-                arguments modifying the <code>num_train_epochs</code> parameter. We trained independent adapters for 1,
-                2, and 3 epochs to observe how JSON syntax acquisition scales against the degradation of conversational
-                abilities.</p>
-            <p>All computational workloads, including the ablation runs and heavy batched inference generation, were
-                executed on the UTSA High-Performance Computing (HPC) cluster using the SLURM workload manager to
-                allocate V100 GPU nodes.</p>
+
+            <p><strong>Sequential Pathway:</strong></p>
+            <ul>
+                <li><strong>Checkpoint 0</strong>: The untuned base model (<code>Phi-3.5-mini-instruct</code>).</li>
+                <li><strong>Checkpoint 1 (Stage 1)</strong>: Base model fine-tuned exclusively on the Alpaca dataset.
+                </li>
+                <li><strong>Checkpoint 2 (Stage 2)</strong>: Checkpoint 1 fine-tuned exclusively on the synthetic JSON
+                    Instruct dataset.</li>
+            </ul>
+
+            <p><strong>Ablation Study Design:</strong><br>
+                To understand how quickly catastrophic forgetting occurs, we conducted an ablation study during Stage 2.
+                Custom arguments (<code>num_train_epochs</code>) were passed to the SLURM batch scripts. We trained
+                independent adapters for 1, 2, and 3 epochs to observe how quickly JSON syntax mastery scales against
+                the deterioration of core conversational fluency.</p>
+
+            <p><strong>HPC Configuration:</strong><br>
+                All computational workloads—including training, evaluation, ablation, and text generation—were executed
+                on the UTSA High-Performance Computing (HPC) cluster. Jobs relied upon SLURM workload manager,
+                allocating 1 compute node on the <code>gpu1v100</code> partition, ensuring deterministic execution via
+                dedicated V100 GPU acceleration.</p>
 
             <h3>1.4 Evaluation Protocol</h3>
-            <p>Evaluation requires moving beyond traditional string-matching. We utilized a hybrid approach:</p>
+            <p>Evaluation requires moving beyond traditional string-matching. A multi-modal hybrid pipeline was adopted:
+            </p>
+
+            <p><strong>Automated Text Metrics:</strong><br>
+                ROUGE (1, 2, L) and BERTScore (configured with <code>roberta-large</code>) were employed via Hugging
+                Face's <code>evaluate</code> framework to quantify semantic alignment against conversational reference
+                distributions.</p>
+
+            <p><strong>Automated Structural Metrics (Custom Engine):</strong><br>
+                A localized Python assessment engine parsed string outputs to measure:</p>
             <ul>
-                <li><strong>Automated Text Metrics:</strong> ROUGE (1, 2, L) and BERTScore (using
-                    <code>roberta-large</code>) to measure semantic similarity against reference texts.
+                <li><em>JSON Validity Rate</em>: Binary checks resolving parsing errors.</li>
+                <li><em>Schema Compliance</em>: Ratio of outputs yielding identically matched Dictionary/Key objects
+                    against a reference constraint.</li>
+                <li><em>Exact Match</em>: Absolute fidelity against ground truth extraction patterns.</li>
+                <li><em>Field-level F1</em>: Calculated using precision and recall aggregations across deeply nested
+                    Key:Value pairings.</li>
+            </ul>
+
+            <p><strong>LLM-as-a-Judge API:</strong><br>
+                <code>gpt-4o-mini</code> was utilized via OpenAI's API as an impartial scoring engine for randomized
+                pairwise A/B matchups between checkpoints.
+            </p>
+            <ul>
+                <li>Over 200 Alpaca prompts and 100 JSON prompts were assessed.</li>
+                <li>An environment-constrained system prompt penalized the model for hallucination or formatting
+                    deviations, utilizing <code>temperature=0.1</code> and
+                    <code>response_format={"type": "json_object"}</code>.
                 </li>
-                <li><strong>Automated Structural Metrics:</strong> Custom Python scripts evaluated JSON validity, schema
-                    compliance, exact match, and field-level F1.</li>
-                <li><strong>LLM-as-a-Judge:</strong> We utilized <code>gpt-4o-mini</code> via the OpenAI API as an
-                    impartial judge for pairwise A/B testing across 200 Alpaca prompts and 100 JSON prompts, scoring
-                    responses across five dimensions (Instruction Following, Correctness, Clarity, Completeness,
-                    Conciseness) on a strict 1-5 scale.</li>
+                <li>Outputs were scored strictly across five dimensions: <em>Instruction Following</em>,
+                    <em>Correctness</em>, <em>Clarity</em>, <em>Completeness</em>, and <em>Conciseness</em> on a unified
+                    1-5 scalar system, with randomized response injection orders (A vs B) to mathematically mitigate
+                    positional evaluation biases.
+                </li>
             </ul>
         </section>
 
@@ -214,10 +273,13 @@
 
         <section id="experiments">
             <h2>2. Experiments & Results</h2>
-            <p>The core of this research involves tracking the model's behavioral degradation and improvement as it
-                moves through the sequential fine-tuning checkpoints.</p>
+            <p>The primary experiment tracked model performance across the three sequential fine-tuning checkpoints. By
+                measuring semantic overlap, structural validity, and human-aligned preference (via LLM-as-a-judge), we
+                can map the exact trajectory of capability acquisition and degradation.</p>
 
             <h3>2.1 Three-Checkpoint Comparison Table</h3>
+            <p>The following table serves as the macro-level summary of our findings, illustrating the stark contrast in
+                capabilities before and after each training stage.</p>
             <table>
                 <thead>
                     <tr>
@@ -258,39 +320,50 @@
             </table>
 
             <h3>2.2 Alpaca Evaluation (Self-Instruct Protocol)</h3>
-            <p>Stage 1 was highly successful at aligning the base model to human conversational preferences. The untuned
-                base model generated overly verbose, hallucinated responses (averaging 162.4 tokens). Stage 1 reduced
-                this to a concise 45.5 tokens, drastically improving ROUGE-1 from 0.2744 to 0.4972. In the pairwise
-                LLM-as-a-judge evaluation, Checkpoint 1 defeated the Base model in 113 out of 200 matchups (56.5% win
-                rate, with 10 ties).</p>
+            <p>Stage 1 effectively aligned the base model, transforming it from a raw text-completion engine into a
+                conversational assistant. The untuned Base model exhibited a strong tendency to generate overly verbose
+                completions, often hallucinating continued dialogue or formatting tags, which resulted in an average
+                response length of 162.4 tokens.</p>
+            <p>Stage 1 training aggressively pruned this behavior. The average token length dropped by over 70% to just
+                45.5 tokens per response. This increase in precision drove a massive gain in automated metrics: ROUGE-1
+                improved from 0.2744 to 0.4972, and BERTScore F1 rose from 0.8663 to 0.9139. Consequently, in pairwise
+                judge evaluations, Checkpoint 1 significantly outperformed the Base model, achieving a 56.5% win rate
+                (113 wins, 10 ties out of 200 matchups). The judge consistently cited Checkpoint 1's ability to directly
+                address the prompt without tangential rambling as the primary reason for its victories.</p>
 
             <h3>2.3 JSON Structured Output Evaluation</h3>
-            <p>Stage 2 demonstrated absolute mastery over structured generation. <strong>Common Error Taxonomy:</strong>
-                At Checkpoint 0, the model failed primarily by injecting conversational "fluff" (e.g., "Here is the
-                JSON:") before the JSON object or omitting closing brackets, resulting in only a 31% valid parsing rate.
-            </p>
-            <p>By Checkpoint 2, syntax errors were entirely eliminated, resulting in a perfect 100% JSON validity rate,
-                a BERTScore F1 of 0.9937, and a field-level F1 of 0.8197. In a direct pairwise judge evaluation,
-                Checkpoint 2 defeated Checkpoint 1 on JSON tasks (17 wins to 12, with 71 ties), proving its superior
-                precision.</p>
+            <p>Stage 2 was designed to instill strict structural discipline, and it succeeded comprehensively. To
+                understand the improvement, we must look at the <strong>Common Error Taxonomy</strong> of the earlier
+                models. At Checkpoint 0, the model achieved only a 31% valid parsing rate. An analysis of the failed
+                outputs revealed that the model primarily struggled with <em>Conversational Padding</em>—it would prefix
+                the JSON with helpful but breaking phrases like <code>"Here is the JSON format you requested:"</code>.
+                It also suffered from structural truncation, failing to close deeply nested brackets.</p>
+            <p>By Checkpoint 2, the model had internalized the syntax rules perfectly, achieving a 100% JSON validity
+                rate. It learned to drop all conversational padding, outputting raw, parsable JSON arrays and objects.
+                The semantic mapping of the data within the JSON was also highly accurate, resulting in a BERTScore F1
+                of 0.9937 and a field-level F1 of 0.8197. Checkpoint 2 defeated Checkpoint 1 in pairwise JSON task
+                evaluations (17 wins to 12, with 71 ties). The high volume of ties indicates that Stage 1 provided a
+                strong baseline, but Stage 2 eliminated all remaining edge-case schema failures.</p>
 
             <h3>2.4 Forgetting Analysis</h3>
             <div class="highlight">
-                <p><strong>The Core Finding:</strong> Catastrophic forgetting occurred, but not in the traditional sense
-                    of losing factual knowledge. Instead, the model suffered from an <strong>Alignment Tax</strong>—it
-                    forgot stylistic alignment, specifically the ability to be concise.</p>
+                <p><strong>Key Finding:</strong> Catastrophic forgetting occurred following Stage 2, primarily as a
+                    degradation of stylistic alignment (specifically conciseness) rather than a loss of factual recall
+                    or semantic understanding.</p>
             </div>
 
-            <p>When evaluated on the general Alpaca prompts, Checkpoint 2 suffered a severe regression compared to
-                Checkpoint 1, winning only 21.0% of the matchups (42 wins for Stage 2, 63 for Stage 1, 95 ties).
-                Automated metrics confirmed this drop, with ROUGE-L falling from 0.4335 to 0.4197.</p>
+            <p>The core objective of this research was to measure the "Alignment Tax" incurred when teaching a
+                generalized model a highly rigid task. When evaluated on general Alpaca prompts, Checkpoint 2 regressed
+                significantly compared to Checkpoint 1. It achieved a win rate of only 21.0% (42 wins for Checkpoint 2,
+                63 for Checkpoint 1, and 95 ties). Automated text metrics mirrored this human-aligned preference drop,
+                with ROUGE-L falling from 0.4335 back down to 0.4197.</p>
 
-            <p>A granular dimensional analysis reveals the precise nature of this forgetting from Stage 1 to Stage 2:
-            </p>
+            <p>To pinpoint the exact cognitive mechanism of this forgetting, we conducted a dimensional analysis based
+                on the LLM judge's sub-scores:</p>
             <table>
                 <thead>
                     <tr>
-                        <th>Dimension</th>
+                        <th>Evaluation Dimension</th>
                         <th>Stage 1 Avg Score</th>
                         <th>Stage 2 Avg Score</th>
                         <th>Absolute Change</th>
@@ -323,13 +396,16 @@
                     </tr>
                 </tbody>
             </table>
-            <p>Because the model was trained exclusively on exhaustive JSON formatting in Stage 2, it generalized that
-                "exhaustive" behavior to casual conversation, destroying its conciseness score.</p>
+            <p>This dimensional breakdown is highly illuminating. The model did <em>not</em> forget facts or how to
+                follow instructions; in fact, its Correctness and Completeness scores increased slightly. Because the
+                model was trained exclusively on exhaustive, highly detailed JSON extraction data in Stage 2, it
+                generalized that "exhaustive" behavior to casual conversation. It forgot how to be brief, leading to a
+                sharp drop in conciseness and an overall lower win rate.</p>
 
-            <h3>2.5 Ablation Study: The Scaling of Forgetting</h3>
-            <p>To identify which training decisions most strongly influence the forgetting/retention tradeoff, we
-                ablated the Stage 2 training duration. We generated checkpoints at Epoch 1, Epoch 2, and Epoch 3 of the
-                JSON imitation learning phase to measure how rapidly the Alignment Tax accrues.</p>
+            <h3>2.5 Ablation Study: Training Duration vs. Forgetting</h3>
+            <p>To identify the rate at which alignment degradation occurs during imitation learning, an ablation study
+                was conducted on the Stage 2 training duration. We trained independent adapters for 1, 2, and 3 epochs
+                and evaluated them against the baseline Stage 1 model.</p>
 
             <table>
                 <thead>
@@ -345,65 +421,119 @@
                         <td>Epoch 1</td>
                         <td>100.0%</td>
                         <td>27.0%</td>
-                        <td>Immediate mastery of JSON syntax; initial drop in conversational preference.</td>
+                        <td>High JSON syntax accuracy achieved; initial decrease in conversational preference.</td>
                     </tr>
                     <tr>
                         <td>Epoch 2</td>
                         <td>100.0%</td>
                         <td>25.0%</td>
-                        <td>Continued stylistic degradation as weights overfit to rigid extraction tasks.</td>
+                        <td>Continued stylistic degradation.</td>
                     </tr>
                     <tr>
                         <td><strong>Epoch 3 (Final Checkpoint 2)</strong></td>
                         <td><strong>100.0%</strong></td>
                         <td><strong>21.0%</strong></td>
-                        <td>Maximum stylistic forgetting and verbose behavior.</td>
+                        <td>Lowest conversational win rate.</td>
                     </tr>
                 </tbody>
             </table>
 
-            <p><strong>Ablation Insights:</strong> The data tells a mathematically clear story. The model achieved a
-                perfect 100% JSON validity rate after just a single training epoch, indicating that strict syntax rules
-                are learned almost instantly. However, as the model progressed from Epoch 1 to Epoch 3, its win rate on
-                general Alpaca prompts steadily degraded (dropping from 27% to 21%). This proves that while functional
-                syntax is learned immediately, <em>stylistic overfitting</em> worsens proportionally with prolonged
-                exposure to the narrow dataset.</p>
-        </section>
+            <h4 style="text-align: center; margin-top: 30px;">Figure 1: The Scaling of the Alignment Tax</h4>
+            <div
+                style="display: flex; align-items: flex-end; justify-content: space-around; height: 250px; border-left: 2px solid #ccc; border-bottom: 2px solid #ccc; padding: 20px; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <div style="text-align: center; width: 80px;">
+                    <div style="background-color: #28a745; height: 100%; width: 100%; border-radius: 4px 4px 0 0;">
+                    </div>
+                    <div style="margin-top: 10px; font-weight: bold;">100%</div>
+                    <div style="font-size: 12px; color: #555;">JSON Validity</div>
+                </div>
 
+                <div style="text-align: center; width: 60px;">
+                    <div style="background-color: #0366d6; height: 27%; width: 100%; border-radius: 4px 4px 0 0;"></div>
+                    <div style="margin-top: 10px; font-weight: bold;">27%</div>
+                    <div style="font-size: 12px; color: #555;">Win Rate<br>(Epoch 1)</div>
+                </div>
+
+                <div style="text-align: center; width: 60px;">
+                    <div style="background-color: #0366d6; height: 25%; width: 100%; border-radius: 4px 4px 0 0;"></div>
+                    <div style="margin-top: 10px; font-weight: bold;">25%</div>
+                    <div style="font-size: 12px; color: #555;">Win Rate<br>(Epoch 2)</div>
+                </div>
+
+                <div style="text-align: center; width: 60px;">
+                    <div style="background-color: #d73a49; height: 21%; width: 100%; border-radius: 4px 4px 0 0;"></div>
+                    <div style="margin-top: 10px; font-weight: bold;">21%</div>
+                    <div style="font-size: 12px; color: #555;">Win Rate<br>(Epoch 3)</div>
+                </div>
+            </div>
+
+            <p><strong>Ablation Insights:</strong> The ablation data, visualized in Figure 1, demonstrates a clear
+                inverse relationship between training duration and conversational retention. The model reached a 100%
+                JSON validity rate after just one epoch, showing that structured syntax boundaries are learned rapidly
+                by the weights. However, the win rate on Alpaca prompts decreased steadily from 27% at Epoch 1 to 21% at
+                Epoch 3. This indicates that while functional format rules are acquired immediately, the stylistic
+                overfitting—the tendency to answer every prompt as if it were an exhaustive data-extraction
+                task—increases continuously with prolonged exposure to the uniform dataset.</p>
+        </section>
         <hr>
 
         <section id="analysis">
             <h2>3. Analysis & Discussion</h2>
             <h3>3.1 Qualitative Output Comparison & Failure Cases</h3>
-            <p>The judge justifications clearly highlight the exact failure mechanism of Checkpoint 2. Because Stage 2
-                training requires exhaustive, complete, and highly structured data extraction, the model over-indexed on
-                this heuristic.</p>
+            <p>A qualitative review of the raw outputs provides striking context to the numerical data, demonstrating
+                how the "persona" of the model shifted drastically at each checkpoint.</p>
+            <ul>
+                <li><strong>Checkpoint 0 (Untuned Base):</strong> The model acted as a raw text-continuation engine. It
+                    lacked a conversational persona, often hallucinating additional prompts, leaking template tags, or
+                    trailing off into unrelated paragraphs.</li>
+                <li><strong>Checkpoint 1 (Stage 1):</strong> The model successfully adopted a helpful, conversational
+                    persona. Outputs were direct, neatly formatted into standard paragraphs or simple bullet points, and
+                    stopped generating text as soon as the prompt was answered.</li>
+                <li><strong>Checkpoint 2 (Stage 2):</strong> The model adopted an ultra-rigid, data-extraction persona.
+                    While it was highly accurate, it over-engineered simple answers, applying structured headers and
+                    exhaustive lists to basic conversational questions.</li>
+            </ul>
 
-            <p><strong>Representative Forgetting Example (Prompt: <code>alpaca_eval_1</code>):</strong><br>
-                When asked to summarize the US Presidential Election, Stage 1 provided a punchy, one-paragraph summary.
-                Stage 2 provided a highly structured, bloated breakdown detailing the exact roles of social media and
-                targeted advertising. The judge ruled in favor of Stage 1, noting: <em>"Response B [Stage 1] is more
-                    concise than Response A, omitting unnecessary details while still providing a clear summary of the
-                    core election."</em></p>
+            <p>An analysis of judge evaluations contextualizes the failure mechanisms at Checkpoint 2. Because Stage 2
+                training requires structured data extraction, the model over-indexed on this heuristic during general
+                prompts.</p>
 
-            <h3>3.2 Discussion: Forgetting vs. Retention</h3>
-            <p>Catastrophic forgetting is often conceptualized as the destruction of previously learned weights, leading
-                to a loss of core knowledge. Our results propose a nuanced view: <strong>Stylistic Forgetting vs.
-                    Factual Retention</strong>. Checkpoint 2 did not forget <em>how</em> to answer questions (its
-                Completeness score rose by +0.25). It simply applied the wrong cognitive heuristic to the task, writing
-                exhaustive reports instead of conversational replies.</p>
+            <p><strong>Failure Case 1 (Prompt: <code>alpaca_eval_1</code> - Election Summary):</strong><br>
+                The prompt requested a summary of a US Presidential Election. Checkpoint 1 generated a standard, concise
+                paragraph. Checkpoint 2 generated a highly structured, verbose breakdown categorizing specific roles
+                like social media and targeted advertising. The evaluator penalized Checkpoint 2, citing that Checkpoint
+                1 was more concise while still summarizing the core information effectively.</p>
+
+            <p><strong>Failure Case 2 (Prompt: <code>alpaca_eval_2</code> - Economic Prediction):</strong><br>
+                When asked to predict stock market trends based on rising unemployment, Checkpoint 1 provided a brief,
+                accurate forecast. Checkpoint 2 ignored the mandate for brevity and attempted to generate an exhaustive,
+                multi-variable economic report. The judge again preferred Checkpoint 1 due to its directness.</p>
+
+            <h3>3.2 Discussion: Stylistic vs. Factual Forgetting</h3>
+            <p>Catastrophic forgetting is typically conceptualized as the destructive overwriting of previously learned
+                weights, leading to a loss of core knowledge or vocabulary. Our results propose a highly nuanced view:
+                <strong>Stylistic Forgetting vs. Factual Retention</strong>.
+            </p>
+            <p>In this experiment, Checkpoint 2 did not forget <em>how</em> to answer questions or process facts. This
+                is evidenced by the +0.25 increase in its "Completeness" score and a +0.03 increase in "Correctness."
+                The regression was entirely stylistic; the model misapplied the formatting heuristics of JSON extraction
+                tasks—which inherently demand exhaustive detail—to open-ended conversational instructions that demand
+                brevity.</p>
 
             <h3>3.3 Implications for Sequential Fine-Tuning</h3>
-            <p>This experiment provides a textbook demonstration of why sequential fine-tuning on narrow tasks is
-                dangerous for generalized assistants. To prevent this stylistic catastrophic forgetting in future
-                pipelines, developers must utilize two strategies:</p>
+            <p>These results illustrate the severe risks of purely sequential fine-tuning on narrow downstream tasks.
+                When a generalized assistant is sequentially tuned on a rigid task without regularization, it incurs an
+                "Alignment Tax." Two primary strategies can mitigate this stylistic degradation in practical LLM
+                deployment applications:</p>
             <ol>
-                <li><strong>Early Stopping:</strong> As proven by our ablation study, models learn structural syntax
-                    much faster than they unlearn conversational alignment. Stopping training at Epoch 1 yields perfect
-                    JSON with minimal conversational degradation.</li>
-                <li><strong>Data Composition (Experience Replay):</strong> Rather than purely sequential training, Stage
-                    2 should utilize a mixed data curriculum (e.g., 80% JSON data, 20% Alpaca data) to anchor the
-                    weights related to conversational brevity.</li>
+                <li><strong>Early Stopping:</strong> The ablation study demonstrates that structural syntax is learned
+                    much faster than conversational alignment is unlearned. Terminating the Stage 2 training at Epoch 1
+                    achieves full formatting compliance (100% JSON validity) while minimizing the conversational
+                    penalty.</li>
+                <li><strong>Data Mixing (Experience Replay):</strong> Rather than utilizing purely sequential training,
+                    Stage 2 should incorporate a mixed data curriculum. By combining the JSON instructions with a 10% to
+                    20% subset of the Stage 1 Alpaca data, the optimizer is forced to anchor the weights associated with
+                    general conversational alignment while simultaneously learning the new structured task.</li>
             </ol>
         </section>
 
@@ -411,19 +541,91 @@
 
         <section id="prompt-engineering">
             <h2>4. Prompt Engineering Evolution</h2>
-            <p>Developing a robust evaluation pipeline required iterative prompt engineering, particularly to overcome
-                the inherent biases of the LLM-as-a-Judge.</p>
-            <p><strong>The "Illusion of Competence" Failure:</strong> Initially, the <code>gpt-4o-mini</code> judge
-                suffered heavily from <em>verbosity bias</em>. It routinely awarded Checkpoint 0 (the Base model)
-                perfect scores simply because the base model output massive, grammatically correct walls of text,
-                completely failing to notice that the model was hallucinating contexts or leaking template tags (e.g.,
-                printing <code>### Instruction:</code> mid-response).</p>
-            <p><strong>The Fix:</strong> The judge prompt was heavily revised to include an explicit
-                <code>CRITICAL PENALTIES</code> section. We instructed the judge to apply a severe penalty (score of 1)
-                if the model exhibited "Self-Prompting," "Degenerate Loops," or unnecessary fluff. This immediately
-                aligned the judge's automated scoring with human intuition, accurately penalizing the base model's word
-                vomit and correctly measuring the stylistic regression in Checkpoint 2.
-            </p>
+            <p>Developing a robust end-to-end pipeline required rigorous prompt engineering on two fronts: the
+                generation of the synthetic training data (via the teacher model) and the refinement of the automated
+                evaluation pipeline (via the LLM-as-a-Judge).</p>
+
+            <h3>4.1 Imitation Learning Data Generation (Teacher Prompts)</h3>
+            <p>To construct the <em>JSON Instruct</em> dataset, we utilized Claude as the teacher model to generate
+                highly diverse, complex JSON structures. The prompts were engineered to cover five primary task
+                categories. To ensure the student model learned robust generalization rather than memorizing a single
+                format, each primary category was systematically divided into five distinct subcategories:</p>
+
+            <ul>
+                <li><strong>JSON Extraction & Schema Constrained Tasks:</strong> Both of these primary categories
+                    utilized the same five structural variations to teach the model how to map natural language to
+                    specific shapes:
+                    <ul>
+                        <li><em>Flat Object:</em> Standard key-value pairs (e.g., product attributes, person profiles).
+                        </li>
+                        <li><em>Nested Object:</em> Hierarchical data (e.g., an address object inside a person object).
+                        </li>
+                        <li><em>Array of Objects:</em> Lists of uniform items (e.g., multiple transaction events or
+                            attendees).</li>
+                        <li><em>Mixed Flat + Array:</em> Complex documents (e.g., an invoice with flat metadata and an
+                            array of line items).</li>
+                        <li><em>Nullable Fields:</em> Incomplete data extraction (e.g., a clinical note where missing
+                            fields must map to <code>null</code>).</li>
+                    </ul>
+                </li>
+                <li><strong>JSON Repair:</strong> Prompts designed to teach syntax correction and parser compliance:
+                    <ul>
+                        <li><em>Unquoted Keys/Values:</em> Fixing raw JavaScript-style objects missing double quotes.
+                        </li>
+                        <li><em>Trailing Commas:</em> Removing illegal commas before closing brackets or braces.</li>
+                        <li><em>Truncated Structure:</em> Closing mid-generation cut-offs (missing braces/brackets).
+                        </li>
+                        <li><em>Incorrect Delimiters:</em> Replacing Python-style syntax (single quotes, equal signs)
+                            with JSON standards.</li>
+                        <li><em>Escaping Errors:</em> Properly escaping internal double quotes, backslashes, or line
+                            breaks.</li>
+                    </ul>
+                </li>
+                <li><strong>Exact-Label Classification:</strong> Prompts constraining the LLM to output specific,
+                    predefined categorical labels:
+                    <ul>
+                        <li><em>Political Stance:</em> Classifying ideological leaning ('LIBERAL', 'CONSERVATIVE',
+                            'CENTRIST').</li>
+                        <li><em>Claim Type:</em> Categorizing epistemological nature ('FACTUAL_CLAIM',
+                            'SUBJECTIVE_OPINION', 'SPECULATION').</li>
+                        <li><em>Support Routing:</em> Determining customer intent ('BILLING', 'TECHNICAL_SUPPORT',
+                            'SALES', 'CANCELLATION').</li>
+                        <li><em>Urgency Triage:</em> Assessing issue severity ('LOW', 'MEDIUM', 'HIGH', 'CRITICAL').
+                        </li>
+                        <li><em>Content Moderation:</em> Evaluating intent and safety ('SAFE', 'SPAM', 'TOXIC',
+                            'PHISHING').</li>
+                    </ul>
+                </li>
+                <li><strong>Tool-Calling:</strong> Prompts simulating agentic service calls:
+                    <ul>
+                        <li><em>Find Flights:</em> Extracting broad search intent (origin, destination, date).</li>
+                        <li><em>Book Flights:</em> Transactional extraction including precise times and passenger
+                            counts.</li>
+                        <li><em>Get Weather:</em> Utility calls extracting location and resolving temperature units.
+                        </li>
+                        <li><em>Get Product:</em> E-commerce extraction requiring mixed data types (string IDs, integer
+                            quantities, float prices).</li>
+                        <li><em>Schedule Meeting:</em> Calendar management parsing 24-hour times, dates, and arrays of
+                            email addresses.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p><strong>Dataset Sizing:</strong> For each of the five primary task types, we generated 70 training
+                prompts and 20 testing prompts. This resulted in a strictly balanced and diverse dataset comprising 350
+                training instances and 100 evaluation instances.</p>
+
+            <h3>4.2 LLM-as-a-Judge Refinement</h3>
+            <p>Evaluating the resulting models required refining the LLM-as-a-Judge prompt to address inherent
+                evaluation biases observed during early testing.</p>
+            <p><strong>Evaluation Bias Mitigation:</strong> Initial testing revealed that the <code>gpt-4o-mini</code>
+                evaluator exhibited <em>verbosity bias</em>. It frequently assigned high scores to the Base model simply
+                because it produced lengthy text, ignoring critical failure modes like context hallucination or leaked
+                template tags (e.g., <code>### Instruction:</code>).</p>
+            <p><strong>Prompt Revision:</strong> The judge prompt was revised to include an explicit
+                <code>CRITICAL PENALTIES</code> section. The evaluator was instructed to penalize models heavily for
+                self-prompting, repetitive loops, and unnecessary verbosity. This adjustment aligned the automated
+                scoring more closely with expected human evaluation standards, correctly identifying the verbose outputs
+                of both the Base model and Checkpoint 2 as sub-optimal for general conversational tasks.</p>
         </section>
 
         <hr>
