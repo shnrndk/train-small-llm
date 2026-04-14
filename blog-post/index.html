@@ -253,7 +253,9 @@
 
             <p><strong>LLM-as-a-Judge API:</strong><br>
                 <code>gpt-4o-mini</code> was utilized via OpenAI's API as an impartial scoring engine for randomized
-                pairwise A/B matchups between checkpoints.
+                pairwise A/B matchups between checkpoints. This API-based model was selected over open-weight
+                alternatives due to its strong instruction adherence and cost-effectiveness during large-scale
+                evaluation loops.
             </p>
             <ul>
                 <li>Over 200 Alpaca prompts and 100 JSON prompts were assessed.</li>
@@ -261,8 +263,9 @@
                     deviations, utilizing <code>temperature=0.1</code> and
                     <code>response_format={"type": "json_object"}</code>.
                 </li>
-                <li>Outputs were scored strictly across five dimensions: <em>Instruction Following</em>,
-                    <em>Correctness</em>, <em>Clarity</em>, <em>Completeness</em>, and <em>Conciseness</em> on a unified
+                <li>Outputs were scored strictly across seven dimensions: <em>Instruction Following</em>,
+                    <em>Correctness</em>, <em>Clarity</em>, <em>Completeness</em>, <em>Structured Output Validity</em>,
+                    <em>Hallucination Risk</em>, and <em>Conciseness</em> on a unified
                     1-5 scalar system, with randomized response injection orders (A vs B) to mathematically mitigate
                     positional evaluation biases.
                 </li>
@@ -356,7 +359,8 @@
                 generalized model a highly rigid task. When evaluated on general Alpaca prompts, Checkpoint 2 regressed
                 significantly compared to Checkpoint 1. It achieved a win rate of only 21.0% (42 wins for Checkpoint 2,
                 63 for Checkpoint 1, and 95 ties). Automated text metrics mirrored this human-aligned preference drop,
-                with ROUGE-L falling from 0.4335 back down to 0.4197.</p>
+                with ROUGE-L falling from 0.4335 back down to 0.4197, and BERTScore dropping from 0.9139 to 0.9108. This
+                represents an absolute change of -0.0138 for ROUGE-L and -0.0031 for BERTScore.</p>
 
             <p>To pinpoint the exact cognitive mechanism of this forgetting, we conducted a dimensional analysis based
                 on the LLM judge's sub-scores:</p>
