@@ -438,42 +438,48 @@
                 </tbody>
             </table>
 
-            <h4 style="text-align: center; margin-top: 30px;">Figure 1: The Scaling of the Alignment Tax</h4>
+            <h4 style="text-align: center; margin-top: 30px;">Figure 1: The Scaling of Alignment Degradation</h4>
             <div
-                style="display: flex; align-items: flex-end; justify-content: space-around; height: 250px; border-left: 2px solid #ccc; border-bottom: 2px solid #ccc; padding: 20px; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                style="display: flex; align-items: flex-end; justify-content: space-around; height: 250px; border-left: 2px solid #ccc; border-bottom: 2px solid #ccc; padding: 20px 20px 10px 20px; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
+
                 <div style="text-align: center; width: 80px;">
-                    <div style="background-color: #28a745; height: 100%; width: 100%; border-radius: 4px 4px 0 0;">
+                    <div style="background-color: #28a745; height: 180px; width: 100%; border-radius: 4px 4px 0 0;">
                     </div>
                     <div style="margin-top: 10px; font-weight: bold;">100%</div>
                     <div style="font-size: 12px; color: #555;">JSON Validity</div>
                 </div>
 
-                <div style="text-align: center; width: 60px;">
-                    <div style="background-color: #0366d6; height: 27%; width: 100%; border-radius: 4px 4px 0 0;"></div>
+                <div style="text-align: center; width: 80px;">
+                    <div style="background-color: #0366d6; height: 49px; width: 100%; border-radius: 4px 4px 0 0;">
+                    </div>
                     <div style="margin-top: 10px; font-weight: bold;">27%</div>
                     <div style="font-size: 12px; color: #555;">Win Rate<br>(Epoch 1)</div>
                 </div>
 
-                <div style="text-align: center; width: 60px;">
-                    <div style="background-color: #0366d6; height: 25%; width: 100%; border-radius: 4px 4px 0 0;"></div>
+                <div style="text-align: center; width: 80px;">
+                    <div style="background-color: #0366d6; height: 45px; width: 100%; border-radius: 4px 4px 0 0;">
+                    </div>
                     <div style="margin-top: 10px; font-weight: bold;">25%</div>
                     <div style="font-size: 12px; color: #555;">Win Rate<br>(Epoch 2)</div>
                 </div>
 
-                <div style="text-align: center; width: 60px;">
-                    <div style="background-color: #d73a49; height: 21%; width: 100%; border-radius: 4px 4px 0 0;"></div>
+                <div style="text-align: center; width: 80px;">
+                    <div style="background-color: #d73a49; height: 38px; width: 100%; border-radius: 4px 4px 0 0;">
+                    </div>
                     <div style="margin-top: 10px; font-weight: bold;">21%</div>
                     <div style="font-size: 12px; color: #555;">Win Rate<br>(Epoch 3)</div>
                 </div>
+
             </div>
 
             <p><strong>Ablation Insights:</strong> The ablation data, visualized in Figure 1, demonstrates a clear
                 inverse relationship between training duration and conversational retention. The model reached a 100%
                 JSON validity rate after just one epoch, showing that structured syntax boundaries are learned rapidly
                 by the weights. However, the win rate on Alpaca prompts decreased steadily from 27% at Epoch 1 to 21% at
-                Epoch 3. This indicates that while functional format rules are acquired immediately, the stylistic
-                overfitting—the tendency to answer every prompt as if it were an exhaustive data-extraction
-                task—increases continuously with prolonged exposure to the uniform dataset.</p>
+                Epoch 3. This indicates that while functional format rules are acquired immediately, <em>stylistic
+                    overfitting</em>—the tendency to answer every prompt as if it were an exhaustive data-extraction
+                task—increases continuously with prolonged exposure to the uniform dataset, driving further alignment
+                degradation.</p>
         </section>
         <hr>
 
@@ -625,7 +631,8 @@
                 <code>CRITICAL PENALTIES</code> section. The evaluator was instructed to penalize models heavily for
                 self-prompting, repetitive loops, and unnecessary verbosity. This adjustment aligned the automated
                 scoring more closely with expected human evaluation standards, correctly identifying the verbose outputs
-                of both the Base model and Checkpoint 2 as sub-optimal for general conversational tasks.</p>
+                of both the Base model and Checkpoint 2 as sub-optimal for general conversational tasks.
+            </p>
         </section>
 
         <hr>
