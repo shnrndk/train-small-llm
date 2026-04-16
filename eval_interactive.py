@@ -10,9 +10,9 @@ dotenv.load_dotenv()
 # ---------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------
-BASE_MODEL   = "microsoft/Phi-3.5-mini-instruct"
+BASE_MODEL   = "meta-llama/Llama-3.2-3B"
 # Pointing to the 'final' folder saved at the end of your training script
-ADAPTER_PATH = "./sft-lora-Phi-3.5-mini-instruct-alpaca-r32-a64-d0.05-lr1.0e-04-wd0.01/final" 
+ADAPTER_PATH = "./sft-lora-Llama-3.2-3B-alpaca-r32-a64-d0.05-lr1.0e-04-wd0.01/final" 
 
 INSTRUCTION  = "What is the capital of France?"
 INPUT        = ""  

@@ -7,7 +7,7 @@ dotenv.load_dotenv()
 # ---------------------------------------------------------
 # Configuration — edit these before running
 # ---------------------------------------------------------
-BASE_MODEL = "microsoft/Phi-3.5-mini-instruct"
+BASE_MODEL = "meta-llama/Llama-3.2-3B"
 
 PROMPT = "What is the capital of France?"
 

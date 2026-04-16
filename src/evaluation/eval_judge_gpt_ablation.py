@@ -12,17 +12,16 @@ BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(BASE_DIR)
 
 # --- Configuration ---
-# Load environment variables from a .env file
-load_dotenv()
+UTSA_API_KEY = "gpustack_50e00c9281422bc5_0c0696dfcb1696d7635e58a2e56d6282"
+UTSA_BASE_URL = "http://10.246.100.230/v1"
 
-# Initialize the client using the key from the environment
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# Initialize the client using the UTSA config
+client = OpenAI(api_key=UTSA_API_KEY, base_url=UTSA_BASE_URL)
 
-JUDGE_MODEL = "gpt-4o-mini" 
+JUDGE_MODEL = "llama-3.3-70b-instruct-awq" 
 
 RESULTS_DIR = os.path.join(BASE_DIR, "eval_results")
 JUDGE_OUT_DIR = os.path.join(BASE_DIR, "judge_results")
-PROMPT_TEMPLATE_PATH = os.path.join(BASE_DIR, "prompts/judge_prompt_template.txt")
 os.makedirs(JUDGE_OUT_DIR, exist_ok=True)
 
 # Load Evaluation Metrics
@@ -65,8 +64,8 @@ def calculate_json_metrics(parsed_pred, parsed_ref):
     return exact, schema_compliant, f1
 
 # --- Helper: The LLM Judge API Call ---
-def query_judge(client, prompt_text, resp_a, resp_b, id_a, id_b, prompt_id):
-    with open(PROMPT_TEMPLATE_PATH, "r") as f:
+def query_judge(client, prompt_text, resp_a, resp_b, id_a, id_b, prompt_id, template_path):
+    with open(template_path, "r") as f:
         system_prompt = f.read()
 
     user_message = f"Prompt ID: {prompt_id}\n\nUSER PROMPT:\n{prompt_text}\n\n---\nRESPONSE A:\n{resp_a}\n\n---\nRESPONSE B:\n{resp_b}"
@@ -78,7 +77,6 @@ def query_judge(client, prompt_text, resp_a, resp_b, id_a, id_b, prompt_id):
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_message}
             ],
-            response_format={ "type": "json_object" }, 
             max_tokens=2048,
             temperature=0.1
         )
@@ -102,9 +100,9 @@ def run_automatic_metrics(task_name, checkpoints):
 
         with open(file_path, "r") as f:
             data = json.load(f)
-            
-        preds = [str(d["generated_response"]) for d in data]
-        refs = [str(d["reference"]) for d in data]
+
+        preds = [d["generated_response"] if d["generated_response"].strip() else "empty" for d in data]
+        refs = [d["reference"] if d["reference"].strip() else "empty" for d in data]
         
         rouge_res = rouge.compute(predictions=preds, references=refs)
         bert_res = bertscore.compute(predictions=preds, references=refs, lang="en")
@@ -149,7 +147,7 @@ def run_automatic_metrics(task_name, checkpoints):
                 print("  Schema Compliance / Exact Match: 0.0% (No valid JSON generated)")
 
 # --- Pipeline 2: Pairwise LLM Judge ---
-def run_judge_eval(client, file_1, file_2, name_1, name_2, output_filename):
+def run_judge_eval(client, file_1, file_2, name_1, name_2, output_filename, template_path):
     out_path = os.path.join(JUDGE_OUT_DIR, output_filename)
     if os.path.exists(out_path):
         print(f"\n=== Skipping Judge: {name_1} vs {name_2} (Already completed) ===")
@@ -177,7 +175,7 @@ def run_judge_eval(client, file_1, file_2, name_1, name_2, output_filename):
             resp_a, resp_b = resp_1, resp_2
             id_a, id_b = name_1, name_2
             
-        judge_out = query_judge(client, prompt_text, resp_a, resp_b, id_a, id_b, prompt_id)
+        judge_out = query_judge(client, prompt_text, resp_a, resp_b, id_a, id_b, prompt_id, template_path)
         
         if judge_out:
             judge_out["checkpoint_a"] = id_a
@@ -221,6 +219,10 @@ def main():
         "ckpt2_stage2"
     ]
     
+    # Prompt Template Paths
+    ALPACA_PROMPT_PATH = os.path.join(BASE_DIR, "prompts/alpaca_judge_prompt.txt")
+    JSON_PROMPT_PATH = os.path.join(BASE_DIR, "prompts/json_judge_prompt.txt")
+
     # 1. Automatic Metrics
     run_automatic_metrics("alpaca", checkpoints)
     run_automatic_metrics("json", checkpoints)
@@ -233,7 +235,8 @@ def main():
         f"{RESULTS_DIR}/ckpt0_base_alpaca_responses.json", 
         f"{RESULTS_DIR}/ckpt1_stage1_alpaca_responses.json", 
         "ckpt0_base", "ckpt1_stage1", 
-        "judge_alpaca_0_vs_1.json"
+        "judge_alpaca_0_vs_1.json",
+        ALPACA_PROMPT_PATH
     )
     
     run_judge_eval(
@@ -241,7 +244,8 @@ def main():
         f"{RESULTS_DIR}/ckpt1_stage1_alpaca_responses.json", 
         f"{RESULTS_DIR}/ckpt2_stage2_alpaca_responses.json", 
         "ckpt1_stage1", "ckpt2_stage2", 
-        "judge_alpaca_1_vs_2.json"
+        "judge_alpaca_1_vs_2.json",
+        ALPACA_PROMPT_PATH
     )
 
     run_judge_eval(
@@ -249,7 +253,8 @@ def main():
         f"{RESULTS_DIR}/ckpt1_stage1_json_responses.json", 
         f"{RESULTS_DIR}/ckpt2_stage2_json_responses.json", 
         "ckpt1_stage1", "ckpt2_stage2", 
-        "judge_json_1_vs_2.json"
+        "judge_json_1_vs_2.json",
+        JSON_PROMPT_PATH
     )
 
     # --- NEW: ABLATION EXPERIMENTS ---
@@ -260,7 +265,8 @@ def main():
         f"{RESULTS_DIR}/ckpt1_stage1_alpaca_responses.json", 
         f"{RESULTS_DIR}/ckpt2_stage2_epoch1_alpaca_responses.json", 
         "ckpt1_stage1", "ckpt2_stage2_epoch1", 
-        "judge_alpaca_1_vs_2_epoch1.json"
+        "judge_alpaca_1_vs_2_epoch1.json",
+        ALPACA_PROMPT_PATH
     )
     
     # Stage 1 vs Epoch 2
@@ -269,7 +275,8 @@ def main():
         f"{RESULTS_DIR}/ckpt1_stage1_alpaca_responses.json", 
         f"{RESULTS_DIR}/ckpt2_stage2_epoch2_alpaca_responses.json", 
         "ckpt1_stage1", "ckpt2_stage2_epoch2", 
-        "judge_alpaca_1_vs_2_epoch2.json"
+        "judge_alpaca_1_vs_2_epoch2.json",
+        ALPACA_PROMPT_PATH
     )
 
 if __name__ == "__main__":

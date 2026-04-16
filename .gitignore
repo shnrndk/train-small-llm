@@ -1,6 +1,7 @@
 # Ignore model weights and checkpoints
 sft-lora-*/
-checkpoint-*/
+checkpoints-*/
+checkpointsOld-*/
 *.safetensors
 *.bin
 *.pt

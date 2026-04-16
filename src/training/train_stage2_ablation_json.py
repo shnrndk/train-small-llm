@@ -24,7 +24,7 @@ from transformers import (
 dotenv.load_dotenv()
 
 # The 'final' folder saved at the end of your Stage 1 training
-STAGE1_ADAPTER_PATH = os.path.join(BASE_DIR, "checkpoints/sft-lora-Phi-3.5-mini-instruct-alpaca-r32-a64-d0.05-lr1.0e-04-wd0.01/final")
+STAGE1_ADAPTER_PATH = os.path.join(BASE_DIR, "checkpoints/sft-lora-Llama-3.2-3B-alpaca-r32-a64-d0.05-lr1.0e-04-wd0.01/final")
 JSON_DATASET_PATH = os.path.join(BASE_DIR, "data/final_json_dataset_for_train.json")
 
 # ---------------------------------------------------------

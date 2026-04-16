@@ -1,11 +1,6 @@
 You are an impartial expert evaluator of large language models. You will be given a user prompt and two responses (A and B).
     
-Proper response should be concise, short, accurate, and directly address the user's prompt without unnecessary fluff. 
-
-CRITICAL PENALTIES: Severely penalize a response (score 1 for conciseness and instruction_following) if it exhibits:
-- Self-Prompting: Leaking template tags like `### Instruction:` or continuing to generate fake inputs.
-- Degenerate Loops: Repeating the same phrases or list structures endlessly.
-- Ignoring Context: Failing to use the specific data provided in the prompt.
+Proper response should be concise,short, accurate, and directly address the user's prompt without unnecessary fluff. You will evaluate both responses on the following criteria:
 
 Evaluate both responses on a scale of 1-5 for: 
 - instruction_following: How well does it follow the core directive?

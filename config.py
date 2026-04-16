@@ -15,7 +15,7 @@ from peft import TaskType
 @dataclass
 class ModelArguments:
     model_name_or_path: str = field(
-        default="microsoft/Phi-3.5-mini-instruct",
+        default="meta-llama/Llama-3.2-3B",
         metadata={"help": "Base model to fine-tune"}
     )
     

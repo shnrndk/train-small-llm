@@ -1,210 +1,162 @@
 [
     {
         "prompt_id": "json_eval_0",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 4,
+            "correctness": 4,
+            "instruction_following": 4
         },
-        "winner": "Tie",
-        "justification": "Both responses are identical and perfectly formatted JSON objects that accurately extract all required insurance policy details.",
-        "actual_winner": "Tie"
+        "winner": "A",
+        "justification": "Response A is the winner because it strictly follows the requested schema and formatting. Specifically, the 'policy_type' is correctly capitalized as 'Homeowners', and the 'start_date' and 'expiry_date' are in the correct YYYY-MM-DD format, as typically expected in JSON date fields.",
+        "actual_winner": "ckpt1_stage1"
     },
     {
         "prompt_id": "json_eval_1",
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses are identical and perfectly formatted JSON objects, accurately capturing all required data concisely.",
+        "justification": "Both responses provide perfectly formatted JSON objects with all required keys present and correctly typed, adhering strictly to the requested schema and containing accurate data based on the input.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_2",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 4,
+            "correctness": 4,
+            "instruction_following": 4
         },
-        "winner": "Tie",
-        "justification": "Both responses accurately extract the required details into a valid JSON format with no significant differences in content or clarity.",
-        "actual_winner": "Tie"
+        "winner": "A",
+        "justification": "Response A is the winner because it strictly follows the schema requested in the prompt, including the 'sustainable_certified' key with a string value as implied by the context, whereas Response B incorrectly assumes a boolean value for 'sustainable_certified', violating the schema compliance.",
+        "actual_winner": "ckpt1_stage1"
     },
     {
         "prompt_id": "json_eval_3",
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 4,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "Tie",
-        "justification": "Both responses accurately extract the required data into a valid JSON format with no significant differences in length or content.",
-        "actual_winner": "Tie"
+        "winner": "A",
+        "justification": "Response A is the winner because it follows the schema exactly as requested, including the case sensitivity of the 'energy_source' key, which is specified as 'solar' in the input, whereas Response B incorrectly capitalizes it as 'Solar'.",
+        "actual_winner": "ckpt2_stage2"
     },
     {
         "prompt_id": "json_eval_4",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 4,
+            "correctness": 5,
+            "instruction_following": 4
         },
-        "winner": "Tie",
-        "justification": "Both responses accurately extract the warehouse details into a valid JSON format, following the prompt's instructions perfectly. They are both concise and clear, with no hallucinations.",
-        "actual_winner": "Tie"
+        "winner": "A",
+        "justification": "Response A is the winner because it follows the exact schema requested in the prompt, including the sub-keys for 'coordinates' as 'latitude' and 'longitude', whereas Response B uses 'lat' and 'lng', which deviates from the requested schema.",
+        "actual_winner": "ckpt2_stage2"
     },
     {
         "prompt_id": "json_eval_5",
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 1,
-            "correctness": 1,
-            "clarity": 1,
-            "completeness": 1,
-            "conciseness": 1,
-            "structured_output_validity": 1,
-            "hallucination_risk": 5
+            "structured_output_validity": 5,
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 4,
+            "instruction_following": 4
         },
-        "winner": "B",
-        "justification": "Response B accurately extracts and formats the campaign details into the requested JSON structure, while Response A is completely irrelevant to the prompt.",
-        "actual_winner": "ckpt2_stage2"
+        "winner": "A",
+        "justification": "Response A is the winner because it perfectly follows the instruction, has correct and complete information, and maintains strict JSON formatting without any conversational fluff. Specifically, it accurately includes 'in rural districts' as part of the target population, adhering to the input details.",
+        "actual_winner": "ckpt1_stage1"
     },
     {
         "prompt_id": "json_eval_6",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 4,
+            "correctness": 4,
+            "instruction_following": 4
         },
-        "winner": "Tie",
-        "justification": "Both responses accurately extract the transaction details into the required JSON format, with no significant differences in length or conciseness.",
-        "actual_winner": "Tie"
+        "winner": "A",
+        "justification": "Response A is the winner because it strictly follows the requested JSON schema and formatting, particularly in the 'timestamp' field, which is correctly formatted as an ISO 8601 date string, whereas Response B's 'timestamp' field does not comply with this standard.",
+        "actual_winner": "ckpt2_stage2"
     },
     {
         "prompt_id": "json_eval_7",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses are identical and perfectly formatted JSON objects that accurately extract the enrollment details as requested.",
+        "justification": "Both responses provide perfectly formatted JSON objects with all required keys and correct data extraction, adhering strictly to the requested schema and formatting guidelines.",
         "actual_winner": "Tie"
     },
     {
@@ -212,129 +164,99 @@
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 4,
+            "correctness": 5,
+            "instruction_following": 4
         },
-        "winner": "Tie",
-        "justification": "Both responses are identical and perfectly fulfill the prompt requirements with accurate and clear JSON formatting.",
-        "actual_winner": "Tie"
+        "winner": "A",
+        "justification": "Response A is the winner because it follows the schema exactly as requested, including the 'signature_required' field being a string, whereas Response B uses boolean values for 'signature_required', violating the schema compliance.",
+        "actual_winner": "ckpt1_stage1"
     },
     {
         "prompt_id": "json_eval_9",
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses are identical and perfectly formatted JSON arrays, accurately extracting all required information concisely.",
+        "justification": "Both responses are perfectly formatted, compliant with the requested schema, and accurately extract the data from the investment portfolio summary. The minor difference in decimal places for the price values does not affect the overall correctness or compliance.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_10",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses are identical and perfectly formatted JSON arrays, accurately extracting all defect entries as requested.",
+        "justification": "Both responses are perfectly formatted JSON arrays with all required keys present and correctly typed. The only difference is in the data type of 'units_affected', which is a string in Response A and an integer in Response B. Since the prompt does not specify the data type, both are considered correct.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_11",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 4,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 4,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "A",
-        "justification": "Response A is better because it correctly formats the magnitude values as numbers, while Response B incorrectly formats them as strings.",
-        "actual_winner": "ckpt2_stage2"
+        "justification": "Response A is the winner because it maintains strict formatting by enclosing all values in quotes, including numerical values, which is consistent with JSON formatting requirements. Response B, while mostly correct, fails to enclose the magnitude values in quotes, which could lead to schema compliance issues in certain JSON parsing contexts.",
+        "actual_winner": "ckpt1_stage1"
     },
     {
         "prompt_id": "json_eval_12",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses are identical and perfectly fulfill the prompt requirements with accurate and clear JSON formatting.",
+        "justification": "Both responses are perfectly formatted, compliant with the requested schema, and accurately extract the required data from the input, with no conversational fluff or JSON errors.",
         "actual_winner": "Tie"
     },
     {
@@ -342,25 +264,19 @@
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses are identical and perfectly formatted JSON objects that meet all requirements of the prompt.",
+        "justification": "Both responses are perfectly formatted, compliant with the requested schema, and accurately extract the performance review details as instructed, with no conversational fluff or JSON errors.",
         "actual_winner": "Tie"
     },
     {
@@ -368,77 +284,59 @@
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 4,
+            "correctness": 5,
+            "instruction_following": 4
         },
-        "winner": "Tie",
-        "justification": "Both responses are identical and perfectly formatted JSON objects that accurately extract all concert details as requested.",
-        "actual_winner": "Tie"
+        "winner": "A",
+        "justification": "Response A is the winner because it perfectly follows the schema by including the full venue name as requested, maintaining strict formatting and schema compliance.",
+        "actual_winner": "ckpt1_stage1"
     },
     {
         "prompt_id": "json_eval_15",
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses are identical and perfectly formatted JSON objects that accurately extract the required information from the prompt.",
+        "justification": "Both responses are perfectly formatted, compliant with the requested schema, and accurately extract the required data from the input, with no conversational fluff or invalid JSON.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_16",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses are identical and perfectly formatted JSON objects that accurately reflect the user's prompt without any unnecessary information.",
+        "justification": "Both responses provide perfectly formatted JSON objects with all required keys present and correctly typed, adhering strictly to the instruction without any conversational fluff.",
         "actual_winner": "Tie"
     },
     {
@@ -446,51 +344,39 @@
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 4,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "A",
-        "justification": "Response A is more concise as it uses the ISO date format for the start date, which is preferred in JSON structures, while Response B uses a longer, less standardized date format.",
-        "actual_winner": "ckpt2_stage2"
+        "winner": "Tie",
+        "justification": "Both responses are perfectly formatted, compliant with the requested schema, and accurately extract the required details from the input, with no conversational fluff or invalid JSON.",
+        "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_18",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses are identical and perfectly formatted JSON objects, accurately capturing all required details concisely.",
+        "justification": "Both responses are perfectly formatted, compliant with the requested schema, and correctly extract the visa application details into a JSON object, with all required fields present and correctly typed, including the use of null for unavailable fields.",
         "actual_winner": "Tie"
     },
     {
@@ -498,77 +384,59 @@
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 4,
+            "correctness": 4,
+            "instruction_following": 4
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "Tie",
-        "justification": "Both responses are identical and perfectly formatted JSON objects that accurately extract all required details from the prompt.",
-        "actual_winner": "Tie"
+        "winner": "B",
+        "justification": "Response B is the winner because it correctly formats the 'registration_required' field as a boolean (false) instead of a string ('No'), which is a more appropriate and strict data type for this field, improving schema compliance and correctness.",
+        "actual_winner": "ckpt2_stage2"
     },
     {
         "prompt_id": "json_eval_20",
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses provide valid JSON and are equally clear, correct, and concise.",
+        "justification": "Both responses provide perfectly formatted, valid JSON with all keys properly quoted and values correctly typed, adhering strictly to the requested repair of the input JSON syntax errors.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_21",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses provide valid JSON with correct syntax and are equally clear and concise.",
+        "justification": "Both responses provide perfectly formatted, valid JSON with all keys properly quoted and values correctly typed, adhering strictly to the requested schema and instructions.",
         "actual_winner": "Tie"
     },
     {
@@ -576,25 +444,19 @@
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses provide valid JSON and are equally concise and clear.",
+        "justification": "Both responses provide perfectly formatted, valid JSON with all requested keys present and correctly typed, adhering strictly to the instruction without any conversational fluff.",
         "actual_winner": "Tie"
     },
     {
@@ -602,103 +464,79 @@
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses provide valid JSON and are equally concise and clear.",
+        "justification": "Both responses provide strictly valid JSON with quoted keys and values, adhering to the requested schema and instructions. The difference in formatting (spaces) does not affect the validity or compliance of the JSON output.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_24",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 4,
-            "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "structured_output_validity": 1,
+            "schema_compliance": 1,
+            "correctness": 1,
+            "instruction_following": 1
         },
         "winner": "A",
-        "justification": "Response A is more concise while still providing valid JSON, making it slightly better than Response B, which, although valid, is more verbose.",
-        "actual_winner": "ckpt1_stage1"
+        "justification": "Response A is the winner because it provides a strictly valid JSON object, repairing the syntax of the input JSON by removing the trailing comma, and maintaining the original schema. In contrast, Response B contains invalid JSON syntax and does not follow the instruction to repair the input JSON.",
+        "actual_winner": "ckpt2_stage2"
     },
     {
         "prompt_id": "json_eval_25",
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 3,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 3,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "A",
-        "justification": "Response A provides a valid JSON structure and correctly removes the trailing comma, while Response B fails to address the instruction to repair the syntax.",
-        "actual_winner": "ckpt2_stage2"
+        "winner": "Tie",
+        "justification": "Both responses are strictly valid JSON objects with no trailing commas, adhering perfectly to the requested format and schema.",
+        "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_26",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses provide valid JSON without trailing commas and are equally concise and clear.",
+        "justification": "Both responses are strictly valid JSON objects with proper syntax and schema compliance, accurately repairing the input JSON by removing the trailing comma.",
         "actual_winner": "Tie"
     },
     {
@@ -706,25 +544,19 @@
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses provide valid JSON without trailing commas and are equally clear and concise.",
+        "justification": "Both responses are strictly valid JSON, with no trailing commas, and perfectly follow the schema and instructions. They differ only in formatting (compact vs. expanded), but both are correct and compliant.",
         "actual_winner": "Tie"
     },
     {
@@ -732,103 +564,79 @@
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses provide valid JSON and correctly repair the structure. They are equally concise and complete.",
+        "justification": "Both responses provide strictly valid JSON with proper closure of brackets and braces, adhering to the schema and instructions provided, thus they are equally correct in terms of formatting strictness and schema compliance.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_29",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 4,
+            "instruction_following": 4
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "Tie",
-        "justification": "Both responses provide valid JSON and are equally correct, clear, and concise.",
-        "actual_winner": "Tie"
+        "winner": "B",
+        "justification": "Response B is the winner because it not only provides a strictly valid JSON object but also correctly completes the truncated string in a way that is more accurate and follows the instruction to repair the structure with a plausible license name, unlike Response A which uses a different license name.",
+        "actual_winner": "ckpt1_stage1"
     },
     {
         "prompt_id": "json_eval_30",
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 4,
-            "clarity": 5,
-            "completeness": 4,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 4,
+            "correctness": 4,
+            "instruction_following": 4
         },
         "winner": "A",
-        "justification": "Response A is more complete as it includes an 'x' value for the 'scroll' event, while Response B introduces a 'y' value that was not present in the original prompt.",
+        "justification": "Response A is the winner because it strictly follows the instruction to repair the structure without adding extra information not present in the original prompt, maintaining perfect schema compliance and correctness based on the given input.",
         "actual_winner": "ckpt2_stage2"
     },
     {
         "prompt_id": "json_eval_31",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses provide valid JSON and are equally correct, clear, and concise.",
+        "justification": "Both responses provide strictly valid JSON, perfectly repairing the input structure with the necessary opening brackets or braces, and adhering to the requested schema without any conversational fluff.",
         "actual_winner": "Tie"
     },
     {
@@ -836,25 +644,19 @@
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses are identical and correctly formatted JSON, meeting all requirements of the prompt.",
+        "justification": "Both responses provide strictly valid JSON objects with correct schema compliance and instruction following. They both corrected the invalid delimiters and punctuation from the input text, resulting in identical and perfectly formatted JSON outputs.",
         "actual_winner": "Tie"
     },
     {
@@ -862,77 +664,59 @@
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 3,
+            "structured_output_validity": 5,
+            "schema_compliance": 5,
             "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
-            "structured_output_validity": 3,
-            "hallucination_risk": 5
+            "instruction_following": 5
         },
-        "winner": "A",
-        "justification": "Response A correctly formats the JSON with valid delimiters and is clear and concise, while Response B retains the invalid format and does not follow the instruction.",
-        "actual_winner": "ckpt2_stage2"
+        "winner": "Tie",
+        "justification": "Both responses provide strictly valid JSON objects with correct schema compliance and instruction following. They accurately converted the input text to valid JSON format, using the correct delimiters and maintaining the required structure.",
+        "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_34",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses correctly convert the input to valid JSON format and are equally concise and clear.",
+        "justification": "Both responses provide strictly valid JSON objects with correct schema compliance and instruction following. They both replaced the invalid semicolons with commas, resulting in perfectly formatted JSON.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_35",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses are valid JSON and correctly formatted, with no differences in content or clarity.",
+        "justification": "Both responses provide strictly valid JSON format with all required comma delimiters between key-value pairs, adhering to the schema and instructions perfectly.",
         "actual_winner": "Tie"
     },
     {
@@ -940,77 +724,59 @@
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses provide valid JSON with correctly escaped quotes and are equally concise and clear.",
+        "justification": "Both responses provide strictly valid JSON with properly escaped internal quotes, adhering to the requested schema and instruction.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_37",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
-        "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
-            "structured_output_validity": 5,
-            "hallucination_risk": 5
-        },
-        "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
-            "structured_output_validity": 5,
-            "hallucination_risk": 5
-        },
-        "winner": "Tie",
-        "justification": "Both responses correctly escape the backslashes and provide valid JSON without unnecessary verbosity.",
-        "actual_winner": "Tie"
-    },
-    {
-        "prompt_id": "json_eval_38",
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
+            "structured_output_validity": 4,
+            "schema_compliance": 5,
             "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
-            "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "instruction_following": 5
         },
         "winner": "A",
-        "justification": "Response A provides a valid JSON structure without unnecessary escaping, making it more straightforward and easier to read compared to Response B.",
+        "justification": "Response A is the winner because it provides a strictly valid JSON object with properly escaped backslashes and no unnecessary whitespace or formatting issues, adhering to the instruction of outputting strictly valid JSON.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "json_eval_38",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "structured_output_validity": 4,
+            "schema_compliance": 5,
+            "correctness": 4,
+            "instruction_following": 4
+        },
+        "response_b_scores": {
+            "structured_output_validity": 5,
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
+        },
+        "winner": "B",
+        "justification": "Response B is the winner because it correctly escapes the internal quotes, providing a strictly valid JSON object as requested, while maintaining the original string structure as specified in the prompt.",
         "actual_winner": "ckpt1_stage1"
     },
     {
@@ -1018,51 +784,39 @@
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 1,
-            "correctness": 1,
-            "clarity": 1,
-            "completeness": 1,
-            "conciseness": 1,
-            "structured_output_validity": 1,
-            "hallucination_risk": 5
+            "structured_output_validity": 5,
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
-            "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "structured_output_validity": 1,
+            "schema_compliance": 1,
+            "correctness": 1,
+            "instruction_following": 1
         },
-        "winner": "B",
-        "justification": "Response B correctly replaces the invalid tab with the proper escape character and outputs valid JSON, while Response A does not address the prompt at all.",
-        "actual_winner": "ckpt2_stage2"
+        "winner": "A",
+        "justification": "Response A is the winner because it correctly replaced the literal tab with the proper tab escape character '\t', resulting in strictly valid JSON, while Response B failed to replace the tab and also included unnecessary conversational formatting.",
+        "actual_winner": "ckpt1_stage1"
     },
     {
         "prompt_id": "json_eval_40",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses correctly identify the ideological stance as 'CONSERVATIVE' and follow the instruction to return a JSON object without unnecessary content.",
+        "justification": "Both responses are perfectly formatted, schema-compliant, and correctly identify the ideological stance of the input text as 'CONSERVATIVE', with no conversational fluff or invalid JSON.",
         "actual_winner": "Tie"
     },
     {
@@ -1070,103 +824,79 @@
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses correctly identify the ideological stance as 'CENTRIST' and adhere to the JSON format without any issues.",
+        "justification": "Both responses are perfectly formatted JSON objects with the correct key 'label' and a value that matches one of the specified options, adhering strictly to the instruction without any conversational fluff.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_42",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 1,
-            "correctness": 1,
-            "clarity": 3,
-            "completeness": 1,
-            "conciseness": 1,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "B",
-        "justification": "Response B correctly identifies the ideological stance as 'LIBERAL' and adheres to the prompt's requirements, while Response A incorrectly labels it as 'CONSERVATIVE' and fails to follow the instruction.",
-        "actual_winner": "ckpt2_stage2"
+        "winner": "Tie",
+        "justification": "Both responses are perfectly formatted, schema-compliant, and correctly identify the ideological stance of the input text as 'LIBERAL', with no conversational fluff or invalid JSON.",
+        "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_43",
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 1,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 1,
-            "correctness": 1,
-            "clarity": 5,
-            "completeness": 1,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "A",
-        "justification": "Response A correctly identifies the ideological stance as CONSERVATIVE, while Response B incorrectly labels it as LIBERAL, demonstrating a clear understanding of the text's context.",
-        "actual_winner": "ckpt1_stage1"
+        "winner": "B",
+        "justification": "Response B is the winner because it correctly identifies the ideological stance of the text as 'CONSERVATIVE', given the strong stance on Second Amendment rights, while maintaining perfect JSON formatting and schema compliance.",
+        "actual_winner": "ckpt2_stage2"
     },
     {
         "prompt_id": "json_eval_44",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses correctly classify the statement and adhere to the JSON format, with no differences in length or conciseness.",
+        "justification": "Both responses provide perfectly formatted JSON objects with the correct key and value, adhering strictly to the requested schema and formatting guidelines.",
         "actual_winner": "Tie"
     },
     {
@@ -1174,207 +904,159 @@
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 1,
-            "correctness": 1,
-            "clarity": 1,
-            "completeness": 1,
-            "conciseness": 1,
-            "structured_output_validity": 1,
-            "hallucination_risk": 5
+            "structured_output_validity": 5,
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "B",
-        "justification": "Response B correctly identifies the statement as 'SPECULATION' and adheres to the JSON format, while Response A fails to follow the instruction and provides an incorrect label.",
-        "actual_winner": "ckpt2_stage2"
+        "winner": "Tie",
+        "justification": "Both responses are perfectly formatted JSON objects with the correct schema and label value, adhering strictly to the instruction without any conversational fluff.",
+        "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_46",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses correctly classify the statement and adhere to the JSON format without unnecessary verbosity.",
+        "justification": "Both responses are perfectly formatted JSON objects with the correct schema and label value, adhering strictly to the instruction without any conversational fluff.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_47",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 1,
-            "correctness": 1,
-            "clarity": 5,
-            "completeness": 1,
-            "conciseness": 5,
-            "structured_output_validity": 1,
-            "hallucination_risk": 5
+            "structured_output_validity": 5,
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "A",
-        "justification": "Response A correctly identifies the statement as a factual claim, while Response B incorrectly categorizes it as a subjective opinion.",
-        "actual_winner": "ckpt2_stage2"
+        "winner": "Tie",
+        "justification": "Both responses provide perfectly formatted JSON objects with the correct key 'label' and value 'FACTUAL_CLAIM', adhering strictly to the instruction without any conversational fluff.",
+        "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_48",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses correctly identify the intent as 'TECHNICAL_SUPPORT' and adhere to the JSON format, with no differences in length or conciseness.",
+        "justification": "Both responses are perfectly formatted, compliant with the requested schema, and correctly identify the primary intent of the customer's message as 'TECHNICAL_SUPPORT'.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_49",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
-        "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
-            "structured_output_validity": 5,
-            "hallucination_risk": 5
-        },
-        "response_b_scores": {
-            "instruction_following": 1,
-            "correctness": 1,
-            "clarity": 5,
-            "completeness": 1,
-            "conciseness": 5,
-            "structured_output_validity": 5,
-            "hallucination_risk": 5
-        },
-        "winner": "A",
-        "justification": "Response A correctly identifies the intent as 'CANCELLATION', while Response B incorrectly labels it as 'QUESTION'.",
-        "actual_winner": "ckpt2_stage2"
-    },
-    {
-        "prompt_id": "json_eval_50",
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses correctly identify the intent as 'TECHNICAL_SUPPORT' and follow the instruction to return a JSON object accurately.",
+        "justification": "Both responses are perfectly formatted, schema-compliant, and correctly identify the primary intent as 'CANCELLATION', adhering strictly to the requested JSON structure and values.",
         "actual_winner": "Tie"
     },
     {
-        "prompt_id": "json_eval_51",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "prompt_id": "json_eval_50",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 1,
-            "correctness": 1,
-            "clarity": 5,
-            "completeness": 1,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 4,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "B",
-        "justification": "Response B correctly identifies the intent as 'SALES', while Response A incorrectly labels it as 'CANCELLATION'. Response B is accurate and concise.",
-        "actual_winner": "ckpt2_stage2"
+        "justification": "Both responses have perfect structured output validity and schema compliance. However, Response B is more correct as the customer's message is primarily related to a billing issue, making it the better choice.",
+        "actual_winner": "ckpt1_stage1"
+    },
+    {
+        "prompt_id": "json_eval_51",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "structured_output_validity": 5,
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
+        },
+        "response_b_scores": {
+            "structured_output_validity": 5,
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are perfectly formatted JSON objects with the correct key 'label' and value 'SALES', which matches the primary intent of the customer's message. They both strictly follow the instruction without any conversational fluff.",
+        "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_52",
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses are identical and perfectly meet the prompt requirements.",
+        "justification": "Both responses are perfectly formatted JSON objects with the correct schema and value, adhering strictly to the instruction without any conversational fluff.",
         "actual_winner": "Tie"
     },
     {
@@ -1382,155 +1064,119 @@
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 4,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "Tie",
-        "justification": "Both responses correctly follow the instruction and provide the same accurate and concise output in valid JSON format.",
-        "actual_winner": "Tie"
+        "winner": "B",
+        "justification": "Both responses have perfect structured output validity and schema compliance. However, Response B is considered the winner because it more accurately assesses the severity of the issue as 'LOW', given that jobs are still processing normally and the lag is only a few seconds, which does not significantly impact overall performance.",
+        "actual_winner": "ckpt2_stage2"
     },
     {
         "prompt_id": "json_eval_54",
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 4,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 4,
+            "instruction_following": 4
         },
         "winner": "A",
-        "justification": "Response A correctly identifies the severity as 'CRITICAL', which is more accurate given the context of a trading script crashing and failing to execute stop-loss orders.",
+        "justification": "Response A is the winner because it correctly assesses the severity of the issue as 'CRITICAL' due to the entire trading script crashing and not executing stop-loss orders, which is a severe impact. Both responses are perfectly formatted and compliant with the schema, but Response A's correctness and instruction following are superior.",
         "actual_winner": "ckpt2_stage2"
     },
     {
         "prompt_id": "json_eval_55",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 4,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 1,
-            "correctness": 1,
-            "clarity": 1,
-            "completeness": 1,
-            "conciseness": 1,
-            "structured_output_validity": 1,
-            "hallucination_risk": 1
+            "structured_output_validity": 5,
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "A",
-        "justification": "Response A correctly follows the instruction and provides the appropriate JSON format with the correct label, while Response B fails to address the prompt and contains irrelevant information.",
+        "winner": "B",
+        "justification": "Both responses have perfect structured output validity and schema compliance. However, Response B is considered the winner because it more accurately assesses the severity of the reported issue as 'LOW', given that the issue is described as a minor background cron job taking longer than usual, which does not indicate a critical or high severity problem.",
         "actual_winner": "ckpt2_stage2"
     },
     {
         "prompt_id": "json_eval_56",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 2,
+            "instruction_following": 2
         },
-        "winner": "Tie",
-        "justification": "Both responses correctly classify the text as 'PHISHING' and adhere to the JSON format without any issues.",
-        "actual_winner": "Tie"
+        "winner": "A",
+        "justification": "Response A is the winner because it correctly classifies the input text as 'PHISHING' due to the request for sensitive information like PIN and social security number, adhering strictly to the requested JSON format and schema.",
+        "actual_winner": "ckpt2_stage2"
     },
     {
         "prompt_id": "json_eval_57",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
+            "structured_output_validity": 4,
+            "schema_compliance": 5,
             "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
-            "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "instruction_following": 4
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "Tie",
-        "justification": "Both responses correctly classify the text as 'SAFE' and adhere to the JSON format without any issues.",
-        "actual_winner": "Tie"
+        "winner": "B",
+        "justification": "Response B is the winner because it provides a strictly formatted JSON object without any conversational fluff, perfectly following the instruction for output format.",
+        "actual_winner": "ckpt1_stage1"
     },
     {
         "prompt_id": "json_eval_58",
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses correctly classify the text as TOXIC and adhere to the JSON format without any issues.",
+        "justification": "Both responses are perfectly formatted JSON objects with the correct key 'label' and a value that matches one of the specified options, adhering strictly to the instruction without any conversational fluff.",
         "actual_winner": "Tie"
     },
     {
@@ -1538,77 +1184,59 @@
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 4,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "Tie",
-        "justification": "Both responses correctly classify the text as 'PHISHING' and adhere to the JSON format without any issues.",
-        "actual_winner": "Tie"
+        "winner": "B",
+        "justification": "Both responses have perfect JSON formatting and schema compliance. However, RESPONSE B is considered the winner because it more accurately classifies the input text as 'PHISHING' due to the presence of a link to claim a prize, which is a common phishing tactic.",
+        "actual_winner": "ckpt2_stage2"
     },
     {
         "prompt_id": "json_eval_60",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses provide valid JSON and are equally concise and clear.",
+        "justification": "Both responses provide strictly valid JSON with proper quoting of keys and values, adhering to the requested schema and instructions. The difference in formatting (compact vs. expanded) does not affect the validity or compliance of the JSON output.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_61",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses provide valid JSON and are equally correct, clear, and concise.",
+        "justification": "Both responses provide perfectly formatted, valid JSON with all keys properly quoted and values correctly typed, adhering strictly to the requested format without any conversational fluff.",
         "actual_winner": "Tie"
     },
     {
@@ -1616,259 +1244,199 @@
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses provide valid JSON and are equally clear, concise, and correct.",
+        "justification": "Both responses provide strictly valid JSON with properly quoted keys and values, adhering to the requested schema and instructions. The minor difference in 'tip' value formatting (5.00 vs 5.0) does not affect the overall validity or compliance of the JSON objects.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_63",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses provide valid JSON with correct syntax and are equally clear and concise.",
+        "justification": "Both responses provide strictly valid JSON with quoted keys and values, adhering to the requested schema and instructions. The difference in formatting (spaces) does not affect the JSON's validity.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_64",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
-        "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
-            "structured_output_validity": 5,
-            "hallucination_risk": 5
-        },
-        "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
-            "structured_output_validity": 5,
-            "hallucination_risk": 5
-        },
-        "winner": "Tie",
-        "justification": "Both responses provide valid JSON without trailing commas and are equally concise and clear.",
-        "actual_winner": "Tie"
-    },
-    {
-        "prompt_id": "json_eval_65",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
-        "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
-            "structured_output_validity": 5,
-            "hallucination_risk": 5
-        },
-        "response_b_scores": {
-            "instruction_following": 2,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 2,
-            "conciseness": 5,
-            "structured_output_validity": 2,
-            "hallucination_risk": 5
-        },
-        "winner": "A",
-        "justification": "Response A correctly formats the JSON without trailing commas and provides a structured output, while Response B fails to address the prompt's requirement for valid JSON structure.",
-        "actual_winner": "ckpt2_stage2"
-    },
-    {
-        "prompt_id": "json_eval_66",
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
-            "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "structured_output_validity": 1,
+            "schema_compliance": 1,
+            "correctness": 1,
+            "instruction_following": 1
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
+        },
+        "winner": "B",
+        "justification": "Response B is the winner because it provides a strictly valid JSON object, without any conversational fluff, and adheres to the exact schema requested in the prompt, including proper data typing and array formatting.",
+        "actual_winner": "ckpt2_stage2"
+    },
+    {
+        "prompt_id": "json_eval_65",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2",
+        "response_a_scores": {
+            "structured_output_validity": 5,
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
+        },
+        "response_b_scores": {
+            "structured_output_validity": 5,
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses provide valid JSON without trailing commas and are equally clear and concise.",
+        "justification": "Both responses are strictly valid JSON, with no trailing commas, and perfectly follow the instruction to repair the syntax. They differ in formatting but are equally compliant with JSON standards.",
+        "actual_winner": "Tie"
+    },
+    {
+        "prompt_id": "json_eval_66",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
+        "response_a_scores": {
+            "structured_output_validity": 5,
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
+        },
+        "response_b_scores": {
+            "structured_output_validity": 5,
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
+        },
+        "winner": "Tie",
+        "justification": "Both responses are strictly valid JSON objects with proper syntax and schema compliance, accurately repairing the input JSON by removing the trailing comma.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_67",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses provide valid JSON without trailing commas and are equally concise and clear.",
+        "justification": "Both responses are strictly valid JSON, with no trailing commas, and perfectly follow the schema and instructions. They differ only in formatting (compact vs. pretty-printed), but both are correct.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_68",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses provide valid JSON and correctly repair the structure. They are equally concise and clear.",
+        "justification": "Both responses provide strictly valid JSON with proper closure of brackets and braces, adhering to the schema and instructions. They differ in formatting but are equally correct in terms of JSON validity and schema compliance.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_69",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 4,
+            "instruction_following": 4
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "Tie",
-        "justification": "Both responses provide valid JSON and are equally correct, clear, and concise.",
-        "actual_winner": "Tie"
+        "winner": "B",
+        "justification": "Response B is the winner because it not only provides a strictly valid JSON object but also correctly completes the truncated string with a plausible license name, following the instruction more accurately than Response A.",
+        "actual_winner": "ckpt1_stage1"
     },
     {
         "prompt_id": "json_eval_70",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 4,
+            "correctness": 4,
+            "instruction_following": 4
         },
-        "winner": "Tie",
-        "justification": "Both responses provide valid JSON structures that repair the input correctly, with no unnecessary fluff or errors.",
-        "actual_winner": "Tie"
+        "winner": "A",
+        "justification": "Response A is the winner because it strictly follows the instruction to repair the structure without adding extra information not present in the original prompt, maintaining perfect schema compliance and correctness based on the given input.",
+        "actual_winner": "ckpt2_stage2"
     },
     {
         "prompt_id": "json_eval_71",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses are identical and correctly formatted valid JSON, fulfilling the prompt requirements.",
+        "justification": "Both responses provide perfectly formatted, valid JSON objects with the correct keys and values, adhering strictly to the requested structure without any conversational fluff.",
         "actual_winner": "Tie"
     },
     {
@@ -1876,51 +1444,39 @@
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses are identical and correctly formatted JSON, fulfilling the prompt requirements perfectly.",
+        "justification": "Both responses provide perfectly formatted JSON objects with correct schema compliance and instruction following. They both corrected the invalid delimiters and punctuation from the input text, resulting in identical, valid JSON outputs.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_73",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses correctly convert the input to valid JSON format and are equally clear, concise, and correct.",
+        "justification": "Both responses provide strictly valid JSON objects with correct schema compliance and instruction following. They accurately converted the input text to valid JSON format, using the correct delimiters and maintaining the required structure.",
         "actual_winner": "Tie"
     },
     {
@@ -1928,25 +1484,19 @@
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses correctly convert the input to valid JSON format and are equally clear, concise, and accurate.",
+        "justification": "Both responses are perfectly formatted JSON objects with correct schema compliance and instruction following. They both replaced the invalid semicolons with commas, resulting in strictly valid JSON.",
         "actual_winner": "Tie"
     },
     {
@@ -1954,51 +1504,39 @@
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses provide valid JSON format and are equally concise and clear.",
+        "justification": "Both responses provide strictly valid JSON format with all required comma delimiters between key-value pairs, adhering to the schema and instructions perfectly. They are identical in content and structure, making them equally correct.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_76",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses correctly escape the quotes and provide valid JSON. They are equally concise and complete.",
+        "justification": "Both responses are strictly valid JSON with properly escaped internal quotes, adhering to the requested schema and instructions.",
         "actual_winner": "Tie"
     },
     {
@@ -2006,129 +1544,99 @@
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
+            "structured_output_validity": 4,
+            "schema_compliance": 5,
             "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
-            "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "instruction_following": 5
         },
-        "winner": "Tie",
-        "justification": "Both responses correctly escaped the backslashes and provided valid JSON. They are equally concise and clear.",
-        "actual_winner": "Tie"
+        "winner": "A",
+        "justification": "Response A is the winner because it provides a strictly valid JSON object with properly escaped backslashes and no unnecessary whitespace or formatting issues, adhering to the instruction of outputting strictly valid JSON.",
+        "actual_winner": "ckpt1_stage1"
     },
     {
         "prompt_id": "json_eval_78",
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 4,
+            "correctness": 4,
+            "instruction_following": 4
         },
-        "winner": "Tie",
-        "justification": "Both responses provide valid JSON and correctly escape the internal quotes, fulfilling the prompt requirements.",
-        "actual_winner": "Tie"
+        "winner": "A",
+        "justification": "Response A is the winner because it correctly escapes the internal quotes and maintains the original string structure as requested, demonstrating perfect schema compliance and instruction following.",
+        "actual_winner": "ckpt1_stage1"
     },
     {
         "prompt_id": "json_eval_79",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 1,
-            "correctness": 1,
-            "clarity": 1,
-            "completeness": 1,
-            "conciseness": 1,
             "structured_output_validity": 1,
-            "hallucination_risk": 5
+            "schema_compliance": 1,
+            "correctness": 1,
+            "instruction_following": 1
         },
         "winner": "A",
-        "justification": "Response A correctly replaces the invalid tab with the escape character and outputs valid JSON, while Response B does not address the prompt at all.",
-        "actual_winner": "ckpt2_stage2"
+        "justification": "Response A is the winner because it correctly replaced the literal tab with the proper tab escape character '\\t', resulting in strictly valid JSON, while Response B failed to replace the tab and also included unnecessary conversational formatting.",
+        "actual_winner": "ckpt1_stage1"
     },
     {
         "prompt_id": "json_eval_80",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 4,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "B",
-        "justification": "Response B is more concise as it presents the JSON in a single line without unnecessary formatting, while Response A includes extra line breaks and indentation.",
-        "actual_winner": "ckpt1_stage1"
+        "winner": "Tie",
+        "justification": "Both responses provide perfectly formatted JSON objects with all required fields correctly populated, adhering strictly to the requested schema and structure.",
+        "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_81",
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses are valid JSON and correctly parse the flight search request with no differences in content or structure.",
+        "justification": "Both responses provide perfectly formatted JSON objects with all required fields correctly populated, adhering strictly to the requested schema and formatting guidelines.",
         "actual_winner": "Tie"
     },
     {
@@ -2136,77 +1644,59 @@
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 4,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "A",
-        "justification": "Response A is more concise, providing the same valid JSON structure in a single line, while Response B is unnecessarily formatted over multiple lines.",
-        "actual_winner": "ckpt1_stage1"
+        "winner": "Tie",
+        "justification": "Both responses provide perfectly formatted JSON objects with all required fields correctly populated, adhering strictly to the requested schema and structure. The minor formatting difference between the two responses (compact vs. expanded) does not affect their validity or compliance.",
+        "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_83",
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
+            "structured_output_validity": 4,
+            "schema_compliance": 5,
             "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
-            "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "Tie",
-        "justification": "Both responses are valid JSON and accurately parse the flight search request with no differences in content or structure.",
-        "actual_winner": "Tie"
+        "winner": "B",
+        "justification": "Response B is the winner because it provides a strictly formatted JSON object without any unnecessary characters or markdown formatting, adhering perfectly to the requested structure and content.",
+        "actual_winner": "ckpt1_stage1"
     },
     {
         "prompt_id": "json_eval_84",
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses are valid JSON and accurately parse the flight booking request. They provide the same information, just formatted differently, with no significant difference in length or conciseness.",
+        "justification": "Both responses provide perfectly formatted JSON objects with all required fields correctly populated, adhering strictly to the requested schema and formatting guidelines.",
         "actual_winner": "Tie"
     },
     {
@@ -2214,207 +1704,159 @@
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 4,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "A",
-        "justification": "Response A is more concise, providing the same valid JSON in a single line compared to the multi-line format of Response B.",
-        "actual_winner": "ckpt1_stage1"
+        "winner": "Tie",
+        "justification": "Both responses provide perfectly formatted JSON objects with all required fields correctly populated, adhering strictly to the requested schema and formatting guidelines.",
+        "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_86",
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 4,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 3,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 3,
+            "correctness": 3,
+            "instruction_following": 3
         },
         "winner": "A",
-        "justification": "Response A is more concise and adheres strictly to the required JSON structure, using the correct format for time and origin/destination.",
+        "justification": "Response A is the winner because it strictly follows the requested JSON structure and schema, using only the airport codes for origin and destination as specified, whereas Response B includes the city names, violating the schema compliance.",
         "actual_winner": "ckpt2_stage2"
     },
     {
         "prompt_id": "json_eval_87",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses provide valid JSON that meets the prompt requirements perfectly, with no differences in content or structure.",
+        "justification": "Both responses provide perfectly formatted JSON objects with all required fields correctly populated, adhering strictly to the requested schema and structure.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_88",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 4,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "A",
-        "justification": "Response A is more concise as it uses a single line, while Response B is slightly longer due to formatting.",
-        "actual_winner": "ckpt1_stage1"
+        "winner": "Tie",
+        "justification": "Both responses provide perfectly formatted JSON objects with the exact structure and keys requested, containing the correct city and unit of measurement as per the user's request.",
+        "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_89",
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 4,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "B",
-        "justification": "Response B is more concise, providing the same valid JSON in a single line without unnecessary formatting.",
-        "actual_winner": "ckpt1_stage1"
+        "winner": "Tie",
+        "justification": "Both responses provide perfectly formatted JSON objects with the exact structure and keys requested, containing correct data based on the user's input. They differ only in formatting style (pretty print vs. compact), but both are valid and compliant.",
+        "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_90",
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses are valid JSON and correctly parse the user's request with no differences in content or structure.",
+        "justification": "Both responses provide perfectly formatted JSON objects with the exact structure and keys requested, containing the correct city and unit of measurement as per the user's input.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_91",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses are valid JSON and correctly parse the user's weather request with no differences in content or structure.",
+        "justification": "Both responses provide perfectly formatted JSON objects with the exact structure and keys requested, containing the correct city and unit of measurement as per the user's input.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_92",
-        "checkpoint_a": "ckpt2_stage2",
-        "checkpoint_b": "ckpt1_stage1",
+        "checkpoint_a": "ckpt1_stage1",
+        "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses are valid JSON and correctly parse the user's request with no differences in content or structure.",
+        "justification": "Both responses provide valid JSON with the correct structure and data. They both follow the instructions precisely without any conversational fluff, and their schema compliance is perfect as they match the requested keys and data types.",
         "actual_winner": "Tie"
     },
     {
@@ -2422,25 +1864,19 @@
         "checkpoint_a": "ckpt1_stage1",
         "checkpoint_b": "ckpt2_stage2",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses are valid JSON and accurately parse the user's request with no differences in content or structure.",
+        "justification": "Both responses provide perfectly formatted JSON objects with the exact structure requested, containing the correct data extracted from the user's e-commerce request. The minor difference in price formatting (45.00 vs 45.0) does not affect the overall validity or compliance of the JSON.",
         "actual_winner": "Tie"
     },
     {
@@ -2448,25 +1884,19 @@
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses are valid JSON and correctly parse the user's request without any unnecessary content.",
+        "justification": "Both responses provide perfectly formatted JSON objects with the exact keys requested and correct data extraction, adhering strictly to the required structure and schema.",
         "actual_winner": "Tie"
     },
     {
@@ -2474,129 +1904,99 @@
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "winner": "Tie",
-        "justification": "Both responses are valid JSON and accurately reflect the user's request without unnecessary verbosity.",
+        "justification": "Both responses provide perfectly formatted JSON objects with the exact keys requested and correct data extraction, adhering strictly to the specified schema and formatting requirements.",
         "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_96",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 4,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "A",
-        "justification": "Response A is more concise, providing the required JSON without unnecessary formatting or line breaks, making it easier to read quickly.",
-        "actual_winner": "ckpt1_stage1"
+        "winner": "Tie",
+        "justification": "Both responses provide perfectly formatted JSON objects with all required fields correctly populated, adhering strictly to the requested schema and containing the correct extracted data from the meeting request.",
+        "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_97",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 4,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "A",
-        "justification": "Response A is more concise, providing the same information in a single line compared to the multi-line format of Response B.",
-        "actual_winner": "ckpt1_stage1"
+        "winner": "Tie",
+        "justification": "Both responses provide perfectly formatted JSON objects that strictly adhere to the requested schema and contain the correct extracted data from the user's meeting request.",
+        "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_98",
         "checkpoint_a": "ckpt2_stage2",
         "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 4,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "B",
-        "justification": "Response B is more concise as it presents the JSON in a single line without additional formatting, making it slightly shorter than Response A.",
-        "actual_winner": "ckpt1_stage1"
+        "winner": "Tie",
+        "justification": "Both responses provide perfectly formatted JSON objects that strictly adhere to the requested schema and correctly extract the meeting details from the input, with no conversational fluff or invalid JSON.",
+        "actual_winner": "Tie"
     },
     {
         "prompt_id": "json_eval_99",
-        "checkpoint_a": "ckpt1_stage1",
-        "checkpoint_b": "ckpt2_stage2",
+        "checkpoint_a": "ckpt2_stage2",
+        "checkpoint_b": "ckpt1_stage1",
         "response_a_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 5,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
         "response_b_scores": {
-            "instruction_following": 5,
-            "correctness": 5,
-            "clarity": 5,
-            "completeness": 5,
-            "conciseness": 4,
             "structured_output_validity": 5,
-            "hallucination_risk": 5
+            "schema_compliance": 5,
+            "correctness": 5,
+            "instruction_following": 5
         },
-        "winner": "A",
-        "justification": "Response A is more concise, providing the same valid JSON output in a single line compared to the multi-line format of Response B.",
-        "actual_winner": "ckpt1_stage1"
+        "winner": "Tie",
+        "justification": "Both responses provide perfectly formatted JSON objects with all required fields correctly populated, adhering strictly to the requested schema and containing the correct extracted data from the user's meeting request.",
+        "actual_winner": "Tie"
     }
 ]

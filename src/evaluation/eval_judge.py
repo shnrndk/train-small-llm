@@ -6,13 +6,17 @@ import evaluate
 from openai import OpenAI
 import pandas as pd
 
+import sys
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.append(BASE_DIR)
+
 # --- Configuration ---
 UTSA_API_KEY = "gpustack_50e00c9281422bc5_0c0696dfcb1696d7635e58a2e56d6282"
 UTSA_BASE_URL = "http://10.246.100.230/v1"
 JUDGE_MODEL = "llama-3.3-70b-instruct-awq" 
 
-RESULTS_DIR = "eval_results"
-JUDGE_OUT_DIR = "judge_results"
+RESULTS_DIR = os.path.join(BASE_DIR, "eval_results")
+JUDGE_OUT_DIR = os.path.join(BASE_DIR, "judge_results")
 os.makedirs(JUDGE_OUT_DIR, exist_ok=True)
 
 # Load Evaluation Metrics
@@ -58,30 +62,9 @@ def calculate_json_metrics(parsed_pred, parsed_ref):
     return exact, schema_compliant, f1
 
 # --- Helper: The LLM Judge API Call ---
-def query_judge(client, prompt_text, resp_a, resp_b, id_a, id_b, prompt_id):
-    system_prompt = """You are an impartial expert evaluator of large language models. You will be given a user prompt and two responses (A and B).
-    
-Proper response should be concise,short, accurate, and directly address the user's prompt without unnecessary fluff. You will evaluate both responses on the following criteria:
-
-Evaluate both responses on a scale of 1-5 for: 
-- instruction_following: How well does it follow the core directive?
-- correctness: Is the information factually accurate?
-- clarity: Is the language clear and easy to understand?
-- completeness: Does it answer all parts of the prompt?
-- conciseness: 5 means perfectly concise without missing details; 1 means overly verbose, rambling, or contains irrelevant fluff.
-- structured_output_validity: Rate high if formatting is perfect JSON if requested, otherwise N/A or 5.
-- hallucination_risk: 5 means NO hallucinations, 1 means high hallucination.
-
-You MUST output strictly in this JSON format:
-{
-  "prompt_id": "<prompt_id>",
-  "checkpoint_a": "<checkpoint_a_name>",
-  "checkpoint_b": "<checkpoint_b_name>",
-  "response_a_scores": {"instruction_following": 0, "correctness": 0, "clarity": 0, "completeness": 0, "conciseness": 0, "structured_output_validity": 0, "hallucination_risk": 0},
-  "response_b_scores": {"instruction_following": 0, "correctness": 0, "clarity": 0, "completeness": 0, "conciseness": 0, "structured_output_validity": 0, "hallucination_risk": 0},
-  "winner": "<A, B, or Tie>",
-  "justification": "<Brief reason highlighting why the winner is better, specifically mentioning length/conciseness if applicable>"
-}"""
+def query_judge(client, prompt_text, resp_a, resp_b, id_a, id_b, prompt_id, template_path):
+    with open(template_path, "r") as f:
+        system_prompt = f.read()
 
     user_message = f"Prompt ID: {prompt_id}\n\nUSER PROMPT:\n{prompt_text}\n\n---\nRESPONSE A:\n{resp_a}\n\n---\nRESPONSE B:\n{resp_b}"
 
@@ -111,8 +94,9 @@ def run_automatic_metrics(task_name, checkpoints):
         with open(file_path, "r") as f:
             data = json.load(f)
             
-        preds = [d["generated_response"] for d in data]
-        refs = [d["reference"] for d in data]
+        # Sanitize strings to prevent bert_score from crashing on empty outputs
+        preds = [d["generated_response"] if d["generated_response"].strip() else "empty" for d in data]
+        refs = [d["reference"] if d["reference"].strip() else "empty" for d in data]
         
         # 1. ROUGE & BERTScore
         rouge_res = rouge.compute(predictions=preds, references=refs)
@@ -161,7 +145,7 @@ def run_automatic_metrics(task_name, checkpoints):
                 print("  Schema Compliance / Exact Match: 0.0% (No valid JSON generated)")
 
 # --- Pipeline 2: Pairwise LLM Judge ---
-def run_judge_eval(client, file_1, file_2, name_1, name_2, output_filename):
+def run_judge_eval(client, file_1, file_2, name_1, name_2, output_filename, template_path):
     print(f"\n=== Running Judge: {name_1} vs {name_2} ===")
     
     with open(file_1, "r") as f: data_1 = json.load(f)
@@ -185,7 +169,7 @@ def run_judge_eval(client, file_1, file_2, name_1, name_2, output_filename):
             resp_a, resp_b = resp_1, resp_2
             id_a, id_b = name_1, name_2
             
-        judge_out = query_judge(client, prompt_text, resp_a, resp_b, id_a, id_b, prompt_id)
+        judge_out = query_judge(client, prompt_text, resp_a, resp_b, id_a, id_b, prompt_id, template_path)
         
         if judge_out:
             judge_out["checkpoint_a"] = id_a
@@ -221,7 +205,11 @@ def main():
     client = OpenAI(api_key=UTSA_API_KEY, base_url=UTSA_BASE_URL)
     checkpoints = ["ckpt0_base", "ckpt1_stage1", "ckpt2_stage2"]
     
-    # 1. Automatic Metrics (Now includes Schema Compliance, Field F1, R1/R2)
+    # Prompt Template Paths
+    ALPACA_PROMPT_PATH = os.path.join(BASE_DIR, "prompts/alpaca_judge_prompt.txt")
+    JSON_PROMPT_PATH = os.path.join(BASE_DIR, "prompts/json_judge_prompt.txt")
+    
+    # 1. Automatic Metrics
     run_automatic_metrics("alpaca", checkpoints)
     run_automatic_metrics("json", checkpoints)
     
@@ -233,7 +221,8 @@ def main():
         f"{RESULTS_DIR}/ckpt0_base_alpaca_responses.json", 
         f"{RESULTS_DIR}/ckpt1_stage1_alpaca_responses.json", 
         "ckpt0_base", "ckpt1_stage1", 
-        "judge_alpaca_0_vs_1.json"
+        "judge_alpaca_0_vs_1.json",
+        ALPACA_PROMPT_PATH
     )
     
     # EXPERIMENT 4.4: Stage 1 vs Stage 2 (Forgetting Analysis)
@@ -242,17 +231,19 @@ def main():
         f"{RESULTS_DIR}/ckpt1_stage1_alpaca_responses.json", 
         f"{RESULTS_DIR}/ckpt2_stage2_alpaca_responses.json", 
         "ckpt1_stage1", "ckpt2_stage2", 
-        "judge_alpaca_1_vs_2.json"
+        "judge_alpaca_1_vs_2.json",
+        ALPACA_PROMPT_PATH
     )
     
-    # EXPERIMENT 4.3: JSON Improvement (Base vs Stage 1 vs Stage 2)
-    # Testing Stage 1 vs Stage 2 for JSON structured output
+    # EXPERIMENT 4.3: JSON Improvement (Stage 1 vs Stage 2) 
+    # Testing Stage 1 vs Stage 2 for JSON structured output using the strict JSON judge
     run_judge_eval(
         client, 
         f"{RESULTS_DIR}/ckpt1_stage1_json_responses.json", 
         f"{RESULTS_DIR}/ckpt2_stage2_json_responses.json", 
         "ckpt1_stage1", "ckpt2_stage2", 
-        "judge_json_1_vs_2.json"
+        "judge_json_1_vs_2.json",
+        JSON_PROMPT_PATH
     )
 
 if __name__ == "__main__":

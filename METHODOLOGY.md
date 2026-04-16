@@ -4,7 +4,7 @@ This project investigates the complex dynamics of post-training and sequential f
 
 ## 1.1 Model Selection
 
-**Student Model:** A highly capable but compact open-weight base model (`microsoft/Phi-3.5-mini-instruct`) was selected as the student. Smaller parameter models are ideal for post-training experiments as they exhibit more pronounced shifts in behavior during fine-tuning compared to their larger counterparts, making phenomena like catastrophic forgetting easier to measure within academic compute constraints. During training, the base model is dynamically quantized to 4-bit (`nf4`) precision using `bitsandbytes` (with double quantization and `float16` compute type) to drastically reduce VRAM footprints.
+**Student Model:** A highly capable but compact open-weight base model (`meta-llama/Llama-3.2-3B`) was selected as the student. Smaller parameter models are ideal for post-training experiments as they exhibit more pronounced shifts in behavior during fine-tuning compared to their larger counterparts, making phenomena like catastrophic forgetting easier to measure within academic compute constraints. During training, the base model is dynamically quantized to 4-bit (`nf4`) precision using `bitsandbytes` (with double quantization and `float16` compute type) to drastically reduce VRAM footprints.
 
 **Teacher Model:** We utilized a frontier-level model (`llama-3.3-70b-instruct-awq`) deployed locally to generate synthetic training data. These large-scale models possess robust internal representations of complex schema structures, making them ideal teachers for distilling strict reasoning frameworks into smaller student architectures.
 
@@ -29,7 +29,7 @@ Training was executed sequentially leveraging Parameter-Efficient Fine-Tuning (P
 - **Batching & Regularization**: Per-device batch size of `4` with `8` gradient accumulation steps (yielding a larger effective batch size). Max gradient norm clipped at `0.3`, weight decay at `0.01`. Half-precision (`fp16`) and `gradient_checkpointing` were enabled for maximal memory efficiency on sequences up to `1024` tokens.
 
 **Sequential Pathway:**
-- **Checkpoint 0**: The untuned base model (`Phi-3.5-mini-instruct`).
+- **Checkpoint 0**: The untuned base model (`Llama-3.2-3B`).
 - **Checkpoint 1 (Stage 1)**: Base model fine-tuned exclusively on the Alpaca dataset.
 - **Checkpoint 2 (Stage 2)**: Checkpoint 1 fine-tuned exclusively on the synthetic JSON Instruct dataset.
 

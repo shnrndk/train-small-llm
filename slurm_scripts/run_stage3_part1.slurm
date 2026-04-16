@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=eval_stage3
-#SBATCH --output=logs/stage3_%j.log
-#SBATCH --error=logs/stage3_%j.err
+#SBATCH --output=../logs/stage3_%j.log
+#SBATCH --error=../logs/stage3_%j.err
 #SBATCH --partition=gpu1v100     # UTSA V100 GPU partition
 #SBATCH --nodes=1
 #SBATCH --ntasks=1

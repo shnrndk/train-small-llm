@@ -5,7 +5,7 @@
         "instruction": "Extract the insurance policy details into a JSON object with keys: \"policy_number\", \"holder_name\", \"policy_type\", \"coverage_amount_usd\", \"premium_monthly_usd\", \"start_date\", \"expiry_date\".",
         "input": "Policy #POL-2024-88741 is a homeowners insurance plan held by Thomas Brennan. The policy covers up to $450,000 in damages with a monthly premium of $182. Coverage runs from January 1, 2024 to December 31, 2024.",
         "reference": "{\n  \"policy_number\": \"POL-2024-88741\",\n  \"holder_name\": \"Thomas Brennan\",\n  \"policy_type\": \"homeowners insurance\",\n  \"coverage_amount_usd\": 450000,\n  \"premium_monthly_usd\": 182,\n  \"start_date\": \"2024-01-01\",\n  \"expiry_date\": \"2024-12-31\"\n}",
-        "generated_response": "{\n  \"policy_number\": \"POL-2024-88741\",\n  \"holder_name\": \"Thomas Brennan\",\n  \"policy_type\": \"homeowners insurance\",\n  \"coverage_amount_usd\": 450000,\n  \"premium_monthly_usd\": 182,\n  \"start_date\": \"2024-01-01\",\n  \"expiry_date\": \"2024-12-31\"\n}"
+        "generated_response": "{\n  \"policy_number\": \"POL-2024-88741\",\n  \"holder_name\": \"Thomas Brennan\",\n  \"policy_type\": \"homeowners insurance\",\n  \"coverage_amount_usd\": 450000,\n  \"premium_monthly_usd\": 182,\n  \"start_date\": \"January 1, 2024\",\n  \"expiry_date\": \"December 31, 2024\"\n}"
     },
     {
         "id": "json_eval_1",
@@ -21,7 +21,7 @@
         "instruction": "Extract clothing product details into a JSON object with keys: \"item_name\", \"brand\", \"category\", \"size_range\", \"fabric\", \"price_usd\", \"sustainable_certified\".",
         "input": "The Terra Linen Blazer by EcoThread is a women's outerwear piece made from 100% organic linen. It is available in sizes XS to XL, priced at $215, and holds the GOTS sustainability certification.",
         "reference": "{\n  \"item_name\": \"The Terra Linen Blazer\",\n  \"brand\": \"EcoThread\",\n  \"category\": \"women's outerwear\",\n  \"size_range\": \"XS-XL\",\n  \"fabric\": \"100% organic linen\",\n  \"price_usd\": 215,\n  \"sustainable_certified\": \"GOTS\"\n}",
-        "generated_response": "{\n  \"item_name\": \"Terra Linen Blazer\",\n  \"brand\": \"EcoThread\",\n  \"category\": \"Women's Outerwear\",\n  \"size_range\": \"XS to XL\",\n  \"fabric\": \"100% Organic Linen\",\n  \"price_usd\": 215,\n  \"sustainable_certified\": \"GOTS\"\n}"
+        "generated_response": "{\n  \"item_name\": \"Terra Linen Blazer\",\n  \"brand\": \"EcoThread\",\n  \"category\": \"outerwear\",\n  \"size_range\": \"XS to XL\",\n  \"fabric\": \"100% organic linen\",\n  \"price_usd\": 215,\n  \"sustainable_certified\": true\n}"
     },
     {
         "id": "json_eval_3",
@@ -29,7 +29,7 @@
         "instruction": "Extract the power plant data into a JSON object with keys: \"plant_name\", \"operator\", \"country\", \"energy_source\", \"capacity_mw\", \"commissioned_year\", \"operational\".",
         "input": "The Solara Sunrise facility, operated by GreenGrid Energy in Morocco, is a utility-scale solar power plant with a generation capacity of 580 MW. It was commissioned in 2022 and remains fully operational.",
         "reference": "{\n  \"plant_name\": \"Solara Sunrise\",\n  \"operator\": \"GreenGrid Energy\",\n  \"country\": \"Morocco\",\n  \"energy_source\": \"solar\",\n  \"capacity_mw\": 580,\n  \"commissioned_year\": 2022,\n  \"operational\": true\n}",
-        "generated_response": "{\n  \"plant_name\": \"Solara Sunrise\",\n  \"operator\": \"GreenGrid Energy\",\n  \"country\": \"Morocco\",\n  \"energy_source\": \"Solar\",\n  \"capacity_mw\": 580,\n  \"commissioned_year\": 2022,\n  \"operational\": true\n}"
+        "generated_response": "{\n  \"plant_name\": \"Solara Sunrise\",\n  \"operator\": \"GreenGrid Energy\",\n  \"country\": \"Morocco\",\n  \"energy_source\": \"solar\",\n  \"capacity_mw\": 580,\n  \"commissioned_year\": 2022,\n  \"operational\": true\n}"
     },
     {
         "id": "json_eval_4",
@@ -45,7 +45,7 @@
         "instruction": "Extract campaign details into a JSON object with keys \"campaign\" (sub-keys: \"campaign_id\", \"disease\", \"target_population\", \"launch_date\") and \"agency\" (sub-keys: \"name\", \"country\", \"funding_source\").",
         "input": "Campaign VX-2024-PH09 targets polio prevention among children under 5 years in rural districts, launched on February 10, 2025. It is run by the National Health Authority of Nigeria, funded through WHO and UNICEF grants.",
         "reference": "{\n  \"campaign\": {\n    \"campaign_id\": \"VX-2024-PH09\",\n    \"disease\": \"polio\",\n    \"target_population\": \"children under 5 years in rural districts\",\n    \"launch_date\": \"February 10, 2025\"\n  },\n  \"agency\": {\n    \"name\": \"National Health Authority of Nigeria\",\n    \"country\": \"Nigeria\",\n    \"funding_source\": \"WHO and UNICEF grants\"\n  }\n}",
-        "generated_response": "{\n  \"campaign\": {\n    \"campaign_id\": \"VX-2024-PH09\",\n    \"disease\": \"polio\",\n    \"target_population\": \"children under 5 years in rural districts\",\n    \"launch_date\": \"February 10, 2025\"\n  },\n  \"agency\": {\n    \"name\": \"National Health Authority of Nigeria\",\n    \"country\": \"Nigeria\",\n    \"funding_source\": [\"WHO\", \"UNICEF\"]\n  }\n}"
+        "generated_response": "{\n  \"campaign\": {\n    \"campaign_id\": \"VX-2024-PH09\",\n    \"disease\": \"polio prevention\",\n    \"target_population\": \"children under 5 years\",\n    \"launch_date\": \"February 10, 2025\"\n  },\n  \"agency\": {\n    \"name\": \"National Health Authority of Nigeria\",\n    \"country\": \"Nigeria\",\n    \"funding_source\": \"WHO and UNICEF grants\"\n  }\n}"
     },
     {
         "id": "json_eval_6",
@@ -53,7 +53,7 @@
         "instruction": "Extract the blockchain transaction details into a JSON object with keys \"transaction\" (sub-keys: \"tx_hash\", \"block_number\", \"timestamp\", \"fee_usd\") and \"transfer\" (sub-keys: \"from_address\", \"to_address\", \"amount\", \"currency\").",
         "input": "Transaction 0xabc123def456 was confirmed in block 19,204,311 at 14:32:07 UTC on October 18, 2024, with a network fee of $2.84. It transferred 1.25 ETH from address 0xSender001 to 0xReceiver002.",
         "reference": "{\n  \"transaction\": {\n    \"tx_hash\": \"0xabc123def456\",\n    \"block_number\": 19204311,\n    \"timestamp\": \"2024-10-18T14:32:07Z\",\n    \"fee_usd\": 2.84\n  },\n  \"transfer\": {\n    \"from_address\": \"0xSender001\",\n    \"to_address\": \"0xReceiver002\",\n    \"amount\": 1.25,\n    \"currency\": \"ETH\"\n  }\n}",
-        "generated_response": "{\n  \"transaction\": {\n    \"tx_hash\": \"0xabc123def456\",\n    \"block_number\": 19204311,\n    \"timestamp\": \"2024-10-18T14:32:07Z\",\n    \"fee_usd\": 2.84\n  },\n  \"transfer\": {\n    \"from_address\": \"0xSender001\",\n    \"to_address\": \"0xReceiver002\",\n    \"amount\": 1.25,\n    \"currency\": \"ETH\"\n  }\n}"
+        "generated_response": "{\n  \"transaction\": {\n    \"tx_hash\": \"0xabc123def456\",\n    \"block_number\": 1924311,\n    \"timestamp\": \"2024-10-18T14:32:07Z\",\n    \"fee_usd\": 2.84\n  },\n  \"transfer\": {\n    \"from_address\": \"0xSender001\",\n    \"to_address\": \"0xReceiver002\",\n    \"amount\": 1.25,\n    \"currency\": \"ETH\"\n  }\n}"
     },
     {
         "id": "json_eval_7",
@@ -77,7 +77,7 @@
         "instruction": "Extract each holding from the investment portfolio summary into a JSON array. Each element should have keys: \"ticker\", \"company_name\", \"shares\", \"purchase_price_usd\", \"current_price_usd\", \"asset_class\".",
         "input": "AAPL \u2014 Apple Inc., 50 shares, purchased at $178.00, current price $195.40, Equity. MSFT \u2014 Microsoft Corp., 30 shares, purchased at $310.00, current price $387.00, Equity. BND \u2014 Vanguard Bond ETF, 100 shares, purchased at $72.50, current price $74.80, Fixed Income.",
         "reference": "[\n  {\n    \"ticker\": \"AAPL\",\n    \"company_name\": \"Apple Inc.\",\n    \"shares\": 50,\n    \"purchase_price_usd\": 178.0,\n    \"current_price_usd\": 195.4,\n    \"asset_class\": \"Equity\"\n  },\n  {\n    \"ticker\": \"MSFT\",\n    \"company_name\": \"Microsoft Corp.\",\n    \"shares\": 30,\n    \"purchase_price_usd\": 310.0,\n    \"current_price_usd\": 387.0,\n    \"asset_class\": \"Equity\"\n  },\n  {\n    \"ticker\": \"BND\",\n    \"company_name\": \"Vanguard Bond ETF\",\n    \"shares\": 100,\n    \"purchase_price_usd\": 72.5,\n    \"current_price_usd\": 74.8,\n    \"asset_class\": \"Fixed Income\"\n  }\n]",
-        "generated_response": "[\n  {\n    \"ticker\": \"AAPL\",\n    \"company_name\": \"Apple Inc.\",\n    \"shares\": 50,\n    \"purchase_price_usd\": 178.00,\n    \"current_price_usd\": 195.40,\n    \"asset_class\": \"Equity\"\n  },\n  {\n    \"ticker\": \"MSFT\",\n    \"company_name\": \"Microsoft Corp.\",\n    \"shares\": 30,\n    \"purchase_price_usd\": 310.00,\n    \"current_price_usd\": 387.00,\n    \"asset_class\": \"Equity\"\n  },\n  {\n    \"ticker\": \"BND\",\n    \"company_name\": \"Vanguard Bond ETF\",\n    \"shares\": 100,\n    \"purchase_price_usd\": 72.50,\n    \"current_price_usd\": 74.80,\n    \"asset_class\": \"Fixed Income\"\n  }\n]"
+        "generated_response": "[\n  {\n    \"ticker\": \"AAPL\",\n    \"company_name\": \"Apple Inc.\",\n    \"shares\": 50,\n    \"purchase_price_usd\": 178.0,\n    \"current_price_usd\": 195.4,\n    \"asset_class\": \"Equity\"\n  },\n  {\n    \"ticker\": \"MSFT\",\n    \"company_name\": \"Microsoft Corp.\",\n    \"shares\": 30,\n    \"purchase_price_usd\": 310.0,\n    \"current_price_usd\": 387.0,\n    \"asset_class\": \"Equity\"\n  },\n  {\n    \"ticker\": \"BND\",\n    \"company_name\": \"Vanguard Bond ETF\",\n    \"shares\": 100,\n    \"purchase_price_usd\": 72.5,\n    \"current_price_usd\": 74.8,\n    \"asset_class\": \"Fixed Income\"\n  }\n]"
     },
     {
         "id": "json_eval_10",
@@ -85,7 +85,7 @@
         "instruction": "Extract each defect entry from the quality control log into a JSON array. Each element should have keys: \"batch_id\", \"defect_type\", \"units_affected\", \"severity\", \"detected_by\".",
         "input": "Batch B-2024-441: Surface scratch defect, 12 units affected, Minor severity, detected by Inspector Huang. Batch B-2024-442: Dimensional non-conformance, 3 units affected, Critical severity, detected by automated sensor. Batch B-2024-443: Colour mismatch, 28 units affected, Minor severity, detected by Inspector Patel.",
         "reference": "[\n  {\n    \"batch_id\": \"B-2024-441\",\n    \"defect_type\": \"Surface scratch\",\n    \"units_affected\": 12,\n    \"severity\": \"Minor\",\n    \"detected_by\": \"Inspector Huang\"\n  },\n  {\n    \"batch_id\": \"B-2024-442\",\n    \"defect_type\": \"Dimensional non-conformance\",\n    \"units_affected\": 3,\n    \"severity\": \"Critical\",\n    \"detected_by\": \"automated sensor\"\n  },\n  {\n    \"batch_id\": \"B-2024-443\",\n    \"defect_type\": \"Colour mismatch\",\n    \"units_affected\": 28,\n    \"severity\": \"Minor\",\n    \"detected_by\": \"Inspector Patel\"\n  }\n]",
-        "generated_response": "[\n  {\n    \"batch_id\": \"B-2024-441\",\n    \"defect_type\": \"Surface scratch\",\n    \"units_affected\": 12,\n    \"severity\": \"Minor\",\n    \"detected_by\": \"Inspector Huang\"\n  },\n  {\n    \"batch_id\": \"B-2024-442\",\n    \"defect_type\": \"Dimensional non-conformance\",\n    \"units_affected\": 3,\n    \"severity\": \"Critical\",\n    \"detected_by\": \"automated sensor\"\n  },\n  {\n    \"batch_id\": \"B-2024-443\",\n    \"defect_type\": \"Colour mismatch\",\n    \"units_affected\": 28,\n    \"severity\": \"Minor\",\n    \"detected_by\": \"Inspector Patel\"\n  }\n]"
+        "generated_response": "[\n  {\n    \"batch_id\": \"B-2024-441\",\n    \"defect_type\": \"Surface scratch defect\",\n    \"units_affected\": 12,\n    \"severity\": \"Minor\",\n    \"detected_by\": \"Inspector Huang\"\n  },\n  {\n    \"batch_id\": \"B-2024-442\",\n    \"defect_type\": \"Dimensional non-conformance\",\n    \"units_affected\": 3,\n    \"severity\": \"Critical\",\n    \"detected_by\": \"automated sensor\"\n  },\n  {\n    \"batch_id\": \"B-2024-443\",\n    \"defect_type\": \"Colour mismatch\",\n    \"units_affected\": 28,\n    \"severity\": \"Minor\",\n    \"detected_by\": \"Inspector Patel\"\n  }\n]"
     },
     {
         "id": "json_eval_11",
@@ -109,7 +109,7 @@
         "instruction": "Extract the performance review details into a JSON object with flat keys \"employee_name\", \"review_period\", \"reviewer\", \"overall_rating\" and an array key \"competencies\" where each element has \"name\", \"score\", \"comment\".",
         "input": "Performance review for Nina Schulz, covering Q3 2024, conducted by her manager Oliver Brown. Overall rating: 4.2/5. Competencies: Technical Skills \u2014 4.5, consistently delivers high-quality code; Communication \u2014 3.8, improving but needs clearer written updates; Leadership \u2014 4.3, proactively mentors junior teammates.",
         "reference": "{\n  \"employee_name\": \"Nina Schulz\",\n  \"review_period\": \"Q3 2024\",\n  \"reviewer\": \"Oliver Brown\",\n  \"overall_rating\": 4.2,\n  \"competencies\": [\n    {\n      \"name\": \"Technical Skills\",\n      \"score\": 4.5,\n      \"comment\": \"consistently delivers high-quality code\"\n    },\n    {\n      \"name\": \"Communication\",\n      \"score\": 3.8,\n      \"comment\": \"improving but needs clearer written updates\"\n    },\n    {\n      \"name\": \"Leadership\",\n      \"score\": 4.3,\n      \"comment\": \"proactively mentors junior teammates\"\n    }\n  ]\n}",
-        "generated_response": "{\n  \"employee_name\": \"Nina Schulz\",\n  \"review_period\": \"Q3 2024\",\n  \"reviewer\": \"Oliver Brown\",\n  \"overall_rating\": \"4.2/5\",\n  \"competencies\": [\n    {\n      \"name\": \"Technical Skills\",\n      \"score\": \"4.5\",\n      \"comment\": \"consistently delivers high-quality code\"\n    },\n    {\n      \"name\": \"Communication\",\n      \"score\": \"3.8\",\n      \"comment\": \"improving but needs clearer written updates\"\n    },\n    {\n      \"name\": \"Leadership\",\n      \"score\": \"4.3\",\n      \"comment\": \"proactively mentors junior teammates\"\n    }\n  ]\n}"
+        "generated_response": "{\n  \"employee_name\": \"Nina Schulz\",\n  \"review_period\": \"Q3 2024\",\n  \"reviewer\": \"Oliver Brown\",\n  \"overall_rating\": 4.2,\n  \"competencies\": [\n    {\n      \"name\": \"Technical Skills\",\n      \"score\": 4.5,\n      \"comment\": \"consistently delivers high-quality code\"\n    },\n    {\n      \"name\": \"Communication\",\n      \"score\": 3.8,\n      \"comment\": \"improving but needs clearer written updates\"\n    },\n    {\n      \"name\": \"Leadership\",\n      \"score\": 4.3,\n      \"comment\": \"proactively mentors junior teammates\"\n    }\n  ]\n}"
     },
     {
         "id": "json_eval_14",
@@ -117,7 +117,7 @@
         "instruction": "Extract the concert details into a JSON object with flat keys \"artist\", \"venue\", \"city\", \"date\" and an array key \"setlist\" where each element has \"position\", \"song_title\", \"album\".",
         "input": "Artist: The Lunar Tides. Venue: Hammersmith Apollo, London. Date: October 5, 2024. Setlist: 1 \u2014 'Orbit' from Gravity; 2 \u2014 'Fallen Star' from Eclipse; 3 \u2014 'Neon Tide' from Gravity; 4 \u2014 'Afterglow' from Meridian; 5 \u2014 'Last Transmission' from Eclipse.",
         "reference": "{\n  \"artist\": \"The Lunar Tides\",\n  \"venue\": \"Hammersmith Apollo\",\n  \"city\": \"London\",\n  \"date\": \"October 5, 2024\",\n  \"setlist\": [\n    {\n      \"position\": 1,\n      \"song_title\": \"Orbit\",\n      \"album\": \"Gravity\"\n    },\n    {\n      \"position\": 2,\n      \"song_title\": \"Fallen Star\",\n      \"album\": \"Eclipse\"\n    },\n    {\n      \"position\": 3,\n      \"song_title\": \"Neon Tide\",\n      \"album\": \"Gravity\"\n    },\n    {\n      \"position\": 4,\n      \"song_title\": \"Afterglow\",\n      \"album\": \"Meridian\"\n    },\n    {\n      \"position\": 5,\n      \"song_title\": \"Last Transmission\",\n      \"album\": \"Eclipse\"\n    }\n  ]\n}",
-        "generated_response": "{\n  \"artist\": \"The Lunar Tides\",\n  \"venue\": \"Hammersmith Apollo, London\",\n  \"city\": \"London\",\n  \"date\": \"October 5, 2024\",\n  \"setlist\": [\n    {\n      \"position\": 1,\n      \"song_title\": \"Orbit\",\n      \"album\": \"Gravity\"\n    },\n    {\n      \"position\": 2,\n      \"song_title\": \"Fallen Star\",\n      \"album\": \"Eclipse\"\n    },\n    {\n      \"position\": 3,\n      \"song_title\": \"Neon Tide\",\n      \"album\": \"Gravity\"\n    },\n    {\n      \"position\": 4,\n      \"song_title\": \"Afterglow\",\n      \"album\": \"Meridian\"\n    },\n    {\n      \"position\": 5,\n      \"song_title\": \"Last Transmission\",\n      \"album\": \"Eclipse\"\n    }\n  ]\n}"
+        "generated_response": "{\n  \"artist\": \"The Lunar Tides\",\n  \"venue\": \"Hammersmith Apollo\",\n  \"city\": \"London\",\n  \"date\": \"October 5, 2024\",\n  \"setlist\": [\n    {\n      \"position\": 1,\n      \"song_title\": \"Orbit\",\n      \"album\": \"Gravity\"\n    },\n    {\n      \"position\": 2,\n      \"song_title\": \"Fallen Star\",\n      \"album\": \"Eclipse\"\n    },\n    {\n      \"position\": 3,\n      \"song_title\": \"Neon Tide\",\n      \"album\": \"Gravity\"\n    },\n    {\n      \"position\": 4,\n      \"song_title\": \"Afterglow\",\n      \"album\": \"Meridian\"\n    },\n    {\n      \"position\": 5,\n      \"song_title\": \"Last Transmission\",\n      \"album\": \"Eclipse\"\n    }\n  ]\n}"
     },
     {
         "id": "json_eval_15",
@@ -125,7 +125,7 @@
         "instruction": "Extract the hospital discharge summary into a JSON object with flat keys \"patient_name\", \"admission_date\", \"discharge_date\", \"discharge_diagnosis\" and an array key \"procedures\" where each element has \"procedure_name\", \"date_performed\", \"performing_surgeon\".",
         "input": "Patient: Eduardo Reyes. Admitted: November 3, 2024. Discharged: November 7, 2024. Discharge diagnosis: Acute appendicitis. Procedures performed: Laparoscopic Appendectomy on November 3 by Dr. Karen Loh; Abdominal Ultrasound on November 4 by Dr. James Teo.",
         "reference": "{\n  \"patient_name\": \"Eduardo Reyes\",\n  \"admission_date\": \"November 3, 2024\",\n  \"discharge_date\": \"November 7, 2024\",\n  \"discharge_diagnosis\": \"Acute appendicitis\",\n  \"procedures\": [\n    {\n      \"procedure_name\": \"Laparoscopic Appendectomy\",\n      \"date_performed\": \"November 3, 2024\",\n      \"performing_surgeon\": \"Dr. Karen Loh\"\n    },\n    {\n      \"procedure_name\": \"Abdominal Ultrasound\",\n      \"date_performed\": \"November 4, 2024\",\n      \"performing_surgeon\": \"Dr. James Teo\"\n    }\n  ]\n}",
-        "generated_response": "{\n  \"patient_name\": \"Eduardo Reyes\",\n  \"admission_date\": \"November 3, 2024\",\n  \"discharge_date\": \"November 7, 2024\",\n  \"discharge_diagnosis\": \"Acute appendicitis\",\n  \"procedures\": [\n    {\n      \"procedure_name\": \"Laparoscopic Appendectomy\",\n      \"date_performed\": \"November 3, 2024\",\n      \"performing_surgeon\": \"Dr. Karen Loh\"\n    },\n    {\n      \"procedure_name\": \"Abdominal Ultrasound\",\n      \"date_performed\": \"November 4, 2024\",\n      \"performing_surgeon\": \"Dr. James Teo\"\n    }\n  ]\n}"
+        "generated_response": "{\n  \"patient_name\": \"Eduardo Reyes\",\n  \"admission_date\": \"November 3, 2024\",\n  \"discharge_date\": \"November 7, 2024\",\n  \"discharge_diagnosis\": \"Acute appendicitis\",\n  \"procedures\": [\n    {\n      \"procedure_name\": \"Laparoscopic Appendectomy\",\n      \"date_performed\": \"November 3\",\n      \"performing_surgeon\": \"Dr. Karen Loh\"\n    },\n    {\n      \"procedure_name\": \"Abdominal Ultrasound\",\n      \"date_performed\": \"November 4\",\n      \"performing_surgeon\": \"Dr. James Teo\"\n    }\n  ]\n}"
     },
     {
         "id": "json_eval_16",
@@ -133,7 +133,7 @@
         "instruction": "Extract gaming account details into a JSON object with keys: \"username\", \"platform\", \"level\", \"rank\", \"hours_played\", \"premium_member\", \"linked_twitch\". Use null for fields not available.",
         "input": "Username: ShadowBolt_99, playing on PC. Account level: 87. Total hours played: 1,240. This player has a premium membership active. Current rank is not shown on public profile. No linked Twitch account was found.",
         "reference": "{\n  \"username\": \"ShadowBolt_99\",\n  \"platform\": \"PC\",\n  \"level\": 87,\n  \"rank\": null,\n  \"hours_played\": 1240,\n  \"premium_member\": true,\n  \"linked_twitch\": null\n}",
-        "generated_response": "{\n  \"username\": \"ShadowBolt_99\",\n  \"platform\": \"PC\",\n  \"level\": 87,\n  \"hours_played\": 1240,\n  \"premium_member\": true,\n  \"linked_twitch\": null\n}"
+        "generated_response": "{\n  \"username\": \"ShadowBolt_99\",\n  \"platform\": \"PC\",\n  \"level\": 87,\n  \"hours_played\": 1240,\n  \"premium_member\": true,\n  \"rank\": null,\n  \"linked_twitch\": null\n}"
     },
     {
         "id": "json_eval_17",
@@ -141,7 +141,7 @@
         "instruction": "Extract contractor agreement details into a JSON object with keys: \"contractor_name\", \"client_company\", \"start_date\", \"end_date\", \"hourly_rate_usd\", \"scope_of_work\", \"non_compete_clause\". Use null for undisclosed fields.",
         "input": "Contractor: Isabel Ferreira. Client: Apex Digital Ltd. Contract starts January 6, 2025 with an hourly rate of $95. Scope: UX design and prototyping for the mobile app rebrand. Contract end date and non-compete clause details were not included in the summary.",
         "reference": "{\n  \"contractor_name\": \"Isabel Ferreira\",\n  \"client_company\": \"Apex Digital Ltd\",\n  \"start_date\": \"January 6, 2025\",\n  \"end_date\": null,\n  \"hourly_rate_usd\": 95,\n  \"scope_of_work\": \"UX design and prototyping for the mobile app rebrand\",\n  \"non_compete_clause\": null\n}",
-        "generated_response": "{\n  \"contractor_name\": \"Isabel Ferreira\",\n  \"client_company\": \"Apex Digital Ltd\",\n  \"start_date\": \"2025-01-06\",\n  \"end_date\": null,\n  \"hourly_rate_usd\": 95,\n  \"scope_of_work\": \"UX design and prototyping for the mobile app rebrand\",\n  \"non_compete_clause\": null\n}"
+        "generated_response": "{\n  \"contractor_name\": \"Isabel Ferreira\",\n  \"client_company\": \"Apex Digital Ltd\",\n  \"start_date\": \"January 6, 2025\",\n  \"end_date\": null,\n  \"hourly_rate_usd\": 95,\n  \"scope_of_work\": \"UX design and prototyping for the mobile app rebrand\",\n  \"non_compete_clause\": null\n}"
     },
     {
         "id": "json_eval_18",
@@ -149,7 +149,7 @@
         "instruction": "Extract visa application details into a JSON object with keys: \"applicant_name\", \"passport_number\", \"nationality\", \"destination_country\", \"visa_type\", \"application_date\", \"decision\". Use null for fields not available.",
         "input": "Applicant: Kwame Asante. Passport: GH-4421992. Nationality: Ghanaian. Applied for a tourist visa to Canada on October 10, 2024. A decision has not yet been issued.",
         "reference": "{\n  \"applicant_name\": \"Kwame Asante\",\n  \"passport_number\": \"GH-4421992\",\n  \"nationality\": \"Ghanaian\",\n  \"destination_country\": \"Canada\",\n  \"visa_type\": \"tourist\",\n  \"application_date\": \"October 10, 2024\",\n  \"decision\": null\n}",
-        "generated_response": "{\n  \"applicant_name\": \"Kwame Asante\",\n  \"passport_number\": \"GH-4421992\",\n  \"nationality\": \"Ghanaian\",\n  \"destination_country\": \"Canada\",\n  \"visa_type\": \"tourist\",\n  \"application_date\": \"October 10, 2024\",\n  \"decision\": null\n}"
+        "generated_response": "{\n  \"applicant_name\": \"Kwame Asante\",\n  \"passport_number\": \"GH-4421992\",\n  \"nationality\": \"Ghanaian\",\n  \"destination_country\": \"Canada\",\n  \"visa_type\": null,\n  \"application_date\": \"October 10, 2024\",\n  \"decision\": null\n}"
     },
     {
         "id": "json_eval_19",
@@ -181,7 +181,7 @@
         "instruction": "The following text contains malformed JSON with unquoted keys and/or values. Repair the syntax errors and output strictly valid JSON.",
         "input": "{service: Uber Eats, status: delivered, tip: 5.00}",
         "reference": "{\n  \"service\": \"Uber Eats\",\n  \"status\": \"delivered\",\n  \"tip\": 5.0\n}",
-        "generated_response": "{\n  \"service\": \"Uber Eats\",\n  \"status\": \"delivered\",\n  \"tip\": 5.00\n}"
+        "generated_response": "{\n  \"service\": \"Uber Eats\",\n  \"status\": \"delivered\",\n  \"tip\": 5.0\n}"
     },
     {
         "id": "json_eval_23",
@@ -205,7 +205,7 @@
         "instruction": "The following JSON contains trailing commas, which are invalid in strict JSON. Repair the syntax and output strictly valid JSON.",
         "input": "[\"milk\", \"eggs\", \"bread\",]",
         "reference": "[\n  \"milk\",\n  \"eggs\",\n  \"bread\"\n]",
-        "generated_response": "{\n  \"items\": [\n    \"milk\",\n    \"eggs\",\n    \"bread\"\n  ]\n}"
+        "generated_response": "[\n  \"milk\",\n  \"eggs\",\n  \"bread\"\n]"
     },
     {
         "id": "json_eval_26",
@@ -237,7 +237,7 @@
         "instruction": "The following JSON payload was truncated mid-string. Close the string and repair the structure to output strictly valid JSON.",
         "input": "{\"dataset\": \"Alpaca\", \"size\": 52000, \"license\": \"c",
         "reference": "{\n  \"dataset\": \"Alpaca\",\n  \"size\": 52000,\n  \"license\": \"cc0\"\n}",
-        "generated_response": "{\n  \"dataset\": \"Alpaca\",\n  \"size\": 52000,\n  \"license\": \"Creative Commons Attribution 4.0 International License\"\n}"
+        "generated_response": "{\n  \"dataset\": \"Alpaca\",\n  \"size\": 52000,\n  \"license\": \"CC0-1.0\"\n}"
     },
     {
         "id": "json_eval_30",
@@ -245,7 +245,7 @@
         "instruction": "The following JSON payload was truncated and is missing closing brackets or braces. Repair the structure and output strictly valid JSON.",
         "input": "{\"events\": [{\"type\": \"click\", \"x\": 100}, {\"type\": \"scroll\"",
         "reference": "{\n  \"events\": [\n    {\n      \"type\": \"click\",\n      \"x\": 100\n    },\n    {\n      \"type\": \"scroll\"\n    }\n  ]\n}",
-        "generated_response": "{\n  \"events\": [\n    {\n      \"type\": \"click\",\n      \"x\": 100\n    },\n    {\n      \"type\": \"scroll\",\n      \"x\": 0\n    }\n  ]\n}"
+        "generated_response": "{\n  \"events\": [\n    {\n      \"type\": \"click\",\n      \"x\": 100\n    },\n    {\n      \"type\": \"scroll\"\n    }\n  ]\n}"
     },
     {
         "id": "json_eval_31",
@@ -309,7 +309,7 @@
         "instruction": "The following JSON contains unescaped internal quotes inside a string value, breaking the parser. Escape the quotes and output strictly valid JSON.",
         "input": "{\"payload\": \"{\"key\": \"value\"}\"}",
         "reference": "{\n  \"payload\": \"{\\\"key\\\": \\\"value\\\"}\"\n}",
-        "generated_response": "{\n  \"payload\": \"{\\\"key\\\": \\\"value\\\"}\"\n}"
+        "generated_response": "{\n  \"payload\": {\n    \"key\": \"value\"\n  }\n}"
     },
     {
         "id": "json_eval_39",
@@ -317,7 +317,7 @@
         "instruction": "The following JSON contains a literal tab inside a string value, which is invalid. Replace it with the proper tab escape character and output strictly valid JSON.",
         "input": "{\"formatting\": \"Column1\tColumn2\"}",
         "reference": "{\n  \"formatting\": \"Column1\\tColumn2\"\n}",
-        "generated_response": "{\n  \"formatting\": \"Column1\\tColumn2\"\n}"
+        "generated_response": "{\n  \"formatting\": \"Column1\tColumn2\"\n}"
     },
     {
         "id": "json_eval_40",
@@ -349,7 +349,7 @@
         "instruction": "Analyze the ideological stance of the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'LIBERAL', 'CONSERVATIVE', or 'CENTRIST'.",
         "input": "Second Amendment rights are absolute, and any federal attempt to restrict firearm ownership is a direct violation of the Constitution.",
         "reference": "{\n  \"label\": \"CONSERVATIVE\"\n}",
-        "generated_response": "{\n  \"label\": \"LIBERAL\"\n}"
+        "generated_response": "{\n  \"label\": \"CONSERVATIVE\"\n}"
     },
     {
         "id": "json_eval_44",
@@ -365,7 +365,7 @@
         "instruction": "Classify the type of statement provided in the text. Return ONLY a JSON object with the key 'label' and a value of exactly 'FACTUAL_CLAIM', 'SUBJECTIVE_OPINION', or 'SPECULATION'.",
         "input": "I think augmented reality headsets will completely replace smartphones as our primary computing devices within a decade.",
         "reference": "{\n  \"label\": \"SUBJECTIVE_OPINION\"\n}",
-        "generated_response": "{\n  \"label\": \"SPECULATION\"\n}"
+        "generated_response": "{\n  \"label\": \"SUBJECTIVE_OPINION\"\n}"
     },
     {
         "id": "json_eval_46",
@@ -501,7 +501,7 @@
         "instruction": "The following text contains malformed JSON with unquoted keys and/or values. Repair the syntax errors and output strictly valid JSON.",
         "input": "{service: Uber Eats, status: delivered, tip: 5.00}",
         "reference": "{\n  \"service\": \"Uber Eats\",\n  \"status\": \"delivered\",\n  \"tip\": 5.0\n}",
-        "generated_response": "{\n  \"service\": \"Uber Eats\",\n  \"status\": \"delivered\",\n  \"tip\": 5.00\n}"
+        "generated_response": "{\n  \"service\": \"Uber Eats\",\n  \"status\": \"delivered\",\n  \"tip\": 5.0\n}"
     },
     {
         "id": "json_eval_63",
@@ -525,7 +525,7 @@
         "instruction": "The following JSON contains trailing commas, which are invalid in strict JSON. Repair the syntax and output strictly valid JSON.",
         "input": "[\"milk\", \"eggs\", \"bread\",]",
         "reference": "[\n  \"milk\",\n  \"eggs\",\n  \"bread\"\n]",
-        "generated_response": "{\n  \"items\": [\n    \"milk\",\n    \"eggs\",\n    \"bread\"\n  ]\n}"
+        "generated_response": "[\n  \"milk\",\n  \"eggs\",\n  \"bread\"\n]"
     },
     {
         "id": "json_eval_66",
@@ -557,7 +557,7 @@
         "instruction": "The following JSON payload was truncated mid-string. Close the string and repair the structure to output strictly valid JSON.",
         "input": "{\"dataset\": \"Alpaca\", \"size\": 52000, \"license\": \"c",
         "reference": "{\n  \"dataset\": \"Alpaca\",\n  \"size\": 52000,\n  \"license\": \"cc\"\n}",
-        "generated_response": "{\n  \"dataset\": \"Alpaca\",\n  \"size\": 52000,\n  \"license\": \"Creative Commons Attribution 4.0 International License\"\n}"
+        "generated_response": "{\n  \"dataset\": \"Alpaca\",\n  \"size\": 52000,\n  \"license\": \"CC0-1.0\"\n}"
     },
     {
         "id": "json_eval_70",
@@ -565,7 +565,7 @@
         "instruction": "The following JSON payload was truncated and is missing closing brackets or braces. Repair the structure and output strictly valid JSON.",
         "input": "{\"events\": [{\"type\": \"click\", \"x\": 100}, {\"type\": \"scroll\"",
         "reference": "{\n  \"events\": [\n    {\n      \"type\": \"click\",\n      \"x\": 100\n    },\n    {\n      \"type\": \"scroll\"\n    }\n  ]\n}",
-        "generated_response": "{\n  \"events\": [\n    {\n      \"type\": \"click\",\n      \"x\": 100\n    },\n    {\n      \"type\": \"scroll\",\n      \"x\": 0\n    }\n  ]\n}"
+        "generated_response": "{\n  \"events\": [\n    {\n      \"type\": \"click\",\n      \"x\": 100\n    },\n    {\n      \"type\": \"scroll\"\n    }\n  ]\n}"
     },
     {
         "id": "json_eval_71",
@@ -629,7 +629,7 @@
         "instruction": "The following JSON contains unescaped internal quotes inside a string value, breaking the parser. Escape the quotes and output strictly valid JSON.",
         "input": "{\"payload\": \"{\"key\": \"value\"}\"}",
         "reference": "{\n  \"payload\": \"{\\\"key\\\": \\\"value\\\"}\"\n}",
-        "generated_response": "{\n  \"payload\": \"{\\\"key\\\": \\\"value\\\"}\"\n}"
+        "generated_response": "{\n  \"payload\": {\n    \"key\": \"value\"\n  }\n}"
     },
     {
         "id": "json_eval_79",
@@ -637,7 +637,7 @@
         "instruction": "The following JSON contains a literal tab inside a string value, which is invalid. Replace it with the proper tab escape character and output strictly valid JSON.",
         "input": "{\"formatting\": \"Column1\tColumn2\"}",
         "reference": "{\n  \"formatting\": \"Column1\\tColumn2\"\n}",
-        "generated_response": "{\n  \"formatting\": \"Column1\\tColumn2\"\n}"
+        "generated_response": "{\n  \"formatting\": \"Column1\tColumn2\"\n}"
     },
     {
         "id": "json_eval_80",
@@ -677,7 +677,7 @@
         "instruction": "Parse the user's flight booking request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"STRING\", \"destination\": \"STRING\", \"date\": \"YYYY-MM-DD\", \"time\": \"STRING\", \"PeopleCount\": INTEGER}}",
         "input": "Book 3 tickets on the 6:45 AM departure from Minneapolis (MSP) to Detroit (DTW) on 2026-12-19.",
         "reference": "{\n  \"tool\": \"flight_booking_service\",\n  \"action\": \"book_flights\",\n  \"parameters\": {\n    \"origin\": \"MSP\",\n    \"destination\": \"DTW\",\n    \"date\": \"2026-12-19\",\n    \"time\": \"6:45 AM\",\n    \"PeopleCount\": 3\n  }\n}",
-        "generated_response": "{\n  \"tool\": \"flight_booking_service\",\n  \"action\": \"book_flights\",\n  \"parameters\": {\n    \"origin\": \"Minneapolis (MSP)\",\n    \"destination\": \"Detroit (DTW)\",\n    \"date\": \"2026-12-19\",\n    \"time\": \"6:45 AM\",\n    \"PeopleCount\": 3\n  }\n}"
+        "generated_response": "{\n  \"tool\": \"flight_booking_service\",\n  \"action\": \"book_flights\",\n  \"parameters\": {\n    \"origin\": \"MSP\",\n    \"destination\": \"DTW\",\n    \"date\": \"2026-12-19\",\n    \"time\": \"6:45 AM\",\n    \"PeopleCount\": 3\n  }\n}"
     },
     {
         "id": "json_eval_85",
@@ -685,7 +685,7 @@
         "instruction": "Parse the user's flight booking request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"STRING\", \"destination\": \"STRING\", \"date\": \"YYYY-MM-DD\", \"time\": \"STRING\", \"PeopleCount\": INTEGER}}",
         "input": "I need to secure a flight for 1 person from San Diego (SAN) to Honolulu (HNL) at 9:30 AM on 2026-08-30.",
         "reference": "{\n  \"tool\": \"flight_booking_service\",\n  \"action\": \"book_flights\",\n  \"parameters\": {\n    \"origin\": \"SAN\",\n    \"destination\": \"HNL\",\n    \"date\": \"2026-08-30\",\n    \"time\": \"9:30 AM\",\n    \"PeopleCount\": 1\n  }\n}",
-        "generated_response": "{\n  \"tool\": \"flight_booking_service\",\n  \"action\": \"book_flights\",\n  \"parameters\": {\n    \"origin\": \"SAN\",\n    \"destination\": \"HNL\",\n    \"date\": \"2026-08-30\",\n    \"time\": \"09:30\",\n    \"PeopleCount\": 1\n  }\n}"
+        "generated_response": "{\n  \"tool\": \"flight_booking_service\",\n  \"action\": \"book_flights\",\n  \"parameters\": {\n    \"origin\": \"SAN\",\n    \"destination\": \"HNL\",\n    \"date\": \"2026-08-30\",\n    \"time\": \"9:30 AM\",\n    \"PeopleCount\": 1\n  }\n}"
     },
     {
         "id": "json_eval_86",
@@ -693,7 +693,7 @@
         "instruction": "Parse the user's flight booking request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"STRING\", \"destination\": \"STRING\", \"date\": \"YYYY-MM-DD\", \"time\": \"STRING\", \"PeopleCount\": INTEGER}}",
         "input": "Please confirm 2 seats from Nashville (BNA) to Tampa (TPA) taking off at 2:00 PM on 2026-10-05.",
         "reference": "{\n  \"tool\": \"flight_booking_service\",\n  \"action\": \"book_flights\",\n  \"parameters\": {\n    \"origin\": \"BNA\",\n    \"destination\": \"TPA\",\n    \"date\": \"2026-10-05\",\n    \"time\": \"2:00 PM\",\n    \"PeopleCount\": 2\n  }\n}",
-        "generated_response": "{\n  \"tool\": \"flight_booking_service\",\n  \"action\": \"book_flights\",\n  \"parameters\": {\n    \"origin\": \"BNA\",\n    \"destination\": \"TPA\",\n    \"date\": \"2026-10-05\",\n    \"time\": \"14:00\",\n    \"PeopleCount\": 2\n  }\n}"
+        "generated_response": "{\n  \"tool\": \"flight_booking_service\",\n  \"action\": \"book_flights\",\n  \"parameters\": {\n    \"origin\": \"BNA\",\n    \"destination\": \"TPA\",\n    \"date\": \"2026-10-05\",\n    \"time\": \"2:00 PM\",\n    \"PeopleCount\": 2\n  }\n}"
     },
     {
         "id": "json_eval_87",
@@ -701,7 +701,7 @@
         "instruction": "Parse the user's flight booking request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"flight_booking_service\", \"action\": \"book_flights\", \"parameters\": {\"origin\": \"STRING\", \"destination\": \"STRING\", \"date\": \"YYYY-MM-DD\", \"time\": \"STRING\", \"PeopleCount\": INTEGER}}",
         "input": "Purchase tickets for 4 travelers flying out of Baltimore (BWI) to Boston (BOS) at 5:15 PM on 2027-01-20.",
         "reference": "{\n  \"tool\": \"flight_booking_service\",\n  \"action\": \"book_flights\",\n  \"parameters\": {\n    \"origin\": \"BWI\",\n    \"destination\": \"BOS\",\n    \"date\": \"2027-01-20\",\n    \"time\": \"5:15 PM\",\n    \"PeopleCount\": 4\n  }\n}",
-        "generated_response": "{\n  \"tool\": \"flight_booking_service\",\n  \"action\": \"book_flights\",\n  \"parameters\": {\n    \"origin\": \"BWI\",\n    \"destination\": \"BOS\",\n    \"date\": \"2027-01-20\",\n    \"time\": \"17:15\",\n    \"PeopleCount\": 4\n  }\n}"
+        "generated_response": "{\n  \"tool\": \"flight_booking_service\",\n  \"action\": \"book_flights\",\n  \"parameters\": {\n    \"origin\": \"BWI\",\n    \"destination\": \"BOS\",\n    \"date\": \"2027-01-20\",\n    \"time\": \"5:15 PM\",\n    \"PeopleCount\": 4\n  }\n}"
     },
     {
         "id": "json_eval_88",
@@ -749,7 +749,7 @@
         "instruction": "Parse the user's e-commerce request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"productId\": \"STRING\", \"quantity\": INTEGER, \"price\": FLOAT}",
         "input": "I need 2 of the LAPTOP-STAND-PRO items. They are selling for 45.00 each.",
         "reference": "{\n  \"productId\": \"LAPTOP-STAND-PRO\",\n  \"quantity\": 2,\n  \"price\": 45.0\n}",
-        "generated_response": "{\n  \"productId\": \"LAPTOP-STAND-PRO\",\n  \"quantity\": 2,\n  \"price\": 45.00\n}"
+        "generated_response": "{\n  \"productId\": \"LAPTOP-STAND-PRO\",\n  \"quantity\": 2,\n  \"price\": 45.0\n}"
     },
     {
         "id": "json_eval_94",
@@ -757,7 +757,7 @@
         "instruction": "Parse the user's e-commerce request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"productId\": \"STRING\", \"quantity\": INTEGER, \"price\": FLOAT}",
         "input": "Let's order 15 of the COFFEE-MUG-11OZ. They are priced at 8.50 a piece.",
         "reference": "{\n  \"productId\": \"COFFEE-MUG-11OZ\",\n  \"quantity\": 15,\n  \"price\": 8.5\n}",
-        "generated_response": "{\n  \"productId\": \"COFFEE-MUG-11OZ\",\n  \"quantity\": 15,\n  \"price\": 8.50\n}"
+        "generated_response": "{\n  \"productId\": \"COFFEE-MUG-11OZ\",\n  \"quantity\": 15,\n  \"price\": 8.5\n}"
     },
     {
         "id": "json_eval_95",
@@ -765,7 +765,7 @@
         "instruction": "Parse the user's e-commerce request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"productId\": \"STRING\", \"quantity\": INTEGER, \"price\": FLOAT}",
         "input": "Grab 1 tablet for me, the product ID is TAB-GEN8-64GB. The price listed is 299.00.",
         "reference": "{\n  \"productId\": \"TAB-GEN8-64GB\",\n  \"quantity\": 1,\n  \"price\": 299.0\n}",
-        "generated_response": "{\n  \"productId\": \"TAB-GEN8-64GB\",\n  \"quantity\": 1,\n  \"price\": 299.00\n}"
+        "generated_response": "{\n  \"productId\": \"TAB-GEN8-64GB\",\n  \"quantity\": 1,\n  \"price\": 299.0\n}"
     },
     {
         "id": "json_eval_96",
@@ -797,6 +797,6 @@
         "instruction": "Parse the user's meeting request into a JSON tool call. Output ONLY valid JSON matching this exact structure: {\"tool\": \"calendar_service\", \"action\": \"schedule_meeting\", \"parameters\": {\"date\": \"YYYY-MM-DD\", \"time\": \"HH:MM\", \"participants\": [\"email1\", \"email2\"]}}",
         "input": "Put a design sync on the calendar for 11:30 on 2026-10-27. Make sure ux@studio.com and ui@studio.com are both included.",
         "reference": "{\n  \"tool\": \"calendar_service\",\n  \"action\": \"schedule_meeting\",\n  \"parameters\": {\n    \"date\": \"2026-10-27\",\n    \"time\": \"11:30\",\n    \"participants\": [\n      \"ux@studio.com\",\n      \"ui@studio.com\"\n    ]\n  }\n}",
-        "generated_response": "{\n  \"tool\": \"calendar_service\",\n  \"action\": \"schedule_meeting\",\n  \"parameters\": {\n    \"date\": \"2026-10-27\",\n    \"time\": \"11:30\",\n    \"participants\": [\"ux@studio.com\", \"ui@studio.com\"]\n  }\n}"
+        "generated_response": "{\n  \"tool\": \"calendar_service\",\n  \"action\": \"schedule_meeting\",\n  \"parameters\": {\n    \"date\": \"2026-10-27\",\n    \"time\": \"11:30\",\n    \"participants\": [\n      \"ux@studio.com\",\n      \"ui@studio.com\"\n    ]\n  }\n}"
     }
 ]

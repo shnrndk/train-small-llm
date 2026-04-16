@@ -23,7 +23,7 @@ from transformers import (
 dotenv.load_dotenv()
 
 # The 'final' folder saved at the end of your Stage 1 training
-STAGE1_ADAPTER_PATH = os.path.join(BASE_DIR, "checkpoints/sft-lora-Phi-3.5-mini-instruct-alpaca-r32-a64-d0.05-lr1.0e-04-wd0.01/final")
+STAGE1_ADAPTER_PATH = os.path.join(BASE_DIR, "checkpoints/sft-lora-Llama-3.2-3B-alpaca-r32-a64-d0.05-lr1.0e-04-wd0.01/final")
 JSON_DATASET_PATH = os.path.join(BASE_DIR, "data/final_json_dataset_for_train.json")
 
 # ---------------------------------------------------------
@@ -34,6 +34,9 @@ def main():
 
     # 1. Config
     model_args, data_args, lora_args, train_args = config.get_config_classes(training_type="sft")
+
+    epochs = int(train_args.num_train_epochs)
+    epoch_suffix = f"-epoch{epochs}"
 
     # 2. Load, Format, and Split the JSON Dataset
     print(f"Loading local JSON dataset from: {JSON_DATASET_PATH}")
@@ -64,7 +67,7 @@ def main():
     output_dir = os.path.join(BASE_DIR, "checkpoints",
         f"sft-lora-stage2-json"
         f"-r{lora_args.r}"
-        f"-lr{train_args.learning_rate:.1e}"
+        f"-lr{train_args.learning_rate:.1e}{epoch_suffix}"
     )
     train_args.output_dir = output_dir
     train_args.run_name = output_dir

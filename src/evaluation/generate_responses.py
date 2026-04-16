@@ -9,9 +9,9 @@ import gc
 # --- Configuration ---
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 
-BASE_MODEL_NAME = "microsoft/Phi-3.5-mini-instruct"
-STAGE1_ADAPTER = os.path.join(BASE_DIR, "checkpoints/sft-lora-Phi-3.5-mini-instruct-alpaca-r32-a64-d0.05-lr1.0e-04-wd0.01/final")
-STAGE2_ADAPTER = os.path.join(BASE_DIR, "checkpoints/sft-lora-stage2-json-r32-lr1.0e-04/final")
+BASE_MODEL_NAME = "meta-llama/Llama-3.2-3B"
+STAGE1_ADAPTER = os.path.join(BASE_DIR, "checkpoints/sft-lora-Llama-3.2-3B-alpaca-r32-a64-d0.05-lr1.0e-04-wd0.01/final")
+STAGE2_ADAPTER = os.path.join(BASE_DIR, "checkpoints/sft-lora-stage2-json-r32-lr1.0e-04-epoch3/final")
 
 # Paths to your explicitly generated test sets
 ALPACA_EVAL_PATH = os.path.join(BASE_DIR, "data/alpaca_eval_set.json")
