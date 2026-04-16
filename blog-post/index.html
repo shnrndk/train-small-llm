@@ -634,19 +634,7 @@ You MUST output strictly in this JSON format:
   "justification": "<Brief reason highlighting why the winner is better, specifically mentioning formatting strictness or schema compliance>"
 }</code></pre>
 
-            <h3>B. Imitation Learning Prompt (Teacher JSON Generation)</h3>
-            <pre><code>You are an expert data structuring assistant. Your task is to take the provided input text and extract/transform the requested information into a strictly valid JSON object. 
-
-Do not include any conversational text, markdown formatting blocks (like ```json), or explanations before or after the JSON. 
-
-Ensure all keys match the requested schema exactly.
-
-Input Context: {context}
-Target Schema: {schema}
-
-Output pure JSON only:</code></pre>
-
-            <h3>C. Student Formatting Prompt (Inference Template)</h3>
+            <h3>B. Student Formatting Prompt (Inference Template)</h3>
             <pre><code>Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
 
 ### Instruction:
