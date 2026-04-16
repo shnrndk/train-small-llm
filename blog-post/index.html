@@ -160,7 +160,8 @@
                 to 4-bit (<code>nf4</code>) precision using <code>bitsandbytes</code> (with double quantization and
                 <code>float16</code> compute type) to drastically reduce VRAM footprints.
             </p>
-            <p><strong>Teacher Model:</strong> We utilized a frontier-level model
+            <p><strong>Teacher Model:</strong> The assignment suggested Llama 3.1 70B Instruct; we utilized an upgraded,
+                comparable frontier-level model
                 (<code>llama-3.3-70b-instruct-awq</code>) deployed locally to generate synthetic training data. These
                 large-scale models possess robust internal representations of complex schema structures, making them
                 ideal teachers for distilling strict reasoning frameworks into smaller student architectures.</p>
@@ -315,11 +316,10 @@
                 completions, often hallucinating continued dialogue or formatting tags, resulting in an average
                 response length of 211.0 tokens.</p>
             <p>Stage 1 training aggressively pruned this behavior. The average token length dropped by nearly 80% to
-                just
-                45.1 tokens per response. This increase in precision drove a massive gain in automated metrics: ROUGE-1
+                just 45.1 tokens per response while maintaining a 99.0% task completion rate. This increase in precision
+                drove a massive gain in automated metrics: ROUGE-1
                 more than doubled from 0.2309 to 0.4712, and BERTScore F1 rose from 0.8474 to 0.9075. Consequently, in
-                pairwise
-                judge evaluations, Checkpoint 1 crushed the Base model, achieving an 83.9% win rate
+                pairwise judge evaluations, Checkpoint 1 crushed the Base model, achieving an 83.9% win rate
                 (167 wins, 10 ties out of 200 matchups).</p>
 
             <h3>2.3 JSON Structured Output Evaluation</h3>
@@ -330,11 +330,28 @@
                 rate. More impressively, the semantic mapping of the data within the JSON skyrocketed: Exact Match
                 jumped from 72.9% (Checkpoint 1) to a dominant 84.7%, with a near-perfect BERTScore F1 of 0.9955 and a
                 field-level F1 of 0.8483.</p>
+
+            <h4>Common Error Taxonomy</h4>
+            <p>Before achieving mastery in Stage 2, earlier checkpoints frequently failed JSON validation due to the
+                following core errors:</p>
+            <ul>
+                <li><strong>Conversational Padding (Pre-amble/Post-amble):</strong> The most frequent error at
+                    Checkpoint 1. The model correctly structured the data but wrapped the JSON in conversational text
+                    (e.g., <code>"Here is the requested schema: { ... }"</code>), destroying programmatic parseability.
+                </li>
+                <li><strong>Structural Truncation:</strong> Common in Checkpoint 0, where the base model would begin
+                    forming a valid dictionary but stop generation before closing the final brackets, leaving trailing
+                    commas.</li>
+                <li><strong>Schema Hallucination:</strong> Adding nested keys or descriptive fields that were not
+                    explicitly requested in the constraint prompt.</li>
+            </ul>
+
             <p>Interestingly, in pairwise JSON task evaluations judged by the LLM, Checkpoint 1 won 17 matchups while
                 Checkpoint 2 won 15 (with a massive 68 ties). The high volume of ties indicates that both models output
                 perfectly parsable JSON the majority of the time. The slight judge preference for Checkpoint 1, despite
                 Checkpoint 2's vastly superior Exact Match automated metric (84.7% vs 72.9%), highlights a common
-                artifact in AI evaluation: the LLM judge marginally favored the "chattier" output of Stage 1 over the
+                artifact in AI evaluation: the generic LLM judge marginally favored the "chattier" output of Stage 1
+                over the
                 ruthless, perfectly strict data structure of Stage 2.</p>
 
             <h3>2.4 Forgetting Analysis</h3>
@@ -430,12 +447,12 @@
             <p><strong>Ablation Insights:</strong> The ablation data presents a fascinating training dynamic. The model
                 reached 100% JSON validity after just a single epoch, demonstrating that format boundaries are
                 internalized almost instantly. At Epoch 1, the Alpaca win rate was at its lowest (23.1%), indicating an
-                initial shock where the model struggled to context-switch between rigid syntax and fluid conversation.
+                initial "shock" where the model struggled to context-switch between rigid syntax and fluid conversation.
                 However, by Epochs 2 and 3, the model reconciled these weights. Epoch 2 proved to be the structural
                 sweet spot (peaking at an 86.0% JSON exact match), while Epoch 3 achieved the highest conversational win
-                rate (36.0%). The data firmly concludes that giving the optimizer enough time (epochs) allows it to
-                segment formatting instructions from conversational instructions, preserving both capabilities
-                perfectly.</p>
+                rate (36.0%) but slightly degraded in exact JSON mapping (dropping to 84.7%, indicating minor
+                overfitting). The data firmly concludes that giving the optimizer enough time (epochs) allows it to
+                segment formatting instructions from conversational instructions, preserving both capabilities.</p>
         </section>
         <hr>
 
@@ -453,7 +470,8 @@
                 designed for general helpfulness, rewarded this chattiness. By engineering two highly specific
                 evaluation prompts—one for Alpaca tasks that rewarded naturalness, and one for JSON tasks that
                 ruthlessly penalized any non-schema text—we stripped away this bias, uncovering the true dual-capability
-                of the Stage 2 model.</p>
+                of the Stage 2 model.
+            </p>
 
             <h3>3.2 Implications for Sequential Fine-Tuning</h3>
             <p>The success of the Stage 2 model fundamentally challenges the assumption that sequential fine-tuning on
