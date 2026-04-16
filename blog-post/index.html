@@ -493,20 +493,69 @@
                 evaluation pipeline (via the LLM-as-a-Judge).</p>
 
             <h3>4.1 Imitation Learning Data Generation (Teacher Prompts)</h3>
-            <p>To construct the <em>JSON Instruct</em> dataset, we utilized the 70B teacher model to generate
+            <p>To construct the <em>JSON Instruct</em> dataset, we utilized Claude as the teacher model to generate
                 highly diverse, complex JSON structures. The prompts were engineered to cover five primary task
                 categories. To ensure the student model learned robust generalization rather than memorizing a single
                 format, each primary category was systematically divided into five distinct subcategories:</p>
 
             <ul>
-                <li><strong>JSON Extraction & Schema Constrained Tasks:</strong> Taught the model how to map natural
-                    language to specific shapes (Flat Objects, Nested Objects, Arrays, Mixed, and Nullable fields).</li>
-                <li><strong>JSON Repair:</strong> Prompts designed to teach syntax correction and parser compliance
-                    (fixing unquoted keys, trailing commas, truncated structures, etc.).</li>
+                <li><strong>JSON Extraction & Schema Constrained Tasks:</strong> Both of these primary categories
+                    utilized the same five structural variations to teach the model how to map natural language to
+                    specific shapes:
+                    <ul>
+                        <li><em>Flat Object:</em> Standard key-value pairs (e.g., product attributes, person profiles).
+                        </li>
+                        <li><em>Nested Object:</em> Hierarchical data (e.g., an address object inside a person object).
+                        </li>
+                        <li><em>Array of Objects:</em> Lists of uniform items (e.g., multiple transaction events or
+                            attendees).</li>
+                        <li><em>Mixed Flat + Array:</em> Complex documents (e.g., an invoice with flat metadata and an
+                            array of line items).</li>
+                        <li><em>Nullable Fields:</em> Incomplete data extraction (e.g., a clinical note where missing
+                            fields must map to <code>null</code>).</li>
+                    </ul>
+                </li>
+                <li><strong>JSON Repair:</strong> Prompts designed to teach syntax correction and parser compliance:
+                    <ul>
+                        <li><em>Unquoted Keys/Values:</em> Fixing raw JavaScript-style objects missing double quotes.
+                        </li>
+                        <li><em>Trailing Commas:</em> Removing illegal commas before closing brackets or braces.</li>
+                        <li><em>Truncated Structure:</em> Closing mid-generation cut-offs (missing braces/brackets).
+                        </li>
+                        <li><em>Incorrect Delimiters:</em> Replacing Python-style syntax (single quotes, equal signs)
+                            with JSON standards.</li>
+                        <li><em>Escaping Errors:</em> Properly escaping internal double quotes, backslashes, or line
+                            breaks.</li>
+                    </ul>
+                </li>
                 <li><strong>Exact-Label Classification:</strong> Prompts constraining the LLM to output specific,
-                    predefined categorical labels.</li>
-                <li><strong>Tool-Calling:</strong> Prompts simulating agentic service calls (extracting parameters for
-                    flight bookings, weather APIs, etc.).</li>
+                    predefined categorical labels:
+                    <ul>
+                        <li><em>Political Stance:</em> Classifying ideological leaning ('LIBERAL', 'CONSERVATIVE',
+                            'CENTRIST').</li>
+                        <li><em>Claim Type:</em> Categorizing epistemological nature ('FACTUAL_CLAIM',
+                            'SUBJECTIVE_OPINION', 'SPECULATION').</li>
+                        <li><em>Support Routing:</em> Determining customer intent ('BILLING', 'TECHNICAL_SUPPORT',
+                            'SALES', 'CANCELLATION').</li>
+                        <li><em>Urgency Triage:</em> Assessing issue severity ('LOW', 'MEDIUM', 'HIGH', 'CRITICAL').
+                        </li>
+                        <li><em>Content Moderation:</em> Evaluating intent and safety ('SAFE', 'SPAM', 'TOXIC',
+                            'PHISHING').</li>
+                    </ul>
+                </li>
+                <li><strong>Tool-Calling:</strong> Prompts simulating agentic service calls:
+                    <ul>
+                        <li><em>Find Flights:</em> Extracting broad search intent (origin, destination, date).</li>
+                        <li><em>Book Flights:</em> Transactional extraction including precise times and passenger
+                            counts.</li>
+                        <li><em>Get Weather:</em> Utility calls extracting location and resolving temperature units.
+                        </li>
+                        <li><em>Get Product:</em> E-commerce extraction requiring mixed data types (string IDs, integer
+                            quantities, float prices).</li>
+                        <li><em>Schedule Meeting:</em> Calendar management parsing 24-hour times, dates, and arrays of
+                            email addresses.</li>
+                    </ul>
+                </li>
             </ul>
             <p><strong>Dataset Sizing:</strong> For each of the five primary task types, we generated 70 training
                 prompts and 20 testing prompts. This resulted in a strictly balanced and diverse dataset comprising 350
